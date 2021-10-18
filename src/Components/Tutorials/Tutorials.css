@@ -1,0 +1,40 @@
+.dow-description-container{
+    border: solid 3px #012325;
+    background-color: #46756A;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 2em;
+}
+.dow-summary{
+    
+}
+.dow-summary h1{
+    margin: 0;
+}
+.dow-summary h2{
+    margin: 0;
+}
+.dow-summary p{
+    margin: 1em;
+    text-align: justify;
+}
+.dow-category{
+    margin-left: 3em;
+    margin-bottom: 10px;
+}
+.dow-category h3{
+    margin: 5px;
+    color: #012325;
+    font-size: large;
+}
+.dow-each-description{
+    color: #012325;
+    text-align:justify;
+    border: solid 1px #84c6b8; 
+    padding: 8px;
+    padding-right: 15px;
+    margin-top:3em;
+}
+.active-cat{
+    background-color: #84c6b8;
+}
