@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import DOW from './Components/Tutorials/DOW'
+import Tutorials from './Components/Tutorials/Tutorials'
 
 function App() {
   return (
     <div>
-      <DOW />
+      <Tutorials />
     </div>
   );
 }

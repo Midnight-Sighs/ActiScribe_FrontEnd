@@ -54,8 +54,8 @@ const DOW = () => {
     //#endregion
 
     return ( 
-        <div className="dow-description-container container-fluid">
-            <div className=" row dow-summary">
+        <div className="container-fluid">
+            <div className=" row tutorial-summary">
                 <div className="col-12">
                     <h1>Dimensions of Wellness</h1>
                     <h2>What are they and why do we need to know them?</h2>
@@ -64,34 +64,34 @@ const DOW = () => {
             </div>
             <div className = "row">
                 <div className="col-4">
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowSoc}>Social Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowPhy}>Physical Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowEmo}>Emotional Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowSpi}>Spiritual Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowEnv}>Environmental Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowFin}>Financial Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowInt}>Intellectual Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowCre}>Creative Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowOcc}>Occupational Wellness</h3>
                     </div>
-                    <div className="dow-category">
+                    <div className="category">
                         <h3 onClick={onClickHideShowSen}>Sensory Wellness</h3>
                     </div>
                 </div>

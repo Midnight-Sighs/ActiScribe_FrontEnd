@@ -1,28 +1,34 @@
-.dow-description-container{
+.tutorial-container{
+    max-width: 85vw;
+    max-height: 70vh;
     border: solid 3px #012325;
     background-color: #46756A;
     padding-left: 1em;
     padding-right: 1em;
     margin: 2em;
+    overflow-y: scroll;
 }
-.dow-summary{
-    
-}
+/* .sticky-cat{
+    position: fixed;
+    top: 10em;
+    left: inherit;
+    transform: translateX(-50%);
+} */
 .dow-summary h1{
     margin: 0;
 }
 .dow-summary h2{
     margin: 0;
 }
-.dow-summary p{
+.turotial-summary p{
     margin: 1em;
     text-align: justify;
 }
-.dow-category{
+.category{
     margin-left: 3em;
     margin-bottom: 10px;
 }
-.dow-category h3{
+.category h3{
     margin: 5px;
     color: #012325;
     font-size: large;
