@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../src/Styles/App.css'
 import Tutorials from './Components/Tutorials/Tutorials'
 
 function App() {

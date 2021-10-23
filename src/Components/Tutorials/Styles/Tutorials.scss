@@ -1,0 +1,41 @@
+@import '../../Utilities/variables';
+
+.tutorial-container{
+    width: 85vw;
+    height: 70vh;
+    border: solid 3px $dark-teal;
+    background-color: $light-teal;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 2em;
+    overflow-y: scroll;
+}
+.dow-summary h1{
+    & h2{
+        margin: 0;
+    }
+}
+.tutorial-summary p{
+    margin: 1em;
+    text-align: justify;
+}
+.category{
+    margin-left: 3em;
+    margin-bottom: 10px;
+    & h3{
+        margin: 5px;
+        color: $dark-teal;
+        font-size: large;
+    }
+}
+.dow-each-description{
+    color: $dark-teal;
+    text-align:justify;
+    border: solid 1px $light-teal; 
+    padding: 8px;
+    padding-right: 15px;
+    margin-top:3em;
+}
+.active-cat{
+    background-color: $light-teal;
+}

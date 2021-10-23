@@ -1,0 +1,85 @@
+@import '../../Utilities/variables';
+
+.assessment-main{
+    & h1{
+        margin-top:1em;
+        margin-bottom: 1em;
+        color: $dark-teal;
+    }
+    & p{
+        margin-left:4em;
+        margin-right: 4em;
+        text-align:justify;
+    }
+}
+
+.sample-ass-container{
+    & h1{
+        margin-left:2em;
+        color: $dark-teal;
+    }
+    & p{
+        margin-left: 2em;
+        text-align: justify;
+    }
+    & li{
+        padding: 3px;
+        font-weight: bold;
+    }
+    & .tab-in{
+        margin-left:5em;
+    }
+    & .extra-tab{
+        margin-left:3em;
+    }
+}
+
+.interpret-ass{
+    & h1{
+        margin-top:.5em;
+        margin-left:1em;
+    }
+    &  p{
+        text-align: justify;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    & ol{
+        background-color:$dark-teal;
+        margin-right: 3em;
+        margin-left: 2em;
+    }
+    & li{
+        color: $warm-brown;
+        text-align: justify;
+        margin-left: 1em;
+        margin-right:1em;
+    }
+}
+
+.ex-ass{
+    margin-left: 3em;
+    & h1{
+        margin: 20px;
+    }
+    & .subtitle{
+        font-weight: bold;
+        padding-left: 3em;
+    }
+    & .table-top{
+        margin-left: 11%;
+    }
+    & .table-bottom{
+        margin-left: 5%;
+        margin-bottom: 1em;
+    }
+    & .answers{
+        color: $second-teal;
+        font-weight: 700;
+        font-style:italic;
+    }
+    & td{
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,92 @@
+.assessment-main h1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: #012325;
+}
+
+.assessment-main p {
+  margin-left: 4em;
+  margin-right: 4em;
+  text-align: justify;
+}
+
+.sample-ass-container h1 {
+  margin-left: 2em;
+  color: #012325;
+}
+
+.sample-ass-container p {
+  margin-left: 2em;
+  text-align: justify;
+}
+
+.sample-ass-container li {
+  padding: 3px;
+  font-weight: bold;
+}
+
+.sample-ass-container .tab-in {
+  margin-left: 5em;
+}
+
+.sample-ass-container .extra-tab {
+  margin-left: 3em;
+}
+
+.interpret-ass h1 {
+  margin-top: .5em;
+  margin-left: 1em;
+}
+
+.interpret-ass p {
+  text-align: justify;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.interpret-ass ol {
+  background-color: #012325;
+  margin-right: 3em;
+  margin-left: 2em;
+}
+
+.interpret-ass li {
+  color: #a7a29f;
+  text-align: justify;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.ex-ass {
+  margin-left: 3em;
+}
+
+.ex-ass h1 {
+  margin: 20px;
+}
+
+.ex-ass .subtitle {
+  font-weight: bold;
+  padding-left: 3em;
+}
+
+.ex-ass .table-top {
+  margin-left: 11%;
+}
+
+.ex-ass .table-bottom {
+  margin-left: 5%;
+  margin-bottom: 1em;
+}
+
+.ex-ass .answers {
+  color: #46756A;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.ex-ass td {
+  padding-right: 10px;
+}
+/*# sourceMappingURL=Assessments.css.map */

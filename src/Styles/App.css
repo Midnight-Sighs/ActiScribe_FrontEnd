@@ -1,0 +1,36 @@
+::-webkit-scrollbar {
+  background-color: #84c6b8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a7a29f;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #84c6b8;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #84c6b8;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #84c6b8;
+}
+
+.bold-text {
+  font-weight: 500;
+  font-size: large;
+}
+
+a {
+  color: #f1a761;
+  text-shadow: 1px 1px #2e1e15;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2e1e15;
+  text-shadow: none;
+}
+/*# sourceMappingURL=App.css.map */

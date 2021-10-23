@@ -1,0 +1,35 @@
+@import '../Components/Utilities/variables';
+
+::-webkit-scrollbar{
+    background-color: $light-teal; 
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $warm-brown;
+}
+
+::-webkit-scrollbar-corner{
+    background-color: $light-teal;
+}
+
+::-webkit-scrollbar-track-piece{
+    background-color: $light-teal;
+}
+
+::-webkit-scrollbar-track{
+    background-color: $light-teal;
+}
+
+.bold-text{
+    font-weight:500;
+    font-size:large;
+}
+a{
+    color: $light-yellow;
+    text-shadow: 1px 1px $dk-warm-brown;
+    text-decoration: none;
+    &:hover{
+        color: $dk-warm-brown;
+        text-shadow:none;
+    }
+}

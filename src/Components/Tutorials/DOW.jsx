@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Tutorials.css'
 import { Social, Physical, Emotional, Spiritual, Environmental, Financial, Intellectual, Creative, Occupational, Sensory } from './DOWExplanations'
 
 const DOW = () => {
