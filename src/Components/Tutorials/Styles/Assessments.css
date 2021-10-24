@@ -1,7 +1,7 @@
 .assessment-main h1 {
   margin-top: 1em;
   margin-bottom: 1em;
-  color: #012325;
+  color: #003235;
 }
 
 .assessment-main p {
@@ -12,7 +12,7 @@
 
 .sample-ass-container h1 {
   margin-left: 2em;
-  color: #012325;
+  color: #003235;
 }
 
 .sample-ass-container p {
@@ -36,6 +36,7 @@
 .interpret-ass h1 {
   margin-top: .5em;
   margin-left: 1em;
+  color: #003235;
 }
 
 .interpret-ass p {
@@ -46,7 +47,7 @@
 }
 
 .interpret-ass ol {
-  background-color: #012325;
+  background-color: #003235;
   margin-right: 3em;
   margin-left: 2em;
 }
@@ -62,8 +63,13 @@
   margin-left: 3em;
 }
 
+.ex-ass p {
+  text-align: justify;
+}
+
 .ex-ass h1 {
   margin: 20px;
+  color: #003235;
 }
 
 .ex-ass .subtitle {
@@ -98,5 +104,81 @@
 
 .example-explanation {
   margin-left: 1em;
+}
+
+.care-planning {
+  margin-left: 2em;
+}
+
+.care-planning h1 {
+  margin-left: 1em;
+  color: #003235;
+}
+
+.care-planning li {
+  margin-left: .5em;
+}
+
+.care-planning p {
+  text-align: justify;
+}
+
+.care-planning img {
+  width: 25em;
+  border-radius: 40px;
+  -webkit-box-shadow: 5px 5px 5px 5px #003235;
+          box-shadow: 5px 5px 5px 5px #003235;
+  margin-top: 3em;
+}
+
+.interventions {
+  text-align: justify;
+}
+
+.interventions h1 {
+  margin-left: 2em;
+  color: #003235;
+}
+
+.interventions p {
+  margin-left: 1em;
+}
+
+.interventions .extra-tab {
+  margin-left: 2em;
+}
+
+.interventions .extra-tab-two {
+  margin-left: 3em;
+}
+
+.update-assessment {
+  margin-left: 2em;
+}
+
+.update-assessment h1 {
+  margin-left: 1em;
+}
+
+.update-assessment p {
+  text-align: justify;
+  margin-right: 2em;
+}
+
+.ending-notes {
+  margin-left: 2em;
+}
+
+.ending-notes h1 {
+  margin-left: 1em;
+}
+
+.ending-notes p {
+  margin-right: 2em;
+  text-align: justify;
+}
+
+.ending-notes img {
+  height: 25em;
 }
 /*# sourceMappingURL=Assessments.css.map */

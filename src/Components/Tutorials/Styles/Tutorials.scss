@@ -39,3 +39,14 @@
 .active-cat{
     background-color: $light-teal;
 }
+.pagination{
+    margin-left: 15%;
+    & .page-link{
+        background-color: $dark-teal;
+        border:none;
+        color: $light-teal;
+    }
+    & .page-link:hover{
+        background-color: $warm-brown;
+    }
+}

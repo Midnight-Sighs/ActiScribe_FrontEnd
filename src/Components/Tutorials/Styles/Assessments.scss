@@ -38,6 +38,7 @@
     & h1{
         margin-top:.5em;
         margin-left:1em;
+        color: $dark-teal;
     }
     &  p{
         text-align: justify;
@@ -60,8 +61,12 @@
 
 .ex-ass{
     margin-left: 3em;
+    & p{
+        text-align: justify;
+    }
     & h1{
         margin: 20px;
+        color: $dark-teal;
     }
     & .subtitle{
         font-weight: bold;
@@ -90,4 +95,62 @@
 }
 .example-explanation{
     margin-left: 1em;
+}
+.care-planning{
+    margin-left: 2em;
+    & h1{
+        margin-left:1em;
+        color: $dark-teal;
+    }
+    & li{
+        margin-left:.5em;
+    }
+    & p{
+        text-align:justify;
+    }
+    & img{
+        width:25em;
+        border-radius: 40px;
+        box-shadow: 5px 5px 5px 5px $dark-teal;
+        margin-top: 3em;
+    }
+}
+.interventions{
+    text-align: justify;
+    & h1{
+        margin-left:2em;
+        color: $dark-teal;
+    }
+    & p{
+        margin-left: 1em;
+    }
+    & .extra-tab{
+        margin-left:2em;
+    }
+    & .extra-tab-two{
+        margin-left:3em;
+    }
+}
+.update-assessment{
+    margin-left:2em;
+    & h1{
+        margin-left: 1em;
+    }
+    & p{
+        text-align:justify;
+        margin-right: 2em;
+    }
+}
+.ending-notes{
+    margin-left:2em;
+    & h1{
+        margin-left: 1em;
+    }
+    & p{
+        margin-right:2em;
+        text-align: justify;
+    }
+    & img{
+        height: 25em;
+    }
 }

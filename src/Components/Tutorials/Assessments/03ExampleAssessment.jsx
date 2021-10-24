@@ -60,7 +60,7 @@ function ExampleAssessment() {
                         </tr>
                         <tr>
                             <td> . . . Spending time outside?</td>
-                            <td> All the time</td>
+                            <td className="answers"> All the time</td>
                         </tr>
                         <tr>
                             <td> . . . Animals?</td> 
