@@ -1,74 +1,82 @@
 import React from 'react';
 import '../Styles/Assessments.css'
+import teaAndHerbs from '../../Images/teaAndHerbs.jpg'
 
 function ExampleAssessment() {
     return ( 
         <>
         <div className ="ex-ass"> 
         <h1>Example Assessment</h1>
-            <table className = "table-top">
-                <tbody>    
-                    <tr>
-                        <td>Name:</td>
-                        <td className="answers"> Jane</td>
-                    </tr>
-                    <tr>
-                        <td>Nickname:</td>
-                        <td className="answers"> J, Jan</td>
-                    </tr>
-                    <tr>
-                        <td className="subtitle" colspan="2">Do you like . . . if  yes, what type</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Games?</td>
-                        <td className="answers"> Yes, crosswords</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Books?</td>
-                        <td className="answers"> In youth, no time in adulthood</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Music?</td>
-                        <td className="answers"> Love 60s and 70s</td> 
-                    </tr>
-                    <tr>
-                        <td> . . . Crafts?</td>
-                        <td className="answers"> no</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Arts?</td>
-                        <td className="answers"> no</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Learning?</td>
-                        <td className="answers"> no</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Gardening?</td>
-                        <td className="answers"> Had a flourishing garden, flowers, vegetables, fruit trees</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Sports?</td> 
-                        <td className="answers">Basketball, baseball</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Exercise?</td> 
-                        <td className="answers">Not other than yardwork</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Spending time outside?</td>
-                        <td> All the time</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Animals?</td> 
-                        <td className="answers">yes</td>
-                    </tr>
-                    <tr>
-                        <td> . . . Socializing?</td>
-                        <td className="answers"> no</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div className = "row">
+            <div className = "col-7">
+                <table className = "table-top">
+                    <tbody>    
+                        <tr>
+                            <td>Name:</td>
+                            <td className="answers"> Jane</td>
+                        </tr>
+                        <tr>
+                            <td>Nickname:</td>
+                            <td className="answers">J, Jan</td>
+                        </tr>
+                        <tr>
+                            <td className="subtitle" colspan="2">Do you like . . . if  yes, what type</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Games?</td>
+                            <td className="answers">Yes, crosswords</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Books?</td>
+                            <td className="answers">In youth, no time in adulthood</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Music?</td>
+                            <td className="answers">Love 60s and 70s</td> 
+                        </tr>
+                        <tr>
+                            <td> . . . Crafts?</td>
+                            <td className="answers">No</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Arts?</td>
+                            <td className="answers">No</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Learning?</td>
+                            <td className="answers">No</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Gardening?</td>
+                            <td className="answers"> Had a flourishing garden, flowers, vegetables, fruit trees</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Sports?</td> 
+                            <td className="answers">Basketball, baseball</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Exercise?</td> 
+                            <td className="answers">Not other than yardwork</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Spending time outside?</td>
+                            <td> All the time</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Animals?</td> 
+                            <td className="answers">Yes</td>
+                        </tr>
+                        <tr>
+                            <td> . . . Socializing?</td>
+                            <td className="answers">No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div className= "col-5">
+                <img className="tea-herb-img" src={teaAndHerbs}></img>
+            </div>
+        </div>
             <table className = "table-bottom">
                 <tbody>
                     <tr>
@@ -141,24 +149,24 @@ function ExampleAssessment() {
 
             <p>You'll first update this care plan a week after admission and then you should be updating them at least quarterly after that.  Of course, if something changes drastically, you change the care plan as it changes.</p>
 
-            <p>Other interventions I would include in Jane's care plan, based on the assessment above, would be something like this:
-            <br />
-            "Invite Jane to church (bible study, what have you) as she was active in her church community"
+            <p>Other interventions I would include in Jane's care plan, based on the assessment above, would be something like this:</p>
+            - "Invite Jane to church (bible study, what have you) as she was active in her church community"
             <br />          
-            "Invite Jane to a variety of group activities to assess interest"
+            - "Invite Jane to a variety of group activities to assess interest"
             <br />
-            "Volunteer (manicurist, hairdresser, musician, whatever you have) to connect with Jane to assess interest"
+            - "Volunteer (manicurist, hairdresser, musician, whatever you have) to connect with Jane to assess interest"
             <br />
-            "Introduce Jane to peers of a similar level of functioning.  Facilitate socialization and get togethers as needed"
+            - "Introduce Jane to peers of a similar level of functioning.  Facilitate socialization and get togethers as needed"
             <br />
-            "Offer independent activity supplies to Jane to assess interest"
+            - "Offer independent activity supplies to Jane to assess interest"
             <br />
-            "Offer the newspaper (or puzzle books, or printouts) for the crossword to Jane as she's historically enjoyed them"
+            - "Offer the newspaper (or puzzle books, or printouts) for the crossword to Jane as she's historically enjoyed them"
             <br />
-            "Jane has a smart phone that she can independently operate.  Assist PRN if directed by Jane.  Assist with any TV issues PRN"
+            - "Jane has a smart phone that she can independently operate.  Assist PRN if directed by Jane.  Assist with any TV issues PRN"
             <br />
-            "Topics for conversation, interests, and preferences: Gardening, farming, camping trips, trivial knowledge, 60s/70s music, HGTV"
-
+            - "Topics for conversation, interests, and preferences: Gardening, farming, camping trips, trivial knowledge, 60s/70s music, HGTV"
+            <br />
+            <br />
             <p>From this initial assessment, we have been able to gleam a lot of information about Jane.  There are a lot of interventions, as a result, but they are all fairly quick and easy to read over and some of them are generalized.  As your CNAs/care givers get used to reading your care plans, they'll get used to seeing "invite to xxxx to assess interest" and should be in the routine of doing that from the start of admission.  Anything important, you want to pass on verbally, like at a change of shift.  It's also always good practice to announce a brief bit about new admits at the first couple meetings after move-in anyway.  In an ideal world, your CNAs are checking these new care plans as soon as they're put out, but we all know that we're human and that doesn't always end up being the case!</p>
         </div>
         </>
