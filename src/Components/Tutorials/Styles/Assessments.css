@@ -181,4 +181,15 @@
 .ending-notes img {
   height: 25em;
 }
+
+a {
+  color: #f1a761;
+  text-shadow: 1px 1px #2e1e15;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2e1e15;
+  text-shadow: none;
+}
 /*# sourceMappingURL=Assessments.css.map */

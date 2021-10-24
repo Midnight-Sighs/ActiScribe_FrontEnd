@@ -50,3 +50,12 @@
         background-color: $warm-brown;
     }
 }
+a{
+    color: $light-yellow;
+    text-shadow: 1px 1px $dk-warm-brown;
+    text-decoration: none;
+    &:hover{
+        color: $dk-warm-brown;
+        text-shadow:none;
+    }
+}

@@ -55,4 +55,15 @@
 .pagination .page-link:hover {
   background-color: #a7a29f;
 }
+
+a {
+  color: #f1a761;
+  text-shadow: 1px 1px #2e1e15;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2e1e15;
+  text-shadow: none;
+}
 /*# sourceMappingURL=Tutorials.css.map */

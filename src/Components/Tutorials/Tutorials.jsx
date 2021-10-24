@@ -5,13 +5,6 @@ import DOW from './DOW'
 import SOM from './SOM'
 import Links from './Links'
 import AssessmentExplained from './AssessmentExplained'
-import SampleAdmissionAssessment from './Assessments/01SampleAdmissionAssessment'
-import InterpretAdmissionAssessment from './Assessments/02InterpretAdmissionAssessment'
-import ExampleAssessment from './Assessments/03ExampleAssessment';
-import Careplanning from './Assessments/04Careplanning';
-import Interventions from './Assessments/05Interventions';
-import UpdateAssessments from './Assessments/06QuarterlyYearlyAssessments';
-import EndingNotes from './Assessments/07EndingNotes';
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 //#endregion
 
@@ -20,47 +13,36 @@ const Tutorials = () =>{
 
     return(
         <div className="tutorial-container">
-            <h1>Assessment Tutorial</h1>
-            <p>This is a bit of a long-winded topic.  There are a lot of little intricacies behind creating good care plans and it all starts the minute a new resident comes into your facility.  From your admission assessment on, your care plan will continue to grow and change on a regular basis.  If you wish to learn, follow through the pages and read on!</p>
-
-
+            
+            {
+                //#region Switch Router
+            }
             <Router>
-            <Switch>
-                <Route path="/Sample_Admission_Assessment">
-                    <SampleAdmissionAssessment />
-                </Route>
-                <Route path="/Interpret_Admission_Assessment">
-                    <InterpretAdmissionAssessment />
-                </Route>
-                <Route path="/Example_Assessment">
-                    <ExampleAssessment />
-                </Route>
-                <Route path="/Care_Plan_Basics">
-                    <Careplanning />
-                </Route>
-                <Route path="/Interventions">
-                    <Interventions />
-                </Route>
-                <Route path="/Update_Assessments">
-                    <UpdateAssessments />
-                </Route>
-                <Route path="/Ending_Notes">
-                    <EndingNotes />
-                </Route>
-            </Switch>
+                <Switch>
+                    <Route path="/Dimensions_of_Wellness">
+                        <DOW />
+                    </Route>
+                    <Route path="/State_Operations_Manual">
+                        <SOM />
+                    </Route>
+                    <Route path="/Assessments_Explained">
+                        <AssessmentExplained />
+                    </Route>
+                    <Route path="/Helpful_Links">
+                        <Links />
+                    </Route>
+                </Switch>
+            {
+                //$endregion
+            }
 
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li class="page-item"><Link class="page-link" to ="/Sample_Admission_Assessment" >1</Link></li>
-                    <li class="page-item"><Link class="page-link" to ="/Interpret_Admission_Assessment" >2</Link></li>
-                    <li class="page-item"><Link class="page-link" to ="/Example_Assessment" >3</Link></li>
-                    <li class="page-item"><Link class="page-link" to ="/Care_Plan_Basics" >4</Link></li>
-                    <li class="page-item"><Link class="page-link" to ="/Interventions" >5</Link></li>
-                    <li class="page-item"><Link class="page-link" to ="/Update_Assessments" >6</Link></li>
-                    <li class="page-item"><Link class="page-link" to ="/Ending_Notes">7</Link></li>
-                </ul>
+            <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                <Link to="/Dimensions_of_Wellness" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dimensions of Wellness</Link>
+                <Link to="/State_Operations_Manual" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">State Operations Manual</Link>
+                <Link to="/Assessments_Explained" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Assessments Explained</Link>
+                <Link to="/Helpful_Links" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Helpful Links</Link>
             </nav>
-
             </Router>
             
 
