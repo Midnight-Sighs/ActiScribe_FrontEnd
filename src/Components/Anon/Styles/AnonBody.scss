@@ -1,5 +1,21 @@
 @import '../../Utilities/variables';
 
-html {
+.anon-page {
     background-color: $light-teal;
+    position: relative;
+    &::before{
+        content: "";
+        background-image: url(/src/Components/Images/succulentCenter.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 15vh;
+        right: 0px;
+        left: 0px;
+        bottom:0px;
+        opacity: .5;
+    }
+}
+.page-content{
+    position:relative;
+    z-index:2;
 }

@@ -1,0 +1,16 @@
+.title-bar {
+  height: 15vh;
+  width: 100vw;
+  background-color: #003235;
+}
+
+.title {
+  padding-top: .5em;
+  color: #b47f60;
+}
+
+.log-reg {
+  padding-top: 1em;
+  color: #b47f60;
+}
+/*# sourceMappingURL=HeadAndFoot.css.map */

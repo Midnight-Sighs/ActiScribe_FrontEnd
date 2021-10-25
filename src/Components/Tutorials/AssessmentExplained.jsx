@@ -37,6 +37,9 @@ const AssessmentExplained = () =>{
             }
                 <Router>
                 <Switch>
+                    <Route path="/Assessment_Explained">
+                        <AssessmentExplained />
+                    </Route>
                     <Route path="/Sample_Admission_Assessment">
                         <SampleAdmissionAssessment />
                     </Route>
@@ -68,6 +71,7 @@ const AssessmentExplained = () =>{
             }
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
+                        <li class="page-item"><Link class="page-link" to ="/Assessment_Explained" >0</Link></li>
                         <li class="page-item"><Link class="page-link" to ="/Sample_Admission_Assessment" >1</Link></li>
                         <li class="page-item"><Link class="page-link" to ="/Interpret_Admission_Assessment" >2</Link></li>
                         <li class="page-item"><Link class="page-link" to ="/Example_Assessment" >3</Link></li>

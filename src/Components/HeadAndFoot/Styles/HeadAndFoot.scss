@@ -1,0 +1,15 @@
+@import '../../Utilities/variables';
+
+.title-bar{
+    height: 15vh;
+    width:100vw;
+    background-color: $dark-teal;
+}
+.title{
+    padding-top:.5em;
+    color: $warm-brown;
+}
+.log-reg{
+    padding-top:1em;
+    color: $warm-brown;
+}
