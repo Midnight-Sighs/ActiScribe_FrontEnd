@@ -38,6 +38,10 @@
   margin-top: 3em;
 }
 
+.dow-each-description .bold {
+  font-weight: 700;
+}
+
 .active-cat {
   background-color: #84c6b8;
 }

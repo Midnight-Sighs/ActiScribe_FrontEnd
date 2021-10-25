@@ -35,6 +35,9 @@
     padding: 8px;
     padding-right: 15px;
     margin-top:3em;
+    & .bold{
+        font-weight:700;
+    }
 }
 .active-cat{
     background-color: $light-teal;

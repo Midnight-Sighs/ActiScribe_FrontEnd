@@ -19,3 +19,9 @@
     position:relative;
     z-index:2;
 }
+.tutorial-nav{
+    & .nav-pills{
+        margin-top: 5em;
+        margin-left: 9px;
+    }
+}
