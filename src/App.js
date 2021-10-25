@@ -1,11 +1,11 @@
 import React from 'react';
 import '../src/Styles/App.css'
-import Tutorials from './Components/Tutorials/Tutorials'
+import AnonBody from './Components/Anon/AnonBody'
 
 function App() {
   return (
     <div>
-      <Tutorials />
+      <AnonBody />
     </div>
   );
 }

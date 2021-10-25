@@ -154,12 +154,20 @@
         height: 25em;
     }
 }
-a{
-    color: $light-yellow;
-    text-shadow: 1px 1px $dk-warm-brown;
-    text-decoration: none;
-    &:hover{
-        color: $dk-warm-brown;
-        text-shadow:none;
+.pagination{
+    margin-left: 15%;
+    & .page-link{
+        background-color: $dark-teal;
+        border:none;
+        color: $light-teal;
     }
-} 
+    & .page-link:hover{
+        background-color: $warm-brown;
+        color: $light-teal;
+    }
+    & .page-link:focus{
+        background-color: $light-teal;
+        color: $dark-teal;
+        text-shadow: none;
+    }
+}

@@ -12,42 +12,12 @@ import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 const Tutorials = () =>{
 
     return(
-        <div className="tutorial-container">
-            
-            {
-                //#region Switch Router
-            }
-            <Router>
-                <Switch>
-                    <Route path="/Dimensions_of_Wellness">
-                        <DOW />
-                    </Route>
-                    <Route path="/State_Operations_Manual">
-                        <SOM />
-                    </Route>
-                    <Route path="/Assessments_Explained">
-                        <AssessmentExplained />
-                    </Route>
-                    <Route path="/Helpful_Links">
-                        <Links />
-                    </Route>
-                </Switch>
-            {
-                //$endregion
-            }
-
-            <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                <Link to="/Dimensions_of_Wellness" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dimensions of Wellness</Link>
-                <Link to="/State_Operations_Manual" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">State Operations Manual</Link>
-                <Link to="/Assessments_Explained" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Assessments Explained</Link>
-                <Link to="/Helpful_Links" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Helpful Links</Link>
-            </nav>
-            </Router>
-            
-
-
-        </div>
+        <>
+            <div className="tutorial-container">
+                <h1>Tutorials</h1>
+                <p>Here you'll be able to find some helpful things I've written on the topics of  care planning, assessments, and the dimensions of wellness.  If you're a seasoned pro, these will hopefully help to provide some new insights for you.  If you're new to the industry, they will hopefully help you begin your jounry as an activity professional on the right feet.</p>
+            </div>
+        </>
     )
 }
 export default Tutorials

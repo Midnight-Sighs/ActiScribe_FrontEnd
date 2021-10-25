@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACD,gBAAgB,ECDP,OAAO;CDEnB",
+    "sources": [
+        "AnonBody.scss",
+        "../../Utilities/_variables.scss"
+    ],
+    "names": [],
+    "file": "AnonBody.css"
+}

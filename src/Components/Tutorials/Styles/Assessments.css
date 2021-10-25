@@ -53,7 +53,7 @@
 }
 
 .interpret-ass li {
-  color: #a7a29f;
+  color: #b47f60;
   text-align: justify;
   margin-left: 1em;
   margin-right: 1em;
@@ -182,14 +182,24 @@
   height: 25em;
 }
 
-a {
-  color: #f1a761;
-  text-shadow: 1px 1px #2e1e15;
-  text-decoration: none;
+.pagination {
+  margin-left: 15%;
 }
 
-a:hover {
-  color: #2e1e15;
+.pagination .page-link {
+  background-color: #003235;
+  border: none;
+  color: #84c6b8;
+}
+
+.pagination .page-link:hover {
+  background-color: #b47f60;
+  color: #84c6b8;
+}
+
+.pagination .page-link:focus {
+  background-color: #84c6b8;
+  color: #003235;
   text-shadow: none;
 }
 /*# sourceMappingURL=Assessments.css.map */
