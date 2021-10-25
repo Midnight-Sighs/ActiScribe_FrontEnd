@@ -10,13 +10,18 @@
     margin: 2em;
     overflow-y: scroll;
 }
-.dow-summary h1{
-    & h2{
-        margin: 0;
-    }
+h1{
+    margin-left: 1em;
+    margin-top:.25em;
+    color: $dark-teal;
 }
-.tutorial-summary p{
-    margin: 1em;
+h5{
+    color: $dark-teal;
+}
+
+p{
+    margin-left: 1em;
+    margin-right: 3em;
     text-align: justify;
 }
 .category{

@@ -23,5 +23,30 @@
 .tutorial-nav .nav-pills {
   margin-top: 5em;
   margin-left: 9px;
+  border-radius: 10px;
+}
+
+.tutorial-nav .nav-link {
+  color: #84c6b8;
+}
+
+.tutorial-nav .nav-link:hover {
+  color: #b47f60;
+}
+
+.tutorial-nav .nav-link:active {
+  color: #84c6b8;
+}
+
+.tutorial-nav .nav-link:focus {
+  color: #f1a761;
+}
+
+#v-pills-tut-home-tab,
+#v-pills-dow-tab,
+#v-pills-som-tab,
+#v-pills-assessments-tab,
+#v-pills-links-tab {
+  background-color: #003235;
 }
 /*# sourceMappingURL=AnonBody.css.map */

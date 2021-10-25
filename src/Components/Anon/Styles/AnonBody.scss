@@ -23,5 +23,25 @@
     & .nav-pills{
         margin-top: 5em;
         margin-left: 9px;
+        border-radius: 10px;
     }
+    & .nav-link{
+        color: $light-teal;
+    }
+    & .nav-link:hover{
+        color:$warm-brown;
+    }
+    & .nav-link:active{
+        color: $light-teal;
+    }
+    & .nav-link:focus{
+        color: $light-yellow;
+    }
+}
+#v-pills-tut-home-tab,
+#v-pills-dow-tab,
+#v-pills-som-tab,
+#v-pills-assessments-tab,
+#v-pills-links-tab{
+    background-color: $dark-teal;
 }

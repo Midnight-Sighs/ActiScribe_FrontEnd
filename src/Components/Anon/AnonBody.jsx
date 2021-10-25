@@ -1,7 +1,8 @@
 import React from 'react';
 import './Styles/AnonBody.css';
 import Header from '../HeadAndFoot/Header'
-import AnonSubNav from './AnonSubNav'
+import AnonSubNav from '../Tutorials/TutorialSubNav'
+import AnonMainNav from './AnonMainNav'
 
 function AnonBody() {
     return ( 
@@ -9,7 +10,7 @@ function AnonBody() {
         <div className="anon-page"> 
         <div className="page-content">
             <Header />
-            <AnonSubNav />
+            <AnonMainNav />
         </div>
         </div>
 

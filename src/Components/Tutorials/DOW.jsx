@@ -58,7 +58,6 @@ const DOW = () => {
                 <div className=" row tutorial-summary">
                     <div className="col-12">
                         <h1>Dimensions of Wellness</h1>
-                        <h2>What are they and why do we need to know them?</h2>
                         <p>The SOM isn't clear on what constitutes as person centered care and every individual is different so how can you measure or gauge what kind of wellness you are providing to your residents?  There are aspects of all of our being referred to as the dimensions of wellness (hereby abbreviated to DOW) that pertain to each and every one of us to some degree.  There are many different definitions of how to break down the DOW but the overall concept remains the same.  Because the DOW can apply to each and every person, it only makes sense to categorize our activities by these because we're trying to provide the most well rounded enrichment to their lives.</p>
                     </div>
                 </div>
