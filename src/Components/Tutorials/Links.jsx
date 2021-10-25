@@ -1,5 +1,6 @@
 import React from 'react';
 import { ActivityIdeas, Regulations, CalendarCreators, CraftIdeas} from './LinkCategories'
+import './Styles/Tutorials.css'
 
 const Links = () => {
 

@@ -5,7 +5,8 @@
   background-color: #46756ada;
   padding-left: 1em;
   padding-right: 1em;
-  margin: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
   overflow-y: scroll;
 }
 
@@ -36,6 +37,17 @@ p {
   font-size: large;
 }
 
+.category a {
+  color: #f1a761;
+  text-shadow: 1px 1px #2e1e15;
+  text-decoration: none;
+}
+
+.category a:hover {
+  color: #2e1e15;
+  text-shadow: none;
+}
+
 .dow-each-description {
   color: #003235;
   text-align: justify;
@@ -53,13 +65,13 @@ p {
   background-color: #84c6b8;
 }
 
-a {
+.link-cats a {
   color: #f1a761;
   text-shadow: 1px 1px #2e1e15;
   text-decoration: none;
 }
 
-a:hover {
+.link-cats:hover {
   color: #2e1e15;
   text-shadow: none;
 }

@@ -49,4 +49,20 @@
 #v-pills-links-tab {
   background-color: #003235;
 }
+
+#nav-home-tab,
+#nav-tutorials-tab,
+#nav-features-tab {
+  margin-top: 1em;
+  background-color: #003235;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #84c6b8;
+}
+
+#nav-home-tab .nav:hover,
+#nav-tutorials-tab .nav:hover,
+#nav-features-tab .nav:hover {
+  color: #b47f60;
+}
 /*# sourceMappingURL=AnonBody.css.map */

@@ -15,7 +15,7 @@ function AnonSubNav() {
             //#region Nav-Pills
         }
         <div className = "row">
-            <div className="col-1 tutorial-nav">
+            <div className="col-1 col-sm-row tutorial-nav">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <Link to="/Tutorials_Home"  class="nav-link" id="v-pills-tut-home-tab" data-bs-toggle="pill" href="#v-pills-tut-home" role="tab" aria-controls="v-pills-tut-home" aria-selected="true">Tutorials</Link>

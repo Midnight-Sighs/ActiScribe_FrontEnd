@@ -7,7 +7,8 @@
     background-color: $half-second-teal;
     padding-left: 1em;
     padding-right: 1em;
-    margin: 2em;
+    margin-left: 2em;
+    margin-right:2em;
     overflow-y: scroll;
 }
 h1{
@@ -32,6 +33,15 @@ p{
         color: $dark-teal;
         font-size: large;
     }
+    & a {
+        color: $light-yellow;
+        text-shadow: 1px 1px $dk-warm-brown;
+        text-decoration: none;
+        &:hover{
+            color: $dk-warm-brown;
+            text-shadow:none;
+        }
+    }
 }
 .dow-each-description{
     color: $dark-teal;
@@ -47,11 +57,12 @@ p{
 .active-cat{
     background-color: $light-teal;
 }
-
-a{
-    color: $light-yellow;
-    text-shadow: 1px 1px $dk-warm-brown;
-    text-decoration: none;
+.link-cats{
+    & a{
+        color: $light-yellow;
+        text-shadow: 1px 1px $dk-warm-brown;
+        text-decoration: none;
+    }
     &:hover{
         color: $dk-warm-brown;
         text-shadow:none;
