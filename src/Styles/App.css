@@ -49,6 +49,7 @@ a:hover {
 .page-container {
   background-color: #84c6b8;
   position: relative;
+  height: 75vh;
 }
 
 .page-container::before {
@@ -112,6 +113,7 @@ a:hover {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border: none;
+  border-bottom: none;
   color: #84c6b8;
 }
 
@@ -121,7 +123,12 @@ a:hover {
   color: #b47f60;
 }
 
+#nav-tab {
+  border-bottom: none;
+}
+
 .nav-tabs {
   border: none;
+  border-bottom: none;
 }
 /*# sourceMappingURL=App.css.map */

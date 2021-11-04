@@ -50,6 +50,7 @@ a{
 .page-container {
     background-color: $light-teal;
     position: relative;
+    height: 75vh;
     &::before{
         content: "";
         background-image: url(/src/Components/Images/succulentCenter.jpg);
@@ -106,11 +107,16 @@ a{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border:none;
+    border-bottom: none;
     color: $light-teal;
     & .nav:hover{
         color: $warm-brown;
     }
 }
+#nav-tab{
+    border-bottom: none;
+}
 .nav-tabs{
     border: none;
+    border-bottom: none;
 }

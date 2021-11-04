@@ -79,5 +79,6 @@ p {
 
 .nav-tabs {
   border: none;
+  border-bottom: none;
 }
 /*# sourceMappingURL=Tutorials.css.map */
