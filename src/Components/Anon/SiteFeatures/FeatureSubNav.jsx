@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../Styles/App.css'
+import '../../Tutorials/Styles/Tutorials.css'
 import WhyDOW from './WhyDOW'
 import ScreenShots from './ScreenShots'
 import WhyTrack from './WhyTrack'
@@ -10,9 +10,6 @@ function AnonSubNav() {
     return ( 
         <>
         <Router>
-        {
-            //#region Nav-Pills
-        }
         <div className = "row">
             <div className="col-1 col-sm-row tutorial-nav">
                 <div class="d-flex align-items-start">
@@ -24,21 +21,16 @@ function AnonSubNav() {
                     </div>
                 </div>
             </div>
-        {
-            //#endregion
-        }
-        {
-            //#region Switch Router
-        }
+
             <div className ="col-11">
                 <Switch>
                     <Route path="/Features_Home">
                         <Features />
                     </Route>
-                    <Route path="/Why_DOW?">
+                    <Route path="/Why_DOW">
                         <WhyDOW />
                     </Route>
-                    <Route path="/Why_Track?">
+                    <Route path="/Why_Track">
                         <WhyTrack />
                     </Route>
                     <Route path="/ScreenShots">
@@ -46,9 +38,6 @@ function AnonSubNav() {
                     </Route>
                 </Switch>
             </div>
-        {
-            //#endregion
-        }
         </div>
         </Router>
         </>

@@ -76,4 +76,8 @@ p {
   color: #2e1e15;
   text-shadow: none;
 }
+
+.nav-tabs {
+  border: none;
+}
 /*# sourceMappingURL=Tutorials.css.map */

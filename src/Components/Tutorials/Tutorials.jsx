@@ -1,12 +1,6 @@
-//#region Imports
 import React from 'react';
 import './Styles/Tutorials.css'
-import DOW from './DOW'
-import SOM from './SOM'
-import Links from './Links'
-import AssessmentExplained from './AssessmentExplained'
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
-//#endregion
+
 
 
 const Tutorials = () =>{
