@@ -3,16 +3,16 @@
   height: 70vh;
   border: solid 3px #003235;
   background-color: #46756ada;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-left: 2em;
-  margin-right: 2em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   overflow-y: scroll;
 }
 
 h1 {
-  margin-left: 1em;
-  margin-top: .25em;
+  margin-left: 1rem;
+  margin-top: .25rem;
   color: #003235;
 }
 
@@ -21,14 +21,15 @@ h5 {
 }
 
 p {
-  margin-left: 1em;
-  margin-right: 3em;
+  margin-left: 1rem;
+  margin-right: 3rem;
   text-align: justify;
 }
 
 .category {
-  margin-left: 3em;
+  margin-left: 3rem;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .category h3 {
@@ -54,7 +55,7 @@ p {
   border: solid 1px #84c6b8;
   padding: 8px;
   padding-right: 15px;
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 
 .dow-each-description .bold {

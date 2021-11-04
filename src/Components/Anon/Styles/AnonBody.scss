@@ -38,22 +38,3 @@
         color: $light-yellow;
     }
 }
-#v-pills-tut-home-tab,
-#v-pills-dow-tab,
-#v-pills-som-tab,
-#v-pills-assessments-tab,
-#v-pills-links-tab{
-    background-color: $dark-teal;
-}
-#nav-home-tab,
-#nav-tutorials-tab,
-#nav-features-tab {
-    margin-top: 1em;
-    background-color:$dark-teal;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    color: $light-teal;
-    & .nav:hover{
-        color: $warm-brown;
-    }
-}

@@ -5,15 +5,15 @@
     height: 70vh;
     border: solid 3px $dark-teal;
     background-color: $half-second-teal;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-left: 2em;
-    margin-right:2em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 2rem;
+    margin-right:2rem;
     overflow-y: scroll;
 }
 h1{
-    margin-left: 1em;
-    margin-top:.25em;
+    margin-left: 1rem;
+    margin-top:.25rem;
     color: $dark-teal;
 }
 h5{
@@ -21,13 +21,14 @@ h5{
 }
 
 p{
-    margin-left: 1em;
-    margin-right: 3em;
+    margin-left: 1rem;
+    margin-right: 3rem;
     text-align: justify;
 }
 .category{
-    margin-left: 3em;
+    margin-left: 3rem;
     margin-bottom: 10px;
+    cursor: pointer;
     & h3{
         margin: 5px;
         color: $dark-teal;
@@ -49,7 +50,7 @@ p{
     border: solid 1px $light-teal; 
     padding: 8px;
     padding-right: 15px;
-    margin-top:3em;
+    margin-top:3rem;
     & .bold{
         font-weight:700;
     }

@@ -2,24 +2,23 @@
 
 .assessment-main{
     & h1{
-        margin-top:.25em;
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
         color: $dark-teal;
     }
     & p{
-        margin-left:1em;
-        margin-right: 3em;
+        margin-left:1rem;
+        margin-right: 3rem;
         text-align:justify;
     }
 }
 
 .sample-ass-container{
     & h1{
-        margin-left:2em;
+        margin-left:2rem;
         color: $dark-teal;
     }
     & p{
-        margin-left: 2em;
+        margin-left: 2rem;
         text-align: justify;
     }
     & li{
@@ -27,17 +26,17 @@
         font-weight: bold;
     }
     & .tab-in{
-        margin-left:5em;
+        margin-left:5rem;
     }
     & .extra-tab{
-        margin-left:3em;
+        margin-left:3rem;
     }
 }
 
 .interpret-ass{
     & h1{
-        margin-top:.5em;
-        margin-left:1em;
+        margin-top:.5rem;
+        margin-left:1rem;
         color: $dark-teal;
     }
     &  p{
@@ -48,19 +47,19 @@
     }
     & ol{
         background-color:$dark-teal;
-        margin-right: 3em;
-        margin-left: 2em;
+        margin-right: 3rem;
+        margin-left: 2rem;
     }
     & li{
         color: $warm-brown;
         text-align: justify;
-        margin-left: 1em;
-        margin-right:1em;
+        margin-left: 1rem;
+        margin-right:1rem;
     }
 }
 
 .ex-ass{
-    margin-left: 3em;
+    margin-left: 3rem;
     & p{
         text-align: justify;
     }
@@ -70,14 +69,14 @@
     }
     & .subtitle{
         font-weight: bold;
-        padding-left: 3em;
+        padding-left: 3rem;
     }
     & .table-top{
         margin-left: 11%;
     }
     & .table-bottom{
         margin-left: 5%;
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
     }
     & .answers{
         color: $second-teal;
@@ -89,21 +88,21 @@
     }
 }
 .tea-herb-img{
-    margin-top: 3em;
+    margin-top: 3rem;
     width: 30vw;
     border-radius: 30px;
 }
 .example-explanation{
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 .care-planning{
-    margin-left: 2em;
+    margin-left: 2rem;
     & h1{
-        margin-left:1em;
+        margin-left:1rem;
         color: $dark-teal;
     }
     & li{
-        margin-left:.5em;
+        margin-left:.5rem;
     }
     & p{
         text-align:justify;
@@ -112,46 +111,46 @@
         width:25em;
         border-radius: 40px;
         box-shadow: 5px 5px 5px 5px $dark-teal;
-        margin-top: 3em;
+        margin-top: 3rem;
     }
 }
 .interventions{
     text-align: justify;
     & h1{
-        margin-left:2em;
+        margin-left:2rem;
         color: $dark-teal;
     }
     & p{
-        margin-left: 1em;
+        margin-left: 1rem;
     }
     & .extra-tab{
-        margin-left:2em;
+        margin-left:2rem;
     }
     & .extra-tab-two{
-        margin-left:3em;
+        margin-left:3rem;
     }
 }
 .update-assessment{
-    margin-left:2em;
+    margin-left:2rem;
     & h1{
-        margin-left: 1em;
+        margin-left: 1rem;
     }
     & p{
         text-align:justify;
-        margin-right: 2em;
+        margin-right: 2rem;
     }
 }
 .ending-notes{
-    margin-left:2em;
+    margin-left:2rem;
     & h1{
-        margin-left: 1em;
+        margin-left: 1rem;
     }
     & p{
-        margin-right:2em;
+        margin-right:2rem;
         text-align: justify;
     }
     & img{
-        height: 25em;
+        height: 25rem;
     }
 }
 .pagination{
@@ -170,4 +169,5 @@
         color: $dark-teal;
         text-shadow: none;
     }
+    
 }

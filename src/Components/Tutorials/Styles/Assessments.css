@@ -1,22 +1,21 @@
 .assessment-main h1 {
-  margin-top: .25em;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   color: #003235;
 }
 
 .assessment-main p {
-  margin-left: 1em;
-  margin-right: 3em;
+  margin-left: 1rem;
+  margin-right: 3rem;
   text-align: justify;
 }
 
 .sample-ass-container h1 {
-  margin-left: 2em;
+  margin-left: 2rem;
   color: #003235;
 }
 
 .sample-ass-container p {
-  margin-left: 2em;
+  margin-left: 2rem;
   text-align: justify;
 }
 
@@ -26,16 +25,16 @@
 }
 
 .sample-ass-container .tab-in {
-  margin-left: 5em;
+  margin-left: 5rem;
 }
 
 .sample-ass-container .extra-tab {
-  margin-left: 3em;
+  margin-left: 3rem;
 }
 
 .interpret-ass h1 {
-  margin-top: .5em;
-  margin-left: 1em;
+  margin-top: .5rem;
+  margin-left: 1rem;
   color: #003235;
 }
 
@@ -48,19 +47,19 @@
 
 .interpret-ass ol {
   background-color: #003235;
-  margin-right: 3em;
-  margin-left: 2em;
+  margin-right: 3rem;
+  margin-left: 2rem;
 }
 
 .interpret-ass li {
   color: #b47f60;
   text-align: justify;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .ex-ass {
-  margin-left: 3em;
+  margin-left: 3rem;
 }
 
 .ex-ass p {
@@ -74,7 +73,7 @@
 
 .ex-ass .subtitle {
   font-weight: bold;
-  padding-left: 3em;
+  padding-left: 3rem;
 }
 
 .ex-ass .table-top {
@@ -83,7 +82,7 @@
 
 .ex-ass .table-bottom {
   margin-left: 5%;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .ex-ass .answers {
@@ -97,26 +96,26 @@
 }
 
 .tea-herb-img {
-  margin-top: 3em;
+  margin-top: 3rem;
   width: 30vw;
   border-radius: 30px;
 }
 
 .example-explanation {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .care-planning {
-  margin-left: 2em;
+  margin-left: 2rem;
 }
 
 .care-planning h1 {
-  margin-left: 1em;
+  margin-left: 1rem;
   color: #003235;
 }
 
 .care-planning li {
-  margin-left: .5em;
+  margin-left: .5rem;
 }
 
 .care-planning p {
@@ -128,7 +127,7 @@
   border-radius: 40px;
   -webkit-box-shadow: 5px 5px 5px 5px #003235;
           box-shadow: 5px 5px 5px 5px #003235;
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 
 .interventions {
@@ -136,50 +135,50 @@
 }
 
 .interventions h1 {
-  margin-left: 2em;
+  margin-left: 2rem;
   color: #003235;
 }
 
 .interventions p {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .interventions .extra-tab {
-  margin-left: 2em;
+  margin-left: 2rem;
 }
 
 .interventions .extra-tab-two {
-  margin-left: 3em;
+  margin-left: 3rem;
 }
 
 .update-assessment {
-  margin-left: 2em;
+  margin-left: 2rem;
 }
 
 .update-assessment h1 {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .update-assessment p {
   text-align: justify;
-  margin-right: 2em;
+  margin-right: 2rem;
 }
 
 .ending-notes {
-  margin-left: 2em;
+  margin-left: 2rem;
 }
 
 .ending-notes h1 {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .ending-notes p {
-  margin-right: 2em;
+  margin-right: 2rem;
   text-align: justify;
 }
 
 .ending-notes img {
-  height: 25em;
+  height: 25rem;
 }
 
 .pagination {

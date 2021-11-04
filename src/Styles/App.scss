@@ -33,3 +33,83 @@ a{
         text-shadow:none;
     }
 }
+
+.body-container{
+    width: 85vw;
+    height: 70vh;
+    border: solid 3px $dark-teal;
+    background-color: $half-second-teal;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 2rem;
+    margin-right:2rem;
+    overflow-y: scroll;
+}
+
+
+.page-container {
+    background-color: $light-teal;
+    position: relative;
+    &::before{
+        content: "";
+        background-image: url(/src/Components/Images/succulentCenter.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 15vh;
+        right: 0px;
+        left: 0px;
+        bottom:0px;
+        opacity: .5;
+    }
+}
+.page-content{
+    position:relative;
+    z-index:2;
+}
+.sub-nav{
+    & .nav-pills{
+        margin-top: 5rem;
+        margin-left: 9px;
+        border-radius: 10px;
+    }
+    & .nav-link{
+        color: $light-teal;
+    }
+    & .nav-link:hover{
+        color:$warm-brown;
+    }
+    & .nav-link:active{
+        color: $light-teal;
+    }
+    & .nav-link:focus{
+        color: $light-yellow;
+    }
+}
+#v-pills-tut-home-tab,
+#v-pills-dow-tab,
+#v-pills-som-tab,
+#v-pills-assessments-tab,
+#v-pills-links-tab,
+#v-pills-feat-dow-tab,
+#v-pills-feat-track-tab,
+#v-pills-feat-screens-tab,
+#v-pills-feat-home-tab{
+    background-color: $dark-teal;
+    margin-top: .5rem;
+}
+#nav-home-tab,
+#nav-tutorials-tab,
+#nav-features-tab {
+    margin-top: 1rem;
+    background-color:$dark-teal;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border:none;
+    color: $light-teal;
+    & .nav:hover{
+        color: $warm-brown;
+    }
+}
+.nav-tabs{
+    border: none;
+}

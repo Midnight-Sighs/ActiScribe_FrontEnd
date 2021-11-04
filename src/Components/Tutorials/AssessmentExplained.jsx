@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Styles/Assessments.css'
 import SampleAdmissionAssessment from './Assessments/01SampleAdmissionAssessment'
 import InterpretAdmissionAssessment from './Assessments/02InterpretAdmissionAssessment'
@@ -11,10 +11,20 @@ import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 
 const AssessmentExplained = () =>{
 
+    const [hideShow, setHideShow]=useState(true)
+
+    const onClickShow = ()=>{
+        setHideShow(true)
+    }
+
+    const onClick = () =>{
+        setHideShow(false)
+    }
+
     return(
         <>
         <div className="tutorial-container">
-            <div className="assessment-main">
+            {hideShow ? <div className="assessment-main">
                 <h1>Care Plans and Assessments!</h1>
                     <p>This is a bit of an indepth subject, but I'll make it as brief as possible while still providing examples and references to help make things clear.</p>
 
@@ -31,7 +41,7 @@ const AssessmentExplained = () =>{
                     <p>When you're creating a care plan, put on your detective hat and know that when you're starting with admission assessments, you're getting a framework, not their entire life.  You're taking a snapshot and creating a starting point that you'll develop and modify over time. </p> 
 
                     <p>You want to touch on each of the categories of wellness in some sense.  You also want to try to capture some of who your resident was before they started aging or suffering from whatever their primary disability is.  You want to figure out what kind of modifications they may need to be successful in their activity endeavors (although a lot of this one can be done through observation and actually reading through the nursing assessments to see the physical and mental limitations that may be challenging your resident.)  Some of these things will be apparent at admission but some will not.  That's why care plans grow and change.</p>
-            </div>
+            </div> : null}
             {
             //#region Switch Router
             }
@@ -66,16 +76,16 @@ const AssessmentExplained = () =>{
             {
                 //#region Pagination for Tutorial Page
             }
+
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
-                        {/* <li class="page-item"><Link class="page-link" to ="/Assessment_Explained" >0</Link></li> */}
-                        <li class="page-item"><Link class="page-link" to ="/Sample_Admission_Assessment" >1</Link></li>
-                        <li class="page-item"><Link class="page-link" to ="/Interpret_Admission_Assessment" >2</Link></li>
-                        <li class="page-item"><Link class="page-link" to ="/Example_Assessment" >3</Link></li>
-                        <li class="page-item"><Link class="page-link" to ="/Care_Plan_Basics" >4</Link></li>
-                        <li class="page-item"><Link class="page-link" to ="/Interventions" >5</Link></li>
-                        <li class="page-item"><Link class="page-link" to ="/Update_Assessments" >6</Link></li>
-                        <li class="page-item"><Link class="page-link" to ="/Ending_Notes">7</Link></li>
+                        <li class="page-item"><Link class="page-link" onClick={onClick} to ="/Sample_Admission_Assessment" >1</Link></li>
+                        <li class="page-item"><Link class="page-link" onClick={onClick} to ="/Interpret_Admission_Assessment" >2</Link></li>
+                        <li class="page-item"><Link class="page-link" onClick={onClick} to ="/Example_Assessment" >3</Link></li>
+                        <li class="page-item"><Link class="page-link" onClick={onClick} to ="/Care_Plan_Basics" >4</Link></li>
+                        <li class="page-item"><Link class="page-link" onClick={onClick} to ="/Interventions" >5</Link></li>
+                        <li class="page-item"><Link class="page-link" onClick={onClick} to ="/Update_Assessments" >6</Link></li>
+                        <li class="page-item"><Link class="page-link" onClick={onClick} to ="/Ending_Notes">7</Link></li>
                     </ul>
                 </nav>
                 </Router>
