@@ -3,3 +3,18 @@
 html{
     background-color: $second-teal;
 }
+// html{
+//     position: relative;
+//     ::before{
+//         content: "";
+//         background-image: url(/src/Components/Images/succulentCenter.jpg);
+//         background-size: cover;
+//         position: absolute;
+//         top: 15vh;
+//         right: 0px;
+//         left: 0px;
+//         bottom:0px;
+//         opacity: .5;
+//         z-index: -2;
+//     }
+// }

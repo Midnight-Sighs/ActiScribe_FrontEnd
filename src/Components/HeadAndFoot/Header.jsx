@@ -17,18 +17,14 @@ function Header() {
                             <h1 className = "title">Actiscribe</h1>
                         </div>
                         <div className = "col-2 log-reg">
-                            <span><Link to="/login">Login</Link>   <Link to ='/register'>Register</Link>  <Link to = '/'>Home</Link></span>
+                            <span><Link to="/login">Login</Link>   <Link to ='/register'>Register</Link>  <Link to = '/Home'>Home</Link></span>
                         </div>
                 </div>        
             </div>
 
                 <Switch>
-                    <Route path='/login'>
-                        <Login />
-                    </Route>
-                    <Route path='/register'>
-                        <Register />
-                    </Route>
+                    <Route path='/login' component={Login} />
+                    <Route path='/register' component={Register} />
                 </Switch>
             </Router>
 
