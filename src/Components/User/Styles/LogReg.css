@@ -1,2 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
+.log-reg-form-label {
+  color: #b47f60;
+  padding-right: 2rem;
+}
+
+.log-reg-form-input {
+  background-color: #003235;
+  border-radius: 10px;
+  padding: .25rem;
+  margin: .25rem;
+  width: 20rem;
+  color: #84c6b8;
+}
+
+.log-reg-form-input:focus {
+  background-color: #2e1e15;
+  border: 5px solid #b47f60;
+}
+
+.log-reg-error {
+  color: #ec5d1b;
+}
+
+.log-reg-btn {
+  border-radius: 10px;
+  width: 9rem;
+  margin-top: .5rem;
+}
 /*# sourceMappingURL=LogReg.css.map */

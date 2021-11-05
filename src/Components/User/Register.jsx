@@ -85,33 +85,60 @@ class Register extends Component {
     render() { 
         return ( 
             <>
-                <div className = 'main-body'>
-                    <form onSubmit ={this.handleSubmit}>
-                        <label className='form-label'>User Name</label>
-                        <input className = 'form-input' name='username' onChange={this.handleChange} />
-                        {this.state.errors.username ? <span className="error"> {this.state.errors.username}</span> : null}
-
-                        <label className = 'form-label'>Password</label>
-                        <input className='form-input' type='password' name='password' onChange={this.handleChange} />
-                        {this.state.errors.password ? <span className = "error"> {this.state.errors.password}</span>:null}
-
-                        <label className = 'form-label'>Re-Enter Password</label>
-                        <input className = 'form-input'type='password' name='verify_password' onChange={this.handleChange} />
-                        {this.state.errors.verify_password ? <span className = "error">{this.state.errors.verify_password}</span> : null}
-                        
-                        <label className='form-label'>E-mail</label>
-                        <input className ='form-input' type='email' name='email' onChange={this.handleChange} />
-
-                        <label className = 'first_name'>First Name</label>
-                        <input className='form-input' name='first_name' onChange={this.handleChange} />
-
-                        <label className='last_name'>Last Name</label>
-                        <input className='form-input' name='last_name' onChange={this.handleChange} />
-
-                        <label className='middle_name'>Middle Name</label>
-                        <input className='form-input' name='middle_name' onChange={this.handleChange} />
-                    
-                        {this.state.errors.error ? <button type="submit" disabled>Register</button> : <button type="submit">Register</button>}
+                <div>
+                    <form className = 'main-reg' onSubmit ={this.handleSubmit}>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><label className='log-reg-form-label'>User Name</label></td>
+                                    <td><input className = 'log-reg-form-input' name='username' onChange={this.handleChange} /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">    
+                                        {this.state.errors.username ? <span className="log-reg-error"> {this.state.errors.username}</span> : null}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label className = 'log-reg-form-label'>Password</label></td>
+                                    <td><input className='log-reg-form-input' type='log-reg-password' name='password' onChange={this.handleChange} /></td>
+                                </tr>
+                                <tr>  
+                                    <td colspan="2">
+                                        {this.state.errors.password ? <span className = "error"> {this.state.errors.password}</span>:null}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label className = 'log-reg-form-label'>Re-Enter Password</label></td>
+                                    <td><input className = 'log-reg-form-input'type='password' name='verify_password' onChange={this.handleChange} /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">    
+                                        {this.state.errors.verify_password ? <span className = "error">{this.state.errors.verify_password}</span> : null}
+                                    </td>
+                                </tr>
+                                <tr>  
+                                    <td><label className='log-reg-form-label'>E-mail</label></td>
+                                    <td><input className ='log-reg-form-input' type='email' name='email' onChange={this.handleChange} /></td>
+                                </tr>
+                                <tr>
+                                    <td><label className = 'log-reg-form-label'>First Name</label></td>
+                                    <td><input className='log-reg-form-input' name='first_name' onChange={this.handleChange} /></td>
+                                </tr>
+                                <tr>
+                                    <td><label className='log-reg-form-label'>Last Name</label></td>
+                                    <td><input className='log-reg-form-input' name='last_name' onChange={this.handleChange} /></td>
+                                </tr>
+                                <tr>
+                                    <td><label className='log-reg-form-label'>Middle Name</label></td>
+                                    <td><input className='log-reg-form-input' name='middle_name' onChange={this.handleChange} /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        {this.state.errors.error ? <button className="log-reg-btn" type="submit" disabled>Register</button> : <button className="log-reg-btn" type="submit">Register</button>}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </form>
 
                 </div>

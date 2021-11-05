@@ -1,1 +1,27 @@
 @import '../../Utilities/variables';
+
+
+.log-reg-form-label{
+    color: $warm-brown;
+    padding-right: 2rem;
+}
+.log-reg-form-input{
+    background-color: $dark-teal;
+    border-radius: 10px;
+    padding: .25rem;
+    margin: .25rem;
+    width: 20rem;
+    color: $light-teal;
+        &:focus{
+            background-color: $dk-warm-brown;
+            border: 5px solid $warm-brown;
+        }
+}
+.log-reg-error{
+    color: $error-color
+}
+.log-reg-btn{
+    border-radius: 10px;
+    width: 9rem;
+    margin-top: .5rem;
+}

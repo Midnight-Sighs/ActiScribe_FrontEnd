@@ -117,7 +117,9 @@ a{
 #nav-tab{
     border-bottom: none;
 }
-.nav-tabs{
+button{
+    background-color: $dark-teal;
+    color: $light-teal;
     border: none;
-    border-bottom: none;
+    padding: .5rem;
 }

@@ -11,9 +11,7 @@ function AnonSubNav() {
     return ( 
         <>
         <Router>
-        {
-            //#region Nav-Pills
-        }
+        
         <div className = "row">
             <div className="col-1 col-sm-row tutorial-nav">
                 <div class="d-flex align-items-start">
@@ -26,12 +24,7 @@ function AnonSubNav() {
                     </div>
                 </div>
             </div>
-        {
-            //#endregion
-        }
-        {
-            //#region Switch Router
-        }
+     
             <div className ="col-11">
                 <Switch>
                     <Route path="/Tutorials_Home">
@@ -51,9 +44,6 @@ function AnonSubNav() {
                     </Route>
                 </Switch>
             </div>
-        {
-            //#endregion
-        }
         </div>
         </Router>
         </>

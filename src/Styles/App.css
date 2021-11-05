@@ -129,8 +129,10 @@ a:hover {
   border-bottom: none;
 }
 
-.nav-tabs {
+button {
+  background-color: #003235;
+  color: #84c6b8;
   border: none;
-  border-bottom: none;
+  padding: .5rem;
 }
 /*# sourceMappingURL=App.css.map */
