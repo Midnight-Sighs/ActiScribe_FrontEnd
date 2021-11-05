@@ -6,7 +6,7 @@ function Header() {
         <>
             <div className ="title-bar">
                 <div className="row">
-                        <div className = "col-2">
+                        <div className = "col-1">
                             <span></span>
                         </div>
                         <div className="col-8">

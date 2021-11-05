@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
 .anon-page {
   background-color: #84c6b8;
   position: relative;
@@ -40,5 +41,84 @@
 
 .tutorial-nav .nav-link:focus {
   color: #f1a761;
+}
+
+.home-container {
+  height: 30rem;
+  border-top: dashed #003235;
+}
+
+.home-container .random-img {
+  margin-top: 4rem;
+  width: 45rem;
+  height: 25rem;
+  background-attachment: cover;
+  background-position: absolute;
+}
+
+.home-container .welcome-msg {
+  font-family: "Lobster Two", cursive;
+  font-size: 5rem;
+}
+
+.home-container .quote-msg {
+  font-family: "Parisienne", cursive;
+  margin-left: 8rem;
+  -webkit-animation: color-change 5s infinite;
+          animation: color-change 5s infinite;
+  font-size: 3rem;
+}
+
+.home-container .author-msg {
+  font-family: "Parisienne", cursive;
+  margin-left: 20rem;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: #0b2f3d;
+  }
+  20% {
+    color: #533fc5;
+  }
+  35% {
+    color: #ae63eb;
+  }
+  60% {
+    color: #f78ee9;
+  }
+  70% {
+    color: #ae63eb;
+  }
+  85% {
+    color: #533fc5;
+  }
+  100% {
+    color: #0b2f3d;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #0b2f3d;
+  }
+  20% {
+    color: #533fc5;
+  }
+  35% {
+    color: #ae63eb;
+  }
+  60% {
+    color: #f78ee9;
+  }
+  70% {
+    color: #ae63eb;
+  }
+  85% {
+    color: #533fc5;
+  }
+  100% {
+    color: #0b2f3d;
+  }
 }
 /*# sourceMappingURL=AnonBody.css.map */

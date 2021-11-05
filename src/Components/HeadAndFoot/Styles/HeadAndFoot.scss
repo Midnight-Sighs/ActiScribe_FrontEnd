@@ -2,12 +2,16 @@
 
 .title-bar{
     height: 15vh;
-    width:100vw;
+    width:99vw;
     background-color: $dark-teal;
 }
 .title{
     padding-top:.5em;
+    position: absolute;
+    top: -2.5rem;
     color: $warm-brown;
+    font-family: $quote-font;
+    font-size: 5rem;
 }
 .log-reg{
     padding-top:1em;

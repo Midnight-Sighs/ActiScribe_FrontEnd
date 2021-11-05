@@ -38,3 +38,37 @@
         color: $light-yellow;
     }
 }
+.home-container{
+    height: 30rem;
+    border-top: dashed $dark-teal;
+    & .random-img{
+        margin-top: 4rem;
+        width: 45rem;
+        height: 25rem;
+        background-attachment: cover;
+        background-position: absolute;
+    }
+    & .welcome-msg{
+        font-family: $heading-font;
+        font-size: 5rem;
+    }
+    & .quote-msg{
+        font-family: $quote-font;
+        margin-left: 8rem;
+        animation: color-change 5s infinite;
+        font-size: 3rem;
+    }
+    & .author-msg{
+        font-family: $quote-font;
+        margin-left: 20rem;
+    }
+}
+@keyframes color-change {
+    0%{ color: rgb(11, 47, 61)}
+    20%{color:rgb(83, 63, 197) }
+    35%{color: rgb(174, 99, 235)}
+    60%{color: rgb(247, 142, 233)}
+    70%{color: rgb(174, 99, 235)}
+    85%{color:rgb(83, 63, 197) }
+    100%{color: rgb(11, 47, 61)}
+}
