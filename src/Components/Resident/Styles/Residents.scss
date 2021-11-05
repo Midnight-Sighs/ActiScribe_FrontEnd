@@ -1,0 +1,16 @@
+@import '../../Utilities/variables';
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap');
+
+.res-table{
+    margin-left: 4rem;
+    margin-top: 2rem;
+    & .name-col{
+        width: 15rem;
+    }
+    & .iden-col{
+        width: 10rem;
+    }
+    & .ass-col{
+        width: 10rem;
+    }
+}

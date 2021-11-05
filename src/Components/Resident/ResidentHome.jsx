@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import ResidentSubNav from './ResidentSubNav';
 
 class ResidentHome extends Component {
     constructor(props) {
@@ -32,10 +33,34 @@ class ResidentHome extends Component {
         })
     }
 
+    newResident = async(newResident) =>{
+        const jwt = localStorage.getItem('token')
+        await axios.post('http://127.0.0.1:8000/api/actiscribe/residents/', newResident, {headers: {Authorization: 'Bearer '+ jwt}});  
+        this.getAllActiveResidents()
+    }
+
+    editResident = async(resident, resident_id)=>{
+        const jwt = localStorage.getItem('token')
+        await axios.put(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});  
+        this.getAllActiveResidents()
+    }
+
+    archiveResident = async(resident, resident_id)=>{
+        const jwt = localStorage.getItem('token')
+        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});  
+        this.getAllActiveResidents()
+    }
+
+    singleResident = async(resident, resident_id)=>{
+        const jwt = localStorage.getItem('token')
+        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});
+        
+    }
+
     render() { 
         return ( 
             <>
-
+                <ResidentSubNav residents={this.state.residents} archived={this.state.archivedResidents} />
             </>
         );
     }

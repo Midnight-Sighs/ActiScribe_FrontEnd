@@ -89,7 +89,9 @@ a:hover {
 #v-pills-feat-dow-tab,
 #v-pills-feat-track-tab,
 #v-pills-feat-screens-tab,
-#v-pills-feat-home-tab {
+#v-pills-feat-home-tab,
+#v-pills-all-res-tab,
+#v-pills-arch-res-tab {
   background-color: #003235;
   margin-top: .5rem;
   width: 7.5rem;

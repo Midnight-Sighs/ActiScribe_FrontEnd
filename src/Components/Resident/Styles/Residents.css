@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
+.res-table {
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+
+.res-table .name-col {
+  width: 15rem;
+}
+
+.res-table .iden-col {
+  width: 10rem;
+}
+
+.res-table .ass-col {
+  width: 10rem;
+}
+/*# sourceMappingURL=Residents.css.map */

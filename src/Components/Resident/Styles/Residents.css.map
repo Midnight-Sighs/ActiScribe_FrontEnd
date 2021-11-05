@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,wHAAI;ADCZ,OAAO,CAAC,wHAAI;AAEZ,AAAA,UAAU,CAAA;EACN,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,IAAI;CAUnB;;AAZD,AAGI,UAHM,CAGJ,SAAS,CAAA;EACP,KAAK,EAAE,KAAK;CACf;;AALL,AAMI,UANM,CAMJ,SAAS,CAAA;EACP,KAAK,EAAE,KAAK;CACf;;AARL,AASI,UATM,CASJ,QAAQ,CAAA;EACN,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "Residents.scss",
+        "../../Utilities/_variables.scss"
+    ],
+    "names": [],
+    "file": "Residents.css"
+}
