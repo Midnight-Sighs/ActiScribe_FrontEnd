@@ -1,5 +1,4 @@
 import React from 'react';
-import ResidentSubNav from './ResidentSubNav';
 import './Styles/Residents.css'
 
 const AllResidents=(props)=> {
