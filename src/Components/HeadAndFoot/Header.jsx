@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import Register from '../User/Register'
 import Login from '../User/Login'
 
-function Header() {
+const Header=(props)=> {
     return ( 
         <>
             <Router>
@@ -17,13 +17,13 @@ function Header() {
                             <h1 className = "title">Actiscribe</h1>
                         </div>
                         <div className = "col-2 log-reg">
-                            <span><Link to="/login">Login</Link>   <Link to ='/register'>Register</Link>  <Link to = '/Home'>Home</Link></span>
+                            {props.loggedIn ? null: <span><Link to="/login">Login</Link></span>}  <span> <Link to ='/register'>Register</Link>  <Link to = '/'>Home</Link> </span> {props.loggedIn ? <span><a href="/" className = "header-link" onClick={props.logout}>Logout</a></span>: null}
                         </div>
                 </div>        
             </div>
 
                 <Switch>
-                    <Route path='/login' component={Login} />
+                    <Route path='/login' render={() => <Login login={props.login} />} />
                     <Route path='/register' component={Register} />
                 </Switch>
             </Router>

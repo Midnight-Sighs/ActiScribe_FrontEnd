@@ -74,7 +74,7 @@ function ExampleAssessment() {
                 </table>
             </div>
             <div className= "col-5">
-                <img className="tea-herb-img" src={teaAndHerbs}></img>
+                <img className="tea-herb-img" src={teaAndHerbs} alt="Relaxing Cup of Tea"></img>
             </div>
         </div>
             <table className = "table-bottom">

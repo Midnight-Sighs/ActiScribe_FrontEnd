@@ -6,24 +6,26 @@ import '../src/Styles/App.css'
 import AnonBody from './Components/Anon/AnonBody'
 import Header from './Components/HeadAndFoot/Header'
 import Home from './Components/Anon/Home/Home'
+import NavBar from './Components/HeadAndFoot/NavBar';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
         user: [],
+        loggedIn: false,
         userId: '',
         localToken: localStorage.token,
-        token: [],
     }
   }
 
-  componentDidMound(){
+  componentDidMount(){
     const jwt = localStorage.getItem('token');
     try{
       const user = jwtDecode(jwt);
       this.setState({
-        user:user
+        user:user,
+        loggedIn: true
       })
     }
     catch{
@@ -33,27 +35,37 @@ class App extends Component {
 
   userLogin =async(login)=>{
     try{
-      let response = axios.get('http://127.0.0.1:8000/api/auth/login/', login)
+      let response = await axios.post('http://127.0.0.1:8000/api/auth/login/', login)
       this.setState({
         token: response.data.token,
       });
-      localStorage.setItem('token', response.data.token)
+      localStorage.setItem('token', response.data.access)
     }
     catch{
       console.log("Improper Credentials")
     }
   }
 
+  logout = () =>{
+    localStorage.removeItem('token')
+    this.setState({
+      user: [],
+      loggedIn: false,
+      localToken: '',
+    })
+  }
+
 
   render() { 
     return ( 
         <>
-        <Header />
+        <Header login={this.userLogin} logout={this.logout} loggedIn={this.state.loggedIn} />
+        <NavBar />
         <div className="app-background">
           <Router>
             <Switch>
-              <Route path="/Home" component={Home} />
-              <Route path="/Anon" component={AnonBody} />
+              {this.state.loggedIn ? <Route exact path="/" component={Home} /> :
+              <Route exact path="/" component={AnonBody} />}
             </Switch>
           </Router>
         </div>

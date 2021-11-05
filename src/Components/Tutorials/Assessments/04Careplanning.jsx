@@ -21,7 +21,7 @@ function Careplanning() {
                         </ol>
                 </div>
                 <div className="col-4">
-                    <img src={notebookPlantCoffee}></img>
+                    <img src={notebookPlantCoffee} alt="A plant with a cup of coffee"></img>
                 </div>
             </div>
                 <p>It has also been more recently adopted that these imply that there is a partnership between staff and residents - you could design an arbitrary care plan and dictate their care needs and what they would benefit from, all while treating a person with dignity, but to truly adhere to person-centered care, you must do it with your resident or their representative to best provide for each person.</p>
