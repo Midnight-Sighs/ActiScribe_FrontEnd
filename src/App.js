@@ -14,12 +14,16 @@ class App extends Component {
     this.state = { 
         user: [],
         loggedIn: false,
-        userId: '',
         localToken: localStorage.token,
+        userDetails: [],
     }
   }
 
   componentDidMount(){
+    this.decodeToken()
+  }
+
+  decodeToken=()=>{
     const jwt = localStorage.getItem('token');
     try{
       const user = jwtDecode(jwt);
@@ -27,6 +31,7 @@ class App extends Component {
         user:user,
         loggedIn: true
       })
+      this.getUserDetails();
     }
     catch{
       console.log("No token in local storage.  Please log in.")
@@ -40,6 +45,7 @@ class App extends Component {
         token: response.data.token,
       });
       localStorage.setItem('token', response.data.access)
+      this.decodeToken();
     }
     catch{
       console.log("Improper Credentials")
@@ -55,12 +61,20 @@ class App extends Component {
     })
   }
 
+  getUserDetails = async()=>{
+    const jwt = localStorage.getItem('token')
+    let response = await axios.get('http://127.0.0.1:8000/api/auth/user/3/', {headers: {Authorization: 'Bearer '+ jwt}});
+    this.setState({
+      userDetails : response.data
+    })
+  }
+
 
   render() { 
     return ( 
         <>
         <Header login={this.userLogin} logout={this.logout} loggedIn={this.state.loggedIn} />
-        <NavBar />
+        {this.state.loggedIn ? <NavBar /> : null}
         <div className="app-background">
           <Router>
             <Switch>
