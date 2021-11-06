@@ -10,6 +10,8 @@ class ResidentHome extends Component {
             archivedResidents: [],
             activeResident: {},
             activeId:'',
+            activeNotes:[],
+            activeParticipation:[],
          }
     }
 
@@ -18,11 +20,16 @@ class ResidentHome extends Component {
         this.getAllArchivedResidents()
     }
 
+
     setActiveResident=(resident)=>{
         let activeResident = resident
         this.setState({
             activeResident: activeResident,
             activeId: activeResident.id
+        },()=>{
+            debugger
+            this.notesByResident(this.state.activeId)
+            this.participationByResident(this.state.activeId)
         })
     }
 
@@ -69,13 +76,24 @@ class ResidentHome extends Component {
 
     notesByResident = async(resident_id)=>{
         const jwt = localStorage.getItem('token')
-        await axios.get(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/notes/`, {headers: {Authorization: 'Bearer '+ jwt}});
+        let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/notes/`, {headers: {Authorization: 'Bearer '+ jwt}});
+        this.setState({
+            activeNotes: response.data
+        })
+    }
+
+    participationByResident = async(resident_id)=>{
+        const jwt = localStorage.getItem('token')
+        let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/participation/`, {headers: {Authorization: 'Bearer '+ jwt}});
+        this.setState({
+            activeParticipation: response.data
+        })
     }
 
     render() { 
         return ( 
             <>
-                <ResidentSubNav activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
+                <ResidentSubNav notes={this.state.activeNotes} participation={this.state.activeParticipation} activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
             </>
         );
     }
