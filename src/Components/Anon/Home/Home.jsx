@@ -28,6 +28,7 @@ const Home =()=> {
 
     return ( 
         <>
+        <NavBar />
             <div className = 'row home-container'>
                 <div className = "col-2"></div>
                 <div className = "col-8"> 

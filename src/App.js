@@ -7,6 +7,7 @@ import AnonBody from './Components/Anon/AnonBody'
 import Header from './Components/HeadAndFoot/Header'
 import Home from './Components/Anon/Home/Home'
 import NavBar from './Components/HeadAndFoot/NavBar';
+import ResidentDetail from './Components/Resident/ResidentDetail'
 
 class App extends Component {
   constructor(props) {
@@ -43,9 +44,10 @@ class App extends Component {
       let response = await axios.post('http://127.0.0.1:8000/api/auth/login/', login)
       this.setState({
         token: response.data.token,
-      });
+      }, ()=>{
       localStorage.setItem('token', response.data.access)
       this.decodeToken();
+      });
     }
     catch{
       console.log("Improper Credentials")
@@ -74,10 +76,10 @@ class App extends Component {
     return ( 
         <>
         <Header login={this.userLogin} logout={this.logout} loggedIn={this.state.loggedIn} />
-        {this.state.loggedIn ? <NavBar /> : null}
         <div className="app-background">
           <Router>
             <Switch>
+
               {this.state.loggedIn ? <Route exact path="/" component={Home} /> :
               <Route exact path="/" component={AnonBody} />}
             </Switch>

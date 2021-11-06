@@ -8,13 +8,22 @@ class ResidentHome extends Component {
         this.state = { 
             residents: [],
             archivedResidents: [],
-
+            activeResident: {},
+            activeId:'',
          }
     }
 
     componentDidMount(){
         this.getAllActiveResidents()
         this.getAllArchivedResidents()
+    }
+
+    setActiveResident=(resident)=>{
+        let activeResident = resident
+        this.setState({
+            activeResident: activeResident,
+            activeId: activeResident.id
+        })
     }
 
     getAllActiveResidents =async()=>{
@@ -58,10 +67,15 @@ class ResidentHome extends Component {
         
     }
 
+    notesByResident = async(resident_id)=>{
+        const jwt = localStorage.getItem('token')
+        await axios.get(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/notes/`, {headers: {Authorization: 'Bearer '+ jwt}});
+    }
+
     render() { 
         return ( 
             <>
-                <ResidentSubNav residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
+                <ResidentSubNav activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
             </>
         );
     }

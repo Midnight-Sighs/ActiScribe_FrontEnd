@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import AllResidents from './AllResidents';
 import NewResident from './NewResident';
+import ResidentDetail from './ResidentDetail'
 
 const ResidentSubNav=(props)=>{
     return ( 
@@ -20,15 +21,20 @@ const ResidentSubNav=(props)=>{
         
                 <div className ="col-10">
                     <Switch>
-                        <Route path="/All_Residents">
-                            <AllResidents residents={props.residents} />
+                        <Route exact path="/All_Residents">
+                            <AllResidents {...props} setResident={props.setResident} residents={props.residents} />
                         </Route>
-                        <Route path="/Archived_Residents">
-                            <AllResidents residents={props.archived} />
+                        <Route exact path="/Archived_Residents">
+                            <AllResidents {...props} setResident={props.setResident} residents={props.archived} />
                         </Route>
-                        <Route path="/New_Resident">
+                        <Route exact path="/New_Resident">
                             <NewResident newResident={props.newResident} />
                         </Route>
+                        <Route exact path="/Resident_Detail">
+                            <ResidentDetail {...props} activeResident={props.activeResident}/>
+                        </Route>
+ 
+                
                     </Switch>
                 </div>
             </div>

@@ -19,9 +19,9 @@ function AnonMainNav() {
                     </nav>
                 </div>
             </div>
-            <Route path="/" component={Home} />
-            <Route path="/Tutorials_Home" component={TutorialSubNav} />
-            <Route path="/Features_Home" component={FeatureSubNav} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Tutorials_Home" component={TutorialSubNav} />
+            <Route exact path="/Features_Home" component={FeatureSubNav} />
         </Router>
 
         

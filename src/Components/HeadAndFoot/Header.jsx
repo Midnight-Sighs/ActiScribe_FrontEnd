@@ -3,6 +3,9 @@ import './Styles/HeadAndFoot.css'
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import Register from '../User/Register'
 import Login from '../User/Login'
+import NavBar from './NavBar'
+import Home from '../Anon/Home/Home'
+import Anon from '../Anon/AnonBody'
 
 const Header=(props)=> {
     return ( 
@@ -21,10 +24,12 @@ const Header=(props)=> {
                         </div>
                 </div>        
             </div>
+            <NavBar />
 
                 <Switch>
-                    <Route path='/login' render={() => <Login login={props.login} />} />
-                    <Route path='/register' component={Register} />
+                    <Route exact path='/login' render={() => <Login login={props.login} />} />
+                    <Route exact path='/register' component={Register} />
+                    
                 </Switch>
             </Router>
 
