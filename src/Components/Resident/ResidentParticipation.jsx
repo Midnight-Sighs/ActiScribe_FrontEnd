@@ -1,6 +1,18 @@
-import React from 'react';
+import { render } from '@testing-library/react';
+import React, {useState, useEffect} from 'react';
 
 const ResidentParticipation=(props)=>{
+    
+    useEffect(()=>{
+
+    }, [props])
+
+    
+    if(props.participation.length == 0){
+        return(
+            <h3>There is no listed participation</h3>
+        )
+    }
     return ( 
         <>
         <div className="row">
@@ -45,7 +57,7 @@ const ResidentParticipation=(props)=>{
             </div>
         </div>
         </>
-     );
+    );
 }
 
 export default ResidentParticipation;
