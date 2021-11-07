@@ -80,7 +80,7 @@ class EditResident extends Component {
                         </tr>
                         <tr>
                             <td colSpan="2">
-                                <button type="submit">Edit</button>
+                                <button type="submit">Save Edits</button>
                             </td>
                         </tr>
                     </tbody>

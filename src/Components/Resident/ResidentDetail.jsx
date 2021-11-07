@@ -10,7 +10,16 @@ const ResidentDetail=(props)=> {
     
     const[notes, setNotes]=useState(props.notes)
     const[participation, setParticipation]=useState(props.participation)
-   
+    const[editHS, setEditHS]=useState(false)
+    const[notesHS, setNotesHS]=useState(false)
+
+    const editOnClick=()=>{
+        setEditHS(!editHS)
+    }
+
+    const notesOnClick=()=>{
+        setNotesHS(!notesHS)
+    }
 
     useEffect(()=>{
         setNotes(props.notes)
@@ -23,8 +32,14 @@ const ResidentDetail=(props)=> {
                 <h1>{props.activeResident.r_first_name} {props.activeResident.r_last_name}</h1>
                     <Notes  notes={notes}/>
                     <ResidentParticipation participation={participation} />
-                    <Modal resident={props.activeResident} />
-                    <NewNote resident={props.activeResident.id}/>
+                    <button onClick={editOnClick}>Edit Resident Details</button>
+                    <Modal onClick={editOnClick} hideShow={editHS} >
+                        <EditResident resident={props.activeResident} />
+                    </Modal>
+                    <button onClick={notesOnClick}>New Notes</button>
+                    <Modal onClick={notesOnClick} hideShow={notesHS}>
+                        <NewNote resident={props.activeResident.id}/>
+                    </Modal>
             </div>
         </>
      );

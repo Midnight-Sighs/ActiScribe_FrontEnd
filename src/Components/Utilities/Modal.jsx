@@ -1,25 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Utilities.css'
-import EditResident from '../Resident/EditResident';
 
 const Modal=(props)=> {
     
-    const[hideShow, setHideShow]=useState(false)
-    const[editResident, setEditResident]=useState(false)
-    const[editActivity, setEditActivity]=useState(false)
 
-    const onClick =()=>{
-        setHideShow(!hideShow)
-    }
+    useEffect(()=>{
+
+    },[])
 
     return ( 
         <>
-            {hideShow? null: <button onClick={onClick}>Edit</button>}
-            {hideShow ? 
+            {/* {hideShow? null: <button onClick={onClick}>Edit</button>} */}
+            {props.hideShow ? 
             <div className = "modal-wrapper">
                 <div className="modal-body">
-                    <EditResident resident={props.resident}/>
-                    <button onClick={onClick}>Close Modal</button>
+                    {props.children}
+                    <br/>
+                    <button onClick={props.onClick}>Close Modal</button>
                 </div>
             </div>
             
