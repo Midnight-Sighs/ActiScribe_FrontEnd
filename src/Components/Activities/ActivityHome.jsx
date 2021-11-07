@@ -36,7 +36,7 @@ class ActivityHome extends Component {
     render() { 
         return ( 
             <>
-                <ActivitySubNav />
+                <ActivitySubNav allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
             </>
          );
     }
