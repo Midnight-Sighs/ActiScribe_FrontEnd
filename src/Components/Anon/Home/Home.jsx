@@ -11,19 +11,19 @@ const Home =()=> {
     const[quoteImg, setQuoteImg]=useState('')
     const[success, setSuccess]=useState(false)
 
-    const feelGoodQuote = async()=>{
-        let response = await axios.get("https://quotes.rest/qod?language=en")
-        if(response !== undefined){
-            setQuote(response.data.contents.quotes[0].quote)
-            setWhoSaid(response.data.contents.quotes[0].author)
-            setQuoteImg(response.data.contents.quotes[0].background)
-             setSuccess(true)
-        }
-    }
+    // const feelGoodQuote = async()=>{
+    //     let response = await axios.get("https://quotes.rest/qod?language=en")
+    //     if(response !== undefined){
+    //         setQuote(response.data.contents.quotes[0].quote)
+    //         setWhoSaid(response.data.contents.quotes[0].author)
+    //         setQuoteImg(response.data.contents.quotes[0].background)
+    //          setSuccess(true)
+    //     }
+    // }
 
-    useEffect(()=>{
-        feelGoodQuote()
-    }, [])
+    // useEffect(()=>{
+    //     feelGoodQuote()
+    // }, [])
 
 
     return ( 

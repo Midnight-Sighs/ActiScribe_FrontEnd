@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import ResidentSubNav from './ResidentSubNav';
 
+
 class ResidentHome extends Component {
     constructor(props) {
         super(props);

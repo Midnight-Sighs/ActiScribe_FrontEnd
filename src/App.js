@@ -5,7 +5,7 @@ import jwtDecode from 'jwt-decode';
 import '../src/Styles/App.css'
 import AnonBody from './Components/Anon/AnonBody'
 import Header from './Components/HeadAndFoot/Header'
-import Home from './Components/Anon/Home/Home'
+import ResidentHome from'./Components/Resident/ResidentHome'
 
 class App extends Component {
   constructor(props) {
@@ -78,7 +78,7 @@ class App extends Component {
           <Router>
             <Switch>
 
-              {this.state.loggedIn ? <Route exact path="/" component={Home} /> :
+              {this.state.loggedIn ? <Route exact path="/" component={ResidentHome} /> :
               <Route exact path="/" component={AnonBody} />}
             </Switch>
           </Router>
