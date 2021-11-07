@@ -3,36 +3,47 @@ import React from 'react';
 const ResidentParticipation=(props)=>{
     return ( 
         <>
-        <table>
-            <tbody>
-                <tr>
-                    <th>Activity Name</th>
-                    <th colSpan="3">Dimensions of Wellness</th>
-                    <th>Date</th>
-                </tr>
+        <div className="row">
+            <div className="col-8">
+                <table>
                     <tr>
-                    {props.participation.activity.map((activity)=>{
-                        return(
-                            <>
-                            <td>{activity.name} </td>
-                            <td>{activity.dow_one}  </td>
-                            <td>{activity.dow_two} </td> 
-                            <td>{activity.dow_three} </td> 
-                            </>
-                        )
-                    })}
-                    {props.participation.participation.map((date)=>{
-                        return(
-        
-                            <td>
-                                {date.date}
-                            </td>
-                        )
-
-                    })}
+                        <th className='det-activity'>Activity Name</th>
+                        <th colSpan="3" className='det-dow'>Dimensions of Wellness</th>
                     </tr>
-            </tbody>
-        </table>
+                        {props.participation.activity.map((activity)=>{
+                            return(
+                            <tbody>
+                                <tr>
+                                    <td className="det-activity">{activity.name} </td>
+                                    <td className='det-dow'>{activity.dow_one}  </td>
+                                    <td className='det-dow'>{activity.dow_two} </td> 
+                                    <td className='det-dow'>{activity.dow_three} </td> 
+                                </tr>
+                            </tbody>
+                            )
+                        })}
+                </table>
+            </div>
+            <div className="col-2">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th className='det-date'>Date</th>
+                        </tr>
+                        {props.participation.participation.map((date)=>{
+                            return(
+                                <tr>
+                                    <td className ='det-date'>
+                                        {date.date}
+                                    </td>
+                                </tr>
+                            )
+
+                        })}
+                    </tbody>
+                </table>
+            </div>
+        </div>
         </>
      );
 }
