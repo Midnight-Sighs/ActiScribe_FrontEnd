@@ -8,7 +8,7 @@ class EditResident extends Component {
             r_first_name:"",
             r_last_name:"",
             r_other_identifier: "",
-            last_assessment: ""
+            last_assessment: "",
         }
     }
 
@@ -29,6 +29,12 @@ class EditResident extends Component {
         this.editResident(edits, this.props.resident.id)
     }
 
+    archiveOnClick =()=>{
+        let resident_id = this.props.resident.id
+        debugger
+        this.archiveResident(resident_id)
+    }
+
     componentDidMount=()=>{
         this.setState({
             r_first_name: this.props.resident.r_first_name,
@@ -41,6 +47,11 @@ class EditResident extends Component {
     editResident = async(resident, resident_id)=>{
         const jwt = localStorage.getItem('token')
         await axios.put(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});  
+    }
+
+    archiveResident = async(resident_id)=>{
+        const jwt = localStorage.getItem('token')
+        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, {headers: {Authorization: 'Bearer '+ jwt}});   
     }
 
     render() { 
@@ -69,12 +80,14 @@ class EditResident extends Component {
                         </tr>
                         <tr>
                             <td colSpan="2">
-                                <button>Edit</button>
+                                <button type="submit">Edit</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </form>
+            <p>This will change your resident to an archived status (if they're active).  This is used to remove your active resident but retain your statistics and records. If your resident is archived (extended stay somewhere else, readmission, etc), you can set their status to active again.</p>
+                <button type="button" onClick={this.archiveOnClick}>Resident Status</button>
             </>
          );
     }

@@ -2,12 +2,14 @@ import React, {useState, useEffect} from 'react';
 import Notes from '../Notes/Notes'
 import ResidentParticipation from '../Resident/ResidentParticipation'
 import EditResident from './EditResident';
+import Modal from '../Utilities/Modal'
 
 
 const ResidentDetail=(props)=> {
     
     const[notes, setNotes]=useState(props.notes)
     const[participation, setParticipation]=useState(props.participation)
+   
 
     useEffect(()=>{
         setNotes(props.notes)
@@ -21,6 +23,7 @@ const ResidentDetail=(props)=> {
                     <Notes  notes={notes}/>
                     <ResidentParticipation participation={participation} />
                     <EditResident resident={props.activeResident} />
+                   
             </div>
         </>
      );
