@@ -4,17 +4,29 @@ import ResidentSubNav from './ResidentSubNav';
 
 const ResidentDetail=(props)=> {
     
-    const[notes, setNotes]=useState('')
+    const[notes, setNotes]=useState(props.notes)
+    const[participation, setParticipation]=useState(props.participation)
 
     useEffect(()=>{
-
+        setNotes(props.notes)
+        setParticipation(props.participation)
     },[props])
+
 
     return ( 
         <>
             <div>
                 <h1>{props.activeResident.r_first_name} {props.activeResident.r_last_name}</h1>
-                    {props.notes.map((note)=>{
+                    {notes.map((note)=>{
+                        if(notes.legnth==0){
+                            return(
+                                <>
+                                <div>
+                                    <p>There are currently no notes for this resident.</p>
+                                </div>
+                                </>
+                            )
+                        }else{
                         return(
                             <>
                                 <div key={note.id}>
@@ -22,8 +34,17 @@ const ResidentDetail=(props)=> {
                                     <br />{note.note_date}</p>
                                 </div>
                             </>
-                        )})}
-                        {props.participation.activity.map((activity)=>{
+                        )}
+                    })}
+                        {participation.activity.map((activity)=>{
+                            if(participation.length == 0){
+                                return(
+                                    <div>
+                                        <p>No participation listed for this resident.</p>
+                                    </div>
+                                )
+                            }
+                            else{
                             return(
                                 <>
                                     <div>
@@ -33,18 +54,23 @@ const ResidentDetail=(props)=> {
                                         {activity.dow_three}  
                                     </div>
                                 </>
-                            )
+                            )}
                         })}
-                        {props.participation.participation.map((date)=>{
-                            return(
-                                <>
-                                    <div>
-                                        {date.date}
-                                    </div>
-                                </>
-                            )
-
-                        })}
+    
+                        {participation.participation.map((date)=>{
+                            if(participation.legnth == 0){
+                                return
+                            }
+                            else{
+                                return(
+                                    <>
+                                        <div>
+                                            {date.date}
+                                        </div>
+                                    </>
+                                )
+                            }
+                        })}         
             </div>
         </>
      );

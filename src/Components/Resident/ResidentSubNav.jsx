@@ -31,7 +31,7 @@ const ResidentSubNav=(props)=>{
                             <NewResident newResident={props.newResident} />
                         </Route>
                         <Route exact path="/Resident_Detail">
-                            <ResidentDetail {...props} notes={props.notes} participation={props.participation} activeResident={props.activeResident}/>
+                            <ResidentDetail {...props} edit={props.edit} archive={props.archive} notes={props.notes} participation={props.participation} activeResident={props.activeResident}/>
                         </Route>
  
                 
