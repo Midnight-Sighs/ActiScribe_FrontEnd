@@ -27,7 +27,6 @@ class ResidentHome extends Component {
             activeResident: activeResident,
             activeId: activeResident.id
         },()=>{
-            debugger
             this.notesByResident(this.state.activeId)
             this.participationByResident(this.state.activeId)
         })
