@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Notes from '../Notes/Notes'
 import ResidentParticipation from '../Resident/ResidentParticipation'
 import EditResident from './EditResident';
+import NewNote from '../Notes/NewNote';
 import Modal from '../Utilities/Modal'
 
 
@@ -23,7 +24,7 @@ const ResidentDetail=(props)=> {
                     <Notes  notes={notes}/>
                     <ResidentParticipation participation={participation} />
                     <EditResident resident={props.activeResident} />
-                   
+                    <NewNote resident={props.activeResident.id}/>
             </div>
         </>
      );

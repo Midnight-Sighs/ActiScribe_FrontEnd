@@ -6,8 +6,6 @@ import '../src/Styles/App.css'
 import AnonBody from './Components/Anon/AnonBody'
 import Header from './Components/HeadAndFoot/Header'
 import Home from './Components/Anon/Home/Home'
-import NavBar from './Components/HeadAndFoot/NavBar';
-import ResidentDetail from './Components/Resident/ResidentDetail'
 
 class App extends Component {
   constructor(props) {

@@ -51,14 +51,12 @@ class ResidentHome extends Component {
     newResident = async(newResident) =>{
         const jwt = localStorage.getItem('token')
         await axios.post('http://127.0.0.1:8000/api/actiscribe/residents/', newResident, {headers: {Authorization: 'Bearer '+ jwt}});  
-        debugger
         this.getAllActiveResidents()
     }
 
     singleResident = async(resident, resident_id)=>{
         const jwt = localStorage.getItem('token')
-        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});
-        
+        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}}); 
     }
 
     notesByResident = async(resident_id)=>{
