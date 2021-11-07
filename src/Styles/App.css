@@ -94,7 +94,8 @@ a:hover {
 #v-pills-arch-res-tab,
 #v-pills-new-res-tab,
 #v-pills-all-act-tab,
-#v-pills-dow-act-tab {
+#v-pills-dow-act-tab,
+#v-pills-new-act-tab {
   background-color: #003235;
   margin-top: .5rem;
   width: 7.5rem;

@@ -1,17 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
+import './Utilities.css'
+import EditResident from '../Resident/EditResident';
 
 const Modal=(props)=> {
     
-    const showHideClassName = props.show ? "modal display-block" :"modal display-none"
+    const[hideShow, setHideShow]=useState(false)
+    const[editResident, setEditResident]=useState(false)
+    const[editActivity, setEditActivity]=useState(false)
+
+    const onClick =()=>{
+        setHideShow(!hideShow)
+    }
 
     return ( 
         <>
-        <div className={showHideClassName}>
-            <section className="modal-main">
-                
-            </section>
-            <button onClick={props.close}></button>
-        </div>
+            {hideShow? null: <button onClick={onClick}>Edit</button>}
+            {hideShow ? 
+            <div className = "modal-wrapper">
+                <div className="modal-body">
+                    <EditResident resident={props.resident}/>
+                    <button onClick={onClick}>Close Modal</button>
+                </div>
+            </div>
+            
+            : null}
         </>
      );
 }

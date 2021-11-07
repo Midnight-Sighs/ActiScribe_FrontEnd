@@ -23,7 +23,7 @@ const ResidentDetail=(props)=> {
                 <h1>{props.activeResident.r_first_name} {props.activeResident.r_last_name}</h1>
                     <Notes  notes={notes}/>
                     <ResidentParticipation participation={participation} />
-                    <EditResident resident={props.activeResident} />
+                    <Modal resident={props.activeResident} />
                     <NewNote resident={props.activeResident.id}/>
             </div>
         </>
