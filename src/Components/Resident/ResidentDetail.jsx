@@ -12,6 +12,7 @@ const ResidentDetail=(props)=> {
     const[participation, setParticipation]=useState(props.participation)
     const[editHS, setEditHS]=useState(false)
     const[notesHS, setNotesHS]=useState(false)
+    const[assessmentHS, setAssessmentHS]=useState(false)
 
     const editOnClick=()=>{
         setEditHS(!editHS)
@@ -21,10 +22,18 @@ const ResidentDetail=(props)=> {
         setNotesHS(!notesHS)
     }
 
+    const assessmentOnClick=()=>{
+        setAssessmentHS(!assessmentHS)
+    }
+
     useEffect(()=>{
         setNotes(props.notes)
         setParticipation(props.participation)
     },[props])
+
+    if(props.activeResident == undefined){
+        return(<p>Error getting resident details.</p>)
+    }
 
     return ( 
         <>
@@ -40,6 +49,7 @@ const ResidentDetail=(props)=> {
                     <Modal onClick={notesOnClick} hideShow={notesHS}>
                         <NewNote resident={props.activeResident.id}/>
                     </Modal>
+                    <button onClick={assessmentOnClick}>View Assessment</button>
             </div>
         </>
      );

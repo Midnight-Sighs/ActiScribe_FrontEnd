@@ -22,11 +22,12 @@ class EditActivity extends Component {
     }
 
     archiveOnClick=()=>{
-        let activityId = this.props.activity.activityId
+        let activityId = this.props.activity.id
         this.archiveActivity(activityId)
     }
 
     archiveActivity=async(activityId)=>{
+        debugger
         const jwt = localStorage.getItem('token')
         await axios.patch(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/`, {headers: {Authorization: 'Bearer '+ jwt}});   
     }
@@ -43,8 +44,8 @@ class EditActivity extends Component {
             "dow_two": this.state.dow_two,
             "dow_three": this.state.dow_three,
         }
-        debugger
-        this.editActivity(editActivity, this.props.activity.Id)
+
+        this.editActivity(editActivity, this.props.activity.id)
     }
 
     handleChange=(event)=>{
@@ -61,7 +62,7 @@ class EditActivity extends Component {
                 <label className = "edit-act-label">Activity Name</label>
                 <input className = "edit-act-label" name="name" onChange={this.handleChange} value={this.state.name}/>
                 <select name="dow_one" onChange={e=>this.setState({dow_one: e.currentTarget.value})}>
-                    <option value="" selected disabled hiddden>{this.state.dow_one}</option>
+                    <option value="" defaultValue disabled hiddden>{this.state.dow_one}</option>
                     <option value="Social">Social</option>
                     <option value="Physical">Physical</option>
                     <option value="Emotional">Emotional</option>
@@ -74,7 +75,7 @@ class EditActivity extends Component {
                     <option value="Sensory">Sensory</option>
                 </select>
                 <select name="dow_two" onChange={e=>this.setState({dow_two: e.currentTarget.value})}>
-                    <option value="" selected disabled hiddden>{this.state.dow_two}</option>
+                    <option value="" defaultValue disabled hiddden>{this.state.dow_two}</option>
                     <option value=""> --- </option>
                     <option value="Social">Social</option>
                     <option value="Physical">Physical</option>
@@ -88,7 +89,7 @@ class EditActivity extends Component {
                     <option value="Sensory">Sensory</option>
                 </select>
                 <select name="dow_three" onChange={e=>this.setState({dow_three: e.currentTarget.value})}>
-                    <option value="" selected disabled hiddden>{this.state.dow_three}</option>
+                    <option value="" defaultValue disabled hiddden>{this.state.dow_three}</option>
                     <option value=""> --- </option>
                     <option value="Social">Social</option>
                     <option value="Physical">Physical</option>

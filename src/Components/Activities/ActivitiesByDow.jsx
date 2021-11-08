@@ -37,7 +37,7 @@ const ActivitiesByDow=(props)=> {
             </select>
             <input type="submit" value="Submit"></input>
         </form>
-        {filtered ? <AllActivities allActivities={allActivities} />: null}
+        {filtered ? <AllActivities allActivities={allActivities} setActiveActivity={props.setActiveActivity} activity={props.activeActivity}/>: null}
         </>
      );
 }
