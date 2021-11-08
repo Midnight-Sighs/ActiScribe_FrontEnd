@@ -4,6 +4,7 @@ import ResidentParticipation from '../Resident/ResidentParticipation'
 import EditResident from './EditResident';
 import NewNote from '../ResidentNotes/NewNote';
 import Modal from '../Utilities/Modal'
+import ViewAssessment from '../Assessment/ViewAssessment';
 
 
 const ResidentDetail=(props)=> {
@@ -50,6 +51,9 @@ const ResidentDetail=(props)=> {
                         <NewNote resident={props.activeResident.id}/>
                     </Modal>
                     <button onClick={assessmentOnClick}>View Assessment</button>
+                    <Modal onClick={assessmentOnClick} hideShow={assessmentHS}>
+                        <ViewAssessment resident={props.activeResident.id} />
+                    </Modal>
             </div>
         </>
      );
