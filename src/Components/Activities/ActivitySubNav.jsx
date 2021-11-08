@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import '../../Styles/App.css'
 import AllActivities from '../Activities/AllActivities'
@@ -7,6 +7,13 @@ import NewActivity from './NewActivity';
 import ActivityDetail from './ActivityDetails'
 
 const ActivitySubNav=(props)=>{
+
+    const[participation, setParticipation]=useState(props.part)
+
+    useEffect(()=>{
+        setParticipation(props.part)
+    }, [props])
+
     return ( 
         <>
             <Router>
@@ -24,7 +31,7 @@ const ActivitySubNav=(props)=>{
                 <div className ="col-10">
                     <Switch>
                         <Route exact path="/All_Activities">
-                            <AllActivities setActiveActivity={props.setActiveActivity} allActivities={props.allActivities} participation={props.participation} />
+                            <AllActivities setActiveActivity={props.setActiveActivity} allActivities={props.allActivities} participation={props.part} />
                         </Route>
                         <Route exact path="/Dow_Activities">
                             <ActivitiesByDow allActivities={props.dowActivities} filterDow={props.filterDow} />
@@ -33,7 +40,7 @@ const ActivitySubNav=(props)=>{
                             <NewActivity />
                         </Route>
                         <Route exact path='/Activity_Detail'>
-                            <ActivityDetail activity={props.activeActivity}/>
+                            <ActivityDetail participation={participation} activity={props.activeActivity}/>
                         </Route>
                         
  

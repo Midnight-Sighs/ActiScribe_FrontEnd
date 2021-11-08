@@ -35,45 +35,75 @@ class ResidentHome extends Component {
 
     getAllActiveResidents =async()=>{
         const jwt = localStorage.getItem('token')
+        try{
         let response = await axios.get('http://127.0.0.1:8000/api/actiscribe/residents/', {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             residents: response.data
         })
+        }
+        catch(err){
+            console.log(err, "Problem getting all residents")
+        }
     }
 
     getAllArchivedResidents =async ()=>{
         const jwt = localStorage.getItem('token')
+        try{
         let response = await axios.get('http://127.0.0.1:8000/api/actiscribe/residents/archived/', {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             archivedResidents: response.data
         })
+        }
+        catch(err){
+            console.log(err, "Problem getting all residents")
+        }
     }
 
     newResident = async(newResident) =>{
         const jwt = localStorage.getItem('token')
+        try{
         await axios.post('http://127.0.0.1:8000/api/actiscribe/residents/', newResident, {headers: {Authorization: 'Bearer '+ jwt}});  
         this.getAllActiveResidents()
+        }
+        catch(err){
+            console.log(err, "Problem adding resident")
+        }
     }
 
     singleResident = async(resident, resident_id)=>{
         const jwt = localStorage.getItem('token')
+        try{
         await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}}); 
+        }
+        catch(err){
+            console.log(err, "Problem changing resident status.")
+        }
     }
 
     notesByResident = async(resident_id)=>{
         const jwt = localStorage.getItem('token')
+        try{
         let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/notes/`, {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             activeNotes: response.data
         })
+        }
+        catch(err){
+            console.log(err, "Problem getting resident notes")
+        }
     }
 
     participationByResident = async(resident_id)=>{
         const jwt = localStorage.getItem('token')
+        try {
         let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/participation/`, {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             activeParticipation: response.data
         })
+        }
+        catch(err){
+            console.log(err, "Problem getting resident participation")
+        }
     }
 
     render() { 

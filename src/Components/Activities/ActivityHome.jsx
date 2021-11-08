@@ -8,8 +8,9 @@ class ActivityHome extends Component {
         this.state = { 
             allActivities : [],
             activitiesByDOW : [],
-            participationByActivity:[],
+            partByActivity:[],
             activeActivity:{},
+            activeId: '',
         }
     }
 
@@ -44,12 +45,12 @@ class ActivityHome extends Component {
         }
     }
 
-    participationByActivity = async(activityId)=>{
+    getParticipationByActivity = async(activityId)=>{
         const jwt = localStorage.getItem('token')
         try{
         let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/participation/`,{headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
-            participationByActivity:response.data
+            partByActivity:response.data
         })
         }
         catch(err){
@@ -59,16 +60,17 @@ class ActivityHome extends Component {
 
     setActiveActivity =async(activity)=>{
         this.setState({
-            activeActivity:activity
+            activeActivity:activity,
+            activeId:activity.id
         },()=>{
-
+            this.getParticipationByActivity(this.state.activeId)
         })
     }
 
     render() { 
         return ( 
             <>
-                <ActivitySubNav activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity}allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
+                <ActivitySubNav part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity}allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
             </>
          );
     }
