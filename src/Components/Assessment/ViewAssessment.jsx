@@ -7,21 +7,26 @@ const ViewAssessment=(props)=> {
     const[assessment, setAssessment]=useState([])
     const[residentId, setResidentId]=useState(props.resident)
     const[newAssessmentHS, setNewAssessmentHS]=useState(false)
+    const[editHS, setEditHS]=useState(true)
 
     useEffect(()=>{
-        setResidentId(props.residentId)
+        setResidentId(props.resident)
         getAssessmentByResident(residentId)
         setAssessment(props.assessment)
     }, [props])
 
     useEffect(()=>{
-        setResidentId(props.residentId)
+        setResidentId(props.resident)
         getAssessmentByResident(residentId)
         setAssessment(props.assessment)
     }, [])
 
     const newAssessmentClick =()=>{
         setNewAssessmentHS(!newAssessmentHS)
+    }
+
+    const editOnClick=()=>{
+        setEditHS(!editHS)
     }
 
 
@@ -49,6 +54,8 @@ const ViewAssessment=(props)=> {
 
     return ( 
         <>
+        {editHS ?
+            <>
             <p className="ass-line">Nickname</p>
             <p className="ass-value">{assessment.nickname }</p>
             <p className="ass-line">Games</p>
@@ -101,6 +108,10 @@ const ViewAssessment=(props)=> {
             <p className="ass-value">{assessment.social_fun}</p>
             <p className="ass-line">One Thing You Wish Everyone Knew</p>
             <p className="ass-value">{assessment.one_thing}</p>
+            <button onClick={editOnClick}>Edit Assessment?</button>
+            </>
+            :
+            <Assessment resident={residentId}toggleHS={editOnClick} assessment={assessment}/>}
         </>
      );
 }
