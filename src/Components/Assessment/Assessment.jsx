@@ -5,8 +5,8 @@ class Assessment extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            activeAssessment=[],
-            resident_id: "",
+            activeAssessment:[],
+            residentId: "",
             nickname: "",
             games_yn:"",
             books_yn:"",
@@ -38,29 +38,23 @@ class Assessment extends Component {
 
     componentDidMount=()=>{
         this.setState({
-            residentId:props.activeResident.id
-        },()=>{
-            this.getAssessmentByResident(props.activeResident.id)
+            residentId:this.props.resident
         })
     }
 
-    getAssessmentByResident =async (residentId)=>{
-        const jwt = localStorage.getItem('token')
-        try{
-        let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/residents/${residentId}/assessment/`, {headers: {Authorization: 'Bearer '+ jwt}});
+    componentDidUpdate=(prevProps)=>{
+        if(prevProps != this.props)
         this.setState({
-            activeAssessment: response.data
+            residentId:this.props.resident
         })
-        }
-        catch(err){
-            console.log(err, "Problem getting assessment or assessment does not exist")
-        }
     }
+
 
     newAssessment =async (residentId, newAssessment)=>{
         const jwt = localStorage.getItem('token')
+        debugger
         try{
-        let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/residents/${residentId}/assessment/`, newAssessment, {headers: {Authorization: 'Bearer '+ jwt}});
+        let response = await axios.post(`http://127.0.0.1:8000/api/actiscribe/residents/${residentId}/assessment/`, newAssessment, {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             activeAssessment: response.data
         })
@@ -78,13 +72,43 @@ class Assessment extends Component {
     }
 
     onSubmit=(event)=>{
-        
+        let residentId= this.state.residentId
+        let newAssessment={
+            "nickname": this.state.nickname,
+            "games_yn":this.state.games_yn,
+            "books_yn":this.state.books_yn,
+            "music_yn":this.state.music_yn,
+            "crafts_yn":this.state.crafts_yn,
+            "arts_yn":this.state.arts_yn,
+            "learning_yn":this.state.learning_yn,
+            "gardening_yn":this.state.gardening_yn,
+            "sports_yn": this.state.sports_yn,
+            "exercise_yn":this.state.exercise_yn,
+            "outside_yn":this.state.outside_yn,
+            "animals_yn":this.state.animals_yn,
+            "socializing_yn":this.state.socializing_yn,
+            "work":this.state.work,
+            "volunteer":this.state.volunteer,
+            "parents":this.state.parents,
+            "siblings":this.state.siblings,
+            "close_family": this.state.close_family,
+            "spouse":this.state.spouse,
+            "children":this.state.children,
+            "technology": this.state.technology,
+            "city_or_country":this.state.city_or_country,
+            "travel":this.state.travel,
+            "alone_fun":this.state.alone_fun,
+            "social_fun":this.state.social_fun,
+            "one_thing":this.state.one_thing
+        }
+        this.newAssessment(residentId, newAssessment)
+        this.props.toggleHS()
     }
 
     render() { 
         return ( 
             <>
-                <form onSubmit={onSubmit}>
+                <form onSubmit={this.onSubmit}>
                     <table>
                         <tbody>
                             <tr>

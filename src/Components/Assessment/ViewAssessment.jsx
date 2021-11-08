@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import Assessment from './Assessment'
 
 const ViewAssessment=(props)=> {
 
     const[assessment, setAssessment]=useState([])
     const[residentId, setResidentId]=useState(props.resident)
+    const[newAssessmentHS, setNewAssessmentHS]=useState(false)
 
     useEffect(()=>{
         setResidentId(props.residentId)
@@ -17,6 +19,10 @@ const ViewAssessment=(props)=> {
         getAssessmentByResident(residentId)
         setAssessment(props.assessment)
     }, [])
+
+    const newAssessmentClick =()=>{
+        setNewAssessmentHS(!newAssessmentHS)
+    }
 
 
     const getAssessmentByResident =async (residentId)=>{
@@ -33,7 +39,11 @@ const ViewAssessment=(props)=> {
 
     if(assessment == undefined){
         return(
-            <p>Currently no assessment for this resident</p>
+            <>
+                <p>Currently no assessment for this resident</p>
+                <button onClick={newAssessmentClick}>Add Assessment</button>
+                {newAssessmentHS ? <Assessment {...props} toggleHS={newAssessmentClick} residentId={residentId}/> : null}
+            </>
         )
     }
 
