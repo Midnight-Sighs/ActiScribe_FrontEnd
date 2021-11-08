@@ -4,8 +4,9 @@ import '../../Styles/App.css'
 import AllActivities from '../Activities/AllActivities'
 import ActivitiesByDow from './ActivitiesByDow';
 import NewActivity from './NewActivity';
+import ActivityDetail from './ActivityDetails'
 
-const ResidentSubNav=(props)=>{
+const ActivitySubNav=(props)=>{
     return ( 
         <>
             <Router>
@@ -23,13 +24,16 @@ const ResidentSubNav=(props)=>{
                 <div className ="col-10">
                     <Switch>
                         <Route exact path="/All_Activities">
-                            <AllActivities allActivities={props.allActivities} />
+                            <AllActivities setActiveActivity={props.setActiveActivity} allActivities={props.allActivities} participation={props.participation} />
                         </Route>
                         <Route exact path="/Dow_Activities">
                             <ActivitiesByDow allActivities={props.dowActivities} filterDow={props.filterDow} />
                         </Route>
-                        <Route>
+                        <Route exact path='/New_Activity'>
                             <NewActivity />
+                        </Route>
+                        <Route exact path='/Activity_Detail'>
+                            <ActivityDetail activity={props.activeActivity}/>
                         </Route>
                         
  
@@ -44,4 +48,4 @@ const ResidentSubNav=(props)=>{
      );
 }
 
-export default ResidentSubNav
+export default ActivitySubNav

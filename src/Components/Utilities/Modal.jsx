@@ -10,7 +10,6 @@ const Modal=(props)=> {
 
     return ( 
         <>
-            {/* {hideShow? null: <button onClick={onClick}>Edit</button>} */}
             {props.hideShow ? 
             <div className = "modal-wrapper">
                 <div className="modal-body">

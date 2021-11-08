@@ -8,7 +8,8 @@ class ActivityHome extends Component {
         this.state = { 
             allActivities : [],
             activitiesByDOW : [],
-
+            participationByActivity:[],
+            activeActivity:{},
         }
     }
 
@@ -19,24 +20,55 @@ class ActivityHome extends Component {
 
     getAllActivities = async ()=>{
         const jwt = localStorage.getItem('token')
-        let response = await axios.get("http://127.0.0.1:8000/api/actiscribe/activities/", {headers: {Authorization: 'Bearer '+ jwt}});
+        try{
+            let response = await axios.get("http://127.0.0.1:8000/api/actiscribe/activities/", {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             allActivities: response.data
         })
+        }
+        catch(err){
+            console.log(err, "Error getting activities")
+        }
     }
 
     getActivitiesByDOW = async (DOW)=>{
         const jwt = localStorage.getItem('token')
+        try{
         let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/${DOW}/`, {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             activitiesByDOW: response.data
+        })
+        }
+        catch(err){
+            console.log(err, "Error getting activities")
+        }
+    }
+
+    participationByActivity = async(activityId)=>{
+        const jwt = localStorage.getItem('token')
+        try{
+        let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/participation/`,{headers: {Authorization: 'Bearer '+ jwt}});
+        this.setState({
+            participationByActivity:response.data
+        })
+        }
+        catch(err){
+            console.log(err, "Error getting activities.")
+        }
+    }
+
+    setActiveActivity =async(activity)=>{
+        this.setState({
+            activeActivity:activity
+        },()=>{
+
         })
     }
 
     render() { 
         return ( 
             <>
-                <ActivitySubNav allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
+                <ActivitySubNav activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity}allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
             </>
          );
     }

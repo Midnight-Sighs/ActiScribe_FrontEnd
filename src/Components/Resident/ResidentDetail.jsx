@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import Notes from '../Notes/Notes'
+import Notes from '../ResidentNotes/Notes'
 import ResidentParticipation from '../Resident/ResidentParticipation'
 import EditResident from './EditResident';
-import NewNote from '../Notes/NewNote';
+import NewNote from '../ResidentNotes/NewNote';
 import Modal from '../Utilities/Modal'
 
 

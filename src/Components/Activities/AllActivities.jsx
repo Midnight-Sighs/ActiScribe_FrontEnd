@@ -23,15 +23,17 @@ const AllActivities=(props)=>{
                     <tr>
                         <th className="name-col">Name</th>
                         <th className="iden-col" colSpan="3">Dimensions of Wellness</th>
+                        <th></th>
                     </tr>
                 {allActivities.map((activity)=>{
                 return(
 
                         <tr key={activity.id}>
                             <td className="name-col">{activity.name}</td>
-                            <td classname='iden-col'>{activity.dow_one}</td>
-                            <td classname='iden-col'>{activity.dow_two}</td>
-                            <td classname='iden-col'>{activity.dow_three}</td>
+                            <td className='iden-col'>{activity.dow_one}</td>
+                            <td className='iden-col'>{activity.dow_two}</td>
+                            <td className='iden-col'>{activity.dow_three}</td>
+                            <td><Link to='/Activity_Detail' onClick={()=>props.setActiveActivity(activity)}>Details</Link></td>
                         </tr>  
                 )})}
                 </tbody>
