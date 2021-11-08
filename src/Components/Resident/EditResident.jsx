@@ -31,7 +31,6 @@ class EditResident extends Component {
 
     archiveOnClick =()=>{
         let resident_id = this.props.resident.id
-        debugger
         this.archiveResident(resident_id)
     }
 
