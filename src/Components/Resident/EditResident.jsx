@@ -45,12 +45,16 @@ class EditResident extends Component {
 
     editResident = async(resident, resident_id)=>{
         const jwt = localStorage.getItem('token')
-        await axios.put(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});  
+        await axios.put(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});
+        console.log({resident} + " has been edited") 
+        this.props.getResidents() 
     }
 
     archiveResident = async(resident_id)=>{
         const jwt = localStorage.getItem('token')
-        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, {headers: {Authorization: 'Bearer '+ jwt}});   
+        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, {headers: {Authorization: 'Bearer '+ jwt}});
+        console.log({resident_id} + " has been edited") 
+        this.props.getResidents()  
     }
 
     render() { 

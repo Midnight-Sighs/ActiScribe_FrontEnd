@@ -32,7 +32,7 @@ const AllResidents=(props)=>{
 
                     <tr key={resident.id}>
                         <td className="name-col">{resident.r_first_name} {resident.r_last_name}</td>
-                        <td classname='iden-col'>{resident.r_other_identifier}</td>
+                        <td className='iden-col'>{resident.r_other_identifier}</td>
                         <td className='ass-col'>{resident.last_assessment}</td>
                         <td><Link to='/Resident_Detail' onClick ={()=>props.setResident(resident)}>Details</Link></td>
                     </tr>  

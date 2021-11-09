@@ -44,7 +44,7 @@ const ResidentDetail=(props)=> {
                     <ResidentParticipation participation={participation} />
                     <button onClick={editOnClick}>Edit Resident Details</button>
                     <Modal onClick={editOnClick} hideShow={editHS} >
-                        <EditResident resident={props.activeResident} />
+                        <EditResident resident={props.activeResident} getResidents={props.getResidents}/>
                     </Modal>
                     <button onClick={notesOnClick}>New Note</button>
                     <Modal onClick={notesOnClick} hideShow={notesHS}>

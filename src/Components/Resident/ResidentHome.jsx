@@ -19,7 +19,6 @@ class ResidentHome extends Component {
 
     componentDidMount(){
         this.getAllActiveResidents()
-        this.getAllArchivedResidents()
     }
 
 
@@ -40,6 +39,8 @@ class ResidentHome extends Component {
         let response = await axios.get('http://127.0.0.1:8000/api/actiscribe/residents/', {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             residents: response.data
+        },()=>{
+            this.getAllArchivedResidents()
         })
         }
         catch(err){
@@ -112,7 +113,7 @@ class ResidentHome extends Component {
             <>
             <div className="row">
                 <div className="col-3">
-                    <ResidentSubNav archive={this.archiveResident} edit={this.editResident} notes={this.state.activeNotes} participation={this.state.activeParticipation} activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
+                    <ResidentSubNav getResidents={this.getAllActiveResidents} archive={this.archiveResident} edit={this.editResident} notes={this.state.activeNotes} participation={this.state.activeParticipation} activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
                 </div>
                 
             </div>
