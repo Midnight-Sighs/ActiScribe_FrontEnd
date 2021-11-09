@@ -15,14 +15,49 @@ const ResidentDetail=(props)=> {
     const[editHS, setEditHS]=useState(false)
     const[notesHS, setNotesHS]=useState(false)
     const[assessmentHS, setAssessmentHS]=useState(false)
+    const[partNumbers, setPartNumbers]=useState([])
+    const[partLoaded, setPartLoaded]=useState(false)
 
-    const partNumbers = [
-        {value: 10},
-        {value: 8},
-        {value: 20},
-        {value: 15},
-        {value: 12},
-    ]
+    const filterAllActivities=()=>{
+        let x = filterActivities("Social");
+        let y = filterActivities("Physical");
+        let z = filterActivities("Emotional");
+        let a = filterActivities("Spiritual");
+        let b = filterActivities("Environmental");
+        let c = filterActivities("Financial");
+        let d = filterActivities("Intellectual");
+        let e = filterActivities("Creative");
+        let f = filterActivities("Occupational");
+        let g = filterActivities("Sensory");
+        setPartNumbers([
+            {name: "Social" ,value: x},
+            {name: "Physical" ,value: y},
+            {name: "Emotional" ,value: z},
+            {name: "Spiritual" ,value: a},
+            {name: "Environmental" ,value:b},
+            {name: "Financial" ,value: c},
+            {name: "Intellectual" ,value: d},
+            {name: "Creative" ,value: e},
+            {name: "Occupational" ,value: f},
+            {name: "Sensory" ,value: g},
+        ])
+    }
+
+    const filterActivities=(dow)=>{
+        let filtered =[];
+        if (Object.keys(props.participation).length>0){
+            participation.activity.map((activity)=>{
+                if(activity.dow_one === dow || activity.dow_two === dow|| activity.dow_three === dow){
+                    filtered.push(activity)
+                }
+            })
+            let x = filtered.length
+            if(x ===0){
+                x = 1
+            }
+            return x
+        }
+    }
 
     const editOnClick=()=>{
         setEditHS(!editHS)
@@ -41,6 +76,14 @@ const ResidentDetail=(props)=> {
         setParticipation(props.participation)
     },[props])
 
+    useEffect(()=>{
+        filterAllActivities()
+    }, [participation])
+
+    useEffect(()=>{
+        setPartLoaded(true)
+    }, [partNumbers])
+
     if(props.activeResident == undefined){
         return(<p>Error getting resident details.</p>)
     }
@@ -49,16 +92,27 @@ const ResidentDetail=(props)=> {
         <>
             <div className="res-details">
                 <h1>{props.activeResident.r_first_name} {props.activeResident.r_last_name}</h1>
-                    <Chart data={partNumbers} />
-                    <Notes  notes={notes}/>
-                    <ResidentParticipation participation={participation} />
+                    <div className="row">
+                        <div className="res-notes">
+                            <button onClick={notesOnClick}>New Note</button>
+                            <Notes  notes={notes}/>
+                            <Modal onClick={notesOnClick} hideShow={notesHS}>
+                                <NewNote resident={props.activeResident.id}/>
+                            </Modal>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {partLoaded ?
+                        <div className ="col-6 res-chart">
+                            <Chart data={partNumbers} />
+                        </div> :null}
+                        <div className="col-6 res-part">
+                            <ResidentParticipation participation={participation} />
+                        </div>
+                    </div>
                     <button onClick={editOnClick}>Edit Resident Details</button>
                     <Modal onClick={editOnClick} hideShow={editHS} >
                         <EditResident resident={props.activeResident} getResidents={props.getResidents}/>
-                    </Modal>
-                    <button onClick={notesOnClick}>New Note</button>
-                    <Modal onClick={notesOnClick} hideShow={notesHS}>
-                        <NewNote resident={props.activeResident.id}/>
                     </Modal>
                     <button onClick={assessmentOnClick}>View Assessment</button>
                     <Modal onClick={assessmentOnClick} hideShow={assessmentHS}>

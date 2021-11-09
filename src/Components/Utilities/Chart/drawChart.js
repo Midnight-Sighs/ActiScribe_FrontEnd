@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 
 const drawChart = (element, data)=>{
-    const colors = ["#05BBD2", "#2070C4", "#EB80F1", "#F5C842", "#37D400"]
+    const colors = ["#000000", "#2E1E15", "#6F4329", "#B47F60", "#E3A781", '#FBDAC5', "#E3A781", "#B47F60", "#6F4329", "#2E1E15"]
     const boxSize = 500;
 
     d3.select(element).select("svg").remove();
@@ -37,7 +37,7 @@ const drawChart = (element, data)=>{
     arcs
         .append("text")
         .attr("text-anchor", "middle")
-        .text((d)=>`${d.data.value}%`)
+        .text((d)=>`${d.data.name}`)
         .style("fill", "#fff")
         .style("font-size", "1rem")
         .attr("transform", (d)=>{
