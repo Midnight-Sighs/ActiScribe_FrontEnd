@@ -114,9 +114,7 @@ class ResidentHome extends Component {
                 <div className="col-3">
                     <ResidentSubNav archive={this.archiveResident} edit={this.editResident} notes={this.state.activeNotes} participation={this.state.activeParticipation} activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
                 </div>
-                <div className="col-8">
-                    <Home />
-                </div>
+                
             </div>
             </>
         );

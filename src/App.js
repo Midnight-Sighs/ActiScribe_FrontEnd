@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Switch, Route, Redirect} from 'react-router-dom';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import '../src/Styles/App.css'
@@ -12,6 +12,8 @@ class App extends Component {
     super(props);
     this.state = { 
         user: [],
+        logInRedirect: false,
+        logOutRedirect: false,
         loggedIn: false,
         localToken: localStorage.token,
         userDetails: [],
@@ -42,6 +44,7 @@ class App extends Component {
       let response = await axios.post('http://127.0.0.1:8000/api/auth/login/', login)
       this.setState({
         token: response.data.token,
+        logInRedirect: true,
       }, ()=>{
       localStorage.setItem('token', response.data.access)
       this.decodeToken();
@@ -58,6 +61,7 @@ class App extends Component {
       user: [],
       loggedIn: false,
       localToken: '',
+      logOutRedirect: true,
     })
   }
 
@@ -78,6 +82,7 @@ class App extends Component {
           <Router>
             <Switch>
 
+              {this.state.logOutRedirect ? <Redirect to='/' />: null}
               {this.state.loggedIn ? <Route exact path="/" component={ResidentHome} /> :
               <Route exact path="/" component={AnonBody} />}
             </Switch>

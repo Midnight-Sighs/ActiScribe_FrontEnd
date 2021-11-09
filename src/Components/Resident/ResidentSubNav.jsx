@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import AllResidents from './AllResidents';
 import NewResident from './NewResident';
 import ResidentDetail from './ResidentDetail'
+import Home from '../Anon/Home/Home'
 
 const ResidentSubNav=(props)=>{
     return ( 
@@ -21,6 +22,9 @@ const ResidentSubNav=(props)=>{
         
                 <div className ="col-2">
                     <Switch>
+                        <Route exact path="/Residents">
+                            <Home />
+                        </Route>
                         <Route exact path="/All_Residents">
                             <AllResidents {...props} setResident={props.setResident} residents={props.residents} />
                         </Route>

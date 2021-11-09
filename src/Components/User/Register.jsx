@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios"
 import './Styles/LogReg.css'
+import {Redirect} from 'react-router-dom'
 
 class Register extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class Register extends Component {
             first_name:"",
             last_name: "",
             middle_name:"",
+            redirect: false,
             errors: {
                 username: null,
                 verify_password: null,
@@ -32,12 +34,14 @@ class Register extends Component {
             "middle_name" : this.state.middle_name
         }
         let response = await axios.post('http://127.0.0.1:8000/api/auth/register/', newUser)
-        if(response === undefined){
-            console.log('Error registering user.')
-        }
+        console.log(response.data)
+        this.setState({
+            redirect: true
+        })
     }
 
     handleSubmit = (event) =>{
+        event.preventDefault()
         this.setState({
         [event.target.name] : event.target.value
         }, ()=>{
@@ -85,6 +89,7 @@ class Register extends Component {
     render() { 
         return ( 
             <>
+            {this.state.redirect ? <Redirect to='/login' /> : null}
                 <div>
                     <form className = 'main-reg' onSubmit ={this.handleSubmit}>
                         <table>

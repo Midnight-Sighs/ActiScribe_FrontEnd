@@ -30,7 +30,8 @@ class NewResident extends Component {
         })
     }
 
-    onSubmit=()=>{
+    onSubmit=(event)=>{
+        event.preventDefault()
         let newResident={
             "r_first_name":this.state.r_first_name,
             "r_last_name":this.state.r_last_name,
@@ -39,8 +40,20 @@ class NewResident extends Component {
             "is_archived":this.state.is_archived,
             "last_assessment":this.state.last_assessment
         }
-        debugger
         this.props.newResident(newResident)
+        console.log({newResident})
+        this.clearForm()
+    }
+
+    clearForm =()=>{
+        this.setState({
+            r_first_name:'',
+            r_last_name:'',
+            r_other_identifier: '',
+            is_active: true,
+            is_archived: false,
+            last_assessment: ''
+        })
     }
 
     render() { 
@@ -51,19 +64,19 @@ class NewResident extends Component {
                         <tbody>
                             <tr>
                                 <td><label className="new-res-label">Resident First Name</label></td>
-                                <td><input className='new-res-field' name='r_first_name' onChange={this.handleChange} /></td>
+                                <td><input className='new-res-field' name='r_first_name' onChange={this.handleChange} value={this.state.r_first_name} /></td>
                             </tr>
                             <tr>
                                 <td><label className="new-res-label">Resident Last Name</label></td>
-                                <td><input className='new-res-field' name='r_last_name'onChange={this.handleChange} /></td>
+                                <td><input className='new-res-field' name='r_last_name'onChange={this.handleChange} value={this.state.r_last_name} /></td>
                             </tr>
                             <tr>
                                 <td><label className="new-res-label">Identifier (such as room number)</label></td>
-                                <td><input className='new-res-field' name='r_other_identifier' onChange={this.handleChange} /></td>
+                                <td><input className='new-res-field' name='r_other_identifier' onChange={this.handleChange} value={this.state.r_other_identifier} /></td>
                             </tr>
                             <tr>
                                 <td><label className="new-res-label">Last Assessment Date</label></td>
-                                <td><input className='new-res-field' type="date" name='last_assessment'onChange={this.handleChange} /></td>
+                                <td><input className='new-res-field' type="date" name='last_assessment'onChange={this.handleChange} value={this.state.last_assessment} /></td>
                             </tr>
                             <tr>
                                 <td colspan="2">

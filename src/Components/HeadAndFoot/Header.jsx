@@ -1,11 +1,12 @@
 import React from 'react';
 import './Styles/HeadAndFoot.css'
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Switch, Route, Redirect} from 'react-router-dom';
 import Register from '../User/Register'
 import Login from '../User/Login'
 import NavBar from './NavBar'
-import Home from '../Anon/Home/Home'
-import Anon from '../Anon/AnonBody'
+import AnonMainNav from '../Anon/AnonMainNav';
+import ResidentHome from '../Resident/ResidentHome'
+
 
 const Header=(props)=> {
     return ( 
@@ -20,16 +21,16 @@ const Header=(props)=> {
                             <h1 className = "title">Actiscribe</h1>
                         </div>
                         <div className = "col-2 log-reg">
-                            {props.loggedIn ? null: <span><Link to="/login">Login</Link></span>}  <span> <Link to ='/register'>Register</Link>  <Link to = '/'>Home</Link> </span> {props.loggedIn ? <span><a href="/" className = "header-link" onClick={props.logout}>Logout</a></span>: null}
+                            {props.loggedIn ? null: <span><Link to="/login">Login</Link></span>}  <span> <Link to ='/register'>Register</Link>  <Link to = '/'>Home</Link> </span> {props.loggedIn ? <span><Link to="/" className = "header-link" onClick={props.logout}>Logout</Link></span>: null}
                         </div>
                 </div>        
             </div>
-            <NavBar />
+            {props.loggedIn ? <NavBar /> : null }
 
                 <Switch>
                     <Route exact path='/login' render={() => <Login login={props.login} />} />
                     <Route exact path='/register' component={Register} />
-                    
+                    {props.loggedIn ? <Route exact path='/' component={ResidentHome} /> : <Route exact path='/' component={AnonMainNav} />}
                 </Switch>
             </Router>
 
