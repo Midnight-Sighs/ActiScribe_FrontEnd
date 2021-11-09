@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ResidentSubNav from './ResidentSubNav';
+import Home from '../Anon/Home/Home'
 
 
 class ResidentHome extends Component {
@@ -109,7 +110,14 @@ class ResidentHome extends Component {
     render() { 
         return ( 
             <>
-                <ResidentSubNav archive={this.archiveResident} edit={this.editResident} notes={this.state.activeNotes} participation={this.state.activeParticipation} activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
+            <div className="row">
+                <div className="col-3">
+                    <ResidentSubNav archive={this.archiveResident} edit={this.editResident} notes={this.state.activeNotes} participation={this.state.activeParticipation} activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
+                </div>
+                <div className="col-8">
+                    <Home />
+                </div>
+            </div>
             </>
         );
     }

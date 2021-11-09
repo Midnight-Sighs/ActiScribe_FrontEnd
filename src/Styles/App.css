@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
 ::-webkit-scrollbar {
   background-color: #84c6b8;
@@ -98,7 +100,10 @@ a:hover {
 #v-pills-new-act-tab {
   background-color: #003235;
   margin-top: .5rem;
-  width: 7.5rem;
+  width: 10rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 #nav-home-tab,
@@ -109,11 +114,14 @@ a:hover {
 #nav-participation-tab {
   margin-top: 1rem;
   background-color: #003235;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   border: none;
   border-bottom: none;
   color: #84c6b8;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 #nav-home-tab .nav:hover,

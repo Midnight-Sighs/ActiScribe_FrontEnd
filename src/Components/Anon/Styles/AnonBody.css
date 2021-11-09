@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 .anon-page {
   background-color: #84c6b8;
   position: relative;
@@ -32,33 +34,26 @@
 }
 
 .home-container {
-  height: 30rem;
-  border-top: dashed #003235;
-}
-
-.home-container .random-img {
-  margin-top: 4rem;
-  width: 45rem;
   height: 25rem;
-  background-attachment: cover;
-  background-position: absolute;
+  width: 40rem;
+  margin-top: 2rem;
 }
 
 .home-container .welcome-msg {
-  font-family: "Lobster Two", cursive;
-  font-size: 5rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
 }
 
 .home-container .quote-msg {
-  font-family: "Parisienne", cursive;
+  font-family: "Tangerine", cursive;
   margin-left: 8rem;
   -webkit-animation: color-change 5s infinite;
           animation: color-change 5s infinite;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .home-container .author-msg {
-  font-family: "Parisienne", cursive;
+  font-family: "Tangerine", cursive;
   margin-left: 20rem;
 }
 

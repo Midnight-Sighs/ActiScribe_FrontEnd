@@ -1,17 +1,17 @@
 @import '../../Utilities/variables';
 
 .title-bar{
-    height: 15vh;
+    height: 18vh;
     width:99vw;
     background-color: $dark-teal;
 }
 .title{
     padding-top:.5em;
     position: absolute;
-    top: -2.5rem;
+    top: -4rem;
     color: $warm-brown;
     font-family: $quote-font;
-    font-size: 5rem;
+    font-size: 7rem;
 }
 .log-reg{
     padding-top:1em;

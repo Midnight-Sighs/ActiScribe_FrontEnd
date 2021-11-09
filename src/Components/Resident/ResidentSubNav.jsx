@@ -9,7 +9,7 @@ const ResidentSubNav=(props)=>{
         <>
             <Router>
             <div className = "row">
-                <div className="col-2 col-sm-row tutorial-nav">
+                <div className="col-10 col-sm-row tutorial-nav">
                     <div class="d-flex align-items-start">
                         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <Link to="/All_Residents"  class="nav-link" id="v-pills-all-res-tab" data-bs-toggle="pill" href="#v-pills-all-res" role="tab" aria-controls="v-pills-all-res" aria-selected="true">All Residents</Link>
@@ -19,7 +19,7 @@ const ResidentSubNav=(props)=>{
                     </div>
                 </div>
         
-                <div className ="col-10">
+                <div className ="col-2">
                     <Switch>
                         <Route exact path="/All_Residents">
                             <AllResidents {...props} setResident={props.setResident} residents={props.residents} />
