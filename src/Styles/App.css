@@ -105,7 +105,8 @@ a:hover {
 #nav-tutorials-tab,
 #nav-features-tab,
 #nav-residents-tab,
-#nav-activities-tab {
+#nav-activities-tab,
+#nav-participation-tab {
   margin-top: 1rem;
   background-color: #003235;
   border-top-left-radius: 15px;
@@ -119,7 +120,8 @@ a:hover {
 #nav-tutorials-tab .nav:hover,
 #nav-features-tab .nav:hover,
 #nav-residents-tab .nav:hover,
-#nav-activities-tab .nav:hover {
+#nav-activities-tab .nav:hover,
+#nav-participation-tab .nav:hover {
   color: #b47f60;
 }
 
