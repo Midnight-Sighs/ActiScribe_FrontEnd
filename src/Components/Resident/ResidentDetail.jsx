@@ -5,6 +5,7 @@ import EditResident from './EditResident';
 import NewNote from '../ResidentNotes/NewNote';
 import Modal from '../Utilities/Modal'
 import ViewAssessment from '../Assessment/ViewAssessment';
+import Chart from '../Utilities/Chart/Chart'
 
 
 const ResidentDetail=(props)=> {
@@ -14,6 +15,14 @@ const ResidentDetail=(props)=> {
     const[editHS, setEditHS]=useState(false)
     const[notesHS, setNotesHS]=useState(false)
     const[assessmentHS, setAssessmentHS]=useState(false)
+
+    const partNumbers = [
+        {value: 10},
+        {value: 8},
+        {value: 20},
+        {value: 15},
+        {value: 12},
+    ]
 
     const editOnClick=()=>{
         setEditHS(!editHS)
@@ -40,6 +49,7 @@ const ResidentDetail=(props)=> {
         <>
             <div className="res-details">
                 <h1>{props.activeResident.r_first_name} {props.activeResident.r_last_name}</h1>
+                    <Chart data={partNumbers} />
                     <Notes  notes={notes}/>
                     <ResidentParticipation participation={participation} />
                     <button onClick={editOnClick}>Edit Resident Details</button>
