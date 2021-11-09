@@ -18,7 +18,7 @@ const ActivitySubNav=(props)=>{
         <>
             <Router>
             <div className = "row">
-                <div className="col-2 col-sm-row tutorial-nav">
+                <div className="col-10 col-sm-row tutorial-nav">
                     <div class="d-flex align-items-start">
                         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <Link to="/All_Activities"  class="nav-link" id="v-pills-all-act-tab" data-bs-toggle="pill" href="#v-pills-all-act" role="tab" aria-controls="v-pills-all-act" aria-selected="true">All Activities</Link>
@@ -28,8 +28,9 @@ const ActivitySubNav=(props)=>{
                     </div>
                 </div>
         
-                <div className ="col-10">
+                <div className ="col-2">
                     <Switch>
+                        <Route exact path="/Activities" />
                         <Route exact path="/All_Activities">
                             <AllActivities setActiveActivity={props.setActiveActivity} allActivities={props.allActivities} participation={props.part} />
                         </Route>
@@ -41,10 +42,7 @@ const ActivitySubNav=(props)=>{
                         </Route>
                         <Route exact path='/Activity_Detail'>
                             <ActivityDetail participation={participation} activity={props.activeActivity}/>
-                        </Route>
-                        
- 
-                
+                        </Route>                
                     </Switch>
                 </div>
             </div>

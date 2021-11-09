@@ -28,14 +28,14 @@ const Header=(props)=> {
             {props.loggedIn ? <NavBar /> : null }
 
                 <Switch>
-                    <Route exact path='/login' >
+                    <Route path='/login' >
                         {props.loggedIn ? null: <Login login={props.login} />}
                     </Route>
-                    <Route exact path='/register' >
+                    <Route path='/register' >
                         {props.loggedIn ? null: <Register />}
                     </Route>
                     <Route exact path="/">
-                        {props.loggedIn ? <ResidentHome /> : <AnonMainNav />}
+                        {props.loggedIn ? null : <AnonMainNav />}
                     </Route>
                 </Switch>
             </Router>

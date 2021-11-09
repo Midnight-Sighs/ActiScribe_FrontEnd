@@ -70,7 +70,11 @@ class ActivityHome extends Component {
     render() { 
         return ( 
             <>
-                <ActivitySubNav part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity}allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
+            <div className = "row">
+                <div className="col-3">
+                    <ActivitySubNav part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity}allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
+                </div>
+            </div>
             </>
          );
     }
