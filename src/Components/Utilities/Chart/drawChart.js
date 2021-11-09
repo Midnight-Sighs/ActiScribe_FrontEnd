@@ -15,7 +15,7 @@ const drawChart = (element, data)=>{
         .append("g")
         .attr("transform", `translate(${boxSize/2}, ${boxSize /2})`)
 
-    const arcGenerator = d3.arc().innerRadius(0).outerRadius(250);
+    const arcGenerator = d3.arc().cornerRadius(5).padAngle(0.01).innerRadius(100).outerRadius(250);
 
     const pieGenerator = d3.pie().value((d)=>d.value);
 
@@ -24,6 +24,26 @@ const drawChart = (element, data)=>{
         .append("path")
         .attr("d", arcGenerator)
         .style("fill", (d, i)=>colors[i % data.length])
+        .transition()
+        .duration(600)
+        .attrTween("d", function (d){
+            const i = d3.interpolate(d.startAngle, d.endAngle);
+            return function(t){
+                d.endAngle =i(t);
+                return arcGenerator(d);
+            };
+        });
+
+    arcs
+        .append("text")
+        .attr("text-anchor", "middle")
+        .text((d)=>`${d.data.value}%`)
+        .style("fill", "#fff")
+        .style("font-size", "1rem")
+        .attr("transform", (d)=>{
+            const[x,y] = arcGenerator.centroid(d);
+            return `translate(${x}, ${y})`;
+        });
 };
 
 export default drawChart
