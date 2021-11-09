@@ -61,7 +61,7 @@ class App extends Component {
       user: [],
       loggedIn: false,
       localToken: '',
-      logOutRedirect: true,
+      logOutRedirect: true
     })
   }
 
@@ -82,7 +82,6 @@ class App extends Component {
           <Router>
             <Switch>
 
-              {this.state.logOutRedirect ? <Redirect to='/' />: null}
               {this.state.loggedIn ? <Route exact path="/" component={ResidentHome} /> :
               <Route exact path="/" component={AnonBody} />}
             </Switch>
