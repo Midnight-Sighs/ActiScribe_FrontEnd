@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import '../Styles/AnonBody.css'
 import axios from "axios";
-import fogWave from '../../Images/fogWave.jpg'
 
 const Home =()=> {
 
