@@ -87,6 +87,7 @@ const NewParticipation=()=> {
 
     return ( 
         <>
+        <div className="my-wrapper">
         <div className="new-part conts">
             <form onSubmit={onSubmit}>
 
@@ -104,6 +105,7 @@ const NewParticipation=()=> {
                 <input name="date" value={activityDate} onChange={handleDateChange} type="date"></input>
                 <button type="submit">Save Participation</button>
             </form>
+        </div>
         </div>
         </>
      );

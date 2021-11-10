@@ -9,7 +9,7 @@ function AnonMainNav() {
     return ( 
         <>
         <Router>
-            <div className="row">
+            <div className="row nav-wrapper">
                 <div className="col-2"></div>
                 <div className="col-10">
                     <nav class="nav nav-tabs" id="nav-tab" role="tablist">

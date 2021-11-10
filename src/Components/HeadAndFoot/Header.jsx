@@ -5,7 +5,6 @@ import Register from '../User/Register'
 import Login from '../User/Login'
 import NavBar from './NavBar'
 import AnonMainNav from '../Anon/AnonMainNav';
-import ResidentHome from '../Resident/ResidentHome'
 
 
 const Header=(props)=> {
@@ -14,12 +13,11 @@ const Header=(props)=> {
             <Router>
             <div className ="title-bar">
                 <div className="row">
-                        <div className = "col-1">
-                            <span></span>
-                        </div>
+                        
                         <div className="col-7">
                             <h1 className = "title">Actiscribe</h1>
                         </div>
+                        <div className='col-1'></div>
                         <div className = "col-3 log-reg">
                             {props.loggedIn ? <Redirect to="/Residents" />: <span><Link to="/login">Login</Link></span>}
                             {props.loggedIn ? null: <span> <Link to ='/register'>Register</Link></span>}

@@ -31,11 +31,11 @@ p{
         font-size: large;
     }
     & a {
-        color: $light-yellow;
-        text-shadow: 1px 1px $dk-warm-brown;
+        color: $-dk-warm-brown;
+        text-shadow: 1px 1px $warm-brown;
         text-decoration: none;
         &:hover{
-            color: $dk-warm-brown;
+            color: $bright-yellow;
             text-shadow:none;
         }
     }

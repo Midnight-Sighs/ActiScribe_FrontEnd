@@ -198,7 +198,8 @@ const ResidentDetail=(props)=> {
                                 <NewNote resident={props.activeResident.id}/>
                             </Modal>
                     </div>
-
+                    <hr />
+                    <br />
                     <div className="row">
                         </div>
                     </div>

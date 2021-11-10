@@ -1,12 +1,13 @@
 @import '../Components/Utilities/variables';
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap');
 
+
 ::-webkit-scrollbar{
     background-color: $light-teal; 
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: $warm-brown; 
+    background-color: $second-teal; 
 }
 
 ::-webkit-scrollbar-corner{
@@ -26,19 +27,37 @@
     font-size:large;
 }
 a{
-    color: $light-yellow;
-    text-shadow: 1px 1px $dk-warm-brown;
+    color: $-dk-warm-brown;
+    text-shadow: 1px 1px $warm-brown;
     text-decoration: none;
     &:hover{
-        color: $dk-warm-brown;
+        color: $bright-yellow;
         text-shadow:none;
     }
 }
 
 .app-background{
-    color:$light-teal;
+
+    background-attachment: relative;
+}
+.my-wrapper{
+    width: 99.75vw;
+    position:relative;
+    background-image: url(../Components/Images/succulent.jpg);
+    background-size: cover;
+
+}
+.my-wrapper::before {
+    content:"";
+    background: $dark-teal;
+    opacity:50%;
+    position:absolute;
 }
 
+.nav-wrapper{
+    background-color: $dark-teal;
+    width:99.70vw;
+}
 .page-content{
     position:relative;
     z-index:2;
@@ -94,7 +113,8 @@ a{
     background-color:$dark-teal;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border:none;
+    border-top:2px solid $light-teal;
+    border-right: 2px solid $light-teal;
     border-bottom: none;
     color: $light-teal;
     font-family:$regular-font;
@@ -116,10 +136,13 @@ button{
 
 .conts{
     width: 80vw;
-    height: 90vh;
+    height: 100vh;
     border: $teal-border;
-    background-color: $half-second-teal;
+    border-top:none;
+    background-color: $half-light-teal;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left:1rem;
+    overflow-y:scroll;
+    padding-top:1rem;
 }

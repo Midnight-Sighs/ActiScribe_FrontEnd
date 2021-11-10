@@ -111,7 +111,7 @@ class ResidentHome extends Component {
     render() { 
         return ( 
             <>
-            <div className="row">
+            <div className="row my-wrapper">
                 <div className="col-3">
                     <ResidentSubNav user={this.props.user} getResidents={this.getAllActiveResidents} archive={this.archiveResident} edit={this.editResident} notes={this.state.activeNotes} participation={this.state.activeParticipation} activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
                 </div>

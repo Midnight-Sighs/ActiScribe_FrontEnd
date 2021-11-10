@@ -1,8 +1,8 @@
 @import '../../Utilities/variables';
 
 .title-bar{
-    height: 18vh;
-    width:99vw;
+    height: 10vh;
+    width:98.75vw;
     background-color: $dark-teal;
 }
 .title{
@@ -14,7 +14,7 @@
     font-size: 7rem;
 }
 .log-reg{
-    padding-top:2rem;
+    padding-top:1rem;
     color: $warm-brown;
     font-family: $quote-font;
     font-size: 2.25rem;

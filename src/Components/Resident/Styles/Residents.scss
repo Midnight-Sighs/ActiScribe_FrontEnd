@@ -12,19 +12,26 @@
         width: 10rem;
     }
 }
+.res-part-table{
+    font-family:$regular-font;
+    & .det-activity{
+        width:30rem;
+    }
+    & .det-dow{
+        width: 10rem;
+    }
+    & .det-date{
+        width: 10rem;
+    }
 
+}
+.date-span{
+    font-family: $regular-font;
+}
 .detail-tbl{
     width: 60rem;
 }
-.det-activity{
-    width:30rem;
-}
-.det-dow{
-    width: 10rem;
-}
-.det-date{
-    width: 10rem;
-}
+
 
 .new-res-form{
     
@@ -43,11 +50,10 @@
         padding-right:.5rem;
     }
 }
-.res-part-table{
-    font-family: $regular-font;
-}
+
 .new-note-btn{
     border-radius:10px;
+    background-color: $mid-brown;
 }
 .new-part{
     margin-left:14rem;

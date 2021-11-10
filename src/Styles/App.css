@@ -7,7 +7,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #b47f60;
+  background-color: #46756A;
 }
 
 ::-webkit-scrollbar-corner {
@@ -28,7 +28,7 @@
 }
 
 a {
-  color: #f1a761;
+  color: #b47f60;
   text-shadow: 1px 1px #2e1e15;
   text-decoration: none;
 }
@@ -39,7 +39,26 @@ a:hover {
 }
 
 .app-background {
-  color: #84c6b8;
+  background-attachment: relative;
+}
+
+.my-wrapper {
+  width: 99.75vw;
+  position: relative;
+  background-image: url(../Components/Images/succulent.jpg);
+  background-size: cover;
+}
+
+.my-wrapper::before {
+  content: "";
+  background: #003235;
+  opacity: 50%;
+  position: absolute;
+}
+
+.nav-wrapper {
+  background-color: #003235;
+  width: 99.70vw;
 }
 
 .page-content {
@@ -102,7 +121,8 @@ a:hover {
   background-color: #003235;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  border: none;
+  border-top: 2px solid #84c6b8;
+  border-right: 2px solid #84c6b8;
   border-bottom: none;
   color: #84c6b8;
   font-family: "Cormorant Garamond", serif;
@@ -132,11 +152,14 @@ button {
 
 .conts {
   width: 80vw;
-  height: 90vh;
+  height: 100vh;
   border: solid 3px #003235;
-  background-color: #46756ada;
+  border-top: none;
+  background-color: #84c6b8c9;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: 1rem;
+  overflow-y: scroll;
+  padding-top: 1rem;
 }
 /*# sourceMappingURL=App.css.map */

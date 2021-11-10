@@ -13,20 +13,28 @@
   width: 10rem;
 }
 
-.detail-tbl {
-  width: 60rem;
+.res-part-table {
+  font-family: "Cormorant Garamond", serif;
 }
 
-.det-activity {
+.res-part-table .det-activity {
   width: 30rem;
 }
 
-.det-dow {
+.res-part-table .det-dow {
   width: 10rem;
 }
 
-.det-date {
+.res-part-table .det-date {
   width: 10rem;
+}
+
+.date-span {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.detail-tbl {
+  width: 60rem;
 }
 
 .new-res-form .new-res-label {
@@ -42,12 +50,9 @@
   padding-right: .5rem;
 }
 
-.res-part-table {
-  font-family: "Cormorant Garamond", serif;
-}
-
 .new-note-btn {
   border-radius: 10px;
+  background-color: #6F4329;
 }
 
 .new-part {

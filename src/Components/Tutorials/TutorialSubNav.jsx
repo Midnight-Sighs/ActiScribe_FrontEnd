@@ -10,7 +10,7 @@ const AnonSubNav=()=> {
     return ( 
         <>
         <Router>
-        <div className = "row">
+        <div className = "row my-wrapper">
             <div className="col-2 col-sm-row tutorial-nav">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">

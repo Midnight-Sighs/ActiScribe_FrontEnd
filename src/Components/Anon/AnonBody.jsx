@@ -6,10 +6,12 @@ import AnonMainNav from './AnonMainNav'
 function AnonBody() {
     return ( 
         <>
-        <div className="anon-page"> 
-        <div className="page-content">
-            <AnonMainNav />
-        </div>
+        <div className="my-wrapper">
+            <div className="anon-page"> 
+            <div className="page-content">
+                <AnonMainNav />
+            </div>
+            </div>
         </div>
 
         

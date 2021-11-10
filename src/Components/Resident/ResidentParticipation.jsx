@@ -1,4 +1,6 @@
 import React, { useEffect} from 'react';
+import './Styles/Residents.css'
+
 
 const ResidentParticipation=(props)=>{
     
@@ -45,7 +47,7 @@ const ResidentParticipation=(props)=>{
                             return(
                                 <tr>
                                     <td className ='det-date'>
-                                        {date.date}
+                                        <div className="date-span">{date.date}</div>
                                     </td>
                                 </tr>
                             )
