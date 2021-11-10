@@ -44,8 +44,10 @@ const NewParticipation=()=> {
 
     const postParticipation = async (residentId, participation)=>{
         const jwt = localStorage.getItem('token')
+        debugger
         try{
             await axios.post(`http://127.0.0.1:8000/api/actiscribe/residents/${residentId}/participation/`,participation, {headers: {Authorization: 'Bearer '+ jwt}});
+            console.log("Your participation has been recorded.")
         }
         catch(err){
             console.log(err, "Error creating participation")
@@ -53,18 +55,22 @@ const NewParticipation=()=> {
     }
 
     const handleResChange=(e)=>{
+        e.preventDefault()
         setSelectedResident(e.target.value)
     }
 
     const handleActChange=(e)=>{
+        e.preventDefault()
         setSelectedActivity(e.target.value)
     }
 
     const handleDateChange=(e)=>{
+        e.preventDefault()
         setActivityDate(e.target.value)
     }
 
-    const onSubmit=()=>{
+    const onSubmit=(e)=>{
+        e.preventDefault()
         let newParticipation={
             "name":selectedActivity,
             "date":activityDate
@@ -83,12 +89,12 @@ const NewParticipation=()=> {
             <form onSubmit={onSubmit}>
 
                 <select onChange={handleResChange}>
-                    <option defaultValue disabled >Select a Resident</option>
+                    <option defaultValue >Select a Resident</option>
                     {allResidents.map((resident)=><option value={resident.id}>{resident.r_first_name} {resident.r_last_name}</option>)}
                 </select>
 
                 <select onChange={handleActChange}>
-                    <option defaultValue disabled >Select an Activity</option>
+                    <option defaultValue >Select an Activity</option>
                     {allActivities.map((activity)=><option value={activity.name}>{activity.name}</option>)}
                 </select>
 

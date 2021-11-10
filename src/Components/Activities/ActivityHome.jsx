@@ -16,7 +16,6 @@ class ActivityHome extends Component {
 
     componentDidMount(){
         this.getAllActivities()
-        this.getActivitiesByDOW()
     }
 
     getAllActivities = async ()=>{
@@ -25,6 +24,8 @@ class ActivityHome extends Component {
             let response = await axios.get("http://127.0.0.1:8000/api/actiscribe/activities/", {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             allActivities: response.data
+        },()=>{
+            this.getActivitiesByDOW()
         })
         }
         catch(err){
@@ -72,7 +73,7 @@ class ActivityHome extends Component {
             <>
             <div className = "row">
                 <div className="col-3">
-                    <ActivitySubNav part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity}allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
+                    <ActivitySubNav getAllActivities={this.getAllActivities} part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity} allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
                 </div>
             </div>
             </>

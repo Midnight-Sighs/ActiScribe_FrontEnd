@@ -38,7 +38,7 @@ const ActivitySubNav=(props)=>{
                             <ActivitiesByDow allActivities={props.dowActivities} setActiveActivity={props.setActiveActivity} filterDow={props.filterDow} activity={props.activeActivity} />
                         </Route>
                         <Route exact path='/New_Activity'>
-                            <NewActivity />
+                            <NewActivity getAllActivities={props.getAllActivities}/>
                         </Route>
                         <Route exact path='/Activity_Detail'>
                             <ActivityDetail participation={participation} activity={props.activeActivity}/>
