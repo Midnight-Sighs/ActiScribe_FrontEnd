@@ -17,6 +17,18 @@ const ResidentDetail=(props)=> {
     const[assessmentHS, setAssessmentHS]=useState(false)
     const[partNumbers, setPartNumbers]=useState([])
     const[partLoaded, setPartLoaded]=useState(false)
+    const[percentSoc, setPercentSoc]=useState()
+    const[percentPhy, setPercentPhy]=useState()
+    const[percentEmo, setPercentEmo]=useState()
+    const[percentSpi, setPercentSpi]=useState()
+    const[percentEnv, setPercentEnv]=useState()
+    const[percentFin, setPercentFin]=useState()
+    const[percentInt, setPercentInt]=useState()
+    const[percentCre, setPercentCre]=useState()
+    const[percentOcc, setPercentOcc]=useState()
+    const[percentSen, setPercentSen]=useState()
+    const[totalSum, setTotalSum]=useState()
+    const[percentsLoaded, setPercentsLoaded]=useState()
 
     const filterAllActivities=()=>{
         let x = filterActivities("Social");
@@ -29,8 +41,30 @@ const ResidentDetail=(props)=> {
         let e = filterActivities("Creative");
         let f = filterActivities("Occupational");
         let g = filterActivities("Sensory");
+        let sum = (x+y+z+a+b+c+d+e+f+g)
+        let percentX=calculatePercentage(x, sum)
+        setPercentSoc(percentX)
+        let percentY=calculatePercentage(y, sum)
+        setPercentPhy(percentY)
+        let percentZ=calculatePercentage(z, sum)
+        setPercentEmo(percentZ)
+        let percentA=calculatePercentage(a, sum)
+        setPercentSpi(percentA)
+        let percentB=calculatePercentage(b, sum)
+        setPercentEnv(percentB)
+        let percentC=calculatePercentage(c, sum)
+        setPercentFin(percentC)
+        let percentD=calculatePercentage(d, sum)
+        setPercentInt(percentD)
+        let percentE=calculatePercentage(e, sum)
+        setPercentCre(percentE)
+        let percentF=calculatePercentage(f, sum)
+        setPercentOcc(percentF)
+        let percentG=calculatePercentage(g, sum)
+        setPercentSen(percentG)
         if(x ===.1 && y===.1 &&z===.1&&a===.1&&b===.1&&c===.1&&d===.1&&e===.1&&f===.1&&g===.1){
             setPartLoaded(false)
+            setPercentsLoaded(false)
         }
         setPartNumbers([
             {name: "Social" ,value: x},
@@ -59,11 +93,21 @@ const ResidentDetail=(props)=> {
                 }
             })
             let x = filtered.length
-            if(x ===0){
-                x = .1
-            }
             setPartLoaded(true)
             return x
+        }
+    }
+
+    const calculatePercentage=(x, sum)=>{
+        let number = x/sum;
+        if(number === 1){
+            let rounded = 100
+            return rounded
+        }
+        else{
+            let percent = number *100
+            let rounded = Math.round(percent)
+            return rounded
         }
     }
 
@@ -89,6 +133,12 @@ const ResidentDetail=(props)=> {
     }, [participation])
 
     useEffect(()=>{
+        if(percentSen !== NaN){
+            setPercentsLoaded(true)
+        }
+    },[percentSen])
+
+    useEffect(()=>{
     }, [partNumbers])
 
     if(props.activeResident == undefined){
@@ -101,15 +151,50 @@ const ResidentDetail=(props)=> {
                 <h1>{props.activeResident.r_first_name} {props.activeResident.r_last_name}</h1>
                     <div className="row">
                         {partLoaded ?
-                        <div className ="col-6 res-chart">
+                        <div className ="col-4">
                             <Chart data={partNumbers} />
                         </div> : <p>No participation to display.</p>}
-                        <div className="col-6 res-part">
-                            <ResidentParticipation participation={participation} />
-                        </div>
+                        {percentsLoaded? 
+                        <div className="col-6 res-perc">
+                            <table>
+                                <tbody>
+                                    <tr> 
+                                        <td>Social Participation:</td><td> {percentSoc}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Physical Participation: </td><td>{percentPhy}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emotional Participation: </td><td>{percentEmo}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Spiritual Participation: </td><td>{percentSpi}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Environmenta Participation: </td><td>{percentEnv}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Financial Participation: </td><td>{percentFin}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intellectual Participation: </td><td>{percentInt}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Creative Participation:</td><td>{percentCre}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Occupational Participation: </td><td>{percentOcc}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sensory Participation:</td><td>{percentSen}%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> :null}
                     </div>
                     <div className="row">
                         <div className="res-notes">
+                            <ResidentParticipation participation={participation} />
                             <button onClick={notesOnClick}>New Note</button>
                             <Notes  notes={notes}/>
                             <Modal onClick={notesOnClick} hideShow={notesHS}>

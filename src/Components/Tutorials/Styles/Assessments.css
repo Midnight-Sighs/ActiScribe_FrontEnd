@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 .assessment-main h1 {
+  margin-top: 1rem;
   margin-bottom: 1rem;
   color: #003235;
 }
@@ -13,6 +14,7 @@
 }
 
 .sample-ass-container h1 {
+  margin-top: 1rem;
   margin-left: 2rem;
   color: #003235;
 }
@@ -39,7 +41,7 @@
 }
 
 .interpret-ass h1 {
-  margin-top: .5rem;
+  margin-top: 1rem;
   margin-left: 1rem;
   color: #003235;
 }
@@ -125,6 +127,7 @@
 }
 
 .care-planning {
+  margin-top: 1rem;
   margin-left: 2rem;
 }
 
@@ -154,6 +157,7 @@
 }
 
 .interventions {
+  margin-top: 1rem;
   text-align: justify;
   font-family: "Cormorant Garamond", serif;
 }
@@ -180,6 +184,7 @@
 }
 
 .update-assessment {
+  margin-top: 1rem;
   margin-left: 2rem;
 }
 
@@ -193,6 +198,7 @@
 }
 
 .ending-notes {
+  margin-top: 2rem;
   margin-left: 2rem;
 }
 
