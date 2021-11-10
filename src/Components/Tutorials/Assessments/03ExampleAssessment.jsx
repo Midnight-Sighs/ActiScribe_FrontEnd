@@ -150,6 +150,7 @@ function ExampleAssessment() {
             <p>You'll first update this care plan a week after admission and then you should be updating them at least quarterly after that.  Of course, if something changes drastically, you change the care plan as it changes.</p>
 
             <p>Other interventions I would include in Jane's care plan, based on the assessment above, would be something like this:</p>
+            <div className="sample-interventions">
             - "Invite Jane to church (bible study, what have you) as she was active in her church community"
             <br />          
             - "Invite Jane to a variety of group activities to assess interest"
@@ -165,6 +166,7 @@ function ExampleAssessment() {
             - "Jane has a smart phone that she can independently operate.  Assist PRN if directed by Jane.  Assist with any TV issues PRN"
             <br />
             - "Topics for conversation, interests, and preferences: Gardening, farming, camping trips, trivial knowledge, 60s/70s music, HGTV"
+            </div>
             <br />
             <br />
             <p>From this initial assessment, we have been able to gleam a lot of information about Jane.  There are a lot of interventions, as a result, but they are all fairly quick and easy to read over and some of them are generalized.  As your CNAs/care givers get used to reading your care plans, they'll get used to seeing "invite to xxxx to assess interest" and should be in the routine of doing that from the start of admission.  Anything important, you want to pass on verbally, like at a change of shift.  It's also always good practice to announce a brief bit about new admits at the first couple meetings after move-in anyway.  In an ideal world, your CNAs are checking these new care plans as soon as they're put out, but we all know that we're human and that doesn't always end up being the case!</p>

@@ -42,9 +42,7 @@ const AssessmentExplained = () =>{
 
                     <p>You want to touch on each of the categories of wellness in some sense.  You also want to try to capture some of who your resident was before they started aging or suffering from whatever their primary disability is.  You want to figure out what kind of modifications they may need to be successful in their activity endeavors (although a lot of this one can be done through observation and actually reading through the nursing assessments to see the physical and mental limitations that may be challenging your resident.)  Some of these things will be apparent at admission but some will not.  That's why care plans grow and change.</p>
             </div> : null}
-            {
-            //#region Switch Router
-            }
+          
                 <Router>
                 <Switch>
                     <Route path="/Sample_Admission_Assessment">
@@ -69,13 +67,6 @@ const AssessmentExplained = () =>{
                         <EndingNotes />
                     </Route>
                 </Switch>
-            {
-            //#endregion
-            }
-
-            {
-                //#region Pagination for Tutorial Page
-            }
 
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
@@ -89,9 +80,6 @@ const AssessmentExplained = () =>{
                     </ul>
                 </nav>
                 </Router>
-            {
-                //#endregion
-            }
         </div>
 
         </>

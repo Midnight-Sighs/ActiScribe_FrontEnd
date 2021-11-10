@@ -17,19 +17,34 @@ const SampleAdmissionAssessment = () => {
                     <li>Name:</li>
                     <li>Nickname:</li>
                     <li>[Do you like . . .   -if  yes, what type/genre?]</li>
-                    <li className="extra-tab">. . . Games?</li>
-                    <li className="extra-tab">. . . Books?</li>
-                    <li className="extra-tab">. . . Music?</li>
-                    <li className="extra-tab">. . . Crafts?</li>
-                    <li className="extra-tab">. . . Arts?</li>
-                    <li className="extra-tab">. . . Learning?</li>
-                    <li className="extra-tab">. . . Gardening?</li>
-                    <li className="extra-tab">. . . Sports?</li>
-                    <li className="extra-tab">. . . Exercise?</li>
-                    <li className="extra-tab">. . . Spending time outside?</li>
-                    <li className="extra-tab">. . . Animals?</li>
-                    <li className="extra-tab">. . . Socializing?</li>
-
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><li className="extra-tab">. . . Games?</li></td>
+                                <td><li className="extra-tab">. . . Books?</li></td>
+                            </tr>
+                            <tr>
+                                <td><li className="extra-tab">. . . Music?</li></td>
+                                <td><li className="extra-tab">. . . Crafts?</li></td>
+                            </tr>
+                            <tr>
+                                <td><li className="extra-tab">. . . Arts?</li></td>
+                                <td><li className="extra-tab">. . . Learning?</li></td>
+                            </tr>
+                            <tr>    
+                                <td><li className="extra-tab">. . . Gardening?</li></td>
+                                <td><li className="extra-tab">. . . Sports?</li></td>
+                            </tr>
+                            <tr>    
+                                <td><li className="extra-tab">. . . Exercise?</li></td>
+                                <td><li className="extra-tab">. . . Spending time outside?</li></td>
+                            </tr>
+                            <tr>
+                                <td><li className="extra-tab">. . . Animals?</li></td>
+                                <td><li className="extra-tab">. . . Socializing?</li></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <li>What did you do for work?</li>
                     <li>Did you volunteer?</li>
                     <li>What is your spiritual preference?</li>

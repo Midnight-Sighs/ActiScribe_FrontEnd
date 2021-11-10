@@ -23,7 +23,8 @@ function Interventions() {
             <br /><span className = "extra-tab">Interventions:</span>
             
             <br /><span className = "extra-tab-two">- Monitor during activity for safety.  Provide verbal cues/reminders.</span>
-            <br /><span className = "extra-tab-two">- Assign cooking tasks of a suitable capability.  Ask [resident] to do the mixing or measuring while you do chopping and handle heat sources</span>
+            <br /><span className = "extra-tab-two">- Assign cooking tasks of a suitable capability.  Ask [resident] to do the mixing or measuring </span>
+            <br /><span className = "extra-tab-two">while you do chopping and handle heat sources</span>
             <br /><span className = "extra-tab-two">- Assure the cooking space is safe, clean, and organized at the beginning and end of use.</span>
             <br />
             <p>I provided examples that are more closely related to an every day life so that you can see that we use interventions all the time.  If you have children, your day is full of interventions and redirection.  For our residents, their facility IS every day life. </p> 

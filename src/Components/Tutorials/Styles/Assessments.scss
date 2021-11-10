@@ -24,12 +24,15 @@
     & li{
         padding: 3px;
         font-weight: bold;
+        font-family:$regular-font;
+        font-size: 1.25rem;
     }
     & .tab-in{
         margin-left:5rem;
     }
     & .extra-tab{
         margin-left:3rem;
+        margin-right: 2rem;
     }
 }
 
@@ -49,6 +52,7 @@
         background-color:$dark-teal;
         margin-right: 3rem;
         margin-left: 2rem;
+        box-shadow: $golden-box-shadow;
     }
     & li{
         color: $warm-brown;
@@ -60,6 +64,7 @@
 
 .ex-ass{
     margin-left: 3rem;
+    font-family: $regular-font;
     & p{
         text-align: justify;
     }
@@ -79,18 +84,26 @@
         margin-bottom: 1rem;
     }
     & .answers{
-        color: $second-teal;
+        color: $dk-warm-brown;
         font-weight: 700;
         font-style:italic;
     }
     & td{
         padding-right: 10px;
+        font-weight:500;
     }
+}
+.sample-interventions{
+    font-size:1.25rem;
+    font-family: $regular-font;
+    color:$dk-warm-brown;
+    margin-left:3rem;
 }
 .tea-herb-img{
     margin-top: 3rem;
-    width: 30vw;
+    width: 25vw;
     border-radius: 30px;
+    box-shadow: $golden-box-shadow;
 }
 .example-explanation{
     margin-left: 1rem;
@@ -103,19 +116,25 @@
     }
     & li{
         margin-left:.5rem;
+        color: $dk-warm-brown;
+        font-weight: 600;
+        font-family: $regular-font;
     }
     & p{
         text-align:justify;
     }
     & img{
-        width:25em;
+        width:20rem;
+        opacity: 75%;
         border-radius: 40px;
         box-shadow: 5px 5px 5px 5px $dark-teal;
         margin-top: 3rem;
     }
 }
+
 .interventions{
     text-align: justify;
+    font-family: $regular-font;
     & h1{
         margin-left:2rem;
         color: $dark-teal;
@@ -125,9 +144,13 @@
     }
     & .extra-tab{
         margin-left:2rem;
+        color: $dk-warm-brown;
+        font-weight: 600;
     }
     & .extra-tab-two{
         margin-left:3rem;
+        color: $dk-warm-brown;
+        font-weight: 600;
     }
 }
 .update-assessment{
@@ -151,6 +174,8 @@
     }
     & img{
         height: 25rem;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px $dark-teal;
     }
 }
 .pagination{
@@ -164,10 +189,9 @@
         background-color: $warm-brown;
         color: $light-teal;
     }
-    & .page-link:focus{
+    & .page-link:focus, .page-ling:active{
         background-color: $light-teal;
         color: $dark-teal;
         text-shadow: none;
-    }
-    
+    }  
 }

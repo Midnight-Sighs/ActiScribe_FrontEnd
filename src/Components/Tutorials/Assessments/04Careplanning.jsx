@@ -13,12 +13,14 @@ function Careplanning() {
                     <p>But what does person centered care mean?</p>
 
                     <p>The theory was first documented in the 1960s, but it took a long time for it to become an industry standard.  It wasn't until the 2000s, more than 40 years later, that it started to become something serious in the industry.  While it's simple in theory, there is no true concrete definition to person-centered care because there are so many aspects it could be referring to.  The Health Foundation put it in terms that I really like.  Being vague enough to work for anyone but being something a framework can be built upon: </p>
+                        <div className="pcc">
                         <ol>
                             <li>  "Affording people dignity, compassion and respect.</li> 
                             <li>  Offering coordinated care, support or treatment. </li>
                             <li>  Offering personalized care, support or treatment. </li>
                             <li>  Supporting people to recognize and develop their own strengths and abilities to enable them to live an independent and fulfilling life."</li>
                         </ol>
+                        </div>
                 </div>
                 <div className="col-4">
                     <img src={notebookPlantCoffee} alt="A plant with a cup of coffee"></img>

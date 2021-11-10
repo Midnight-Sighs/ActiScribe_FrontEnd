@@ -25,6 +25,8 @@
 .sample-ass-container li {
   padding: 3px;
   font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
 }
 
 .sample-ass-container .tab-in {
@@ -33,6 +35,7 @@
 
 .sample-ass-container .extra-tab {
   margin-left: 3rem;
+  margin-right: 2rem;
 }
 
 .interpret-ass h1 {
@@ -52,6 +55,8 @@
   background-color: #003235;
   margin-right: 3rem;
   margin-left: 2rem;
+  -webkit-box-shadow: 0px 0px 15px #f1a761;
+          box-shadow: 0px 0px 15px #f1a761;
 }
 
 .interpret-ass li {
@@ -63,6 +68,7 @@
 
 .ex-ass {
   margin-left: 3rem;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .ex-ass p {
@@ -89,19 +95,29 @@
 }
 
 .ex-ass .answers {
-  color: #46756A;
+  color: #2e1e15;
   font-weight: 700;
   font-style: italic;
 }
 
 .ex-ass td {
   padding-right: 10px;
+  font-weight: 500;
+}
+
+.sample-interventions {
+  font-size: 1.25rem;
+  font-family: "Cormorant Garamond", serif;
+  color: #2e1e15;
+  margin-left: 3rem;
 }
 
 .tea-herb-img {
   margin-top: 3rem;
-  width: 30vw;
+  width: 25vw;
   border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 15px #f1a761;
+          box-shadow: 0px 0px 15px #f1a761;
 }
 
 .example-explanation {
@@ -119,6 +135,9 @@
 
 .care-planning li {
   margin-left: .5rem;
+  color: #2e1e15;
+  font-weight: 600;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .care-planning p {
@@ -126,7 +145,8 @@
 }
 
 .care-planning img {
-  width: 25em;
+  width: 20rem;
+  opacity: 75%;
   border-radius: 40px;
   -webkit-box-shadow: 5px 5px 5px 5px #003235;
           box-shadow: 5px 5px 5px 5px #003235;
@@ -135,6 +155,7 @@
 
 .interventions {
   text-align: justify;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .interventions h1 {
@@ -148,10 +169,14 @@
 
 .interventions .extra-tab {
   margin-left: 2rem;
+  color: #2e1e15;
+  font-weight: 600;
 }
 
 .interventions .extra-tab-two {
   margin-left: 3rem;
+  color: #2e1e15;
+  font-weight: 600;
 }
 
 .update-assessment {
@@ -182,6 +207,9 @@
 
 .ending-notes img {
   height: 25rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 10px #003235;
+          box-shadow: 10px 10px 10px #003235;
 }
 
 .pagination {
@@ -199,7 +227,7 @@
   color: #84c6b8;
 }
 
-.pagination .page-link:focus {
+.pagination .page-link:focus, .pagination .page-ling:active {
   background-color: #84c6b8;
   color: #003235;
   text-shadow: none;
