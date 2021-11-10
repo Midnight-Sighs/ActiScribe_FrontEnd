@@ -27,7 +27,6 @@ const ResidentDetail=(props)=> {
     const[percentCre, setPercentCre]=useState()
     const[percentOcc, setPercentOcc]=useState()
     const[percentSen, setPercentSen]=useState()
-    const[percentsLoaded, setPercentsLoaded]=useState()
 
     const filterAllActivities=()=>{
         let x = filterActivities("Social");
@@ -61,10 +60,6 @@ const ResidentDetail=(props)=> {
         setPercentOcc(percentF)
         let percentG=calculatePercentage(g, sum)
         setPercentSen(percentG)
-        if(x ===.1 && y===.1 &&z===.1&&a===.1&&b===.1&&c===.1&&d===.1&&e===.1&&f===.1&&g===.1){
-            setPartLoaded(false)
-            setPercentsLoaded(false)
-        }
         setPartNumbers([
             {name: "Social" ,value: x},
             {name: "Physical" ,value: y},
@@ -77,11 +72,17 @@ const ResidentDetail=(props)=> {
             {name: "Occupational" ,value: f},
             {name: "Sensory" ,value: g},
         ])
+        if(x ===.1 && y===.1 &&z===.1&&a===.1&&b===.1&&c===.1&&d===.1&&e===.1&&f===.1&&g===.1){
+            setPartLoaded(false)
+        }
+        if(sum >0){
+            setPartLoaded(true)
+        }
     }
 
     const filterActivities=(dow)=>{
         let filtered =[];
-        if( !participation){
+        if(Object.keys(participation).length===0 || !props.participation){
             setPartLoaded(false)
             console.log("Resident has no activity to display.")
         }
@@ -92,7 +93,6 @@ const ResidentDetail=(props)=> {
                 }
             })
             let x = filtered.length
-            setPartLoaded(true)
             return x
         }
     }
@@ -132,10 +132,9 @@ const ResidentDetail=(props)=> {
     }, [participation])
 
     useEffect(()=>{
-        if(percentSen !== NaN){
-            setPercentsLoaded(true)
-        }
-    },[percentSen])
+        if(percentSen ===NaN){
+        setPartLoaded(false)}
+    }, [percentSen])
 
     useEffect(()=>{
     }, [partNumbers])
@@ -151,10 +150,10 @@ const ResidentDetail=(props)=> {
                     
                     <div className="row">
                         {partLoaded ?
+                        <>
                         <div className ="col-4">
                             <Chart data={partNumbers} />
-                        </div> : <p>No participation to display.</p>}
-                        {percentsLoaded? 
+                        </div> 
                         <div className="col-4 res-perc">
                             <table>
                                 <tbody>
@@ -190,7 +189,9 @@ const ResidentDetail=(props)=> {
                                     </tr>
                                 </tbody>
                             </table>
-                        </div> :null}
+                        </div> 
+                        </>
+                        : <p>No participation to display.</p>}
                         <div className=" col-4 res-notes">
                             <button className="new-note-btn" onClick={notesOnClick}>New Note</button>
                             <Notes  notes={notes}/>
@@ -203,15 +204,15 @@ const ResidentDetail=(props)=> {
                     <div className="row">
                         </div>
                     </div>
-                            <ResidentParticipation participation={participation} />
-                    <button onClick={editOnClick}>Edit Resident Details</button>
+                    <button className="text-btn mx-4" onClick={editOnClick}>Edit Resident Details</button>
                     <Modal onClick={editOnClick} hideShow={editHS} >
                         <EditResident resident={props.activeResident} getResidents={props.getResidents}/>
                     </Modal>
-                    <button onClick={assessmentOnClick}>View Assessment</button>
+                    <button className="text-btn" onClick={assessmentOnClick}>View Assessment</button>
                     <Modal onClick={assessmentOnClick} hideShow={assessmentHS}>
                         <ViewAssessment resident={props.activeResident.id} />
                     </Modal>
+                    <ResidentParticipation participation={participation} />
             </div>
         </>
      );

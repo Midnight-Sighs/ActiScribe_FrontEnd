@@ -27,11 +27,10 @@
     font-size:large;
 }
 a{
-    color: $-dk-warm-brown;
-    text-shadow: 1px 1px $warm-brown;
+    color: $dk-warm-brown;
     text-decoration: none;
-    &:hover{
-        color: $bright-yellow;
+    &:hover, :focus, :active{
+        color: $light-yellow;
         text-shadow:none;
     }
 }
@@ -136,7 +135,7 @@ button{
 
 .conts{
     width: 80vw;
-    height: 100vh;
+    height: 90vh;
     border: $teal-border;
     border-top:none;
     background-color: $half-light-teal;

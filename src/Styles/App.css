@@ -28,13 +28,12 @@
 }
 
 a {
-  color: #b47f60;
-  text-shadow: 1px 1px #2e1e15;
+  color: #2e1e15;
   text-decoration: none;
 }
 
-a:hover {
-  color: #2e1e15;
+a:hover, a :focus, a :active {
+  color: #f1a761;
   text-shadow: none;
 }
 
@@ -152,7 +151,7 @@ button {
 
 .conts {
   width: 80vw;
-  height: 100vh;
+  height: 90vh;
   border: solid 3px #003235;
   border-top: none;
   background-color: #84c6b8c9;

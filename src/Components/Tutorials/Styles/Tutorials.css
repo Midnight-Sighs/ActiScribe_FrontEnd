@@ -34,13 +34,12 @@ p {
 }
 
 .category a {
-  color: #b47f60;
-  text-shadow: 1px 1px #2e1e15;
+  color: #2e1e15;
   text-decoration: none;
 }
 
-.category a:hover {
-  color: #2e1e15;
+.category a:hover, .category a :focus, .category a :active {
+  color: #f1a761;
   text-shadow: none;
 }
 

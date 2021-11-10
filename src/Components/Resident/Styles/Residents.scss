@@ -1,17 +1,37 @@
 @import '../../Utilities/variables';
 
-.res-table{
-    
-    & .name-col{
-        width: 15rem;
-    }
-    & .iden-col{
-        width: 10rem;
-    }
-    & .ass-col{
-        width: 10rem;
-    }
+
+//#region All Residents 
+.all-res-wrapper{
+   
 }
+.res-table th, td{
+    height:1rem;
+    font-family:$regular-font;
+    font-size:1.5rem;
+}
+
+.all-res-row{
+    height: 1rem;
+}
+.name-col{
+    width: 18rem;
+    padding-left: 4rem;
+}
+.iden-col{
+    width: 10rem;
+}
+.ass-col{
+    width: 12rem;
+}
+
+.detail-link{
+    background:none;
+    padding:0rem;
+    color: $mid-brown;
+}
+//#endregion
+
 .res-part-table{
     font-family:$regular-font;
     & .det-activity{
@@ -60,4 +80,10 @@
 }
 .res-home{
     margin-left: 3rem;
+}
+.text-btn{
+    background:none;
+    padding:0rem;
+    color: $mid-brown;
+    margin-bottom:1rem;
 }
