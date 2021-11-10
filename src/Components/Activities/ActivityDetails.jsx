@@ -20,7 +20,7 @@ const ActivityDetail=(props)=>{
         catch(ex){
             setError(true)
         }
-    }, [])
+    })
 
     useEffect(()=>{
         try{
@@ -32,10 +32,10 @@ const ActivityDetail=(props)=>{
         }
     }, [props])
     
-    if (Object.keys(props.participation).length===0|| error==true){
+    if (Object.keys(props.participation).length===0|| error===true){
         return(<p>No Participation Data</p>)
     }
-    if (Object.keys(props.participation).length>0 || error==false){
+    if (Object.keys(props.participation).length>0 || error===false){
     return ( 
         <>
         <h1>Activity: {props.activity.name}</h1>
@@ -55,12 +55,12 @@ const ActivityDetail=(props)=>{
             <div className="row">
                 <div className="col-4">
                     {props.participation.resident.map((resident)=>{
-                        return(<p>{resident.r_first_name}</p>
+                        return(<p key={resident.id}>{resident.r_first_name}</p>
                     )})}
                 </div>
                 <div className="col-4">
                     {props.participation.participation.map((date)=>{
-                        return(<p>{date.date}</p>
+                        return(<p key={date.id}>{date.date}</p>
                     )})}
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import './Styles/Activity.css'
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 const AllActivities=(props)=>{
 
@@ -10,7 +10,7 @@ const AllActivities=(props)=>{
         setAllActivities(props.allActivities)
     }, [props])
 
-    if(props.allActivities == undefined){
+    if(props.allActivities === undefined){
         return(
             <h3>You have no activities right now!  Add one to get started!</h3>
         )

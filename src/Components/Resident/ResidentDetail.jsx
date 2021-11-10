@@ -29,6 +29,9 @@ const ResidentDetail=(props)=> {
         let e = filterActivities("Creative");
         let f = filterActivities("Occupational");
         let g = filterActivities("Sensory");
+        if(x ===.1 && y===.1 &&z===.1&&a===.1&&b===.1&&c===.1&&d===.1&&e===.1&&f===.1&&g===.1){
+            setPartLoaded(false)
+        }
         setPartNumbers([
             {name: "Social" ,value: x},
             {name: "Physical" ,value: y},
@@ -45,7 +48,11 @@ const ResidentDetail=(props)=> {
 
     const filterActivities=(dow)=>{
         let filtered =[];
-        if (Object.keys(props.participation).length>0){
+        if( !participation){
+            setPartLoaded(false)
+            console.log("Resident has no activity to display.")
+        }
+        if (Object.keys(participation).length>0){
             participation.activity.map((activity)=>{
                 if(activity.dow_one === dow || activity.dow_two === dow|| activity.dow_three === dow){
                     filtered.push(activity)
@@ -53,8 +60,9 @@ const ResidentDetail=(props)=> {
             })
             let x = filtered.length
             if(x ===0){
-                x = 1
+                x = .1
             }
+            setPartLoaded(true)
             return x
         }
     }
@@ -81,7 +89,6 @@ const ResidentDetail=(props)=> {
     }, [participation])
 
     useEffect(()=>{
-        setPartLoaded(true)
     }, [partNumbers])
 
     if(props.activeResident == undefined){
@@ -93,21 +100,21 @@ const ResidentDetail=(props)=> {
             <div className="res-details">
                 <h1>{props.activeResident.r_first_name} {props.activeResident.r_last_name}</h1>
                     <div className="row">
+                        {partLoaded ?
+                        <div className ="col-6 res-chart">
+                            <Chart data={partNumbers} />
+                        </div> : <p>No participation to display.</p>}
+                        <div className="col-6 res-part">
+                            <ResidentParticipation participation={participation} />
+                        </div>
+                    </div>
+                    <div className="row">
                         <div className="res-notes">
                             <button onClick={notesOnClick}>New Note</button>
                             <Notes  notes={notes}/>
                             <Modal onClick={notesOnClick} hideShow={notesHS}>
                                 <NewNote resident={props.activeResident.id}/>
                             </Modal>
-                        </div>
-                    </div>
-                    <div className="row">
-                        {partLoaded ?
-                        <div className ="col-6 res-chart">
-                            <Chart data={partNumbers} />
-                        </div> :null}
-                        <div className="col-6 res-part">
-                            <ResidentParticipation participation={participation} />
                         </div>
                     </div>
                     <button onClick={editOnClick}>Edit Resident Details</button>
