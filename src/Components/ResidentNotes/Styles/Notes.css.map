@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,wHAAI;AACZ,OAAO,CAAC,4FAAI;AACZ,OAAO,CAAC,wFAAI;ADCZ,AAAA,aAAa,CAAA;EACT,WAAW,ECkBA,oBAAoB,EAAE,KAAK;CDTzC;;AAVD,AAEI,aAFS,CAEP,cAAc,CAAA;EACZ,UAAU,EAAC,IAAI;EACf,OAAO,EAAC,IAAI;EACZ,KAAK,ECOA,OAAO;CDNf",
+    "sources": [
+        "Notes.scss",
+        "../../Utilities/_variables.scss"
+    ],
+    "names": [],
+    "file": "Notes.css"
+}

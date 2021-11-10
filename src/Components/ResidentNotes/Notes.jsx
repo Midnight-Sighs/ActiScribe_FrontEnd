@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import Modal from '../Utilities/Modal'
 import EditNote from './EditNote'
+import './Styles/Notes.css'
 
 const Notes=(props)=> {
 
@@ -26,10 +26,16 @@ const Notes=(props)=> {
             {notes.map((note)=>{
                 return(
                     <>
-                        <div key={note.id}>
-                            <p>{note.content}
-                            <br />{note.note_date}</p>
-                            <button onClick={editOnClick}>Edit Note</button>
+                        <div className="note-content" key={note.id}>
+                            <span>{note.content}</span>
+                            <div className = "row">
+                                <div className="col-6">
+                                    <p className="note-date"> :{note.note_date}</p>
+                                </div>
+                                <div className="col-6">
+                                    <button className="edit-note-btn" onClick={editOnClick}>Edit Note</button>
+                                </div>
+                            </div>
                             {editHS ? <EditNote note={note} />: null}
                         </div>
                     </>

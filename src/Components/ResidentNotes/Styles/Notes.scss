@@ -1,0 +1,14 @@
+@import '../../Utilities/variables';
+
+
+.note-content{
+    font-family: $regular-font;
+    & .edit-note-btn{
+        background:none;
+        padding:0rem;
+        color: $warm-brown;
+    }
+    & .note-date{
+
+    }
+}

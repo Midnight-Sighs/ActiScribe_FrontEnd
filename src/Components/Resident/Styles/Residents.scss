@@ -6,6 +6,8 @@
     width:60rem;
     font-family: $regular-font;
     font-size: 1.5rem;
+    background-color: $half-second-teal;
+    border: $teal-border;
     & .name-col{
         width: 15rem;
     }
@@ -43,7 +45,19 @@
 
 .res-details{
     width:60rem;
+    background-color:$half-second-teal;
+    border: $teal-border
 }
 .res-perc{
     width: 30rem;
+    font-family: $regular-font;
+    & td{
+        padding-right:.5rem;
+    }
+}
+.res-part-table{
+    font-family: $regular-font;
+}
+.new-note-btn{
+    border-radius:10px;
 }

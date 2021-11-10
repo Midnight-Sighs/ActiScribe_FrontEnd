@@ -1,5 +1,4 @@
-import { render } from '@testing-library/react';
-import React, {useState, useEffect} from 'react';
+import React, { useEffect} from 'react';
 
 const ResidentParticipation=(props)=>{
     
@@ -17,7 +16,7 @@ const ResidentParticipation=(props)=>{
         <>
         <div className="row">
             <div className="col-8">
-                <table>
+                <table className="res-part-table">
                     <tr>
                         <th className='det-activity'>Activity Name</th>
                         <th colSpan="3" className='det-dow'>Dimensions of Wellness</th>

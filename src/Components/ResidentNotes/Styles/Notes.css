@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+.note-content {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.note-content .edit-note-btn {
+  background: none;
+  padding: 0rem;
+  color: #b47f60;
+}
+/*# sourceMappingURL=Notes.css.map */

@@ -143,4 +143,14 @@ button {
   border: none;
   padding: .5rem;
 }
+
+.conts {
+  width: 80vw;
+  height: 90vh;
+  border: solid 3px #003235;
+  background-color: #46756ada;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 4.5rem;
+}
 /*# sourceMappingURL=App.css.map */

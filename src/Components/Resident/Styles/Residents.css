@@ -7,6 +7,8 @@
   width: 60rem;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
+  background-color: #46756ada;
+  border: solid 3px #003235;
 }
 
 .res-table .name-col {
@@ -51,9 +53,24 @@
 
 .res-details {
   width: 60rem;
+  background-color: #46756ada;
+  border: solid 3px #003235;
 }
 
 .res-perc {
   width: 30rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.res-perc td {
+  padding-right: .5rem;
+}
+
+.res-part-table {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.new-note-btn {
+  border-radius: 10px;
 }
 /*# sourceMappingURL=Residents.css.map */
