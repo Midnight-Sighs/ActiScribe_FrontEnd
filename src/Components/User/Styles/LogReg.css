@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 .log-reg-form-label {
-  color: #b47f60;
+  color: #6F4329;
   padding-right: 2rem;
 }
 
@@ -28,5 +28,34 @@
   border-radius: 10px;
   width: 9rem;
   margin-top: .5rem;
+}
+
+.log-reg-cont {
+  margin-left: 1.5rem;
+  margin-top: 4rem;
+  padding: 5rem;
+  background-color: #84c6b8c9;
+}
+
+.reg-img {
+  position: relative;
+  height: 45vw;
+  width: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reg-img::before {
+  content: "";
+  background-image: url(../../Images/beach.jpg);
+  background-repeat: none;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 50%;
 }
 /*# sourceMappingURL=LogReg.css.map */

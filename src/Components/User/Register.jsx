@@ -90,62 +90,72 @@ class Register extends Component {
         return ( 
             <>
             {this.state.redirect ? <Redirect to='/login' /> : null}
-                <div>
-                    <form className = 'main-reg' onSubmit ={this.handleSubmit}>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td><label className='log-reg-form-label'>User Name</label></td>
-                                    <td><input className = 'log-reg-form-input' name='username' onChange={this.handleChange} /></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">    
-                                        {this.state.errors.username ? <span className="log-reg-error"> {this.state.errors.username}</span> : null}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><label className = 'log-reg-form-label'>Password</label></td>
-                                    <td><input className='log-reg-form-input' type='log-reg-password' name='password' onChange={this.handleChange} /></td>
-                                </tr>
-                                <tr>  
-                                    <td colspan="2">
-                                        {this.state.errors.password ? <span className = "error"> {this.state.errors.password}</span>:null}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><label className = 'log-reg-form-label'>Re-Enter Password</label></td>
-                                    <td><input className = 'log-reg-form-input'type='password' name='verify_password' onChange={this.handleChange} /></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">    
-                                        {this.state.errors.verify_password ? <span className = "error">{this.state.errors.verify_password}</span> : null}
-                                    </td>
-                                </tr>
-                                <tr>  
-                                    <td><label className='log-reg-form-label'>E-mail</label></td>
-                                    <td><input className ='log-reg-form-input' type='email' name='email' onChange={this.handleChange} /></td>
-                                </tr>
-                                <tr>
-                                    <td><label className = 'log-reg-form-label'>First Name</label></td>
-                                    <td><input className='log-reg-form-input' name='first_name' onChange={this.handleChange} /></td>
-                                </tr>
-                                <tr>
-                                    <td><label className='log-reg-form-label'>Last Name</label></td>
-                                    <td><input className='log-reg-form-input' name='last_name' onChange={this.handleChange} /></td>
-                                </tr>
-                                <tr>
-                                    <td><label className='log-reg-form-label'>Middle Name</label></td>
-                                    <td><input className='log-reg-form-input' name='middle_name' onChange={this.handleChange} /></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        {this.state.errors.error ? <button className="log-reg-btn" type="submit" disabled>Register</button> : <button className="log-reg-btn" type="submit">Register</button>}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>
+                <div className="log-reg-cont">
+                    <div className="row">
+                        <div className="col-6 reg-img">
 
+                        </div>
+                        <div className="col-6">
+                            <form className = 'main-reg' onSubmit ={this.handleSubmit}>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><label className='log-reg-form-label'>User Name</label></td>
+                                            <td><input className = 'log-reg-form-input' name='username' onChange={this.handleChange} /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">    
+                                                {this.state.errors.username ? <span className="log-reg-error"> {this.state.errors.username}</span> : null}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label className = 'log-reg-form-label'>Password</label></td>
+                                            <td><input className='log-reg-form-input' type='log-reg-password' name='password' onChange={this.handleChange} /></td>
+                                        </tr>
+                                        <tr>  
+                                            <td colspan="2">
+                                                {this.state.errors.password ? <span className = "error"> {this.state.errors.password}</span>:null}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label className = 'log-reg-form-label'>Re-Enter Password</label></td>
+                                            <td><input className = 'log-reg-form-input'type='password' name='verify_password' onChange={this.handleChange} /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">    
+                                                {this.state.errors.verify_password ? <span className = "error">{this.state.errors.verify_password}</span> : null}
+                                            </td>
+                                        </tr>
+                                        <tr>  
+                                            <td><label className='log-reg-form-label'>E-mail</label></td>
+                                            <td><input className ='log-reg-form-input' type='email' name='email' onChange={this.handleChange} /></td>
+                                        </tr>
+                                            <td><span></span></td>
+                                        <tr>
+                                            <td><label className = 'log-reg-form-label'>First Name</label></td>
+                                            <td><input className='log-reg-form-input' name='first_name' onChange={this.handleChange} /></td>
+                                        </tr>
+                                            <td><span></span></td>
+                                        <tr>
+                                            <td><label className='log-reg-form-label'>Last Name</label></td>
+                                            <td><input className='log-reg-form-input' name='last_name' onChange={this.handleChange} /></td>
+                                        </tr>
+                                            <td><span></span></td>
+                                        <tr>
+                                            <td><label className='log-reg-form-label'>Middle Name</label></td>
+                                            <td><input className='log-reg-form-input' name='middle_name' onChange={this.handleChange} /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td>
+                                                {this.state.errors.error ? <button className="log-reg-btn" type="submit" disabled>Register</button> : <button className="log-reg-btn" type="submit">Register</button>}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </>
          );

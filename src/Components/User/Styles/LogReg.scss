@@ -2,7 +2,7 @@
 
 
 .log-reg-form-label{
-    color: $warm-brown;
+    color: $mid-brown;
     padding-right: 2rem;
 }
 .log-reg-form-input{
@@ -24,4 +24,29 @@
     border-radius: 10px;
     width: 9rem;
     margin-top: .5rem;
+}
+.log-reg-cont{
+    margin-left: 1.5rem;
+    margin-top: 4rem;
+    padding: 5rem;
+    background-color: $half-light-teal;
+}
+
+.reg-img{
+    position:relative;
+    height:45vw;
+    width: 50vh;
+    display:flex;
+}
+.reg-img::before{
+    content:"";
+    background-image: url(../../Images/beach.jpg);
+    background-repeat: none;
+    background-size: cover;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    bottom:0px;
+    left: 0px;
+    opacity: 50%;
 }

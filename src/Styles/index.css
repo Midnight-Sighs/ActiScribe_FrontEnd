@@ -2,11 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 html {
-  background-color: #46756A;
+  background-color: #003235;
   width: 98vw;
 }
 
 #root {
   font-size: 18px;
+  background-color: #003235;
 }
 /*# sourceMappingURL=index.css.map */

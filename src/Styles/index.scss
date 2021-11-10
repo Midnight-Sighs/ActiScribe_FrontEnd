@@ -1,9 +1,10 @@
 @import '../Components/Utilities/_variables.scss';
 
 html{
-    background-color: $second-teal;
+    background-color: $dark-teal;
     width:98vw;
 }
 #root{
     font-size: 18px;
+    background-color: $dark-teal;
 }
