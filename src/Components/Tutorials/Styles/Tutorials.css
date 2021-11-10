@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 .tutorial-container {
-  width: 85vw;
-  height: 70vh;
+  width: 80vw;
+  height: 90vh;
   border: solid 3px #003235;
   background-color: #46756ada;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-left: 2rem;
+  margin-left: 4.5rem;
   margin-right: 2rem;
   overflow-y: scroll;
 }
@@ -17,6 +17,7 @@ h1 {
   margin-left: 1rem;
   margin-top: .25rem;
   color: #003235;
+  font-family: "Dancing Script", cursive;
 }
 
 h5 {
@@ -27,12 +28,15 @@ p {
   margin-left: 1rem;
   margin-right: 3rem;
   text-align: justify;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .category {
   margin-left: 3rem;
+  margin-top: 1rem;
   margin-bottom: 10px;
   cursor: pointer;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .category h3 {
@@ -69,7 +73,7 @@ p {
   background-color: #84c6b8;
 }
 
-.link-cats a {
+.link-cats {
   color: #f1a761;
   text-shadow: 1px 1px #2e1e15;
   text-decoration: none;
@@ -83,5 +87,14 @@ p {
 .nav-tabs {
   border: none;
   border-bottom: none;
+}
+
+.link-summary {
+  position: relative;
+}
+
+.sticky-cat {
+  position: -webkit-sticky;
+  position: sticky;
 }
 /*# sourceMappingURL=Tutorials.css.map */

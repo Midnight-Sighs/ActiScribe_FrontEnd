@@ -23,7 +23,7 @@ const ResidentSubNav=(props)=>{
                 <div className ="col-2">
                     <Switch>
                         <Route exact path="/Residents">
-                            <Home />
+                            <Home {...props} user={props.user} />
                         </Route>
                         <Route exact path="/All_Residents">
                             <AllResidents {...props} setResident={props.setResident} residents={props.residents} />

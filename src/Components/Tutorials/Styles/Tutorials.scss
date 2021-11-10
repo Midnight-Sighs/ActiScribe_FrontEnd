@@ -1,13 +1,13 @@
 @import '../../Utilities/variables';
 
 .tutorial-container{
-    width: 85vw;
-    height: 70vh;
+    width: 80vw;
+    height: 90vh;
     border: solid 3px $dark-teal;
     background-color: $half-second-teal;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-left: 2rem;
+    margin-left: 4.5rem;
     margin-right:2rem;
     overflow-y: scroll;
 }
@@ -15,6 +15,7 @@ h1{
     margin-left: 1rem;
     margin-top:.25rem;
     color: $dark-teal;
+    font-family: $heading-font;
 }
 h5{
     color: $dark-teal;
@@ -24,11 +25,14 @@ p{
     margin-left: 1rem;
     margin-right: 3rem;
     text-align: justify;
+    font-family: $regular-font;
 }
 .category{
     margin-left: 3rem;
+    margin-top: 1rem;
     margin-bottom: 10px;
     cursor: pointer;
+    font-family:$regular-font;
     & h3{
         margin: 5px;
         color: $dark-teal;
@@ -59,17 +63,22 @@ p{
     background-color: $light-teal;
 }
 .link-cats{
-    & a{
-        color: $light-yellow;
-        text-shadow: 1px 1px $dk-warm-brown;
-        text-decoration: none;
-    }
+    color: $light-yellow;
+    text-shadow: 1px 1px $dk-warm-brown;
+    text-decoration: none;
     &:hover{
         color: $dk-warm-brown;
         text-shadow:none;
     }
 }
+
 .nav-tabs{
     border:none;
     border-bottom: none;
+}
+.link-summary{
+    position:relative;
+}
+.sticky-cat{
+    position:sticky;
 }

@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react';
 import '../Styles/AnonBody.css'
 import axios from "axios";
 
-const Home =()=> {
+const Home =(props)=> {
 
     const[quote, setQuote]=useState("Leave a Little Sparkle Wherever You Go...")
     const[whoSaid, setWhoSaid]=useState(" - anonymous")
+    const[user, setUser]=useState(props.user)
     const[quoteImg, setQuoteImg]=useState('')
     const[success, setSuccess]=useState(false)
 
@@ -27,7 +28,7 @@ const Home =()=> {
         <>
             <div className = 'row home-container'>
                 <div className = "col-12"> 
-                    <h1 className ="welcome-msg">Welcome to Actiscribe!</h1>
+                    <h1 className ="welcome-msg">Welcome</h1>
                     <h1 className="quote-msg">{quote}</h1>
                     <h3 className="author-msg">{whoSaid}</h3>
                 </div>
