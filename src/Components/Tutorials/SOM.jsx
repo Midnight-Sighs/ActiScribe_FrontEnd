@@ -2,7 +2,7 @@ import React from 'react';
 
 const SOM = () =>{
     return(
-        <div className="tutorial-container">
+        <div className="tutorial-container conts">
             <div>
                 <div>
                     <h1>What is the SOM?</h1>

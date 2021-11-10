@@ -38,22 +38,8 @@ a:hover {
   text-shadow: none;
 }
 
-.body-container {
-  width: 85vw;
-  height: 70vh;
-  border: solid 3px #003235;
-  background-color: #46756ada;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  overflow-y: scroll;
-}
-
-.page-container {
-  background-color: #84c6b8;
-  position: relative;
-  height: 75vh;
+.app-background {
+  color: #84c6b8;
 }
 
 .page-content {
@@ -151,6 +137,6 @@ button {
   background-color: #46756ada;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-left: 4.5rem;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=App.css.map */

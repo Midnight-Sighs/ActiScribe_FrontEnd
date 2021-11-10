@@ -28,11 +28,7 @@
     }
 }
 .home-container{
-    height: 25rem;
-    width:60rem;
-    margin-top:2rem;
-    background-color: $half-second-teal;
-    border:solid 3px $dark-teal;
+    
     & .welcome-msg{
         font-family: $heading-font;
         font-size: 4rem;
@@ -56,4 +52,7 @@
     70%{color: rgb(174, 99, 235)}
     85%{color:rgb(83, 63, 197) }
     100%{color: rgb(11, 47, 61)}
+}
+.anon-home{
+    margin-left:12.5rem;
 }

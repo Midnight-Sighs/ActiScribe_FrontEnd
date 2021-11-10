@@ -1,18 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
-.tutorial-container {
-  width: 80vw;
-  height: 90vh;
-  border: solid 3px #003235;
-  background-color: #46756ada;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: 4.5rem;
-  margin-right: 2rem;
-  overflow-y: scroll;
-}
-
 h1 {
   margin-left: 1rem;
   margin-top: .25rem;

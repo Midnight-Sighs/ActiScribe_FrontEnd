@@ -76,7 +76,7 @@ const DOW = () => {
     //#endregion
 
     return ( 
-        <div className="tutorial-container">
+        <div className="tutorial-container conts">
     
             <div className=" row tutorial-summary">
                 <div className="col-12">

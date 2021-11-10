@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "ACAA,OAAO,CAAC,wHAAI;AACZ,OAAO,CAAC,4FAAI;AACZ,OAAO,CAAC,wFAAI;ADAZ,AAAA,eAAe,CAAA;EACX,MAAM,EAAC,KAAK,CAAC,GAAG,CCQR,OAAO;CDPlB",
+    "mappings": "ACAA,OAAO,CAAC,wHAAI;AACZ,OAAO,CAAC,4FAAI;AACZ,OAAO,CAAC,wFAAI",
     "sources": [
         "Activity.scss",
         "../../Utilities/_variables.scss"

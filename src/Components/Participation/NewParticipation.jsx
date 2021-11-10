@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import '../Resident/Styles/Residents.css'
 
 
 const NewParticipation=()=> {
@@ -86,6 +87,7 @@ const NewParticipation=()=> {
 
     return ( 
         <>
+        <div className="new-part conts">
             <form onSubmit={onSubmit}>
 
                 <select onChange={handleResChange}>
@@ -102,7 +104,7 @@ const NewParticipation=()=> {
                 <input name="date" value={activityDate} onChange={handleDateChange} type="date"></input>
                 <button type="submit">Save Participation</button>
             </form>
-
+        </div>
         </>
      );
 }

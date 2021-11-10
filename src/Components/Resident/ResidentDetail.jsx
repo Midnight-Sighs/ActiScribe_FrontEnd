@@ -146,7 +146,7 @@ const ResidentDetail=(props)=> {
 
     return ( 
         <>
-            <div className="res-details">
+            <div className="res-details conts">
                 <h1>{props.activeResident.r_first_name} {props.activeResident.r_last_name}</h1>
                     
                     <div className="row">

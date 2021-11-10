@@ -1,16 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
-.res-table {
-  margin-left: 4rem;
-  margin-top: 2rem;
-  width: 60rem;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
-  background-color: #46756ada;
-  border: solid 3px #003235;
-}
-
 .res-table .name-col {
   width: 15rem;
 }
@@ -39,22 +29,8 @@
   width: 10rem;
 }
 
-.new-res-form {
-  margin-left: 4rem;
-  margin-top: 2rem;
-  width: 50rem;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
-}
-
 .new-res-form .new-res-label {
   padding-right: 2rem;
-}
-
-.res-details {
-  width: 60rem;
-  background-color: #46756ada;
-  border: solid 3px #003235;
 }
 
 .res-perc {
@@ -72,5 +48,13 @@
 
 .new-note-btn {
   border-radius: 10px;
+}
+
+.new-part {
+  margin-left: 14rem;
+}
+
+.res-home {
+  margin-left: 3rem;
 }
 /*# sourceMappingURL=Residents.css.map */

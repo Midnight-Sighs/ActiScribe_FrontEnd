@@ -11,7 +11,7 @@ function AnonSubNav() {
         <>
         <Router>
         <div className = "row">
-            <div className="col-1 col-sm-row tutorial-nav">
+            <div className="col-2 col-sm-row tutorial-nav">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <Link to="/Features_Home"  class="nav-link" id="v-pills-feat-home-tab" data-bs-toggle="pill" href="#v-pills-feat-home-tab" role="tab" aria-controls="v-pills-feat-home" aria-selected="true">Features</Link>
@@ -22,7 +22,7 @@ function AnonSubNav() {
                 </div>
             </div>
 
-            <div className ="col-11">
+            <div className ="col-10">
                 <Switch>
                     <Route path="/Features_Home">
                         <Features />

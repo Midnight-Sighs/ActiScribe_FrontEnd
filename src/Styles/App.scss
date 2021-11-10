@@ -35,24 +35,10 @@ a{
     }
 }
 
-.body-container{
-    width: 85vw;
-    height: 70vh;
-    border: solid 3px $dark-teal;
-    background-color: $half-second-teal;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: 2rem;
-    margin-right:2rem;
-    overflow-y: scroll;
+.app-background{
+    color:$light-teal;
 }
 
-
-.page-container {
-    background-color: $light-teal;
-    position: relative;
-    height: 75vh;
-}
 .page-content{
     position:relative;
     z-index:2;
@@ -135,5 +121,5 @@ button{
     background-color: $half-second-teal;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-left:4.5rem;
+    margin-left:1rem;
 }

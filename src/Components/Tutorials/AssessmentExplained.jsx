@@ -23,7 +23,7 @@ const AssessmentExplained = () =>{
 
     return(
         <>
-        <div className="tutorial-container">
+        <div className="tutorial-container conts">
             {hideShow ? <div className="assessment-main">
                 <h1>Care Plans and Assessments!</h1>
                     <p>This is a bit of an indepth subject, but I'll make it as brief as possible while still providing examples and references to help make things clear.</p>

@@ -26,7 +26,7 @@ const Home =(props)=> {
 
     return ( 
         <>
-            <div className = 'row home-container'>
+            <div className = 'row home-container conts'>
                 <div className = "col-12"> 
                     <h1 className ="welcome-msg">Welcome</h1>
                     <h1 className="quote-msg">{quote}</h1>

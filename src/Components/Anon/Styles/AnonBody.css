@@ -33,14 +33,6 @@
   color: #f1a761;
 }
 
-.home-container {
-  height: 25rem;
-  width: 60rem;
-  margin-top: 2rem;
-  background-color: #46756ada;
-  border: solid 3px #003235;
-}
-
 .home-container .welcome-msg {
   font-family: "Dancing Script", cursive;
   font-size: 4rem;
@@ -105,5 +97,9 @@
   100% {
     color: #0b2f3d;
   }
+}
+
+.anon-home {
+  margin-left: 12.5rem;
 }
 /*# sourceMappingURL=AnonBody.css.map */

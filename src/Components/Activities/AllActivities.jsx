@@ -18,7 +18,7 @@ const AllActivities=(props)=>{
     else{
         return ( 
             <>
-            <table className='activitiy-table'>
+            <table className='activitiy-table conts'>
                 <tbody>
                     <tr>
                         <th className="name-col">Name</th>

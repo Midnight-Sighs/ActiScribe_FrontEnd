@@ -6,7 +6,7 @@ const Links = () => {
 
     return(
         <>
-        <div className="tutorial-container">
+        <div className="tutorial-container conts">
             <div className="link-summary">
                 <h1>Helpful Links</h1>
                 <p>This page is here to list links that may be helpful in your endevours, for a variety of different reasons.  There are resources to particular types of activities, resources for guidelines, and resources to making pretty calendars for printing.</p>

@@ -1,13 +1,7 @@
 @import '../../Utilities/variables';
 
 .res-table{
-    margin-left: 4rem;
-    margin-top: 2rem;
-    width:60rem;
-    font-family: $regular-font;
-    font-size: 1.5rem;
-    background-color: $half-second-teal;
-    border: $teal-border;
+    
     & .name-col{
         width: 15rem;
     }
@@ -33,20 +27,14 @@
 }
 
 .new-res-form{
-    margin-left: 4rem;
-    margin-top:2rem;
-    width: 50rem;
-    font-family: $regular-font;
-    font-size: 1.5rem;
+    
     & .new-res-label{
         padding-right: 2rem;
     }
 }
 
 .res-details{
-    width:60rem;
-    background-color:$half-second-teal;
-    border: $teal-border
+    
 }
 .res-perc{
     width: 30rem;
@@ -60,4 +48,10 @@
 }
 .new-note-btn{
     border-radius:10px;
+}
+.new-part{
+    margin-left:14rem;
+}
+.res-home{
+    margin-left: 3rem;
 }

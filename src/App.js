@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import '../src/Styles/App.css'
@@ -82,7 +82,7 @@ class App extends Component {
           <Router>
             <Switch>
 
-              {this.state.loggedIn ? <Route exact path="/" render={props=> <ResidentHome {...props} user={this.state.userDetails} />} /> :
+              {this.state.loggedIn ? <Redirect to="/Residents" render={props=> <ResidentHome {...props} user={this.state.userDetails} />} /> :
               <Route exact path="/" component={AnonBody} />}
             </Switch>
           </Router>

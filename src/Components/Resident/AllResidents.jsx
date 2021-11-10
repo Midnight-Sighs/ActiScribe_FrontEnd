@@ -19,7 +19,7 @@ const AllResidents=(props)=>{
 
     return ( 
         <>
-        <table className='res-table'>
+        <table className='res-table conts'>
             <tbody>
                 <tr>
                     <th className="name-col">Name</th>

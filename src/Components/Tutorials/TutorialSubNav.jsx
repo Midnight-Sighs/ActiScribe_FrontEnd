@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Anon/Styles/AnonBody.css';
 import Tutorials from './Tutorials'
 import DOW from './DOW'
 import SOM from './SOM'
@@ -7,13 +6,12 @@ import Links from './Links'
 import AssessmentExplained from './AssessmentExplained'
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 
-function AnonSubNav() {
+const AnonSubNav=()=> {
     return ( 
         <>
         <Router>
-        
         <div className = "row">
-            <div className="col-1 col-sm-row tutorial-nav">
+            <div className="col-2 col-sm-row tutorial-nav">
                 <div class="d-flex align-items-start">
                     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <Link to="/Tutorials_Home"  class="nav-link" id="v-pills-tut-home-tab" data-bs-toggle="pill" href="#v-pills-tut-home" role="tab" aria-controls="v-pills-tut-home" aria-selected="true">Tutorials</Link>
@@ -25,7 +23,7 @@ function AnonSubNav() {
                 </div>
             </div>
      
-            <div className ="col-11">
+            <div className ="col-10">
                 <Switch>
                     <Route path="/Tutorials_Home">
                         <Tutorials />
