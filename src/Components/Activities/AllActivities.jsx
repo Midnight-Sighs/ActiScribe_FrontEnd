@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import './Styles/Activity.css'
 import {BrowserRouter as Router, Link} from 'react-router-dom';
+import ActivitiesForChart from '../Utilities/Chart/ActivitiesForChart';
 
 const AllActivities=(props)=>{
 
@@ -19,6 +20,7 @@ const AllActivities=(props)=>{
         return ( 
             <>
             <div className="conts">
+            <ActivitiesForChart activities={props.allActivities} />
                 <table className='activitiy-table'>
                     <tbody>
                         <tr>

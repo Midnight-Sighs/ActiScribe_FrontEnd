@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react'
 import ActivitySubNav from './ActivitySubNav'
+import ActivitiesForChart from '../Utilities/Chart/ActivitiesForChart';
 
 class ActivityHome extends Component {
     constructor(props) {
