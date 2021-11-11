@@ -178,7 +178,7 @@ class Assessment extends Component {
     render() { 
         return ( 
             <>
-            <div className="row">
+            <div className="row ass-view">
                 <div className="col-6">
                 <form onSubmit={this.onSubmit}>
                     <table>
@@ -287,16 +287,16 @@ class Assessment extends Component {
                                 <td><label className='ass-form-label'>One Thing They Wish Everyone Knew</label></td>
                                 <td><input className = 'ass-form-input'  maxLength="250"  name='one_thing' value={this.state.one_thing} onChange={this.handleChange} /></td>
                             </tr>
-                            {this.state.errors.error ? <button type="submit" disabled>Save Assessment</button> : <button type="submit">Save Assessment</button>}
+                            <button className="text-btn ass-btn" type="submit">Save Assessment</button>
                         </tbody>
                     </table>
                 </form>
                 </div>
-                <div className = "col-2">
+                {/* <div className = "col-2">
                     {this.state.errors.nickname ? <span className="ass-error">{this.state.errors.nickname}</span>:null}
                     {this.state.errors.fifty ? <span className="ass-error">{this.state.errors.fifty}</span>:null}
                     {this.state.errors.two_fifty? <span className="ass-error">{this.state.errors.two_fifty}</span>:null}
-                </div>
+                </div> */}
             </div>
             </>
          );

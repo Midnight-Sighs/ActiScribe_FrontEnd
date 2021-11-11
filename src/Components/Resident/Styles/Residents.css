@@ -35,19 +35,33 @@
 }
 
 .res-part-table .det-activity {
-  width: 40rem;
+  width: 15rem;
+  font-size: 1rem;
+  padding: .4rem;
 }
 
 .res-part-table .det-dow {
   width: 10rem;
+  font-size: 1.25rem;
 }
 
 .res-part-table .det-date {
   width: 10rem;
 }
 
+.delete-part {
+  font-size: 1rem;
+  margin: none;
+  padding: none;
+  height: 1rem;
+  font-size: 1rem;
+  background: none;
+  color: #6F4329;
+}
+
 .date-span {
   font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
 }
 
 .detail-tbl {
@@ -99,6 +113,47 @@
   border: 2px solid #2e1e15;
 }
 
+.ass-view {
+  height: 55vh;
+  width: 43vw;
+  overflow-y: scroll;
+}
+
+.ass-view .ass-line {
+  font-family: "Dancing Script", cursive;
+  width: 15vw;
+  border-bottom: 2px double #003235;
+}
+
+.ass-view .ass-value {
+  font-size: 1.25rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-family: "Cormorant Garamond", serif;
+  border-bottom: 2px double #003235;
+}
+
+.ass-view .edit-ass-btn {
+  margin-top: .5rem;
+  font-size: 1.5rem;
+}
+
+.ass-form-label {
+  width: 15rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.ass-form-input {
+  margin-top: .75rem;
+  background-color: #46756A;
+  border: none;
+  border-radius: 5px;
+}
+
+.ass-btn {
+  font-size: 1.5rem;
+}
+
 .res-perc {
   width: 30rem;
   font-family: "Cormorant Garamond", serif;
@@ -118,7 +173,11 @@
 
 .text-btn {
   font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  padding-left: .5rem;
+  padding-right: .5rem;
   background: none;
+  text-decoration: none;
   padding: 0rem;
   padding-left: .25rem;
   padding-right: .25rem;

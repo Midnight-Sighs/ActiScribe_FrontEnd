@@ -118,41 +118,41 @@ function ActivitiesForChart(props) {
             <div className="row">
                 {partLoaded ?
                 <>
-                <div className ="col-5">
+                <div className ="col-7">
                     <Chart data={partNumbers} />
                 </div> 
                 <div className="col-4 res-perc">
                     <table>
                         <tbody>
                             <tr> 
-                                <td>Social Participation: </td><td> {percentSoc}%</td>
+                                <td>Social: </td><td> {percentSoc}%</td>
                             </tr>
                             <tr>
-                                <td>Physical Participation:  </td><td>{percentPhy}%</td>
+                                <td>Physical:  </td><td>{percentPhy}%</td>
                             </tr>
                             <tr>
-                                <td>Emotional Participation:  </td><td>{percentEmo}%</td>
+                                <td>Emotional:  </td><td>{percentEmo}%</td>
                             </tr>
                             <tr>
-                                <td>Spiritual Participation:  </td><td>{percentSpi}%</td>
+                                <td>Spiritual:  </td><td>{percentSpi}%</td>
                             </tr>
                             <tr>
-                                <td>Environmental Participation:  </td><td>{percentEnv}%</td>
+                                <td>Environmental:  </td><td>{percentEnv}%</td>
                             </tr>
                             <tr>
-                                <td>Financial Participation:  </td><td>{percentFin}%</td>
+                                <td>Financial:  </td><td>{percentFin}%</td>
                             </tr>
                             <tr>
-                                <td>Intellectual Participation:  </td><td>{percentInt}%</td>
+                                <td>Intellectual:  </td><td>{percentInt}%</td>
                             </tr>
                             <tr>
-                                <td>Creative Participation:  </td><td>{percentCre}%</td>
+                                <td>Creative:  </td><td>{percentCre}%</td>
                             </tr>
                             <tr>
-                                <td>Occupational Participation:  </td><td>{percentOcc}%</td>
+                                <td>Occupational:  </td><td>{percentOcc}%</td>
                             </tr>
                             <tr>
-                                <td>Sensory Participation:  </td><td>{percentSen}%</td>
+                                <td>Sensory:  </td><td>{percentSen}%</td>
                             </tr>
                         </tbody>
                     </table>

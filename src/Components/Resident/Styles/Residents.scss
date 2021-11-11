@@ -36,26 +36,37 @@
 .res-part-table{
     font-family:$regular-font;
     & .det-activity{
-        width:40rem;
+        width:15rem;
+        font-size: 1rem;
+        padding:.4rem;
     }
     & .det-dow{
         width: 10rem;
+        font-size: 1.25rem;
     }
     & .det-date{
         width: 10rem;
     }
-
 }
+.delete-part{
+    font-size: 1rem;
+    margin: none;
+    padding: none;
+    height: 1rem;
+    font-size:1rem;
+    background: none;
+    color: $mid-brown;
+}
+
 .date-span{
     font-family: $regular-font;
+    font-size: 1.25rem;
 }
 .detail-tbl{
     width: 60rem;
 }
 
 //#endregion
-
-
 
 //#region Resident Detail Page
 .res-details{
@@ -96,7 +107,6 @@
 
 //#endregion
 
-
 //#region Edit Resident in Modal
 
 .edit-resident{
@@ -119,6 +129,50 @@
 }
 
 //#endregion
+
+//#region View Resident Assessment
+.ass-view{
+    height: 55vh;
+    width: 43vw;
+    overflow-y:scroll;
+    .ass-line{
+        font-family:$heading-font;
+        width: 15vw;
+        border-bottom: 2px double $dark-teal;
+    }
+    .ass-value{
+        font-size:1.25rem;
+        padding-top:.5rem;
+        padding-bottom: .5rem;
+        font-family:$regular-font;
+        border-bottom: 2px double $dark-teal;
+    }
+    .edit-ass-btn{
+        margin-top: .5rem;
+        font-size: 1.5rem;
+    }
+}
+
+//#endregion
+
+//#region Edit/New Assessment
+.ass-form-label{
+    width: 15rem;
+    font-family: $heading-font;
+}
+.ass-form-input{
+    margin-top: .75rem;
+    background-color: $second-teal;
+    border: none;
+    border-radius: 5px;
+}
+.ass-btn{
+    font-size: 1.5rem;
+}
+
+
+//#endregion
+
 .res-perc{
     width: 30rem;
     font-family: $regular-font;
@@ -137,7 +191,11 @@
 
 .text-btn{
     font-family: $regular-font;
+    font-weight: 700;
+    padding-left: .5rem;
+    padding-right: .5rem;
     background:none;
+    text-decoration:none;
     padding:0rem;
     padding-left: .25rem;
     padding-right: .25rem;

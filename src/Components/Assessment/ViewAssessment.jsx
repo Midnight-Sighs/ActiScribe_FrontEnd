@@ -56,59 +56,117 @@ const ViewAssessment=(props)=> {
         <>
         {editHS ?
             <>
-            <p className="ass-line">Nickname</p>
-            <p className="ass-value">{assessment.nickname }</p>
-            <p className="ass-line">Games</p>
-            <p className="ass-value">{assessment.games_yn }</p>
-            <p className="ass-line">Books</p>
-            <p className="ass-value">{assessment.books_yn}</p>
-            <p className="ass-line">Music</p>
-            <p className="ass-value">{assessment.music_yn}</p>
-            <p className="ass-line">Crafts</p>
-            <p className="ass-value">{assessment.crafts_yn}</p>
-            <p className="ass-line">Arts</p>
-            <p className="ass-value">{assessment.arts_yn}</p>
-            <p className="ass-line">Learning</p>
-            <p className="ass-value">{assessment.learning_yn}</p>
-            <p className="ass-line">Gardening</p>
-            <p className="ass-value">{assessment.gardening_yn}</p>
-            <p className="ass-line">Sports</p>
-            <p className="ass-value">{assessment.sports_yn}</p>
-            <p className="ass-line">Exercise</p>
-            <p className="ass-value">{assessment.exercise_yn}</p>
-            <p className="ass-line">Outside</p>
-            <p className="ass-value">{assessment.outside_yn}</p>
-            <p className="ass-line">Animals</p>
-            <p className="ass-value">{assessment.animals_yn}</p>
-            <p className="ass-line">Socializing</p>
-            <p className="ass-value">{assessment.socializing_yn}</p>
-            <p className="ass-line">Work</p>
-            <p className="ass-value">{assessment.work}</p>
-            <p className="ass-line">Volunteer</p>
-            <p className="ass-value">{assessment.volunteer}</p>
-            <p className="ass-line">Parents</p>
-            <p className="ass-value">{assessment.parents}</p>
-            <p className="ass-line">Siblings</p>
-            <p className="ass-value">{assessment.siblings}</p>
-            <p className="ass-line">Close Family</p>
-            <p className="ass-value">{assessment.close_family}</p>
-            <p className="ass-line">Spouse</p>
-            <p className="ass-value">{assessment.spouse}</p>
-            <p className="ass-line">Children</p>
-            <p className="ass-value">{assessment.children}</p>
-            <p className="ass-line">Technology</p>
-            <p className="ass-value">{assessment.technology}</p>
-            <p className="ass-line">City or Country</p>
-            <p className="ass-value">{assessment.city_or_country}</p>
-            <p className="ass-line">Travel</p>
-            <p className="ass-value">{assessment.travel}</p>
-            <p className="ass-line">Alone Fun</p>
-            <p className="ass-value">{assessment.alone_fun}</p>
-            <p className="ass-line">Social Fun</p>
-            <p className="ass-value">{assessment.social_fun}</p>
-            <p className="ass-line">One Thing You Wish Everyone Knew</p>
-            <p className="ass-value">{assessment.one_thing}</p>
-            <button onClick={editOnClick}>Edit Assessment?</button>
+            <div className="ass-view">
+            <table>
+                <tbody>
+                    <tr>
+                        <td className="ass-line">Nickname</td>
+                        <td className="ass-value">{assessment.nickname }</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Games</td>
+                        <td className="ass-value">{assessment.games_yn }</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Books</td>
+                        <td className="ass-value">{assessment.books_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Music</td>
+                        <td className="ass-value">{assessment.music_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Crafts</td>
+                        <td className="ass-value">{assessment.crafts_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Arts</td>
+                        <td className="ass-value">{assessment.arts_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Learning</td>
+                        <td className="ass-value">{assessment.learning_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Gardening</td>
+                        <td className="ass-value">{assessment.gardening_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Sports</td>
+                        <td className="ass-value">{assessment.sports_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Exercise</td>
+                        <td className="ass-value">{assessment.exercise_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Outside</td>
+                        <td className="ass-value">{assessment.outside_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Animals</td>
+                        <td className="ass-value">{assessment.animals_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Socializing</td>
+                        <td className="ass-value">{assessment.socializing_yn}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Work</td>
+                        <td className="ass-value">{assessment.work}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Volunteer</td>
+                        <td className="ass-value">{assessment.volunteer}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Parents</td>
+                        <td className="ass-value">{assessment.parents}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Siblings</td>
+                        <td className="ass-value">{assessment.siblings}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Close Family</td>
+                        <td className="ass-value">{assessment.close_family}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Spouse</td>
+                        <td className="ass-value">{assessment.spouse}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Children</td>
+                        <td className="ass-value">{assessment.children}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Technology</td>
+                        <td className="ass-value">{assessment.technology}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">City or Country</td>
+                        <td className="ass-value">{assessment.city_or_country}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Travel</td>
+                        <td className="ass-value">{assessment.travel}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Alone Fun</td>
+                        <td className="ass-value">{assessment.alone_fun}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">Social Fun</td>
+                        <td className="ass-value">{assessment.social_fun}</td>
+                    </tr>
+                    <tr>
+                        <td className="ass-line">One Thing You Wish Everyone Knew</td>
+                        <td className="ass-value">{assessment.one_thing}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button className="text-btn edit-ass-btn"onClick={editOnClick}>Edit Assessment?</button>
+            </div>
             </>
             :
             <Assessment resident={residentId}toggleHS={editOnClick} assessment={assessment}/>}
