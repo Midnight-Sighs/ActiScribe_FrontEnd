@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import './Styles/Notes.css'
 
 const NewNote=(props)=> {
 
@@ -34,14 +35,14 @@ const NewNote=(props)=> {
 
     return ( 
         <>
-
-        <form onSubmit={onSubmit}>
-            <label className="new-note-label">Write a New Note</label>
-            <input className="new-note-field" name="content" onChange={handleChange} placeholder={"Your Note Here"} />
-            <input className="note-date" type="date" name="date" onChange={handleDate} />
-            <button type="submit">Add Note</button>
-        </form>
-
+        <div className="new-notes">
+            <form onSubmit={onSubmit}>
+                <p><label className="new-note-label">Write a New Note</label></p>
+                <p><textarea rows="4" maxLength="400" className="new-note-field" name="content" onChange={handleChange} placeholder={"Your Note Here"} /></p>
+                <input className="note-date" type="date" name="date" onChange={handleDate} />
+                <button className="text-btn edit-note-btn" type="submit">Add Note</button>
+            </form>
+        </div>
         </>
      );
 }

@@ -10,4 +10,37 @@
   padding: 0rem;
   color: #6F4329;
 }
+
+.new-notes {
+  margin-left: 25%;
+}
+
+.new-notes .new-note-label {
+  color: #84c6b8;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+
+.new-notes .note-date {
+  margin-left: 1rem;
+  background-color: #46756A;
+  border: none;
+}
+
+.new-notes .new-note-field {
+  width: 20rem;
+  height: 15rem;
+  background-color: #46756A;
+  border-radius: 5px;
+  color: #2e1e15;
+  font-weight: 600;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.new-notes .edit-note-btn {
+  margin-left: 1rem;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+}
 /*# sourceMappingURL=Notes.css.map */

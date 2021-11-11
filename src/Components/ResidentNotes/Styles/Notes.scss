@@ -12,3 +12,37 @@
 
     }
 }
+
+//#region New Note
+.new-notes{
+    margin-left: 25%;
+    .new-note-label{
+        color: $light-teal;
+        font-family: $heading-font;
+        font-size:2rem;
+    }
+    .note-date{
+        margin-left: 1rem;
+        background-color: $second-teal;
+        border: none;
+    }
+    .new-note-field{
+        width: 20rem;
+        height: 15rem;
+        background-color: $second-teal;
+        border-radius:5px;
+        color: $dk-warm-brown;
+        font-weight: 600;
+        font-family: $regular-font;
+    }
+    .edit-note-btn{
+        margin-left: 1rem;
+        font-weight: 700;
+        font-family: $regular-font;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+//#endregion
