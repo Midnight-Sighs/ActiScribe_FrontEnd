@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import AllActivities from './AllActivities';
+import {Link} from 'react-router-dom'
 
 const ActivitiesByDow=(props)=> {
 
@@ -38,7 +38,29 @@ const ActivitiesByDow=(props)=> {
                 </select>
                 <input type="submit" value="Submit"></input>
             </form>
-            {filtered ? <AllActivities allActivities={allActivities} setActiveActivity={props.setActiveActivity} activity={props.activeActivity}/>: null}
+            {filtered ? 
+                <table className='activity-table'>
+                    <tbody>
+                        <tr>
+                            <th className="name-col">Name</th>
+                            <th className="iden-col" colSpan="3">Dimensions of Wellness</th>
+                            <th></th>
+                        </tr>
+                    {allActivities.map((activity)=>{
+                    return(
+
+                            <tr key={activity.id}>
+                                <td className="name-col">{activity.name}</td>
+                                <td className='iden-col'>{activity.dow_one}</td>
+                                <td className='iden-col'>{activity.dow_two}</td>
+                                <td className='iden-col'>{activity.dow_three}</td>
+                                <td><Link to='/Activity_Detail' onClick={()=>props.setActiveActivity(activity)}>Details</Link></td>
+                            </tr>  
+                    )})}
+                    </tbody>
+                </table> 
+                : null}
+        
         </div>
         </>
      );

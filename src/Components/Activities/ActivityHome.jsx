@@ -8,6 +8,7 @@ class ActivityHome extends Component {
         super(props);
         this.state = { 
             allActivities : [],
+            archivedActivities:[],
             activitiesByDOW : [],
             partByActivity:[],
             activeActivity:{},
@@ -17,6 +18,7 @@ class ActivityHome extends Component {
 
     componentDidMount(){
         this.getAllActivities()
+        this.getAllArchivedActivities()
     }
 
     getAllActivities = async ()=>{
@@ -47,6 +49,19 @@ class ActivityHome extends Component {
         }
     }
 
+    getAllArchivedActivities= async()=>{
+        const jwt = localStorage.getItem('token')
+        try{
+        let response = await axios.get(`http://127.0.0.1:8000/api/actiscribe/activities/archived/`, {headers: {Authorization: 'Bearer '+ jwt}});
+        this.setState({
+            archivedActivities: response.data
+        })
+        }
+        catch(err){
+            console.log(err, "Error getting archived activities")
+        }
+    }
+
     getParticipationByActivity = async(activityId)=>{
         const jwt = localStorage.getItem('token')
         try{
@@ -74,7 +89,7 @@ class ActivityHome extends Component {
             <>
             <div className = "row">
                 <div className="col-3">
-                    <ActivitySubNav getAllActivities={this.getAllActivities} part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity} allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
+                    <ActivitySubNav archivedActivities={this.state.archivedActivities} getAllActivities={this.getAllActivities} part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity} allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
                 </div>
             </div>
             </>

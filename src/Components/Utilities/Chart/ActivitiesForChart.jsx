@@ -17,7 +17,6 @@ function ActivitiesForChart(props) {
     const[percentSen, setPercentSen]=useState()
 
     const filterAllActivities=()=>{
-        debugger
         let x = filterActivities("Social");
         let y = filterActivities("Physical");
         let z = filterActivities("Emotional");

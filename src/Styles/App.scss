@@ -94,7 +94,8 @@ a{
 #v-pills-new-res-tab,
 #v-pills-all-act-tab,
 #v-pills-dow-act-tab,
-#v-pills-new-act-tab{
+#v-pills-new-act-tab,
+#v-pills-arch-act-tab{
     background-color: $dark-teal;
     margin-top: .5rem;
     width: 10rem;
@@ -102,6 +103,7 @@ a{
     font-size: 1.25rem;
     text-align:center;
 }
+
 #nav-home-tab,
 #nav-tutorials-tab,
 #nav-features-tab,

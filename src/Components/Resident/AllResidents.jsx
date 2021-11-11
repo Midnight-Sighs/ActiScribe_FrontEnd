@@ -5,13 +5,8 @@ import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 
 const AllResidents=(props)=>{
 
-    const[urlPath, setUrl]=useState(``)
     const[activeResident, setActiveResident]=useState('')
 
-
-    function onClick (){
-
-    }
 
     useEffect(()=>{
         console.log(activeResident)

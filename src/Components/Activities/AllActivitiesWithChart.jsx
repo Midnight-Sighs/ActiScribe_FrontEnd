@@ -21,7 +21,7 @@ const AllActivities=(props)=>{
             <>
             <div className="conts">
             <ActivitiesForChart activities={props.allActivities} />
-                <table className='activitiy-table'>
+                <table className='activity-table'>
                     <tbody>
                         <tr>
                             <th className="name-col">Name</th>
