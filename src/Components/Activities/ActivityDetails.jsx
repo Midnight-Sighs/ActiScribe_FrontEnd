@@ -39,30 +39,32 @@ const ActivityDetail=(props)=>{
     if (Object.keys(props.participation).length>0 || error===false){
     return ( 
             <>
-            <h1>Activity: {props.activity.name}</h1>
-            <table>
-                <tbody>
-                    <tr>
-                        <td className="act-dow-col">{props.activity.dow_one}</td>
-                        <td className="act-dow-col">{props.activity.dow_two}</td>
-                        <td className="act-dow-col">{props.activity.dow_three}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <button onClick={editOnClick}>Edit Activity</button>
-            <Modal onClick={editOnClick} hideShow={editHS}> 
-                <EditActivity activity={props.activity}/>
-            </Modal>
-                <div className="row">
-                    <div className="col-4">
-                        {props.participation.resident.map((resident)=>{
-                            return(<p key={resident.id}>{resident.r_first_name}</p>
-                        )})}
-                    </div>
-                    <div className="col-4">
-                        {props.participation.participation.map((date)=>{
-                            return(<p key={date.id}>{date.date}</p>
-                        )})}
+            <div className="conts">
+                <h1>Activity: {props.activity.name}</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td className="act-dow-col">{props.activity.dow_one}</td>
+                            <td className="act-dow-col">{props.activity.dow_two}</td>
+                            <td className="act-dow-col">{props.activity.dow_three}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button onClick={editOnClick}>Edit Activity</button>
+                <Modal onClick={editOnClick} hideShow={editHS}> 
+                    <EditActivity activity={props.activity}/>
+                </Modal>
+                    <div className="row">
+                        <div className="col-4">
+                            {props.participation.resident.map((resident)=>{
+                                return(<p key={resident.id}>{resident.r_first_name}</p>
+                            )})}
+                        </div>
+                        <div className="col-4">
+                            {props.participation.participation.map((date)=>{
+                                return(<p key={date.id}>{date.date}</p>
+                            )})}
+                        </div>
                     </div>
                 </div>
             </>

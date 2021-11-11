@@ -61,8 +61,7 @@ p {
 }
 
 .link-cats {
-  color: #f1a761;
-  text-shadow: 1px 1px #2e1e15;
+  color: #6F4329;
   text-decoration: none;
 }
 
@@ -80,8 +79,17 @@ p {
   position: relative;
 }
 
-.sticky-cat {
-  position: -webkit-sticky;
-  position: sticky;
+.link-categories {
+  position: relative;
+}
+
+.link-categories .sticky-cat {
+  position: fixed;
+  top: 17rem;
+}
+
+.link-categories .link-descripts {
+  margin-left: 20rem;
+  font-family: "Cormorant Garamond", serif;
 }
 /*# sourceMappingURL=Tutorials.css.map */

@@ -27,9 +27,8 @@ class EditActivity extends Component {
     }
 
     archiveActivity=async(activityId)=>{
-        debugger
         const jwt = localStorage.getItem('token')
-        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/`, {headers: {Authorization: 'Bearer '+ jwt}});   
+        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/`, {headers: {Authorization: 'Bearer '+ jwt}, });   
     }
 
     editActivity=async(activity, activityId)=>{

@@ -54,8 +54,7 @@ p{
     background-color: $light-teal;
 }
 .link-cats{
-    color: $light-yellow;
-    text-shadow: 1px 1px $dk-warm-brown;
+    color: $mid-brown;
     text-decoration: none;
     &:hover{
         color: $dk-warm-brown;
@@ -70,6 +69,17 @@ p{
 .link-summary{
     position:relative;
 }
-.sticky-cat{
-    position:sticky;
+
+
+.link-categories{
+    position:relative;
+    .sticky-cat{
+        position:fixed;
+        top: 17rem;
+    }
+    .link-descripts{
+        margin-left: 20rem;
+        font-family: $regular-font;
+    }
 }
+

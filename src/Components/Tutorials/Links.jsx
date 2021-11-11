@@ -12,7 +12,7 @@ const Links = () => {
                 <p>This page is here to list links that may be helpful in your endevours, for a variety of different reasons.  There are resources to particular types of activities, resources for guidelines, and resources to making pretty calendars for printing.</p>
             </div>
             <hr />
-            <div className="row">
+            <div className="row link-categories">
                 <div className="col-3 sticky-cat">
                     <h3 className="category"><a href="#ActivityIdeas">Activity Ideas</a></h3>
                     <h3 className="category"><a href="#Regulations">Regulations</a></h3>
