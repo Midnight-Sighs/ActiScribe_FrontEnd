@@ -29,8 +29,9 @@ const Home =(props)=> {
             <div className = 'row home-container conts'>
                 <div className = "col-12"> 
                     <h1 className ="welcome-msg">Welcome</h1>
-                    <h1 className="quote-msg">{quote}</h1>
-                    <h3 className="author-msg">{whoSaid}</h3>
+                    <h1 className ="big-quote">"</h1>
+                    <h1 className="quote-msg">{quote} "</h1>
+                    <h3 className="author-msg">- {whoSaid}</h3>
                 </div>
             </div>
         </>

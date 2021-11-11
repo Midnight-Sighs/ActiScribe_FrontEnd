@@ -60,6 +60,7 @@ class NewResident extends Component {
         return ( 
             <>
             <div className="new-res-form conts">
+                <h1>New Resident</h1>
                 <form onSubmit={this.onSubmit} className="new-res">
                     <table>
                         <tbody>

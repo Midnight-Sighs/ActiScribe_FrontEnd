@@ -58,6 +58,35 @@
   padding-right: 2rem;
 }
 
+.text-btn {
+  background: none;
+  padding: 0rem;
+  color: #6F4329;
+  margin-bottom: 1rem;
+}
+
+.new-res-form .new-res-label {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.new-res-form .new-res-field {
+  width: 20rem;
+  font-family: "Cormorant Garamond", serif;
+  background-color: #46756A;
+  border: none;
+  margin-top: .5rem;
+  color: #2e1e15;
+}
+
+.new-res-form .new-res-field:focus {
+  background-color: #6F4329;
+  border: 1px solid #b47f60;
+}
+
+.new-res-form h1 {
+  font-family: "Dancing Script", cursive;
+}
+
 .res-perc {
   width: 30rem;
   font-family: "Cormorant Garamond", serif;
@@ -67,23 +96,11 @@
   padding-right: .5rem;
 }
 
-.new-note-btn {
-  border-radius: 10px;
-  background-color: #6F4329;
-}
-
 .new-part {
   margin-left: 14rem;
 }
 
 .res-home {
   margin-left: 3rem;
-}
-
-.text-btn {
-  background: none;
-  padding: 0rem;
-  color: #6F4329;
-  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=Residents.css.map */

@@ -77,7 +77,7 @@ class App extends Component {
   render() { 
     return ( 
         <>
-        <Header login={this.userLogin} logout={this.logout} loggedIn={this.state.loggedIn} />
+        <Header login={this.userLogin} user={this.props.userDetails} logout={this.logout} loggedIn={this.state.loggedIn} />
         <div className="app-background">
           <Router>
             <Switch>

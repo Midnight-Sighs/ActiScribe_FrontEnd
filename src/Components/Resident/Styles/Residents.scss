@@ -60,9 +60,49 @@
     }
 }
 
+//#region Resident Detail Page
 .res-details{
     
 }
+.btn-col{
+    
+}
+
+.text-btn{
+    background:none;
+    padding:0rem;
+    color: $mid-brown;
+    margin-bottom:1rem;
+}
+
+//#endregion
+
+//#region New Resident
+
+.new-res-form{
+    
+    & .new-res-label{
+        font-family: $regular-font;
+    }
+    & .new-res-field{
+        width: 20rem;
+        font-family:$regular-font;
+        background-color:$second-teal;
+        border:none;
+        margin-top:.5rem;
+        color: $dk-warm-brown;
+        &:focus{
+            background-color: $mid-brown;
+            border: 1px solid $warm-brown
+        }
+    }
+    & h1{
+        font-family:$heading-font;
+    }
+}
+
+//#endregion
+
 .res-perc{
     width: 30rem;
     font-family: $regular-font;
@@ -71,19 +111,10 @@
     }
 }
 
-.new-note-btn{
-    border-radius:10px;
-    background-color: $mid-brown;
-}
+
 .new-part{
     margin-left:14rem;
 }
 .res-home{
     margin-left: 3rem;
-}
-.text-btn{
-    background:none;
-    padding:0rem;
-    color: $mid-brown;
-    margin-bottom:1rem;
 }
