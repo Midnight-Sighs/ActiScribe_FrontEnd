@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+.activity-table {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+}
+
+.activity-table .name-col, .activity-table .iden-col {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  padding: .5rem;
+}
 /*# sourceMappingURL=Activity.css.map */

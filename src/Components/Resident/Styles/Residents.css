@@ -55,18 +55,8 @@
 }
 
 .new-res-form .new-res-label {
-  padding-right: 2rem;
-}
-
-.text-btn {
-  background: none;
-  padding: 0rem;
-  color: #6F4329;
-  margin-bottom: 1rem;
-}
-
-.new-res-form .new-res-label {
   font-family: "Cormorant Garamond", serif;
+  padding-right: 2rem;
 }
 
 .new-res-form .new-res-field {
@@ -87,6 +77,28 @@
   font-family: "Dancing Script", cursive;
 }
 
+.edit-resident {
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+
+.edit-resident label {
+  font-size: 1.25rem;
+}
+
+.edit-resident .edit-res-field {
+  font-size: 1.25rem;
+  background-color: #46756A;
+  border: none;
+  border-radius: 5px;
+  margin: .25rem;
+}
+
+.edit-resident .edit-res-field:focus {
+  background-color: #6F4329;
+  border: 2px solid #2e1e15;
+}
+
 .res-perc {
   width: 30rem;
   font-family: "Cormorant Garamond", serif;
@@ -102,5 +114,18 @@
 
 .res-home {
   margin-left: 3rem;
+}
+
+.text-btn {
+  font-family: "Cormorant Garamond", serif;
+  background: none;
+  padding: 0rem;
+  padding-left: .25rem;
+  padding-right: .25rem;
+  border-radius: 5px;
+  color: #6F4329;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 5px 5px 10px #6F4329;
+          box-shadow: 5px 5px 10px #6F4329;
 }
 /*# sourceMappingURL=Residents.css.map */

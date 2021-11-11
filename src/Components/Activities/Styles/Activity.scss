@@ -1,5 +1,11 @@
 @import '../../../Components/Utilities/variables';
 
 .activity-table{
-    
+    font-family: $regular-font;
+    font-size:1.5rem;
+    .name-col, .iden-col{
+        font-family:$regular-font;
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
 }

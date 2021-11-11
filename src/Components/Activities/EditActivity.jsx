@@ -29,11 +29,15 @@ class EditActivity extends Component {
     archiveActivity=async(activityId)=>{
         const jwt = localStorage.getItem('token')
         await axios.patch(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/`, {headers: {Authorization: 'Bearer '+ jwt}, });   
+        console.log("Activity Updated")
+        this.props.getAllActivities()
     }
 
     editActivity=async(activity, activityId)=>{
         const jwt = localStorage.getItem('token')
         await axios.put(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/`, activity, {headers: {Authorization: 'Bearer '+ jwt}});  
+        console.log(activity.name + " has been updated.")
+        this.props.getAllActivities()
     }
 
     onSubmit=()=>{

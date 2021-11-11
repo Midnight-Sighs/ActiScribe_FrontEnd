@@ -61,36 +61,37 @@ class EditResident extends Component {
         return ( 
             <>
 
-
-            <form onSubmit={this.handleSubmit}>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><label className="edit-res-label">First Name</label></td>
-                            <td><input className="edit-res-field" name="r_first_name" onChange={this.handleChange} value={this.state.r_first_name} /></td>
-                        </tr>
-                        <tr>
-                            <td><label className="edit-res-label">Last Name</label></td>
-                            <td><input className="edit-res-field" name="r_last_name" onChange={this.handleChange} value={this.state.r_last_name} /></td>
-                        </tr>
-                        <tr>
-                            <td><label className="edit-res-label">Other Identifier</label></td>
-                            <td><input className="edit-res-field" name="r_other_identifier" onChange={this.handleChange} value={this.state.r_other_identifier} /></td>
-                        </tr>
-                        <tr>
-                            <td><label className="edit-res-label">Last Assessment</label></td>
-                            <td><input className="edit-res-field" name="edit-res-field" onChange={this.handleChange} value={this.state.last_assessment} /></td>
-                        </tr>
-                        <tr>
-                            <td colSpan="2">
-                                <button type="submit">Save Edits</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-            <p>This will change your resident to an archived status (if they're active).  This is used to remove your active resident but retain your statistics and records. If your resident is archived (extended stay somewhere else, readmission, etc), you can set their status to active again.</p>
-                <button type="button" onClick={this.archiveOnClick}>Resident Status</button>
+            <div className="edit-resident">
+                <form onSubmit={this.handleSubmit}>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label className="edit-res-label">First Name</label></td>
+                                <td><input className="edit-res-field" name="r_first_name" onChange={this.handleChange} value={this.state.r_first_name} /></td>
+                            </tr>
+                            <tr>
+                                <td><label className="edit-res-label">Last Name</label></td>
+                                <td><input className="edit-res-field" name="r_last_name" onChange={this.handleChange} value={this.state.r_last_name} /></td>
+                            </tr>
+                            <tr>
+                                <td><label className="edit-res-label">Other Identifier</label></td>
+                                <td><input className="edit-res-field" name="r_other_identifier" onChange={this.handleChange} value={this.state.r_other_identifier} /></td>
+                            </tr>
+                            <tr>
+                                <td><label className="edit-res-label">Last Assessment</label></td>
+                                <td><input className="edit-res-field" name="edit-res-field" onChange={this.handleChange} value={this.state.last_assessment} /></td>
+                            </tr>
+                            <tr>
+                                <td colSpan="2">
+                                    <button className="text-btn modal-btn" type="submit">Save Edits</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <p>Status will change your resident to active/archived.  This is used to remove your active resident but retain your statistics and records. Useful for residents on extended stay elsewhere or possibility of readmission later.</p>
+                    <button className="text-btn modal-btn" type="button" onClick={this.archiveOnClick}>Resident Status</button>
+            </div>
             </>
          );
     }

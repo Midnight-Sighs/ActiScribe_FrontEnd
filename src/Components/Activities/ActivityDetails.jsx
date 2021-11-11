@@ -52,17 +52,17 @@ const ActivityDetail=(props)=>{
                 </table>
                 <button onClick={editOnClick}>Edit Activity</button>
                 <Modal onClick={editOnClick} hideShow={editHS}> 
-                    <EditActivity activity={props.activity}/>
+                    <EditActivity activity={props.activity} getAllActivities={props.getAllActivities}/>
                 </Modal>
                     <div className="row">
                         <div className="col-4">
-                            {props.participation.resident.map((resident)=>{
-                                return(<p key={resident.id}>{resident.r_first_name}</p>
+                            {props.participation.resident.map((resident, index)=>{
+                                return(<p key={index}>{resident.r_first_name}</p>
                             )})}
                         </div>
                         <div className="col-4">
                             {props.participation.participation.map((date)=>{
-                                return(<p key={date.id}>{date.date}</p>
+                                return(<p key= {date.id}>{date.date}</p>
                             )})}
                         </div>
                     </div>

@@ -32,6 +32,7 @@
 }
 //#endregion
 
+//#region Resident Participation Component
 .res-part-table{
     font-family:$regular-font;
     & .det-activity{
@@ -52,13 +53,9 @@
     width: 60rem;
 }
 
+//#endregion
 
-.new-res-form{
-    
-    & .new-res-label{
-        padding-right: 2rem;
-    }
-}
+
 
 //#region Resident Detail Page
 .res-details{
@@ -68,23 +65,19 @@
     
 }
 
-.text-btn{
-    background:none;
-    padding:0rem;
-    color: $mid-brown;
-    margin-bottom:1rem;
-}
 
 //#endregion
 
 //#region New Resident
 
+
 .new-res-form{
     
-    & .new-res-label{
+    .new-res-label{
         font-family: $regular-font;
+        padding-right: 2rem;
     }
-    & .new-res-field{
+    .new-res-field{
         width: 20rem;
         font-family:$regular-font;
         background-color:$second-teal;
@@ -96,17 +89,40 @@
             border: 1px solid $warm-brown
         }
     }
-    & h1{
+    h1{
         font-family:$heading-font;
     }
 }
 
 //#endregion
 
+
+//#region Edit Resident in Modal
+
+.edit-resident{
+    font-size: 1rem;
+    margin-left: 2rem;
+    label{
+        font-size: 1.25rem;
+    }
+    .edit-res-field{
+        font-size: 1.25rem;
+        background-color: $second-teal;
+        border:none;
+        border-radius: 5px;
+        margin: .25rem;
+        &:focus{
+            background-color: $mid-brown;
+            border: 2px solid $dk-warm-brown;
+        }
+    }
+}
+
+//#endregion
 .res-perc{
     width: 30rem;
     font-family: $regular-font;
-    & td{
+    td{
         padding-right:.5rem;
     }
 }
@@ -117,4 +133,16 @@
 }
 .res-home{
     margin-left: 3rem;
+}
+
+.text-btn{
+    font-family: $regular-font;
+    background:none;
+    padding:0rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    border-radius: 5px;
+    color: $mid-brown;
+    margin-bottom:1rem;
+    box-shadow: 5px 5px 10px $mid-brown;
 }

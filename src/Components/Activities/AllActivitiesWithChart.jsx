@@ -21,7 +21,9 @@ const AllActivities=(props)=>{
             <>
             <div className="conts">
             <ActivitiesForChart activities={props.allActivities} />
-                <table className='activity-table'>
+                <hr />
+                <div className="activity-table">
+                <table>
                     <tbody>
                         <tr>
                             <th className="name-col">Name</th>
@@ -36,12 +38,13 @@ const AllActivities=(props)=>{
                                 <td className='iden-col'>{activity.dow_one}</td>
                                 <td className='iden-col'>{activity.dow_two}</td>
                                 <td className='iden-col'>{activity.dow_three}</td>
-                                <td><Link to='/Activity_Detail' onClick={()=>props.setActiveActivity(activity)}>Details</Link></td>
+                                <td><Link to='/Activity_Detail' className="text-btn" onClick={()=>props.setActiveActivity(activity)}>Details</Link></td>
                             </tr>  
                     )})}
                     </tbody>
                 </table>
                 </div>
+            </div>
             </>
         );
     }
