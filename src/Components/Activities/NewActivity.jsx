@@ -6,6 +6,7 @@ class NewActivity extends Component {
         super(props);
         this.state = { 
             name: "",
+            description: "",
             is_active: true,
             is_archived: false,
             dow_one: "",
@@ -20,6 +21,7 @@ class NewActivity extends Component {
         await axios.post(`http://127.0.0.1:8000/api/actiscribe/activities/`, newActivity, {headers: {Authorization: 'Bearer '+ jwt}});
         this.setState({
             name: "",
+            description:"",
             is_active: true,
             is_archived: false,
             dow_one: "",
@@ -66,7 +68,11 @@ class NewActivity extends Component {
                     <tbody>
                         <tr>
                             <td><label className = "new-act-label">Activity Name</label></td>
-                            <td><input className = "new-act-label" name="name" value={this.state.name} onChange={this.handleChange} /></td>
+                            <td><input className = "new-act-field" maxLength="50" name="name" value={this.state.name} onChange={this.handleChange} required /></td>
+                        </tr>
+                        <tr>
+                            <td><label className="new-act-label">Activity Description</label></td>
+                            <td><textarea maxLength="250" className="new-act-field" name="description" value={this.state.description} onChange={this.handleChange} /></td>
                         </tr>
                         <tr>
                             <td>Dimension of Wellness</td>

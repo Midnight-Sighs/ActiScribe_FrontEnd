@@ -185,107 +185,107 @@ class Assessment extends Component {
                         <tbody>
                             <tr>
                                 <td><label className='ass-form-label'>Nickname</label></td>
-                                <td><input className = 'ass-form-input' name='nickname' value={this.state.nickname} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="20" name='nickname' value={this.state.nickname} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Games?</label></td>
-                                <td><input className = 'ass-form-input' name='games_yn' value={this.state.games_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50" name='games_yn' value={this.state.games_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Books?</label></td>
-                                <td><input className = 'ass-form-input' name='books_yn' value={this.state.books_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='books_yn' value={this.state.books_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Music</label></td>
-                                <td><input className = 'ass-form-input' name='music_yn' value={this.state.music_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='music_yn' value={this.state.music_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Crafts</label></td>
-                                <td><input className = 'ass-form-input' name='crafts_yn' value={this.state.crafts_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='crafts_yn' value={this.state.crafts_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Arts</label></td>
-                                <td><input className = 'ass-form-input' name='arts_yn' value={this.state.arts_yn} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='arts_yn' value={this.state.arts_yn} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Learning</label></td>
-                                <td><input className = 'ass-form-input' name='learning_yn' value={this.state.learning_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='learning_yn' value={this.state.learning_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Gardening</label></td>
-                                <td><input className = 'ass-form-input' name='gardening_yn' value={this.state.gardening_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='gardening_yn' value={this.state.gardening_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Sports</label></td>
-                                <td><input className = 'ass-form-input' name='sports_yn' value={this.state.sports_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='sports_yn' value={this.state.sports_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Exercise</label></td>
-                                <td><input className = 'ass-form-input' name='exercise_yn' value={this.state.exercise_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='exercise_yn' value={this.state.exercise_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Outside</label></td>
-                                <td><input className = 'ass-form-input' name='outside_yn' value={this.state.outside_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='outside_yn' value={this.state.outside_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Animals</label></td>
-                                <td><input className = 'ass-form-input' name='animals_yn' value={this.state.animals_yn} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='animals_yn' value={this.state.animals_yn} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Socializing</label></td>
-                                <td><input className = 'ass-form-input' name='socializing_yn' value={this.state.socializing_yn}onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="50"  name='socializing_yn' value={this.state.socializing_yn}onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Work, Past Jobs</label></td>
-                                <td><input className = 'ass-form-input' name='work' value={this.state.work} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"  name='work' value={this.state.work} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Volunteer Work</label></td>
-                                <td><input className = 'ass-form-input' name='volunteer' value={this.state.volunteer} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"  name='volunteer' value={this.state.volunteer} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Parents</label></td>
-                                <td><input className = 'ass-form-input' name='parents' value={this.state.parents} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"  name='parents' value={this.state.parents} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Siblings</label></td>
-                                <td><input className = 'ass-form-input' name='siblings' value={this.state.siblings} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='siblings' value={this.state.siblings} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Other Close Family</label></td>
-                                <td><input className = 'ass-form-input' name='close_family' value={this.state.close_family} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='close_family' value={this.state.close_family} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Spouse</label></td>
-                                <td><input className = 'ass-form-input' name='spouse' value={this.state.spouse} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='spouse' value={this.state.spouse} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Children</label></td>
-                                <td><input className = 'ass-form-input' name='children' value={this.state.children} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='children' value={this.state.children} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Technology</label></td>
-                                <td><input className = 'ass-form-input' name='technology' value={this.state.technology} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='technology' value={this.state.technology} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>City or Country</label></td>
-                                <td><input className = 'ass-form-input' name='city_or_country' value={this.state.city_or_country} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='city_or_country' value={this.state.city_or_country} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Travel Experience</label></td>
-                                <td><input className = 'ass-form-input' name='travel' value={this.state.travel} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='travel' value={this.state.travel} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Alone Fun</label></td>
-                                <td><input className = 'ass-form-input' name='alone_fun' value={this.state.alone_fun} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='alone_fun' value={this.state.alone_fun} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>Social Fun</label></td>
-                                <td><input className = 'ass-form-input' name='social_fun' value={this.state.social_fun} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input' maxLength="250"   name='social_fun' value={this.state.social_fun} onChange={this.handleChange} /></td>
                             </tr>
                             <tr>
                                 <td><label className='ass-form-label'>One Thing They Wish Everyone Knew</label></td>
-                                <td><input className = 'ass-form-input' name='one_thing' value={this.state.one_thing} onChange={this.handleChange} /></td>
+                                <td><input className = 'ass-form-input'  maxLength="250"  name='one_thing' value={this.state.one_thing} onChange={this.handleChange} /></td>
                             </tr>
                             {this.state.errors.error ? <button type="submit" disabled>Save Assessment</button> : <button type="submit">Save Assessment</button>}
                         </tbody>

@@ -33,7 +33,7 @@ const EditNote=(props)=> {
     return ( 
         <>
             <form onSubmit={onSubmit}>
-                <input className="edit-field" name="noteContent" onChange={e=>setNoteContent(e.currentTarget.value)} value={noteContent}></input>
+                <input className="edit-field" maxLength="400" name="noteContent" onChange={e=>setNoteContent(e.currentTarget.value)} value={noteContent} required></input>
                 <button type="submit">Save Changes</button>
             </form>
                 <button type="button" onClick={deleteClick}>Delete Note</button>

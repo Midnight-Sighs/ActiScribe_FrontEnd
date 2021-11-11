@@ -67,19 +67,19 @@ class EditResident extends Component {
                         <tbody>
                             <tr>
                                 <td><label className="edit-res-label">First Name</label></td>
-                                <td><input className="edit-res-field" name="r_first_name" onChange={this.handleChange} value={this.state.r_first_name} /></td>
+                                <td><input className="edit-res-field" maxLength="20" name="r_first_name" onChange={this.handleChange} value={this.state.r_first_name} required/></td>
                             </tr>
                             <tr>
                                 <td><label className="edit-res-label">Last Name</label></td>
-                                <td><input className="edit-res-field" name="r_last_name" onChange={this.handleChange} value={this.state.r_last_name} /></td>
+                                <td><input className="edit-res-field" maxLength="20" name="r_last_name" onChange={this.handleChange} value={this.state.r_last_name} required /></td>
                             </tr>
                             <tr>
                                 <td><label className="edit-res-label">Other Identifier</label></td>
-                                <td><input className="edit-res-field" name="r_other_identifier" onChange={this.handleChange} value={this.state.r_other_identifier} /></td>
+                                <td><input className="edit-res-field" maxLength="20" name="r_other_identifier" onChange={this.handleChange} value={this.state.r_other_identifier} required /></td>
                             </tr>
                             <tr>
                                 <td><label className="edit-res-label">Last Assessment</label></td>
-                                <td><input className="edit-res-field" name="edit-res-field" onChange={this.handleChange} value={this.state.last_assessment} /></td>
+                                <td><input className="edit-res-field" name="edit-res-field" onChange={this.handleChange} value={this.state.last_assessment} required /></td>
                             </tr>
                             <tr>
                                 <td colSpan="2">

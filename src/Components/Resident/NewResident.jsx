@@ -66,19 +66,19 @@ class NewResident extends Component {
                         <tbody>
                             <tr>
                                 <td><label className="new-res-label">Resident First Name</label></td>
-                                <td><input className='new-res-field' name='r_first_name' onChange={this.handleChange} value={this.state.r_first_name} /></td>
+                                <td><input className='new-res-field' maxLength="20" name='r_first_name' onChange={this.handleChange} value={this.state.r_first_name} required /></td>
                             </tr>
                             <tr>
                                 <td><label className="new-res-label">Resident Last Name</label></td>
-                                <td><input className='new-res-field' name='r_last_name'onChange={this.handleChange} value={this.state.r_last_name} /></td>
+                                <td><input className='new-res-field' maxLength="20" name='r_last_name'onChange={this.handleChange} value={this.state.r_last_name} required /></td>
                             </tr>
                             <tr>
                                 <td><label className="new-res-label">Identifier (such as room number)</label></td>
-                                <td><input className='new-res-field' name='r_other_identifier' onChange={this.handleChange} value={this.state.r_other_identifier} /></td>
+                                <td><input className='new-res-field' maxLength="20" name='r_other_identifier' onChange={this.handleChange} value={this.state.r_other_identifier} required /></td>
                             </tr>
                             <tr>
                                 <td><label className="new-res-label">Last Assessment Date</label></td>
-                                <td><input className='new-res-field' type="date" name='last_assessment'onChange={this.handleChange} value={this.state.last_assessment} /></td>
+                                <td><input className='new-res-field' maxLength="20" type="date" name='last_assessment'onChange={this.handleChange} value={this.state.last_assessment} required /></td>
                             </tr>
                             <tr>
                                 <td colspan="2">

@@ -6,6 +6,7 @@ class EditActivity extends Component {
         super(props);
         this.state = { 
             name: "",
+            description: "",
             dow_one: "",
             dow_two: "",
             dow_three: "",
@@ -43,6 +44,7 @@ class EditActivity extends Component {
     onSubmit=()=>{
         let editActivity = {
             "name": this.state.name,
+            "description": this.state.description,
             "dow_one": this.state.dow_one,
             "dow_two": this.state.dow_two,
             "dow_three": this.state.dow_three,
@@ -63,7 +65,9 @@ class EditActivity extends Component {
             <>
                 <form onSubmit={this.onSubmit}> 
                 <label className = "edit-act-label">Activity Name</label>
-                <input className = "edit-act-label" name="name" onChange={this.handleChange} value={this.state.name}/>
+                <input className = "edit-act-field" name="name" maxlength="50" onChange={this.handleChange} value={this.state.name} required/>
+                <label className ="edit-act-label">Activity Description</label>
+                <textarea maxlength="250" name="description" onChange={this.handleChange} value={this.state.description} />
                 <select name="dow_one" onChange={e=>this.setState({dow_one: e.currentTarget.value})}>
                     <option value="" defaultValue disabled hiddden>{this.state.dow_one}</option>
                     <option value="Social">Social</option>

@@ -101,7 +101,7 @@ class Register extends Component {
                                     <tbody>
                                         <tr>
                                             <td><label className='log-reg-form-label'>User Name</label></td>
-                                            <td><input className = 'log-reg-form-input' name='username' onChange={this.handleChange} /></td>
+                                            <td><input className = 'log-reg-form-input' name='username' onChange={this.handleChange} required/></td>
                                         </tr>
                                         <tr>
                                             <td colspan="2">    
@@ -110,7 +110,7 @@ class Register extends Component {
                                         </tr>
                                         <tr>
                                             <td><label className = 'log-reg-form-label'>Password</label></td>
-                                            <td><input className='log-reg-form-input' type='log-reg-password' name='password' onChange={this.handleChange} /></td>
+                                            <td><input className='log-reg-form-input' type='log-reg-password' name='password' onChange={this.handleChange} required /></td>
                                         </tr>
                                         <tr>  
                                             <td colspan="2">
@@ -119,7 +119,7 @@ class Register extends Component {
                                         </tr>
                                         <tr>
                                             <td><label className = 'log-reg-form-label'>Re-Enter Password</label></td>
-                                            <td><input className = 'log-reg-form-input'type='password' name='verify_password' onChange={this.handleChange} /></td>
+                                            <td><input className = 'log-reg-form-input'type='password' name='verify_password' onChange={this.handleChange} required /></td>
                                         </tr>
                                         <tr>
                                             <td colspan="2">    
@@ -128,22 +128,22 @@ class Register extends Component {
                                         </tr>
                                         <tr>  
                                             <td><label className='log-reg-form-label'>E-mail</label></td>
-                                            <td><input className ='log-reg-form-input' type='email' name='email' onChange={this.handleChange} /></td>
+                                            <td><input className ='log-reg-form-input' type='email' name='email' onChange={this.handleChange} required /></td>
                                         </tr>
                                             <td><span></span></td>
                                         <tr>
                                             <td><label className = 'log-reg-form-label'>First Name</label></td>
-                                            <td><input className='log-reg-form-input' name='first_name' onChange={this.handleChange} /></td>
+                                            <td><input className='log-reg-form-input' name='first_name' onChange={this.handleChange} required /></td>
                                         </tr>
                                             <td><span></span></td>
                                         <tr>
                                             <td><label className='log-reg-form-label'>Last Name</label></td>
-                                            <td><input className='log-reg-form-input' name='last_name' onChange={this.handleChange} /></td>
+                                            <td><input className='log-reg-form-input' name='last_name' onChange={this.handleChange} required/></td>
                                         </tr>
                                             <td><span></span></td>
                                         <tr>
                                             <td><label className='log-reg-form-label'>Middle Name</label></td>
-                                            <td><input className='log-reg-form-input' name='middle_name' onChange={this.handleChange} /></td>
+                                            <td><input className='log-reg-form-input' name='middle_name' onChange={this.handleChange} required/></td>
                                         </tr>
                                         <tr>
                                             <td><span></span></td>
