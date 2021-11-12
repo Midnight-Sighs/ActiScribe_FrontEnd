@@ -36,7 +36,7 @@ const Notes=(props)=> {
                                     <button className="edit-note-btn" onClick={editOnClick}>Edit Note</button>
                                 </div>
                             </div>
-                            {editHS ? <EditNote note={note} />: null}
+                            {editHS ? <EditNote resident={props.resident} getNotesByRes={props.getNotesByRes} onClick={editOnClick}note={note} />: null}
                         </div>
                     </>
                 )})}

@@ -60,7 +60,7 @@ const ResidentDetail=(props)=> {
                             </div>
                         </div>
                         <div className="row">
-                            <Notes  getNotesByRes={props.getNotesByRes} notes={notes}/>
+                            <Notes  resident={props.activeResident} getNotesByRes={props.getNotesByRes} notes={notes}/>
                             <Modal onClick={notesOnClick} hideShow={notesHS}>
                                 <NewNote onClick={notesOnClick} getNotesByRes={props.getNotesByRes} resident={props.activeResident.id}/>
                             </Modal>
