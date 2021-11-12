@@ -11,4 +11,35 @@
   font-size: 1.5rem;
   padding: .5rem;
 }
+
+.act-dow-col {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  width: 15rem;
+  color: #003235;
+}
+
+.edit-act-label {
+  font-family: "Dancing Script", cursive;
+}
+
+.edit-act-field {
+  background-color: #46756ada;
+  border: none;
+  border-radius: 5px;
+  width: 20rem;
+}
+
+.select-dow {
+  margin-left: 2rem;
+}
+
+.select-dow select {
+  background-color: #46756ada;
+  color: #003235;
+}
+
+.tab-dow {
+  margin-left: 2rem;
+}
 /*# sourceMappingURL=Activity.css.map */

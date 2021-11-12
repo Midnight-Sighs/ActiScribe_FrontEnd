@@ -9,3 +9,38 @@
         padding: .5rem;
     }
 }
+
+//#region Activity Details
+.act-dow-col{
+    font-family: $regular-font;
+    font-size: 1.5rem;
+    width: 15rem;
+    color:$dark-teal;
+    
+}
+
+//#endregion
+
+//#region Edit Activities
+
+.edit-act-label{
+    font-family:$heading-font;
+}
+.edit-act-field{
+    background-color: $half-second-teal;
+    border: none;
+    border-radius: 5px;
+    width: 20rem;
+}
+.select-dow{
+    margin-left:2rem;
+    & select{
+        background-color: $half-second-teal;
+        color: $dark-teal;
+    }
+}
+.tab-dow{
+    margin-left: 2rem;
+}
+
+//#endregion
