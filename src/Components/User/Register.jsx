@@ -110,7 +110,7 @@ class Register extends Component {
                                         </tr>
                                         <tr>
                                             <td><label className = 'log-reg-form-label'>Password</label></td>
-                                            <td><input className='log-reg-form-input' type='log-reg-password' name='password' onChange={this.handleChange} required /></td>
+                                            <td><input className='log-reg-form-input' type='password' name='password' onChange={this.handleChange} required /></td>
                                         </tr>
                                         <tr>  
                                             <td colspan="2">

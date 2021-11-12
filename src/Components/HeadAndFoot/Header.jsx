@@ -5,6 +5,7 @@ import Register from '../User/Register'
 import Login from '../User/Login'
 import NavBar from './NavBar'
 import AnonMainNav from '../Anon/AnonMainNav';
+import Profile from '../User/Profile'
 
 
 const Header=(props)=> {
@@ -21,6 +22,7 @@ const Header=(props)=> {
                         <div className = "col-3 log-reg">
                             {props.loggedIn ? <Redirect to="/Residents" />: <span><Link to="/login">Login</Link></span>}
                             {props.loggedIn ? null: <span> <Link to ='/register'>Register</Link></span>}
+                            {props.loggedIn?<span><Link to="/Profile" className="header-link">Profile</Link></span>:null }
                             {props.loggedIn ? <span><Link to="/" className = "header-link" onClick={props.logout}>Logout</Link></span>: null}
                         </div>
                 </div>        
@@ -36,6 +38,9 @@ const Header=(props)=> {
                     </Route>
                     <Route exact path="/">
                         {props.loggedIn ? null : <AnonMainNav />}
+                    </Route>
+                    <Route exact path="/profile">
+                        {props.loggedIn ? <Profile user={props.userDetails}/>:null}
                     </Route>
                 </Switch>
             </Router>

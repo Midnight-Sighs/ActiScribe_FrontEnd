@@ -67,17 +67,23 @@ class App extends Component {
 
   getUserDetails = async()=>{
     const jwt = localStorage.getItem('token')
+    try{
     let response = await axios.get('http://127.0.0.1:8000/api/auth/user/3/', {headers: {Authorization: 'Bearer '+ jwt}});
     this.setState({
       userDetails : response.data
     })
+    }
+    catch(err){
+      console.log(err, "Error getting user details")
+    }
+
   }
 
 
   render() { 
     return ( 
         <>
-        <Header login={this.userLogin} user={this.props.userDetails} logout={this.logout} loggedIn={this.state.loggedIn} />
+        <Header login={this.userLogin} userDetails={this.state.userDetails} logout={this.logout} loggedIn={this.state.loggedIn} />
         <div className="app-background">
           <Router>
             <Switch>

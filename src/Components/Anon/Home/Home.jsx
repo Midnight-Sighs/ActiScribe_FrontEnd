@@ -26,11 +26,10 @@ const Home =(props)=> {
 
     return ( 
         <>
-            <div className = 'row home-container conts'>
+            <div className = 'row conts'>
                 <div className = "col-12"> 
                     <h1 className ="welcome-msg">Welcome</h1>
-                    <h1 className ="big-quote">"</h1>
-                    <h1 className="quote-msg">{quote} " --- {whoSaid}</h1>
+                    <h1 className="quote-msg">" {quote} " --- {whoSaid}</h1>
                 </div>
             </div>
         </>
