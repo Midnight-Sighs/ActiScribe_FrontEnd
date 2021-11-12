@@ -45,7 +45,6 @@ const NewParticipation=()=> {
 
     const postParticipation = async (residentId, participation)=>{
         const jwt = localStorage.getItem('token')
-        debugger
         try{
             await axios.post(`http://127.0.0.1:8000/api/actiscribe/residents/${residentId}/participation/`,participation, {headers: {Authorization: 'Bearer '+ jwt}});
             console.log("Your participation has been recorded.")

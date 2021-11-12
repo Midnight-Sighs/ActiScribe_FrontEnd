@@ -60,9 +60,9 @@ const ResidentDetail=(props)=> {
                             </div>
                         </div>
                         <div className="row">
-                            <Notes  notes={notes}/>
+                            <Notes  getNotesByRes={props.getNotesByRes} notes={notes}/>
                             <Modal onClick={notesOnClick} hideShow={notesHS}>
-                                <NewNote resident={props.activeResident.id}/>
+                                <NewNote onClick={notesOnClick} getNotesByRes={props.getNotesByRes} resident={props.activeResident.id}/>
                             </Modal>
                             <Modal onClick={editOnClick} hideShow={editHS} >
                                 <EditResident resident={props.activeResident} getResidents={props.getResidents}/>
@@ -74,7 +74,7 @@ const ResidentDetail=(props)=> {
                     <hr />
                     <br />
                     <div className="row">
-                        <ResidentParticipation participation={participation} />
+                        <ResidentParticipation getParticipation={props.getParticipation} participation={participation} />
                     </div>
             </div>
         </>

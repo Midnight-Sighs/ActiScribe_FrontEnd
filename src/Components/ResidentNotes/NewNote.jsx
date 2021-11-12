@@ -10,7 +10,15 @@ const NewNote=(props)=> {
 
     const postNewNote =async(resident_id, note)=>{
         const jwt = localStorage.getItem('token')
+        try{
         await axios.post(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/notes/`, note, {headers: {Authorization: 'Bearer '+ jwt}});
+        console.log("Note added successfully.")
+        props.getNotesByRes(residentId)
+        }
+        catch(err){
+            console.log(err, "Problem adding new note.")
+        }
+        props.onClick()
     }
     
     const handleChange = (event)=>{
