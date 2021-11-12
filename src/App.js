@@ -83,7 +83,7 @@ class App extends Component {
             <Switch>
 
               {this.state.loggedIn ? <Redirect to="/Residents" render={props=> <ResidentHome {...props} user={this.state.userDetails} />} /> :
-              <Route exact path="/" component={AnonBody} />}
+              <Redirect to="/" component={AnonBody} />}
             </Switch>
           </Router>
         </div>

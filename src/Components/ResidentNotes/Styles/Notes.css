@@ -45,6 +45,16 @@
 }
 
 .edit-field {
-  width: 30rem;
+  width: 35rem;
+  background-color: #0032357a;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+.edit-note-btn {
+  background: none;
+  margin-left: 2rem;
+  margin-top: .5rem;
 }
 /*# sourceMappingURL=Notes.css.map */

@@ -55,21 +55,14 @@
   -webkit-animation: color-change 5s infinite;
           animation: color-change 5s infinite;
   font-size: 2rem;
-  background-color: #003235;
+  background-color: #0032357a;
+  text-align: center;
 }
 
 .home-container .big-quote {
   position: absolute;
   font-size: 10rem;
   top: 4rem;
-}
-
-.home-container .author-msg {
-  font-family: "Tangerine", cursive;
-  margin-left: 20rem;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #003235;
 }
 
 @-webkit-keyframes color-change {
@@ -122,5 +115,81 @@
 
 .anon-home {
   margin-left: 12.5rem;
+}
+
+.anon-wrapper {
+  position: relative;
+  width: 80vw;
+  height: 85vh;
+}
+
+.anon-wrapper .ice-berg {
+  margin-top: 3rem;
+  width: 60vw;
+  height: 60vh;
+  background-image: url(../../Images/inkAndQuill.jpg);
+  background-size: cover;
+  opacity: 40%;
+  -webkit-box-shadow: 0px 0px 25px 25px #84c6b8;
+          box-shadow: 0px 0px 25px 25px #84c6b8;
+}
+
+.quote-block p {
+  -webkit-animation: color-change-two 5s infinite;
+          animation: color-change-two 5s infinite;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Tangerine", cursive;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+}
+
+@-webkit-keyframes color-change-two {
+  0% {
+    color: #25053a;
+  }
+  20% {
+    color: #17053a;
+  }
+  35% {
+    color: #05063a;
+  }
+  60% {
+    color: #051a3a;
+  }
+  70% {
+    color: #05063a;
+  }
+  85% {
+    color: #17053a;
+  }
+  100% {
+    color: #25053a;
+  }
+}
+
+@keyframes color-change-two {
+  0% {
+    color: #25053a;
+  }
+  20% {
+    color: #17053a;
+  }
+  35% {
+    color: #05063a;
+  }
+  60% {
+    color: #051a3a;
+  }
+  70% {
+    color: #05063a;
+  }
+  85% {
+    color: #17053a;
+  }
+  100% {
+    color: #25053a;
+  }
 }
 /*# sourceMappingURL=AnonBody.css.map */

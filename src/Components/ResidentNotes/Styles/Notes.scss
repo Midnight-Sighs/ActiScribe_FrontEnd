@@ -46,12 +46,16 @@
 
 //#region
 .edit-field{
-    width: 30rem;
+    width: 35rem;
+    background-color:$half-dark-teal;
+    border:none;
+    border-radius: 5px;
+    padding: .5rem;
 }
-.edit-btn{
-    
+.edit-note-btn{
+    background:none;
+    margin-left: 2rem;
+    margin-top:.5rem;
 }
-.delete-btn{
 
-}
 //#endregion

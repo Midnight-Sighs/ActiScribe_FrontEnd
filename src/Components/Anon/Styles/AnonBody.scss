@@ -45,19 +45,13 @@
         border-radius: 10px;
         animation: color-change 5s infinite;
         font-size: 2rem;
-        background-color:$dark-teal;
+        background-color:$half-dark-teal;
+        text-align:center;
     }
     & .big-quote{
         position:absolute;
         font-size: 10rem;
         top: 4rem;
-    }
-    & .author-msg{
-        font-family: $quote-font;
-        margin-left: 20rem;
-        font-size: 3rem;
-        font-weight:700;
-        color:$dark-teal;
     }
 }
 @keyframes color-change {
@@ -71,4 +65,41 @@
 }
 .anon-home{
     margin-left:12.5rem;
+}
+
+.anon-wrapper{
+    position:relative;
+    width:80vw;
+    height:85vh;
+    .ice-berg{
+        margin-top: 3rem;
+        width:60vw;
+        height:60vh;
+        background-image: url(../../Images/inkAndQuill.jpg);
+        background-size: cover;
+        opacity: 40%;
+        box-shadow: 0px 0px 25px 25px $light-teal;
+    }
+}
+
+.quote-block {
+    & p{
+    animation: color-change-two 5s infinite;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: $quote-font;
+    padding-top:1rem;
+    padding-left:1rem;
+    text-align:center;
+    }
+}
+
+@keyframes color-change-two {
+    0%{ color: rgb(37, 5, 58)}
+    20%{color:rgb(23, 5, 58)}
+    35%{color: rgb(5, 6, 58)}
+    60%{color: rgb(5, 26, 58)}
+    70%{color:rgb(5, 6, 58)}
+    85%{color:rgb(23, 5, 58)}
+    100%{color: rgb(37, 5, 58)}
 }

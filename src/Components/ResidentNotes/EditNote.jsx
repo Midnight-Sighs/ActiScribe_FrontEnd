@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import './Styles/Notes.css'
 
 const EditNote=(props)=> {
 
@@ -49,10 +50,10 @@ const EditNote=(props)=> {
     return ( 
         <>
             <form onSubmit={onSubmit}>
-                <input className="edit-field" maxLength="400" name="noteContent" onChange={e=>setNoteContent(e.currentTarget.value)} value={noteContent} required></input>
-                <button type="submit edit-btn">Save Changes</button>
+                <textarea className="edit-field" maxLength="400" name="noteContent" onChange={e=>setNoteContent(e.currentTarget.value)} value={noteContent} required />
+                <button type="submit" className="edit-note-btn">Save Changes</button>
             </form>
-                <button type="button text-btn" onClick={deleteClick}>Delete Note</button>
+                <button type="button" className="edit-note-btn" onClick={deleteClick}>Delete Note</button>
         </>
      );
 }
