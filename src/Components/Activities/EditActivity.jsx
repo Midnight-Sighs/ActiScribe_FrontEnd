@@ -16,6 +16,7 @@ class EditActivity extends Component {
     componentDidMount=()=>{
         this.setState({
             name: this.props.activity.name,
+            description: this.props.activity.description,
             dow_one: this.props.activity.dow_one,
             dow_two: this.props.activity.dow_two,
             dow_three: this.props.activity.dow_three,

@@ -37,9 +37,15 @@
 .select-dow select {
   background-color: #46756ada;
   color: #003235;
+  border-radius: 5px;
 }
 
 .tab-dow {
+  margin-left: 2rem;
+}
+
+.add-act-btn {
+  margin-top: 2rem;
   margin-left: 2rem;
 }
 /*# sourceMappingURL=Activity.css.map */

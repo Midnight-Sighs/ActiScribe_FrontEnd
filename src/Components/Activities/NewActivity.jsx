@@ -67,71 +67,77 @@ class NewActivity extends Component {
                 <table>
                     <tbody>
                         <tr>
-                            <td><label className = "new-act-label">Activity Name</label></td>
-                            <td><input className = "new-act-field" maxLength="50" name="name" value={this.state.name} onChange={this.handleChange} required /></td>
+                            <td><label className = "edit-act-label">Activity Name</label></td>
+                            <td><input className = "edit-act-field" maxLength="50" name="name" value={this.state.name} onChange={this.handleChange} required /></td>
                         </tr>
                         <tr>
-                            <td><label className="new-act-label">Activity Description</label></td>
-                            <td><textarea maxLength="250" className="new-act-field" name="description" value={this.state.description} onChange={this.handleChange} /></td>
+                            <td><label className="edit-act-label">Activity Description</label></td>
+                            <td><textarea maxLength="250" className="edit-act-field" name="description" value={this.state.description} onChange={this.handleChange} /></td>
                         </tr>
                         <tr>
-                            <td>Dimension of Wellness</td>
+                            <td className="edit-act-label">Dimension of Wellness</td>
                             <td>
-                                <select name="dow_one" value={this.state.dow_one} onChange={e=>this.setState({dow_one: e.currentTarget.value})}>
-                                    <option value="">Select One</option>
-                                    <option value="Social">Social</option>
-                                    <option value="Physical">Physical</option>
-                                    <option value="Emotional">Emotional</option>
-                                    <option value="Spiritual">Spiritual</option>
-                                    <option value="Environmental">Environmental</option>
-                                    <option value="Financial">Financial</option>
-                                    <option value="Creative">Creative</option>
-                                    <option value="Intellectual">Intellectual</option>
-                                    <option value="Occupational">Occupational</option>
-                                    <option value="Sensory">Sensory</option>
-                                </select>
+                                <div className="select-dow">
+                                    <select name="dow_one" value={this.state.dow_one} onChange={e=>this.setState({dow_one: e.currentTarget.value})}>
+                                        <option value="">Select One</option>
+                                        <option value="Social">Social</option>
+                                        <option value="Physical">Physical</option>
+                                        <option value="Emotional">Emotional</option>
+                                        <option value="Spiritual">Spiritual</option>
+                                        <option value="Environmental">Environmental</option>
+                                        <option value="Financial">Financial</option>
+                                        <option value="Creative">Creative</option>
+                                        <option value="Intellectual">Intellectual</option>
+                                        <option value="Occupational">Occupational</option>
+                                        <option value="Sensory">Sensory</option>
+                                    </select>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>Dimension of Wellness (optional)</td>
+                            <td className="edit-act-label">Dimension of Wellness (optional)</td>
                             <td>
-                                <select name="dow_two" value={this.state.dow_two} onChange={e=>this.setState({dow_two: e.currentTarget.value})}>
-                                    <option value= ""> --- </option>
-                                    <option value="Social">Social</option>
-                                    <option value="Physical">Physical</option>
-                                    <option value="Emotional">Emotional</option>
-                                    <option value="Spiritual">Spiritual</option>
-                                    <option value="Environmental">Environmental</option>
-                                    <option value="Financial">Financial</option>
-                                    <option value="Creative">Creative</option>
-                                    <option value="Intellectual">Intellectual</option>
-                                    <option value="Occupational">Occupational</option>
-                                    <option value="Sensory">Sensory</option>
-                                </select>
+                                <div className="select-dow">
+                                    <select name="dow_two" value={this.state.dow_two} onChange={e=>this.setState({dow_two: e.currentTarget.value})}>
+                                        <option value= ""> --- </option>
+                                        <option value="Social">Social</option>
+                                        <option value="Physical">Physical</option>
+                                        <option value="Emotional">Emotional</option>
+                                        <option value="Spiritual">Spiritual</option>
+                                        <option value="Environmental">Environmental</option>
+                                        <option value="Financial">Financial</option>
+                                        <option value="Creative">Creative</option>
+                                        <option value="Intellectual">Intellectual</option>
+                                        <option value="Occupational">Occupational</option>
+                                        <option value="Sensory">Sensory</option>
+                                    </select>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>Dimension of Wellnes (optional)</td>
+                            <td className="edit-act-label">Dimension of Wellnes (optional)</td>
                             <td>
-                                <select name="dow_three" value={this.state.dow_three} onChange={e=>this.setState({dow_three: e.currentTarget.value})}>
-                                    <option value= ""> --- </option>
-                                    <option value="Social">Social</option>
-                                    <option value="Physical">Physical</option>
-                                    <option value="Emotional">Emotional</option>
-                                    <option value="Spiritual">Spiritual</option>
-                                    <option value="Environmental">Environmental</option>
-                                    <option value="Financial">Financial</option>
-                                    <option value="Creative">Creative</option>
-                                    <option value="Intellectual">Intellectual</option>
-                                    <option value="Occupational">Occupational</option>
-                                    <option value="Sensory">Sensory</option>
-                                </select>
+                                <div className="select-dow">
+                                    <select name="dow_three" value={this.state.dow_three} onChange={e=>this.setState({dow_three: e.currentTarget.value})}>
+                                        <option value= ""> --- </option>
+                                        <option value="Social">Social</option>
+                                        <option value="Physical">Physical</option>
+                                        <option value="Emotional">Emotional</option>
+                                        <option value="Spiritual">Spiritual</option>
+                                        <option value="Environmental">Environmental</option>
+                                        <option value="Financial">Financial</option>
+                                        <option value="Creative">Creative</option>
+                                        <option value="Intellectual">Intellectual</option>
+                                        <option value="Occupational">Occupational</option>
+                                        <option value="Sensory">Sensory</option>
+                                    </select>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <button type="submit">Save Activity</button>
+                                <button className="text-btn add-act-btn" type="submit">Save Activity</button>
                             </td>
                         </tr>
                     </tbody>

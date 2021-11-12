@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
+import './Styles/Activity.css'
 
 const ActivitiesByDow=(props)=> {
 
@@ -24,6 +25,7 @@ const ActivitiesByDow=(props)=> {
         <>
         <div className="conts activity-by-dow">
             <form onSubmit={onSubmit}> 
+            <div className="select-dow">
                 <select name="dow" onChange={e=>setDow(e.currentTarget.value)}>
                     <option value="Social">Social</option>
                     <option value="Physical">Physical</option>
@@ -36,7 +38,8 @@ const ActivitiesByDow=(props)=> {
                     <option value="Occupational">Occupational</option>
                     <option value="Sensory">Sensory</option>
                 </select>
-                <input type="submit" value="Submit"></input>
+                <button className="text-btn mx-3" type="submit">Filter</button>
+            </div>
             </form>
             {filtered ? 
                 <table className='activity-table'>
