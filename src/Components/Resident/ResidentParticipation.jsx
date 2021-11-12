@@ -1,23 +1,31 @@
-import React, { useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Styles/Residents.css'
 import axios from 'axios';
 
 
 const ResidentParticipation=(props)=>{
     
+    const[partId, setPartId]=useState()
+
     useEffect(()=>{
 
     }, [props])
 
-    const deleteParticipation = async(part_id)=>{
+    useEffect(()=>{
+        deleteParticipation(partId)
+    },[partId])
+
+    const deleteParticipation = async(partId)=>{
         const jwt = localStorage.getItem('token')
         try{
-        await axios.delete(`http://127.0.0.1:8000/api/actiscribe/participation/${part_id}/`, {headers: {Authorization: 'Bearer '+ jwt}}); 
+        await axios.delete(`http://127.0.0.1:8000/api/actiscribe/participation/${partId}/`, {headers: {Authorization: 'Bearer '+ jwt}}); 
         }
         catch(err){
             console.log(err, "Problem deleting participation.")
         }
     }
+
+  
 
     
     if(props.participation.length == 0){
@@ -61,7 +69,7 @@ const ResidentParticipation=(props)=>{
                                     <td className ='det-date'>
                                         <div className="date-span">{date.date}</div>
                                     </td>
-                                    <td><button className="delete-part">Delete Participation</button></td>
+                                    <td><button className="delete-part" onClick={()=>setPartId(date.id)}>Delete</button></td>
                                 </tr>
                             )
 
