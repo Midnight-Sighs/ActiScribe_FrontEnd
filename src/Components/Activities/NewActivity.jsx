@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 class NewActivity extends Component {
@@ -13,7 +15,6 @@ class NewActivity extends Component {
             dow_one: "",
             dow_two: "",
             dow_three: "",
-            newActAlert: false,
          }
     }
 
@@ -31,12 +32,15 @@ class NewActivity extends Component {
             dow_three: "",
             },()=>{
                 this.props.getAllActivities()
+                this.notify()
             })
         }
         catch(err){
             console.log(err, "Problem creating activity.")
         }
     }
+
+    notify =()=> toast("New activity made successfully");
 
     onSubmit =(event)=>{
         event.preventDefault()
@@ -65,7 +69,7 @@ class NewActivity extends Component {
         return ( 
             <>
             <div className="conts new-act-form">
-                    
+            <ToastContainer />
                 <form onSubmit={this.onSubmit}> 
                 <table>
                     <tbody>

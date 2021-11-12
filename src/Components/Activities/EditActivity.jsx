@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 class EditActivity extends Component {
     constructor(props) {
@@ -30,19 +32,29 @@ class EditActivity extends Component {
 
     archiveActivity=async(activityId)=>{
         const jwt = localStorage.getItem('token')
+        try{
         await axios.patch(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/`, {headers: {Authorization: 'Bearer '+ jwt}, });   
         console.log("Activity Updated")
         this.props.getAllActivities()
         this.props.getArchivedActivities()
         this.props.onClick()
+        }
+        catch(err){
+            console.log(err, "Error archiving activity")
+        }
     }
 
     editActivity=async(activity, activityId)=>{
         const jwt = localStorage.getItem('token')
+        try{
         await axios.put(`http://127.0.0.1:8000/api/actiscribe/activities/${activityId}/`, activity, {headers: {Authorization: 'Bearer '+ jwt}});  
         console.log(activity.name + " has been updated.")
         this.props.getAllActivities()
         this.props.onClick()
+        }
+        catch(err){
+            console.log(err, "Problem editing Activity")
+        }
     }
 
     onSubmit=()=>{

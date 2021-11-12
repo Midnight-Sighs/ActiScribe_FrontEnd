@@ -10,4 +10,8 @@ html {
   font-size: 18px;
   background-color: #003235;
 }
+
+.Toastify__toast-body {
+  color: #46756A;
+}
 /*# sourceMappingURL=index.css.map */
