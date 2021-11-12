@@ -49,7 +49,7 @@ const ActivitySubNav=(props)=>{
                             <ArchivedActivities allActivities={props.archivedActivities} setActiveActivity={props.setActiveActivity}/>
                         </Route>
                         <Route exact path='/Activity_Detail'>
-                            <ActivityDetail participation={participation} activity={props.activeActivity} getAllActivities={props.getAllActivities}/>
+                            <ActivityDetail getArchivedActivities={props.getArchivedActivities} participation={participation} activity={props.activeActivity} getAllActivities={props.getAllActivities}/>
                         </Route>                
                     </Switch>
                 </div>

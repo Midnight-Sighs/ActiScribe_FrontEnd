@@ -8,7 +8,6 @@ const ActivityDetail=(props)=>{
     const[participation, setParticipation]=useState([])
     const[editHS, setEditHS]=useState(false)
     const[error, setError]=useState()
-    const[filteredParticipation, setFilteredParticipation]=useState()
 
     const editOnClick=()=>{
         setEditHS(!editHS)
@@ -18,7 +17,6 @@ const ActivityDetail=(props)=>{
         try{
             setParticipation(props.participation)
             setError(false)
-            // sortByDate()
         }
         catch(ex){
             setError(true)
@@ -28,20 +26,13 @@ const ActivityDetail=(props)=>{
     useEffect(()=>{
         try{
             setParticipation(props.participation)
-            setError(false)
-            // sortByDate()  
+            setError(false) 
         }
         catch(ex){
             setError(true)
         }
     }, [props])
 
-    // const sortByDate =()=>{
-    //     debugger
-    //     let today = new Date()
-    //     let yesterday = new Date(today-1)
-    //     setFilteredParticipation(yesterday)
-    // }
     
     
     if (Object.keys(props.participation).length===0|| error===true){
@@ -65,7 +56,7 @@ const ActivityDetail=(props)=>{
                 </table>
                 <button className="text-btn" onClick={editOnClick}>Edit Activity</button>
                 <Modal onClick={editOnClick} hideShow={editHS}> 
-                    <EditActivity activity={props.activity} getAllActivities={props.getAllActivities}/>
+                    <EditActivity onClick={editOnClick} getArchivedActivities={props.getArchivedActivities} activity={props.activity} getAllActivities={props.getAllActivities}/>
                 </Modal>
                 <hr />
                     <div className="row">

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
+
 class NewActivity extends Component {
     constructor(props) {
         super(props);
@@ -12,6 +13,7 @@ class NewActivity extends Component {
             dow_one: "",
             dow_two: "",
             dow_three: "",
+            newActAlert: false,
          }
     }
 
@@ -63,6 +65,7 @@ class NewActivity extends Component {
         return ( 
             <>
             <div className="conts new-act-form">
+                    
                 <form onSubmit={this.onSubmit}> 
                 <table>
                     <tbody>

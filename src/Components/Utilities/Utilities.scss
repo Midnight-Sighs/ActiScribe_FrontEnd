@@ -31,3 +31,30 @@
 .modal-btn{
     background-color: $half-second-teal;
 }
+
+.alert-wrapper{
+    position: fixed;
+    z-index:2;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(49, 49, 49, 0.753);
+}
+
+.alert-box {
+    position:fixed;
+    background: $light-teal;
+    background: linear-gradient(0deg, rgba(4, 61, 63, 0.81) 0%, rgba(28, 121, 108, 0.766) 100%);
+    z-index: 3;
+    width: 50%;
+    height: 20%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+}
+.alert-body{
+    margin-top: .5rem;
+    margin-left:.5rem;
+}

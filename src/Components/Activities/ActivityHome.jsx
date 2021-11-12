@@ -97,7 +97,7 @@ class ActivityHome extends Component {
             <>
             <div className = "row">
                 <div className="col-2">
-                    <ActivitySubNav alertActivities={this.state.alertActivities} homeAlertActivities={this.setAlertActivities} archivedActivities={this.state.archivedActivities} getAllActivities={this.getAllActivities} part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity} allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
+                    <ActivitySubNav getArchivedActivities={this.getAllArchivedActivities} alertActivities={this.state.alertActivities} homeAlertActivities={this.setAlertActivities} archivedActivities={this.state.archivedActivities} getAllActivities={this.getAllActivities} part={this.state.partByActivity} activeActivity={this.state.activeActivity} setActiveActivity={this.setActiveActivity} participation={this.participationByActivity} allActivities={this.state.allActivities} dowActivities={this.state.activitiesByDOW} filterDow={this.getActivitiesByDOW}/>
                 </div>
                 <div className=" col-1 cheating">
                     <ActivitiesForChart activities={this.state.allActivities} homeAlertActivities={this.setAlertActivities}/>
