@@ -9,9 +9,9 @@
         padding: .5rem;
     }
 }
-
-.filter-btn{
-    color:red;
+h3{
+    font-family: $heading-font;
+    color: $dark-teal;
 }
 
 //#region Activity Details
@@ -54,3 +54,10 @@
 }
 //#endregion
 
+//#region Activity Home
+.cheating{
+    z-index: -10;
+    width:10px;
+    height:10px;
+}
+//#endregion

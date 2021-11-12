@@ -20,7 +20,7 @@ const AllActivities=(props)=>{
         return ( 
             <>
             <div className="conts">
-            <ActivitiesForChart activities={props.allActivities} />
+            <ActivitiesForChart homeAlertActivities={props.homeAlertActivities} activities={props.allActivities} />
                 <hr />
                 <div className="activity-table">
                 <table>

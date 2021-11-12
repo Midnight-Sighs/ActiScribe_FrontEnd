@@ -6,6 +6,7 @@ import ActivitiesByDow from './ActivitiesByDow';
 import NewActivity from './NewActivity';
 import ActivityDetail from './ActivityDetails'
 import ArchivedActivities from './ArchivedActivities';
+import ActivityAlerts from './ActivityAlerts';
 
 const ActivitySubNav=(props)=>{
 
@@ -32,9 +33,11 @@ const ActivitySubNav=(props)=>{
         
                 <div className ="col-10">
                     <Switch>
-                        <Route exact path="/Activities" />
+                        <Route exact path="/Activities" >
+                            <ActivityAlerts alertActivities={props.alertActivities} />
+                        </Route>
                         <Route exact path="/All_Activities">
-                            <AllActivitiesWithChart setActiveActivity={props.setActiveActivity} allActivities={props.allActivities} participation={props.part} />
+                            <AllActivitiesWithChart homeAlertActivities={props.homeAlertActivities} setActiveActivity={props.setActiveActivity} allActivities={props.allActivities} participation={props.part} />
                         </Route>
                         <Route exact path="/Dow_Activities">
                             <ActivitiesByDow allActivities={props.dowActivities} setActiveActivity={props.setActiveActivity} filterDow={props.filterDow} activity={props.activeActivity} />

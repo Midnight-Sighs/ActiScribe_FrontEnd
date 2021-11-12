@@ -15,6 +15,43 @@ function ActivitiesForChart(props) {
     const[percentCre, setPercentCre]=useState()
     const[percentOcc, setPercentOcc]=useState()
     const[percentSen, setPercentSen]=useState()
+    const[alertActivities, setAlertActivities]=useState()
+
+    const checkForAlert=()=>{
+        let tempActivities=[]
+        if(percentSoc < 10){
+            tempActivities.push("Social")
+        }
+        if(percentPhy < 10){
+            tempActivities.push("Physical")
+        }
+        if(percentEmo < 10){
+            tempActivities.push("Emotional")
+        }
+        if(percentSpi < 10){
+            tempActivities.push("Spiritual")
+        }
+        if(percentEnv < 10){
+            tempActivities.push("Environmental")
+        }
+        if(percentFin < 10){
+            tempActivities.push("Financial")
+        }
+        if(percentInt < 10){
+            tempActivities.push("Intellectual")
+        }
+        if(percentCre < 10){
+            tempActivities.push("Creative")
+        }
+        if(percentOcc < 10){
+            tempActivities.push("Occupational")
+        }
+        if(percentSen < 10){
+            tempActivities.push("Sensory")
+        }
+        setAlertActivities(tempActivities)
+        props.homeAlertActivities(tempActivities)
+    }
 
     const filterAllActivities=()=>{
         let x = filterActivities("Social");
@@ -91,7 +128,8 @@ function ActivitiesForChart(props) {
 
     useEffect(()=>{
         if(percentSen ===NaN){
-        setPartLoaded(false)}
+            setPartLoaded(false)}
+        checkForAlert()
     }, [percentSen])
 
     useEffect(()=>{

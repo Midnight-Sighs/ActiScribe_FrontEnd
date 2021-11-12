@@ -12,6 +12,11 @@
   padding: .5rem;
 }
 
+h3 {
+  font-family: "Dancing Script", cursive;
+  color: #003235;
+}
+
 .act-dow-col {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
@@ -47,5 +52,11 @@
 .add-act-btn {
   margin-top: 2rem;
   margin-left: 2rem;
+}
+
+.cheating {
+  z-index: -10;
+  width: 10px;
+  height: 10px;
 }
 /*# sourceMappingURL=Activity.css.map */
