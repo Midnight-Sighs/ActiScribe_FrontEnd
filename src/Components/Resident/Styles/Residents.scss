@@ -203,4 +203,7 @@
     color: $mid-brown;
     margin-bottom:1rem;
     box-shadow: 5px 5px 10px $mid-brown;
+    &:hover{
+        color:$dark-teal;
+    }
 }

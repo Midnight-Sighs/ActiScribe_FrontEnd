@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+.part-select select {
+  background-color: #46756A;
+  color: #2e1e15;
+  padding: .25rem;
+  margin-right: 1rem;
+}
+
+.part-label {
+  padding-top: 1rem;
+  padding-right: .5rem;
+  font-family: "Dancing Script", cursive;
+  color: #003235;
+  font-size: 1.5rem;
+}
+
+.part-date {
+  color: #2e1e15;
+  font-size: 1.5rem;
+  background-color: #46756A;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-family: "Cormorant Garamond", serif;
+}
+/*# sourceMappingURL=Participation.css.map */

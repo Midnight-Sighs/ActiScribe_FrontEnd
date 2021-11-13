@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import '../Resident/Styles/Residents.css'
-
+import '../Participation/Styles/Participation.css'
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const NewParticipation=()=> {
 
@@ -43,14 +44,19 @@ const NewParticipation=()=> {
         }
     }
 
+    const notifyH = () => toast('Participation Added Successfully', {containerId:'H'});
+    const notifyI = () => toast('Adding Participation Failed', {containerId:'I'});
+
     const postParticipation = async (residentId, participation)=>{
         const jwt = localStorage.getItem('token')
         try{
             await axios.post(`http://127.0.0.1:8000/api/actiscribe/residents/${residentId}/participation/`,participation, {headers: {Authorization: 'Bearer '+ jwt}});
             console.log("Your participation has been recorded.")
+            notifyH()
         }
         catch(err){
             console.log(err, "Error creating participation")
+            notifyI()
         }
     }
 
@@ -87,22 +93,24 @@ const NewParticipation=()=> {
     return ( 
         <>
         <div className="my-wrapper">
+            <ToastContainer enableMultiContainer containerId={'H'} position={toast.POSITION.TOP_RIGHT} />
+            <ToastContainer enableMultiContainer containerId={'I'} position={toast.POSITION.TOP_RIGHT} />    
         <div className="new-part conts">
             <form onSubmit={onSubmit}>
+                <div className="part-select">
+                    <select onChange={handleResChange}>
+                        <option defaultValue >Select a Resident</option>
+                        {allResidents.map((resident)=><option value={resident.id}>{resident.r_first_name} {resident.r_last_name}</option>)}
+                    </select>
 
-                <select onChange={handleResChange}>
-                    <option defaultValue >Select a Resident</option>
-                    {allResidents.map((resident)=><option value={resident.id}>{resident.r_first_name} {resident.r_last_name}</option>)}
-                </select>
-
-                <select onChange={handleActChange}>
-                    <option defaultValue >Select an Activity</option>
-                    {allActivities.map((activity)=><option value={activity.name}>{activity.name}</option>)}
-                </select>
-
-                <label className="">Activity Date</label>
-                <input name="date" value={activityDate} onChange={handleDateChange} type="date"></input>
-                <button type="submit">Save Participation</button>
+                    <select onChange={handleActChange}>
+                        <option defaultValue >Select an Activity</option>
+                        {allActivities.map((activity)=><option value={activity.name}>{activity.name}</option>)}
+                    </select>
+                </div>
+                <label className="part-label">Activity Date</label>
+                <input className="part-date" name="date" value={activityDate} onChange={handleDateChange} type="date"></input>
+                <button className="text-btn" type="submit">Save Participation</button>
             </form>
         </div>
         </div>

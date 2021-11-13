@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ResidentSubNav from './ResidentSubNav';
-import Home from '../Anon/Home/Home'
+import {toast} from 'react-toastify';
+
 
 
 class ResidentHome extends Component {
@@ -61,10 +62,13 @@ class ResidentHome extends Component {
         }
     }
 
+    notifyJ = () => toast('Resident Created Successfully', {containerId:'J'});
+
     newResident = async(newResident) =>{
         const jwt = localStorage.getItem('token')
         try{
         await axios.post('http://127.0.0.1:8000/api/actiscribe/residents/', newResident, {headers: {Authorization: 'Bearer '+ jwt}});  
+        this.notifyJ()
         this.getAllActiveResidents()
         }
         catch(err){

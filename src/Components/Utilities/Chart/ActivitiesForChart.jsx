@@ -50,7 +50,9 @@ function ActivitiesForChart(props) {
             tempActivities.push("Sensory")
         }
         setAlertActivities(tempActivities)
-        props.homeAlertActivities(tempActivities)
+        if(props.homeAlertActivities){
+            props.homeAlertActivities(tempActivities)
+        }
     }
 
     const filterAllActivities=()=>{

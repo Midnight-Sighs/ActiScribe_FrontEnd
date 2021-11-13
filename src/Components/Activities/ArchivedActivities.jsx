@@ -27,7 +27,7 @@ const ArchivedActivities=(props)=> {
                                 <td className='iden-col'>{activity.dow_one}</td>
                                 <td className='iden-col'>{activity.dow_two}</td>
                                 <td className='iden-col'>{activity.dow_three}</td>
-                                <td><Link to='/Activity_Detail' onClick={()=>props.setActiveActivity(activity)}>Details</Link></td>
+                                <td><Link to='/Activity_Detail' className="text-btn" onClick={()=>props.setActiveActivity(activity)}>Details</Link></td>
                             </tr>  
                     )})}
                     </tbody>

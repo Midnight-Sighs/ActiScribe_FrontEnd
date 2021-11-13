@@ -1,0 +1,26 @@
+@import '../../../Components/Utilities/variables';
+
+.part-select{
+    & select{
+        background-color: $second-teal;
+        color: $dk-warm-brown;
+        padding: .25rem;
+        margin-right: 1rem;
+    }
+}
+.part-label{
+    padding-top:1rem;
+    padding-right: .5rem;
+    font-family: $heading-font;
+    color: $dark-teal;
+    font-size: 1.5rem;
+}
+.part-date{
+    color: $dk-warm-brown;
+    font-size: 1.5rem;
+    background-color: $second-teal;
+    margin-right: 1rem;
+    border:none;
+    border-radius:5px;
+    font-family: $regular-font;
+}

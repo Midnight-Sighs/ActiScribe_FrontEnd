@@ -187,4 +187,8 @@
   -webkit-box-shadow: 5px 5px 10px #6F4329;
           box-shadow: 5px 5px 10px #6F4329;
 }
+
+.text-btn:hover {
+  color: #003235;
+}
 /*# sourceMappingURL=Residents.css.map */

@@ -28,6 +28,12 @@ class EditActivity extends Component {
         this.archiveActivity(activityId)
     }
 
+    deleteOnClick=(e)=>{
+        e.preventDefault()
+        let activityId=this.props.activity.id
+        this.deleteActivity(activityId)
+    }
+
     archiveActivity=async(activityId)=>{
         const jwt = localStorage.getItem('token')
         try{
@@ -74,7 +80,8 @@ class EditActivity extends Component {
         }
     }
 
-    onSubmit=()=>{
+    onSubmit=(e)=>{
+        e.preventDefault()
         let editActivity = {
             "name": this.state.name,
             "description": this.state.description,
@@ -166,7 +173,8 @@ class EditActivity extends Component {
                     </table>
                 </form>
             <br />
-            <button className="text-btn" onClick={this.archiveOnClick}>Activity Status</button>
+            <button className="text-btn mx-3" onClick={this.archiveOnClick}>Activity Status</button>
+            <button className="text-btn" onClick={this.deleteOnClick}>Delete Activity</button>
            </div> 
             </>
          );

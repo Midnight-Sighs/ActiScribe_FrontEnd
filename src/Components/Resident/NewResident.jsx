@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import './Styles/Residents.css'
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
 
 class NewResident extends Component {
     constructor(props) {
@@ -60,6 +63,7 @@ class NewResident extends Component {
         return ( 
             <>
             <div className="new-res-form conts">
+                <ToastContainer enableMultiContainer containerId={'J'} position={toast.POSITION.TOP_RIGHT} />
                 <h1>New Resident</h1>
                 <form onSubmit={this.onSubmit} className="new-res">
                     <table>
@@ -88,7 +92,7 @@ class NewResident extends Component {
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <button type="submit">Create New Resident</button>
+                                    <button className="text-btn" type="submit">Create New Resident</button>
                                 </td>
                             </tr>
                         </tbody>

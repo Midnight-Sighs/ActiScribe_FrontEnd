@@ -30,7 +30,7 @@ const AllResidents=(props)=>{
                         <td className="name-col">{resident.r_first_name} {resident.r_last_name}</td>
                         <td className='iden-col'>{resident.r_other_identifier}</td>
                         <td className='ass-col'>{resident.last_assessment}</td>
-                        <td><Link to='/Resident_Detail'className="detail-link" onClick ={()=>props.setResident(resident)}>Details</Link></td>
+                        <td><Link to='/Resident_Detail'className="text-btn" onClick ={()=>props.setResident(resident)}>Details</Link></td>
                     </tr> 
                 </>
             )})}
