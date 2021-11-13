@@ -32,7 +32,7 @@ class NewActivity extends Component {
             dow_three: "",
             },()=>{
                 this.props.getAllActivities()
-                this.notify()
+                this.notifyG()
             })
         }
         catch(err){
@@ -40,7 +40,7 @@ class NewActivity extends Component {
         }
     }
 
-    notify =()=> toast("New activity made successfully");
+    notifyG =()=> toast("New activity made successfully", {containerId: 'G'});
 
     onSubmit =(event)=>{
         event.preventDefault()
@@ -69,7 +69,7 @@ class NewActivity extends Component {
         return ( 
             <>
             <div className="conts new-act-form">
-            <ToastContainer />
+            <ToastContainer enableMultiContainer containerId={'G'} position={toast.POSITION.TOP_RIGHT} />
                 <form onSubmit={this.onSubmit}> 
                 <table>
                     <tbody>

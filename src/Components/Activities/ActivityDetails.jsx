@@ -2,8 +2,17 @@ import { now } from 'd3-timer';
 import React, {useState, useEffect} from 'react';
 import Modal from '../Utilities/Modal'
 import EditActivity from './EditActivity';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const ActivityDetail=(props)=>{
+
+    const notifyA = () => toast('Status Change Successful', {containerId:'A'});
+    const notifyB = () => toast('Status Change Failed', {containerId:'B'});
+    const notifyC = () => toast("Delete Successful", {containerId:'C'})
+    const notifyD = () => toast("Delete Failed", {containerId:'D'})
+    const notifyE = () => toast("Edits made successfully", {containerId:'E'});
+    const notifyF = () => toast("Edits failed", {containerId:'F'});
 
     const[participation, setParticipation]=useState([])
     const[editHS, setEditHS]=useState(false)
@@ -42,6 +51,12 @@ const ActivityDetail=(props)=>{
     return ( 
             <>
             <div className="conts activit-details">
+                    <ToastContainer enableMultiContainer containerId={'A'} position={toast.POSITION.TOP_RIGHT} />
+                    <ToastContainer enableMultiContainer containerId={'B'} position={toast.POSITION.TOP_RIGHT} />
+                    <ToastContainer enableMultiContainer containerId={'C'} position={toast.POSITION.TOP_RIGHT} />
+                    <ToastContainer enableMultiContainer containerId={'D'} position={toast.POSITION.TOP_RIGHT} />
+                    <ToastContainer enableMultiContainer containerId={'E'} position={toast.POSITION.TOP_RIGHT} />
+                    <ToastContainer enableMultiContainer containerId={'F'} position={toast.POSITION.TOP_RIGHT} />
                 <h1>Activity: {props.activity.name}</h1>
                 <p>{props.activity.description}</p>
                 <table>
@@ -56,7 +71,7 @@ const ActivityDetail=(props)=>{
                 </table>
                 <button className="text-btn" onClick={editOnClick}>Edit Activity</button>
                 <Modal onClick={editOnClick} hideShow={editHS}> 
-                    <EditActivity onClick={editOnClick} getArchivedActivities={props.getArchivedActivities} activity={props.activity} getAllActivities={props.getAllActivities}/>
+                    <EditActivity onClick={editOnClick} getArchivedActivities={props.getArchivedActivities} activity={props.activity} getAllActivities={props.getAllActivities} notifyA={notifyA} notifyB={notifyB} notifyC={notifyC} notifyD={notifyD} notifyE={notifyE} notifyF={notifyF}/>
                 </Modal>
                 <hr />
                     <div className="row">
