@@ -11,7 +11,7 @@ const NewParticipation=()=> {
     const[selectedResident, setSelectedResident]=useState()
     const[selectedActivity, setSelectedActivity]=useState()
     const[activityDate, setActivityDate]=useState()
-
+    const[newParticipationList, setNewParticipationList]=useState([])
 
     useEffect(()=>{
         getAllActiveResidents()

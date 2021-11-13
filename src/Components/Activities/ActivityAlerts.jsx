@@ -15,7 +15,7 @@ const ActivityAlerts=(props)=> {
             <div className="lacking-dow">
                 {props.alertActivities.map((alert)=>{
                     return(
-                        <p>{alert}</p>
+                        <p className="alert-p">{alert}</p>
                     )
                 })}
             </div>

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 class EditResident extends Component {
     constructor(props) {
@@ -19,7 +21,8 @@ class EditResident extends Component {
         })
     }
 
-    handleSubmit = ()=>{
+    handleSubmit = (e)=>{
+        e.preventDefault()
         let edits = {
             "r_first_name": this.state.r_first_name,
             "r_last_name": this.state.r_last_name,
@@ -45,16 +48,31 @@ class EditResident extends Component {
 
     editResident = async(resident, resident_id)=>{
         const jwt = localStorage.getItem('token')
-        await axios.put(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});
-        console.log({resident} + " has been edited") 
-        this.props.getResidents() 
+        try{
+            await axios.put(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});
+            console.log({resident} + " has been edited") 
+            this.props.getResidents() 
+            this.props.notifyK()
+            this.props.onClick()
+        }
+        catch(err){
+            console.log(err, "Problem editing resident.")
+            this.props.notifyL()
+        }
     }
 
     archiveResident = async(resident_id)=>{
         const jwt = localStorage.getItem('token')
-        await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/archive/`, {headers: {Authorization: 'Bearer '+ jwt}});
-        console.log(this.state.r_first_name + " has been edited") 
-        this.props.getResidents()  
+        try{
+            await axios.patch(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/archive/`, {headers: {Authorization: 'Bearer '+ jwt}});
+            console.log(this.state.r_first_name + " has been edited") 
+            this.props.getResidents()  
+            this.props.notifyM()
+        }
+        catch(err){
+            console.log(err, "Problem changing residen status")
+            this.props.notifyN()
+        }
     }
 
     render() { 

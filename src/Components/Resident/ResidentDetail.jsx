@@ -6,7 +6,8 @@ import NewNote from '../ResidentNotes/NewNote';
 import Modal from '../Utilities/Modal'
 import ViewAssessment from '../Assessment/ViewAssessment';
 import ActivitiesForChart from '../Utilities/Chart/ActivitiesForChart'
-
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const ResidentDetail=(props)=> {
     
@@ -16,6 +17,14 @@ const ResidentDetail=(props)=> {
     const[notesHS, setNotesHS]=useState(false)
     const[assessmentHS, setAssessmentHS]=useState(false)
 
+    const notifyK = () => toast('Resident Edits Successful', {containerId:'K'});
+    const notifyL = () => toast('Resident Edits Failed', {containerId:'L'});
+    const notifyM = () => toast("Status Change Successful", {containerId:'M'})
+    const notifyN = () => toast("Status Change Failed", {containerId:'N'})
+    const notifyO = () => toast('New Assessment Saved Successfully', {containerId:'O'});
+    const notifyP = () => toast('New Assessment Failed', {containerId:'P'});
+    const notifyQ = () => toast("Successfully Edited Assessment", {containerId:'Q'})
+    const notifyR = () => toast("Failed to Edit Assessment", {containerId:'R'})
     
 
     const editOnClick=()=>{
@@ -65,10 +74,10 @@ const ResidentDetail=(props)=> {
                                 <NewNote onClick={notesOnClick} getNotesByRes={props.getNotesByRes} resident={props.activeResident.id}/>
                             </Modal>
                             <Modal onClick={editOnClick} hideShow={editHS} >
-                                <EditResident resident={props.activeResident} getResidents={props.getResidents}/>
+                                <EditResident onClick={editOnClick} notifyN={notifyN} notifyM={notifyM} notifyL={notifyL} notifyK={notifyK} resident={props.activeResident} getResidents={props.getResidents}/>
                             </Modal>
                             <Modal onClick={assessmentOnClick} hideShow={assessmentHS}>
-                                <ViewAssessment resident={props.activeResident.id} />
+                                <ViewAssessment notifyR={notifyR} notifyQ={notifyQ} notifyP={notifyP} notifyO={notifyO} onClick={assessmentOnClick} resident={props.activeResident.id} />
                             </Modal>
                         </div>
                     <hr />
@@ -77,6 +86,14 @@ const ResidentDetail=(props)=> {
                         <ResidentParticipation getParticipation={props.getParticipation} participation={participation} />
                     </div>
             </div>
+            <ToastContainer enableMultiContainer containerId={'K'} position={toast.POSITION.TOP_RIGHT} />
+            <ToastContainer enableMultiContainer containerId={'L'} position={toast.POSITION.TOP_RIGHT} />
+            <ToastContainer enableMultiContainer containerId={'M'} position={toast.POSITION.TOP_RIGHT} />
+            <ToastContainer enableMultiContainer containerId={'N'} position={toast.POSITION.TOP_RIGHT} />
+            <ToastContainer enableMultiContainer containerId={'O'} position={toast.POSITION.TOP_RIGHT} />
+            <ToastContainer enableMultiContainer containerId={'P'} position={toast.POSITION.TOP_RIGHT} />
+            <ToastContainer enableMultiContainer containerId={'Q'} position={toast.POSITION.TOP_RIGHT} />
+            <ToastContainer enableMultiContainer containerId={'R'} position={toast.POSITION.TOP_RIGHT} />   
         </>
      );
 }
