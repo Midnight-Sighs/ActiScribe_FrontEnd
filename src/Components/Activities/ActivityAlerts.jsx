@@ -1,5 +1,4 @@
 import React from 'react';
-import ActivitiesForChart from '../Utilities/Chart/ActivitiesForChart';
 import './Styles/Activity.css'
 
 const ActivityAlerts=(props)=> {

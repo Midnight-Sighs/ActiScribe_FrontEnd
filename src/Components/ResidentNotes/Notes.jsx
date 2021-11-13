@@ -15,7 +15,7 @@ const Notes=(props)=> {
         setEditHS(!editHS)
     }
 
-    if(props.notes.length==0){
+    if(props.notes.length===0){
         return(
             <h3>There are currently no notes for this resident.</h3>
         )

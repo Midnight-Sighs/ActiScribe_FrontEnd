@@ -6,16 +6,12 @@ const Home =(props)=> {
 
     const[quote, setQuote]=useState("Leave a Little Sparkle Wherever You Go...")
     const[whoSaid, setWhoSaid]=useState(" - anonymous")
-    const[user, setUser]=useState(props.user)
-    const[quoteImg, setQuoteImg]=useState('')
-    const[success, setSuccess]=useState(false)
 
     const feelGoodQuote = async()=>{
         let response = await axios.get("https://quotes.rest/qod?language=en")
         if(response !== undefined){
             setQuote(response.data.contents.quotes[0].quote)
             setWhoSaid(response.data.contents.quotes[0].author)
-            setSuccess(true)
         }
     }
 

@@ -58,4 +58,20 @@
   left: 0px;
   opacity: 50%;
 }
+
+.pro-edit-label {
+  font-family: "Dancing Script", cursive;
+  color: #003235;
+  margin-left: 2rem;
+}
+
+.pro-edit-field {
+  color: #2e1e15;
+  background-color: #46756ada;
+  border: none;
+  border-radius: 5px;
+  margin-top: .25rem;
+  margin-bottom: .5rem;
+  margin-left: .5rem;
+}
 /*# sourceMappingURL=LogReg.css.map */

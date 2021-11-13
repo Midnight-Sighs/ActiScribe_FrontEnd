@@ -23,17 +23,17 @@ function NavBar() {
             </div>
 
             <Switch>
-                <Route exact path="/Residents">
+                <Route path="/Residents" component={ResidentHome}>
                     <ResidentHome />
                 </Route>
-                <Route exact path="/Activities">
+                <Route path="/Activities">
                     <ActivityHome />
                 </Route>
-                <Route exact path="/Participation">
+                <Route path="/Participation">
                     <NewParticipation />
                 </Route>
-                <Route>
-                    <TutorialHome exact path="/Tutorials_Home"/>
+                <Route path="/Tutorials_Home">
+                    <TutorialHome />
                 </Route>
             </Switch>
         </Router> 

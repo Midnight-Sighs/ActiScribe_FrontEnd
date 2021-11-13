@@ -42,7 +42,7 @@ const ViewAssessment=(props)=> {
     }
 
 
-    if(assessment == undefined){
+    if(assessment === undefined){
         return(
             <>
                 <p>Currently no assessment for this resident</p>

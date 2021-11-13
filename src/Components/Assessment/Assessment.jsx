@@ -33,12 +33,6 @@ class Assessment extends Component {
             alone_fun:"",
             social_fun:"",
             one_thing:"",
-            errors:{
-                error: false,
-                nickname: null,
-                fifty: null,
-                two_fifty: null
-            }
          }
     }
 
@@ -81,7 +75,7 @@ class Assessment extends Component {
     }
 
     componentDidUpdate=(prevProps)=>{
-        if(prevProps != this.props)
+        if(prevProps !== this.props)
         this.setState({
             residentId:this.props.resident
         })
@@ -96,10 +90,14 @@ class Assessment extends Component {
             let response = await axios.post(`http://127.0.0.1:8000/api/actiscribe/residents/${residentId}/assessment/`, newAssessment, {headers: {Authorization: 'Bearer '+ jwt}});
             this.setState({
                 activeAssessment: response.data
+                
             })
+            this.props.onClick()
+            this.props.notifyO()
             }
             catch(err){
                 console.log(err, "Problem submitting assessment")
+                this.props.notifyP()
             }
         }
         else{
@@ -108,33 +106,18 @@ class Assessment extends Component {
                 this.setState({
                     activeAssessment: response.data
                 })
+                this.props.onClick()
+                this.props.notifyQ()
                 }
                 catch(err){
                     console.log(err, "Problem submitting assessment")
+                    this.props.onClick()
+                    this.props.notifyR()
                 }
         }
     }
 
     handleChange=(event)=>{
-        let errors=this.state.errors;
-        if(event.target.name =='nickname'){
-            errors.nickname = event.target.value && event.target.value.length >=20 ? "That field must be less than 20 characters in length" :null
-            if(errors.nickname !==null){
-                errors.error = true
-            }else{errors.error = false}
-        }
-        if(event.target.name ==="games_yn"||event.target.name === "books_yn"||event.target.name === "music_yn"||event.target.name ==="crafts_yn"||event.target.name ==="arts_yn"||event.target.name ==="learning_yn"||event.target.name ==="gardening_yn"||event.target.name ==="sports_yn" ||event.target.name ==="exercise_yn"||event.target.name ==="outside_yn"||event.target.name ==="animals_yn"||event.target.name ==="socializing_yn"){
-            errors.fifty = event.target.value && event.target.value.length >=50 ? "That field must be 50 characters or less.": null
-            if(errors.fifty!==null){
-                errors.error = true
-            }else{errors.error=false}
-        }
-        if(event.target.name ==="work"||event.target.name==="volunteer"||event.target.name==="parents"||event.target.name==="siblings"||event.target.name==="close_family"||event.target.name==="spouse"||event.target.name==="children"||event.target.name==="technology"||event.target.name==="city_or_country"||event.target.name==="travel"||event.target.name==="alone_fun"||event.target.name==="social_fun"||event.target.name==="one_thing"){
-            errors.two_fifty = event.target.value && event.target.value.length >=250 ? "That field must be 250 characters or less":null
-            if(errors.two_fifty!==null){
-                errors.error=true
-            }else{errors.error=false}
-        }
         event.preventDefault()
         this.setState({
             [event.target.name]:event.target.value
@@ -292,11 +275,6 @@ class Assessment extends Component {
                     </table>
                 </form>
                 </div>
-                {/* <div className = "col-2">
-                    {this.state.errors.nickname ? <span className="ass-error">{this.state.errors.nickname}</span>:null}
-                    {this.state.errors.fifty ? <span className="ass-error">{this.state.errors.fifty}</span>:null}
-                    {this.state.errors.two_fifty? <span className="ass-error">{this.state.errors.two_fifty}</span>:null}
-                </div> */}
             </div>
             </>
          );

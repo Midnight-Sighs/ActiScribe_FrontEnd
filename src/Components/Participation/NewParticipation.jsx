@@ -11,7 +11,6 @@ const NewParticipation=()=> {
     const[selectedResident, setSelectedResident]=useState()
     const[selectedActivity, setSelectedActivity]=useState()
     const[activityDate, setActivityDate]=useState()
-    const[newParticipationList, setNewParticipationList]=useState([])
 
     useEffect(()=>{
         getAllActiveResidents()
@@ -84,7 +83,7 @@ const NewParticipation=()=> {
         postParticipation(selectedResident, newParticipation)
     }
 
-    if(allResidents == undefined || allActivities == undefined){
+    if(allResidents === undefined || allActivities === undefined){
         return(
             <h3>No data loaded</h3>
         )

@@ -24,5 +24,15 @@
     & a{
         color: $warm-brown;
         text-decoration: none;
+        &:hover{
+            color:$light-teal;
+        }
+    }
+}
+.header-button{
+    color: $warm-brown;
+    text-decoration: none;
+    &:hover{
+        color:$light-teal;
     }
 }

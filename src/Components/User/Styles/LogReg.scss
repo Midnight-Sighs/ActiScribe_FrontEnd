@@ -50,3 +50,18 @@
     left: 0px;
     opacity: 50%;
 }
+.pro-edit-label{
+    font-family: $heading-font;
+    color: $dark-teal;
+    margin-left: 2rem;
+}
+.pro-edit-field{
+    color:$dk-warm-brown;
+    background-color: $half-second-teal;
+    border:none;
+    border-radius:5px;
+    margin-top:.25rem;
+    margin-bottom:.5rem;
+    margin-left: .5rem;
+
+}

@@ -44,7 +44,7 @@ const ResidentDetail=(props)=> {
         setParticipation(props.participation)
     },[props])
 
-    if(props.activeResident == undefined){
+    if(props.activeResident === undefined){
         return(<p>Error getting resident details.</p>)
     }
 

@@ -1,16 +1,8 @@
-import React,{useState, useEffect} from 'react';
+import React from 'react';
 import './Styles/Residents.css'
-import ResidentDetail from './ResidentDetail'
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const AllResidents=(props)=>{
-
-    const[activeResident, setActiveResident]=useState('')
-
-
-    useEffect(()=>{
-        console.log(activeResident)
-    }, [activeResident])
 
     return ( 
     

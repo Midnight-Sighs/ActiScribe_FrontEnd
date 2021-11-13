@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {Redirect} from 'react-router-dom'
 import axios from 'axios';
+import "./Styles/LogReg.css"
+
 
 class Profile extends Component {
     constructor(props) {
@@ -54,9 +56,12 @@ class Profile extends Component {
             this.setState({
                 redirect:true
             })
+            this.props.onClick()
+            this.props.notifyS()
         }
         catch(err){
             console.log(err, "Problem editing user.")
+            this.props.notifyT()
         }
     }
     
@@ -64,8 +69,8 @@ class Profile extends Component {
     render() { 
         return ( 
             <>
-            {this.state.redirect ?<Redirect to="/Residents" /> : null}
-                <div className="edit-profile conts">
+            {this.state.redirect ? <Redirect to="/Residents" /> : null}
+                <div className="edit-profile">
                     <form onSubmit={this.handleSubmit}>
                     <table>
                         <tbody>
@@ -91,7 +96,7 @@ class Profile extends Component {
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><button type="submit">Save Changes</button></td>
+                                <td><button className="text-btn" type="submit">Save Changes</button></td>
                             </tr>
                         </tbody>
                     </table>

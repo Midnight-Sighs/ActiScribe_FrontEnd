@@ -113,7 +113,7 @@ function ActivitiesForChart(props) {
             setPartLoaded(false)
             console.log("No activity to display.")
         }
-        if (props.activities!=null&& props.activities != undefined&&props.activities.length>0 ){
+        if (props.activities!==null&& props.activities !== undefined&&props.activities.length>0 ){
             props.activities.map((activity)=>{
                 if(activity.dow_one === dow || activity.dow_two === dow|| activity.dow_three === dow){
                     filtered.push(activity)
@@ -129,14 +129,14 @@ function ActivitiesForChart(props) {
     },[props.activities])
 
     useEffect(()=>{
-        if(percentSen ===NaN){
+        if(isNaN(percentSen)){
             setPartLoaded(false)}
         checkForAlert()
     }, [percentSen])
 
     useEffect(()=>{
         filterAllActivities()
-    },[])
+    })
 
 
     const calculatePercentage=(x, sum)=>{

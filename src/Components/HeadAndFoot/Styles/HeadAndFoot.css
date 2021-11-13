@@ -31,4 +31,17 @@
   color: #b47f60;
   text-decoration: none;
 }
+
+.log-reg a:hover {
+  color: #84c6b8;
+}
+
+.header-button {
+  color: #b47f60;
+  text-decoration: none;
+}
+
+.header-button:hover {
+  color: #84c6b8;
+}
 /*# sourceMappingURL=HeadAndFoot.css.map */

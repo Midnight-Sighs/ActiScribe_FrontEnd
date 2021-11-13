@@ -1,4 +1,3 @@
-import { now } from 'd3-timer';
 import React, {useState, useEffect} from 'react';
 import Modal from '../Utilities/Modal'
 import EditActivity from './EditActivity';
@@ -51,12 +50,6 @@ const ActivityDetail=(props)=>{
     return ( 
             <>
             <div className="conts activit-details">
-                    <ToastContainer enableMultiContainer containerId={'A'} position={toast.POSITION.TOP_RIGHT} />
-                    <ToastContainer enableMultiContainer containerId={'B'} position={toast.POSITION.TOP_RIGHT} />
-                    <ToastContainer enableMultiContainer containerId={'C'} position={toast.POSITION.TOP_RIGHT} />
-                    <ToastContainer enableMultiContainer containerId={'D'} position={toast.POSITION.TOP_RIGHT} />
-                    <ToastContainer enableMultiContainer containerId={'E'} position={toast.POSITION.TOP_RIGHT} />
-                    <ToastContainer enableMultiContainer containerId={'F'} position={toast.POSITION.TOP_RIGHT} />
                 <h1>Activity: {props.activity.name}</h1>
                 <p>{props.activity.description}</p>
                 <table>
@@ -78,15 +71,21 @@ const ActivityDetail=(props)=>{
                         <div className="col-4">
                             {props.participation.resident.map((resident, index)=>{
                                 return(<p key={index}>{resident.r_first_name}</p>
-                            )})}
+                                    )})}
                         </div>
                         <div className="col-4">
                             {props.participation.participation.map((date)=>{
                                 return(<p key= {date.id}>{date.date}</p>
-                            )})}
+                                    )})}
                         </div>
                     </div>
                 </div>
+                <ToastContainer enableMultiContainer containerId={'A'} position={toast.POSITION.TOP_RIGHT} />
+                <ToastContainer enableMultiContainer containerId={'B'} position={toast.POSITION.TOP_RIGHT} />
+                <ToastContainer enableMultiContainer containerId={'C'} position={toast.POSITION.TOP_RIGHT} />
+                <ToastContainer enableMultiContainer containerId={'D'} position={toast.POSITION.TOP_RIGHT} />
+                <ToastContainer enableMultiContainer containerId={'E'} position={toast.POSITION.TOP_RIGHT} />
+                <ToastContainer enableMultiContainer containerId={'F'} position={toast.POSITION.TOP_RIGHT} />
             </>
         );
     }
