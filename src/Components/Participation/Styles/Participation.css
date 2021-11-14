@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=EB+Garamond:ital@1&display=swap");
 .part-select select {
   background-color: #46756A;
   color: #2e1e15;
@@ -11,7 +12,7 @@
 .part-label {
   padding-top: 1rem;
   padding-right: .5rem;
-  font-family: "Dancing Script", cursive;
+  font-family: "EB Garamond", serif;
   color: #003235;
   font-size: 1.5rem;
 }

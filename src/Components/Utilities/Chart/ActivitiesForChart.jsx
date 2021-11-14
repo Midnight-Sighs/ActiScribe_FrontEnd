@@ -158,7 +158,7 @@ function ActivitiesForChart(props) {
             <div className="row">
                 {partLoaded ?
                 <>
-                <div className ="col-5">
+                <div className ="col-4">
                     <Chart data={partNumbers} />
                 </div> 
                 <div className="col-4 res-perc">
@@ -179,6 +179,12 @@ function ActivitiesForChart(props) {
                             <tr>
                                 <td>Environmental:  </td><td>{percentEnv}%</td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="col-4 res-perc">
+                    <table>
+                        <tbody>
                             <tr>
                                 <td>Financial:  </td><td>{percentFin}%</td>
                             </tr>
@@ -196,7 +202,8 @@ function ActivitiesForChart(props) {
                             </tr>
                         </tbody>
                     </table>
-                </div> 
+                </div>
+    
                 </>
                 : <p>No participation to display.</p>}
             </div>

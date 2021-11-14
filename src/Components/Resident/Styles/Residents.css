@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=EB+Garamond:ital@1&display=swap");
 .res-table th, td {
   height: 1rem;
   font-family: "Cormorant Garamond", serif;
@@ -36,7 +37,7 @@
 }
 
 .res-part-table .det-activity {
-  width: 15rem;
+  width: 20rem;
   font-size: 1.5rem;
   padding: .4rem;
 }
@@ -63,7 +64,7 @@
 
 .date-span {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .detail-tbl {
@@ -72,6 +73,14 @@
 
 .res-details {
   font-size: 1.5rem;
+}
+
+.new-res-form h1 {
+  margin-left: 8rem;
+}
+
+.new-res-form .new-res {
+  margin-left: 6rem;
 }
 
 .new-res-form .new-res-label {
@@ -94,7 +103,7 @@
 }
 
 .new-res-form h1 {
-  font-family: "Dancing Script", cursive;
+  font-family: "EB Garamond", serif;
 }
 
 .edit-resident {
@@ -126,7 +135,7 @@
 }
 
 .ass-view .ass-line {
-  font-family: "Dancing Script", cursive;
+  font-family: "EB Garamond", serif;
   width: 15vw;
   border-bottom: 2px double #003235;
 }
@@ -146,7 +155,7 @@
 
 .ass-form-label {
   width: 15rem;
-  font-family: "Dancing Script", cursive;
+  font-family: "EB Garamond", serif;
 }
 
 .ass-form-input {
@@ -167,7 +176,7 @@
 
 .res-perc td {
   padding-right: .5rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .new-part {

@@ -37,7 +37,7 @@
 .res-part-table{
     font-family:$regular-font;
     & .det-activity{
-        width:15rem;
+        width:20rem;
         font-size: 1.5rem;
         padding:.4rem;
     }
@@ -62,7 +62,7 @@
 
 .date-span{
     font-family: $regular-font;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 .detail-tbl{
     width: 60rem;
@@ -84,7 +84,12 @@
 //#region New Resident
 
 .new-res-form{
-    
+    h1{
+        margin-left: 8rem;
+    }
+    .new-res{
+        margin-left: 6rem;
+    }
     .new-res-label{
         font-family: $regular-font;
         padding-right: 2rem;
@@ -179,7 +184,7 @@
     font-family: $regular-font;
     td{
         padding-right:.5rem;
-        font-size: 1.25rem;
+        font-size: 1.75rem;
     }
 }
 

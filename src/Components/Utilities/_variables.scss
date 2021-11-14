@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&family=Lobster+Two&family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=EB+Garamond:ital@1&display=swap');
 
 // 'Dancing Script', cursive;
 // 'Tangerine', cursive;
@@ -22,8 +23,9 @@ $error-color:#ec5d1b;
 $mid-brown:#6F4329;
 
 $quote-font: 'Tangerine', cursive;
-$heading-font: 'Dancing Script', cursive;
+$title-font: 'Dancing Script', cursive;
 $regular-font: 'Cormorant Garamond', serif;
+$heading-font: 'EB Garamond', serif;
 
 $golden-box-shadow: 0px 0px 15px $light-yellow;
 $teal-border: solid 3px $dark-teal;
