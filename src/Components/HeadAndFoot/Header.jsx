@@ -32,7 +32,7 @@ const Header=(props)=> {
                     </div>
                     <div className='col-1'></div>
                     <div className = "col-3 log-reg">
-                        {props.loggedIn ? <Redirect to="/Residents" />: <span><Link className = "header-link" to="/login">Login</Link></span>}
+                        {props.loggedIn ? null: <span><Link className = "header-link" to="/login">Login</Link></span>}
                         {props.loggedIn ? null: <span> <Link to ='/register' className = "header-link">Register</Link></span>}
                         {props.loggedIn?<span><button onClick={onClick} className="header-button">Profile</button></span>:null }
                         {props.loggedIn ? <span><Link to="/" className = "header-link" onClick={props.logout}>Logout</Link></span>: null}

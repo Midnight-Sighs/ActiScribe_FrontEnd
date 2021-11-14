@@ -54,49 +54,49 @@
 
 @-webkit-keyframes color-change {
   0% {
-    color: #0b2f3d;
+    color: #311604;
   }
   20% {
-    color: #533fc5;
+    color: #582c0e;
   }
   35% {
-    color: #ae63eb;
+    color: #85461d;
   }
   60% {
-    color: #f78ee9;
+    color: #b1581d;
   }
   70% {
-    color: #ae63eb;
+    color: #85461d;
   }
   85% {
-    color: #533fc5;
+    color: #582c0e;
   }
   100% {
-    color: #0b2f3d;
+    color: #311604;
   }
 }
 
 @keyframes color-change {
   0% {
-    color: #0b2f3d;
+    color: #311604;
   }
   20% {
-    color: #533fc5;
+    color: #582c0e;
   }
   35% {
-    color: #ae63eb;
+    color: #85461d;
   }
   60% {
-    color: #f78ee9;
+    color: #b1581d;
   }
   70% {
-    color: #ae63eb;
+    color: #85461d;
   }
   85% {
-    color: #533fc5;
+    color: #582c0e;
   }
   100% {
-    color: #0b2f3d;
+    color: #311604;
   }
 }
 

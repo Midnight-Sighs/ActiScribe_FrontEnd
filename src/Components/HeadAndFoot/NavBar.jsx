@@ -14,7 +14,7 @@ function NavBar() {
                 <div className="col-4"></div>
                 <div className="col-8">
                     <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <Link to="/Residents" class="nav-link" id="nav-residents-tab" data-bs-toggle="tab" href="#nav-residents" role="tab" aria-controls="nav-residents" aria-selected="true">Residents</Link>
+                        <Link to="/" class="nav-link" id="nav-residents-tab" data-bs-toggle="tab" href="#nav-residents" role="tab" aria-controls="nav-residents" aria-selected="true">Residents</Link>
                         <Link to="/Activities" class="nav-link" id="nav-activities-tab" data-bs-toggle="tab" href="#nav-activities" role="tab" aria-controls="nav-activities" tabindex="-1" aria-selected="false">Activities</Link>
                         <Link to="/Participation" class="nav-link" id="nav-participation-tab" data-bs-toggle="tab" href="#nav-participation" role="tab" aria-controls="nav-participation" aria-selected="false">Participation</Link>
                         <Link to="/Tutorials_Home" class="nav-link" id="nav-tutorials-tab" data-bs-toggle="tab" href="#nav-tutorials" role="tab" aria-controls="nav-tutorials" aria-selected="false">Tutorials</Link>
@@ -23,7 +23,7 @@ function NavBar() {
             </div>
 
             <Switch>
-                <Route path="/Residents" component={ResidentHome}>
+                <Route exact path="/" exact component={ResidentHome}>
                     <ResidentHome />
                 </Route>
                 <Route path="/Activities">

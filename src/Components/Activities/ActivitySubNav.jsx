@@ -7,6 +7,7 @@ import NewActivity from './NewActivity';
 import ActivityDetail from './ActivityDetails'
 import ArchivedActivities from './ArchivedActivities';
 import ActivityAlerts from './ActivityAlerts';
+import FilteredActvities from './FilteredActivities';
 
 const ActivitySubNav=(props)=>{
 
@@ -24,7 +25,7 @@ const ActivitySubNav=(props)=>{
                     <div className="d-flex align-items-start">
                         <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <Link to="/All_Activities"  className="nav-link" id="v-pills-all-act-tab" data-bs-toggle="pill" href="#v-pills-all-act" role="tab" aria-controls="v-pills-all-act" aria-selected="true">All Activities</Link>
-                            <Link to="/Dow_Activities" className="nav-link" id="v-pills-dow-act-tab" data-bs-toggle="pill" href="#v-pills-dow-act" role="tab" aria-controls="v-pills-dow-act" aria-selected="false">DOW</Link>
+                            <Link to="/Dow_Activities" className="nav-link" id="v-pills-dow-act-tab" data-bs-toggle="pill" href="#v-pills-dow-act" role="tab" aria-controls="v-pills-dow-act" aria-selected="false">Filter Activities</Link>
                             <Link to="/Archived_Activities" className="nav-link" id="v-pills-arch-act-tab" data-bs-toggle="pill" href="#v-pills-arch-act" role="tab" aria-controls="v-pills-arch-act" aria-selected="false">Archived</Link>
                             <Link to="/New_Activity" className="nav-link" id="v-pills-new-act-tab" data-bs-toggle="pill" href="#v-pills-new-act" role="tab" aria-controls="v-pills-new-act" aria-selected="false">New Activity</Link>
                         </div>
@@ -40,7 +41,7 @@ const ActivitySubNav=(props)=>{
                             <AllActivitiesWithChart homeAlertActivities={props.homeAlertActivities} setActiveActivity={props.setActiveActivity} allActivities={props.allActivities} participation={props.part} />
                         </Route>
                         <Route exact path="/Dow_Activities">
-                            <ActivitiesByDow allActivities={props.dowActivities} setActiveActivity={props.setActiveActivity} filterDow={props.filterDow} activity={props.activeActivity} />
+                            <FilteredActvities activitiesForFilter={props.allActivities} allActivities={props.dowActivities} setActiveActivity={props.setActiveActivity} filterDow={props.filterDow} activity={props.activeActivity} />
                         </Route>
                         <Route exact path='/New_Activity'>
                             <NewActivity getAllActivities={props.getAllActivities}/>

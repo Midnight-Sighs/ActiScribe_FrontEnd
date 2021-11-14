@@ -136,7 +136,7 @@ function ActivitiesForChart(props) {
 
     useEffect(()=>{
         filterAllActivities()
-    })
+    },[])
 
 
     const calculatePercentage=(x, sum)=>{

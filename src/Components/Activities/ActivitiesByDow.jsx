@@ -21,9 +21,14 @@ const ActivitiesByDow=(props)=> {
         setAllActivities(props.allActivities)
     }, [props])
 
+    const clearResults=()=>{
+        setFiltered(false)
+    }
+
     return ( 
         <>
-        <div className="conts activity-by-dow">
+
+        <div className="activity-by-dow">
             <form onSubmit={onSubmit}> 
             <div className="select-dow">
                 <select name="dow" onChange={e=>setDow(e.currentTarget.value)}>
@@ -39,8 +44,11 @@ const ActivitiesByDow=(props)=> {
                     <option value="Sensory">Sensory</option>
                 </select>
                 <button className="text-btn mx-3" type="submit">Filter</button>
+                <button type="button" className="text-btn" onClick={clearResults}>Clear Results</button>
             </div>
             </form>
+
+
             {filtered ? 
                 <table className='activity-table'>
                     <tbody>

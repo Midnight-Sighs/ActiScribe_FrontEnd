@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import ResidentSubNav from './ResidentSubNav';
 import {toast} from 'react-toastify';
-
-
+import Home from '../Anon/Home/Home'
 
 class ResidentHome extends Component {
     constructor(props) {
@@ -119,6 +118,9 @@ class ResidentHome extends Component {
                 <div className="col-3">
                     <ResidentSubNav getNotesByRes={this.notesByResident} getParticipation={this.participationByResident} user={this.props.user} getResidents={this.getAllActiveResidents} archive={this.archiveResident} edit={this.editResident} notes={this.state.activeNotes} participation={this.state.activeParticipation} activeResident={this.state.activeResident} setResident={this.setActiveResident} residents={this.state.residents} archived={this.state.archivedResidents} newResident={this.newResident}/>
                 </div>
+                {/* <div className="col-9">
+                    <Home />
+                </div> */}
             </div>
             </>
         );

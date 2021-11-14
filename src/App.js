@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Switch, Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import '../src/Styles/App.css'
@@ -13,7 +13,6 @@ class App extends Component {
     this.state = { 
         user: [],
         logInRedirect: false,
-        logOutRedirect: false,
         loggedIn: false,
         localToken: localStorage.token,
         userDetails: [],
@@ -38,7 +37,7 @@ class App extends Component {
       console.log("No token in local storage.  Please log in.")
     }
   }
-
+  
   userLogin =async(login)=>{
     try{
       let response = await axios.post('http://127.0.0.1:8000/api/auth/login/', login)
@@ -61,7 +60,6 @@ class App extends Component {
       user: [],
       loggedIn: false,
       localToken: '',
-      logOutRedirect: true
     })
   }
 
@@ -72,6 +70,7 @@ class App extends Component {
     this.setState({
       userDetails : response.data
     })
+    
     }
     catch(err){
       console.log(err, "Error getting user details")
@@ -88,7 +87,7 @@ class App extends Component {
           <Router>
             <Switch>
 
-              {this.state.loggedIn ? <Redirect to="/Residents" render={props=> <ResidentHome {...props} user={this.state.userDetails} />} /> :
+              {this.state.loggedIn ? <Redirect to="/" component={ResidentHome} /> :
               <Redirect to="/" component={AnonBody} />}
             </Switch>
           </Router>
