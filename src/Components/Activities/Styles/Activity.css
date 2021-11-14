@@ -40,7 +40,9 @@ h3 {
 }
 
 .edit-act-label {
+  margin-top: 1rem;
   font-family: "EB Garamond", serif;
+  color: #84c6b8;
 }
 
 .edit-act-field {
@@ -57,6 +59,27 @@ h3 {
 .add-act-btn {
   margin-top: 2rem;
   margin-left: 2rem;
+}
+
+.on-act-edit.select-dow {
+  margin-left: 5rem;
+}
+
+.on-act-edit.select-dow select {
+  color: #84c6b8;
+}
+
+.new-act-form .add-act-label {
+  color: #003235;
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+}
+
+.new-act-form .add-act-field {
+  background-color: #0032357a;
+  border-radius: 10px;
+  border: none;
+  width: 25rem;
 }
 
 .act-alert-home h1 {

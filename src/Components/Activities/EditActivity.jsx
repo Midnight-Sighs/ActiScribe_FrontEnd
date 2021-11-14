@@ -109,12 +109,12 @@ class EditActivity extends Component {
                         <tbody>
                                 <tr>
                                     <td><label className = "edit-act-label">Activity Name</label></td>
-                                    <td><label className="edit-act-label tab-dow">DOW</label></td>
+                                    <td><label className="edit-act-label tab-dow">Dimensions of Wellness</label></td>
                                 </tr>
                                 <tr>
                                     <td><input className = "edit-act-field" name="name" maxlength="50" onChange={this.handleChange} value={this.state.name} required/></td>
-                                    <td><div className="select-dow"><select name="dow_one" onChange={e=>this.setState({dow_one: e.currentTarget.value})}>
-                                        <option value="" defaultValue disabled hiddden>{this.state.dow_one}</option>
+                                    <td><div className="select-dow on-act-edit"><select name="dow_one" onChange={e=>this.setState({dow_one: e.currentTarget.value})}>
+                                        <option value={this.state.dow_one} defaultValue>{this.state.dow_one}</option>
                                         <option value="Social">Social</option>
                                         <option value="Physical">Physical</option>
                                         <option value="Emotional">Emotional</option>
@@ -129,7 +129,7 @@ class EditActivity extends Component {
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td><div className="select-dow">
+                                    <td><div className="select-dow on-act-edit">
                                         <select name="dow_two" onChange={e=>this.setState({dow_two: e.currentTarget.value})}>
                                         <option value="" defaultValue disabled hiddden>{this.state.dow_two}</option>
                                         <option value=""> --- </option>
@@ -147,7 +147,7 @@ class EditActivity extends Component {
                                 </tr>
                                 <tr>
                                     <td><label className ="edit-act-label">Activity Description</label></td>
-                                    <td><div className="select-dow">
+                                    <td><div className="select-dow on-act-edit">
                                         <select  name="dow_three" onChange={e=>this.setState({dow_three: e.currentTarget.value})}>
                                         <option value="" defaultValue disabled hiddden>{this.state.dow_three}</option>
                                         <option value=""> --- </option>
@@ -164,17 +164,17 @@ class EditActivity extends Component {
                                     </select></div></td>
                                 </tr>
                                 <tr>
-                                    <td><textarea className="edit-act-field" maxlength="250" name="description" onChange={this.handleChange} value={this.state.description} /></td>
+                                    <td><textarea className="edit-act-field" rows="5" maxlength="250" name="description" onChange={this.handleChange} value={this.state.description} /></td>
                                 </tr>
                                 <tr>
-                                    <td><button className="text-btn" type="submit">Save Activity</button></td>
+                                    <td><button className="edit-note-btn" type="submit">Save Activity</button></td>
                                 </tr>
                         </tbody>
                     </table>
                 </form>
             <br />
-            <button className="text-btn mx-3" onClick={this.archiveOnClick}>Activity Status</button>
-            <button className="text-btn" onClick={this.deleteOnClick}>Delete Activity</button>
+            <button className="edit-note-btn ms-4" onClick={this.archiveOnClick}>Activity Status</button>
+            <button className="edit-note-btn ms-5" onClick={this.deleteOnClick}>Delete Activity</button>
            </div> 
             </>
          );

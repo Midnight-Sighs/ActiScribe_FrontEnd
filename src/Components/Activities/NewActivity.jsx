@@ -74,15 +74,15 @@ class NewActivity extends Component {
                 <table>
                     <tbody>
                         <tr>
-                            <td><label className = "edit-act-label">Activity Name</label></td>
-                            <td><input className = "edit-act-field" maxLength="50" name="name" value={this.state.name} onChange={this.handleChange} required /></td>
+                            <td><label className = "add-act-label">Activity Name</label></td>
+                            <td><input className = "add-act-field" maxLength="50" name="name" value={this.state.name} onChange={this.handleChange} required /></td>
                         </tr>
                         <tr>
-                            <td><label className="edit-act-label">Activity Description</label></td>
-                            <td><textarea maxLength="250" className="edit-act-field" name="description" value={this.state.description} onChange={this.handleChange} /></td>
+                            <td><label className="add-act-label">Activity Description</label></td>
+                            <td><textarea maxLength="250" rows="5" className="add-act-field" name="description" value={this.state.description} onChange={this.handleChange} /></td>
                         </tr>
                         <tr>
-                            <td className="edit-act-label">Dimension of Wellness</td>
+                            <td className="add-act-label">Dimension of Wellness</td>
                             <td>
                                 <div className="select-dow">
                                     <select name="dow_one" value={this.state.dow_one} onChange={e=>this.setState({dow_one: e.currentTarget.value})}>
@@ -102,7 +102,7 @@ class NewActivity extends Component {
                             </td>
                         </tr>
                         <tr>
-                            <td className="edit-act-label">Dimension of Wellness (optional)</td>
+                            <td className="add-act-label">Dimension of Wellness (optional)</td>
                             <td>
                                 <div className="select-dow">
                                     <select name="dow_two" value={this.state.dow_two} onChange={e=>this.setState({dow_two: e.currentTarget.value})}>
@@ -122,7 +122,7 @@ class NewActivity extends Component {
                             </td>
                         </tr>
                         <tr>
-                            <td className="edit-act-label">Dimension of Wellnes (optional)</td>
+                            <td className="add-act-label">Dimension of Wellnes (optional)</td>
                             <td>
                                 <div className="select-dow">
                                     <select name="dow_three" value={this.state.dow_three} onChange={e=>this.setState({dow_three: e.currentTarget.value})}>

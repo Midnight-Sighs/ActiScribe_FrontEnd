@@ -40,7 +40,9 @@ h3{
 //#region Edit Activities/Add Activity
 
 .edit-act-label{
+    margin-top: 1rem;
     font-family:$heading-font;
+    color: $light-teal;
 }
 .edit-act-field{
     background-color: $half-second-teal;
@@ -55,6 +57,26 @@ h3{
 .add-act-btn{
     margin-top:2rem;
     margin-left:2rem;
+}
+.on-act-edit.select-dow{
+    margin-left: 5rem;
+    & select{
+        color:$light-teal;
+    }
+}
+
+.new-act-form{
+    .add-act-label{
+        color: $dark-teal;
+        font-family: $heading-font;
+        font-size: 2rem;
+    }
+    .add-act-field{
+        background-color: $half-dark-teal;
+        border-radius: 10px;
+        border:none;
+        width: 25rem;
+    }
 }
 //#endregion
 
