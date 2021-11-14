@@ -1,12 +1,18 @@
 # ActiScribe_FrontEnd
 
+![Non-Member Home Page](https://github.com/Midnight-Sighs/ActiScribe_FrontEnd/blob/main/src/Screenshots/AnonHome.png)
+
 This project primarily utilizes React through a combination of class components, functional components, and the hooks of useState and useEffect.  The other things utilized here in the front end are Sass/Html/Css, Observable (formerly d3), Axios, Bootstrap (for rows/cols), Toastify and React Router.  The accompanying backend was created using Django Rest-Framework with the assistance of a MySQL database and Postman.  
 
 Functionally, this app can do many things that will assist an activity professional in tracking their residents, activities, and participation.  You can enter in new residents and change their status to archived when they're no longer within your facility.  Facilities need to keep record of all their residents for 7 years AND it helps to see an activities' success when the residents are still in the system.  Two birds with one stone. 
 
+![Non-Member Home Page](https://github.com/Midnight-Sighs/ActiScribe_FrontEnd/blob/main/src/Screenshots/ResidentDetail.png)
+
 You can also archive your activities for similar reasons.  You can look back and have a record of what was successful and what wasn't as the population being served changes.  You can reactivate both residents and activities if need be (sometimes people move out for long-term stays and warrant having it changed and as your population changes, an old activity may be successful again.)
 
 This app will compare the active activities against a system calls the dimensions of wellness to help activity professionals have a well-rounded activity plan.  Similarly, in your resident detail page, you can also see what aspects of dimensions of wellness your resident is lacking.  If you activity plan is not balanced (10% in each area), you will receive a notification.  However, every single facility is different, so needs are not the same even between one month and another in the same place.  This is purely informational, not instructional.  
+
+![Modal/Edits](https://github.com/Midnight-Sighs/ActiScribe_FrontEnd/blob/main/src/Screenshots/Modal.png)
 
 ## Future Plans
 I have a few ideas to expand this in the future and I'm sure I'll think of more.   
@@ -19,3 +25,5 @@ I have a few ideas to expand this in the future and I'm sure I'll think of more.
 
 ## A personal note:
 This is a project I have wanted to make for a long time.  It's something that in my years as an activity director, I thought about and wanted to have.  Now I have the ability to make it so for other people to utilize and learn from.
+
+![Modal/Edits](https://github.com/Midnight-Sighs/ActiScribe_FrontEnd/blob/main/src/Screenshots/Filter.png)
