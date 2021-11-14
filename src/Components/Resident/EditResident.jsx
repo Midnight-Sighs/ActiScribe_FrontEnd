@@ -79,6 +79,7 @@ class EditResident extends Component {
             <>
 
             <div className="edit-resident">
+                <h1 className="modal-title">Edit Resident</h1>
                 <form onSubmit={this.handleSubmit}>
                     <table>
                         <tbody>
@@ -100,14 +101,14 @@ class EditResident extends Component {
                             </tr>
                             <tr>
                                 <td colSpan="2">
-                                    <button className="text-btn modal-btn" type="submit">Save Edits</button>
+                                    <button className="edit-note-btn save-edit" type="submit">Save Edits</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </form>
-                <p>Status will change your resident to active/archived.  This is used to remove your active resident but retain your statistics and records. Useful for residents on extended stay elsewhere or possibility of readmission later.</p>
-                    <button className="text-btn modal-btn" type="button" onClick={this.archiveOnClick}>Resident Status</button>
+                <p className="edit-p">Status will change your resident to active/archived.  This is used to remove your active resident but retain your statistics and records. Useful for residents on extended stay elsewhere or possibility of readmission later.</p>
+                    <button className="edit-note-btn save-edit" type="button" onClick={this.archiveOnClick}>Resident Status</button>
             </div>
             </>
          );

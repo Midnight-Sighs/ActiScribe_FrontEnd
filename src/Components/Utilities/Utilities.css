@@ -15,8 +15,8 @@
 .modal-body {
   position: fixed;
   background: #f2c1a2;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(242, 193, 162, 0.810428)), to(rgba(117, 102, 95, 0.76561)));
-  background: linear-gradient(0deg, rgba(242, 193, 162, 0.810428) 0%, rgba(117, 102, 95, 0.76561) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(206, 152, 119, 0.81)), to(rgba(60, 37, 26, 0.8)));
+  background: linear-gradient(0deg, rgba(206, 152, 119, 0.81) 0%, rgba(60, 37, 26, 0.8) 100%);
   z-index: 3;
   width: 50%;
   height: 80%;
@@ -30,6 +30,13 @@
 .modal-close {
   border-radius: 5px;
   font-family: "Cormorant Garamond", serif;
+  position: fixed;
+  left: 5rem;
+  top: 40rem;
+}
+
+.modal-title {
+  color: #84c6b8;
 }
 
 .modal-btn {

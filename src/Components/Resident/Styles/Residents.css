@@ -112,11 +112,13 @@
 }
 
 .edit-resident label {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  color: #84c6b8;
+  margin-right: 2rem;
 }
 
 .edit-resident .edit-res-field {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   background-color: #46756A;
   border: none;
   border-radius: 5px;
@@ -128,19 +130,34 @@
   border: 2px solid #2e1e15;
 }
 
+.edit-resident .save-edit {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #84c6b8;
+}
+
+.edit-resident p {
+  font-size: 1.25rem;
+  color: black;
+  font-weight: 600;
+}
+
 .ass-view {
+  margin-left: 3rem;
   height: 55vh;
   width: 43vw;
   overflow-y: scroll;
 }
 
 .ass-view .ass-line {
+  color: #84c6b8;
   font-family: "EB Garamond", serif;
   width: 15vw;
   border-bottom: 2px double #003235;
 }
 
 .ass-view .ass-value {
+  color: #84c6b8;
   font-size: 1.25rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -153,13 +170,19 @@
   font-size: 1.5rem;
 }
 
+.edit-ass-btn {
+  margin-left: 3rem;
+}
+
 .ass-form-label {
+  color: #84c6b8;
   width: 15rem;
   font-family: "EB Garamond", serif;
 }
 
 .ass-form-input {
   margin-top: .75rem;
+  width: 30rem;
   background-color: #46756A;
   border: none;
   border-radius: 5px;
@@ -167,6 +190,16 @@
 
 .ass-btn {
   font-size: 1.5rem;
+}
+
+.add-ass p {
+  margin-top: 5rem;
+  margin-left: 3rem;
+  color: #84c6b8;
+}
+
+.add-ass button {
+  color: #84c6b8;
 }
 
 .res-perc {

@@ -270,11 +270,13 @@ class Assessment extends Component {
                                 <td><label className='ass-form-label'>One Thing They Wish Everyone Knew</label></td>
                                 <td><input className = 'ass-form-input'  maxLength="250"  name='one_thing' value={this.state.one_thing} onChange={this.handleChange} /></td>
                             </tr>
-                            <button className="text-btn ass-btn" type="submit">Save Assessment</button>
                         </tbody>
                     </table>
                 </form>
                 </div>
+            </div>
+            <div className="edit-ass-btn">
+                <button className="edit-note-btn" type="submit">Save Assessment</button>
             </div>
             </>
          );

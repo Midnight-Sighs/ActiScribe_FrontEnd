@@ -45,6 +45,10 @@
   font-size: 1.5rem;
 }
 
+.new-note-label {
+  margin-top: 2rem;
+}
+
 .edit-field {
   width: 55rem;
   background-color: #0032357a;
@@ -57,6 +61,11 @@
   background: none;
   margin-left: 2rem;
   margin-top: .5rem;
+  color: #003235;
+  -webkit-box-shadow: 5px 5px 10px #003235;
+          box-shadow: 5px 5px 10px #003235;
+  border-radius: 10px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .note-delete {

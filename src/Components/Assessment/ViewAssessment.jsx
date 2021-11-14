@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Assessment from './Assessment'
+import '../Resident/Styles/Residents.css'
 
 const ViewAssessment=(props)=> {
 
@@ -45,9 +46,11 @@ const ViewAssessment=(props)=> {
     if(assessment === undefined){
         return(
             <>
+            <div className="add-ass">
                 <p>Currently no assessment for this resident</p>
-                <button className="text-btn" onClick={newAssessmentClick}>Add Assessment</button>
+                <button className="edit-note-btn" onClick={newAssessmentClick}>Add Assessment</button>
                 {newAssessmentHS ? <Assessment {...props} toggleHS={newAssessmentClick} residentId={residentId}/> : null}
+            </div>
             </>
         )
     }
@@ -165,7 +168,9 @@ const ViewAssessment=(props)=> {
                     </tr>
                 </tbody>
             </table>
-            <button className="text-btn text-btn"onClick={editOnClick}>Edit Assessment?</button>
+            </div>
+            <div className="edit-ass-btn">
+                <button className="edit-note-btn"onClick={editOnClick}>Edit Assessment?</button>
             </div>
             </>
             :

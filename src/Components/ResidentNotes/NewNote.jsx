@@ -48,7 +48,7 @@ const NewNote=(props)=> {
                 <p><label className="new-note-label">Write a New Note</label></p>
                 <p><textarea rows="4" maxLength="400" className="new-note-field" name="content" onChange={handleChange} placeholder={"Your Note Here"} required/></p>
                 <input className="note-date" type="date" name="date" onChange={handleDate} required />
-                <button className="text-btn edit-note-btn" type="submit">Add Note</button>
+                <button className="edit-note-btn" type="submit">Add Note</button>
             </form>
         </div>
         </>

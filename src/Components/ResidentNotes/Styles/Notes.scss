@@ -45,6 +45,9 @@
 //#endregion
 
 //#region
+.new-note-label{
+    margin-top:2rem;
+}
 .edit-field{
     width: 55rem;
     background-color:$half-dark-teal;
@@ -56,6 +59,10 @@
     background:none;
     margin-left: 2rem;
     margin-top:.5rem;
+    color: $dark-teal;
+    box-shadow: 5px 5px 10px $dark-teal;
+    border-radius: 10px;
+    font-family: $regular-font;
 }
 
 .note-delete{
