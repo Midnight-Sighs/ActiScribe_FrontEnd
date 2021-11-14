@@ -61,24 +61,23 @@
 
 .anon-wrapper{
     position:relative;
-    width:80vw;
+    width:99vw;
     height:85vh;
-    .ice-berg{
-        margin-top: 3rem;
-        width:60vw;
-        height:60vh;
-        background-image: url(../../Images/inkAndQuill.jpg);
-        background-size: cover;
-        opacity: 40%;
-        box-shadow: 0px 0px 25px 25px $light-teal;
-    }
+}
+.ink-quill{
+    margin-top: 3rem;
+    width:30vw;
+    height:40vh;
+    background-image: url(../../Images/inkAndQuill.jpg);
+    background-size: cover;
+    // box-shadow: 0px 0px 25px 25px $light-teal;
 }
 
 .quote-block {
     & p{
     animation: color-change-two 5s infinite;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 500;
     font-family: $quote-font;
     padding-top:1rem;
     padding-left:1rem;
@@ -87,11 +86,11 @@
 }
 
 @keyframes color-change-two {
-    0%{ color: rgb(37, 5, 58)}
-    20%{color:rgb(23, 5, 58)}
-    35%{color: rgb(5, 6, 58)}
-    60%{color: rgb(5, 26, 58)}
-    70%{color:rgb(5, 6, 58)}
-    85%{color:rgb(23, 5, 58)}
-    100%{color: rgb(37, 5, 58)}
+    0%{ color: rgb(123, 222, 235)}
+    20%{color:rgb(77, 177, 190)}
+    35%{color: rgb(38, 114, 124)}
+    60%{color: rgb(11, 61, 68)}
+    70%{color:rgb(38, 114, 124)}
+    85%{color:rgb(77, 177, 190)}
+    100%{color: rgb(123, 222, 235)}
 }

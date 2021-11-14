@@ -23,12 +23,12 @@ const AnonHome=()=> {
 
     return ( 
         <>
-            <div className="anon-wrapper">
-                <div className="ice-berg">
-                    <div className="quote-block">
-                        <p>{quote}
-                        <br/>{author}</p>
-                    </div>
+            <div className="anon-wrapper row">
+                <div className="ink-quill">
+                </div>
+                <div className="quote-block">
+                    <p>{quote}
+                    <br/>{author}</p>
                 </div>
             </div>
         </>

@@ -22,9 +22,15 @@ function AnonMainNav() {
             </div>
         </div>
             <Switch>
-                <div className="anon-home" ><Route exact path="/" component={AnonHome} /></div>
-                <Route exact path="/Tutorials_Home" component={TutorialSubNav} />
-                <Route exact path="/Features_Home" component={FeatureSubNav} /> 
+                <Route exact path = "/">
+                    <AnonHome />
+                </Route>
+                <Route path="/Tutorials_Home">
+                    <TutorialSubNav />
+                </Route>
+                <Route>
+                    <Route exact path="/Features_Home" component={FeatureSubNav} />  */}
+                </Route>
             </Switch>
         </Router>    
             

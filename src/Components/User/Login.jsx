@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Styles/LogReg.css'
 import {Redirect} from 'react-router-dom'
+import InkAndQuill from '../Images/inkAndQuill.jpg'
 
 class Login extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class Login extends Component {
     checkTokenStatus=()=>{
         const jwt = localStorage.getItem('token')
         if(jwt){
-            <Redirect to ="/" />
+            <Redirect to="/" />
         }
     }
 
@@ -46,6 +47,7 @@ class Login extends Component {
             <div className="log-reg-cont">
                 <div className="row">
                     <div className="col-5 log-img">
+                        <img src={InkAndQuill} />
                     </div>
                     <div className="col-7">
                         <form onSubmit={this.handleSubmit}>

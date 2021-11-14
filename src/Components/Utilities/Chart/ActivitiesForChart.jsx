@@ -158,7 +158,7 @@ function ActivitiesForChart(props) {
             <div className="row">
                 {partLoaded ?
                 <>
-                <div className ="col-7">
+                <div className ="col-5">
                     <Chart data={partNumbers} />
                 </div> 
                 <div className="col-4 res-perc">

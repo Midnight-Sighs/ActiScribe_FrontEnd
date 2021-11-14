@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Styles/HeadAndFoot.css'
 import {BrowserRouter as Router, Link, Switch, Route, Redirect} from 'react-router-dom';
 import Register from '../User/Register'
@@ -7,6 +7,7 @@ import NavBar from './NavBar'
 import AnonMainNav from '../Anon/AnonMainNav';
 import Profile from '../User/Profile'
 import Modal from '../Utilities/Modal'
+import ResidentHome from '../Resident/ResidentHome'
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -21,6 +22,10 @@ const Header=(props)=> {
     const onClick = ()=>{
         setProfileHS(!profileHS)
     }
+
+    useEffect(()=>{
+
+    },[props])
 
     return ( 
         <>
@@ -43,7 +48,7 @@ const Header=(props)=> {
             {props.loggedIn ? <NavBar /> : null }
                 <Switch>
                     <Route path='/login' >
-                        {props.loggedIn ? null: <Login login={props.login} />}
+                        {props.loggedIn ? <Redirect to="/" component={ResidentHome}/>: <Login loggedIn={props.loggedIn} login={props.login} />}
                     </Route>
                     <Route path='/register' >
                         {props.loggedIn ? null: <Register />}

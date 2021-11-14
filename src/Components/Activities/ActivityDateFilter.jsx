@@ -91,28 +91,40 @@ const ActivityDateFilter=(props)=> {
         }
     }
 
+    const resetDateFilter =()=>{
+        setHaveFullPart(false)
+        setSelectedActivity()
+        setParticipation()
+        setFilteredParticipation()
+        setFullParticipation([])
+    }
+
     return ( 
         <>
-
-            <form onSubmit={onSubmit}>
-                <div className="select-dow">
+        <form onSubmit={onSubmit}>
+            <div className="row">
+                <div className=" col-4 select-act">
                     <select onChange={handleActChange}>
                         <option defaultValue >Select an Activity</option>
                         {props.activitiesForFilter.map((activity)=><option key={activity.id} value={activity.id}>{activity.name}</option>)}
                     </select>
                 </div>
-                <input className="part-date" type="date" value={startDate} onChange={s=>setStartDate(s.currentTarget.value)}/>
-                <input className="part-date" type="date" value={endDate} onChange={e=>setEndDate(e.currentTarget.value)} />
-                <button className="text-btn" type="submit">Filter</button>
-            </form>
+                <div className="col-8">
+                    <input className="filter-date" type="date" value={startDate} onChange={s=>setStartDate(s.currentTarget.value)}/>
+                    <input className="filter-date" type="date" value={endDate} onChange={e=>setEndDate(e.currentTarget.value)} />
+                    <button className="text-btn filter-btn" type="submit">Filter</button>
+                    <button className="text-btn" onClick={resetDateFilter}>Reset Search</button>
+                </div>
+            </div>
+        </form>
 
             {haveFullPart ? 
             <table>
                 <tbody>
                     <tr>
-                        <th>Activity</th>
-                        <th>Resident</th>
-                        <th>Date</th>
+                        <th className="fil-act-col">Activity</th>
+                        <th className="fil-res-col">Resident</th>
+                        <th className="fil-date-col">Date</th>
                     </tr>
                    
                         {fullParticipation.map((part)=>{

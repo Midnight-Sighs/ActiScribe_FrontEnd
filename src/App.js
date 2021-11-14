@@ -70,8 +70,9 @@ class App extends Component {
     this.setState({
       userDetails : response.data
     })
-    
-    }
+    if(this.state.loggedIn===true){
+    <Redirect to="/" />
+    }}
     catch(err){
       console.log(err, "Error getting user details")
     }

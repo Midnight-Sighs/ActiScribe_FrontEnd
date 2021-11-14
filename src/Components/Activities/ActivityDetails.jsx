@@ -70,7 +70,7 @@ const ActivityDetail=(props)=>{
                     <div className="row">
                         <div className="col-4">
                             {props.participation.resident.map((resident, index)=>{
-                                return(<p key={index}>{resident.r_first_name}</p>
+                                return(<p key={index}>{resident.r_first_name} {resident.r_last_name} </p>
                                     )})}
                         </div>
                         <div className="col-4">

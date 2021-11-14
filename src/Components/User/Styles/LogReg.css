@@ -37,6 +37,11 @@
   background-color: #84c6b8c9;
 }
 
+.log-img img {
+  margin-left: 4rem;
+  width: 20rem;
+}
+
 .reg-img {
   position: relative;
   height: 45vw;

@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACAA,OAAO,CAAC,wHAAI;AACZ,OAAO,CAAC,4FAAI;AACZ,OAAO,CAAC,wFAAI;ADAZ,AACI,aADS,CACP,GAAG,CAAA;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CAChB",
     "sources": [
-        "Features.scss"
+        "Features.scss",
+        "../../../Utilities/_variables.scss"
     ],
     "names": [],
     "file": "Features.css"

@@ -7,6 +7,7 @@ const FilteredActvities=(props)=> {
         <>
         <div className="conts">
             <ActivitiesByDow allActivities={props.allActivities} setActiveActivity={props.setActiveActivity} filterDow={props.filterDow} activity={props.activeActivity}/>
+            <hr />
             <ActivityDateFilter activitiesForFilter={props.activitiesForFilter} />
         </div>
         </>

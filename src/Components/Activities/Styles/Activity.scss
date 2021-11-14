@@ -65,3 +65,33 @@ h3{
     height:10px;
 }
 //#endregion
+
+//#region Filter Date
+
+.select-act{
+    & select{
+        background-color: $half-dark-teal;
+        font-size: 1.25rem;
+    }
+    
+}
+.filter-date{
+    background-color: $half-dark-teal;
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+.fil-act-col{
+    padding-left: 1rem;
+    width: 15rem;
+}
+.fil-res-col{
+    width: 15rem;
+}
+.fil-date-col{
+    width: 15rem;
+}
+.filter-btn{
+    margin-right: .75rem;
+}
+//#endregion
