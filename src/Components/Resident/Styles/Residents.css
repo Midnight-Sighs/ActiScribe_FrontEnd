@@ -4,7 +4,7 @@
 .res-table th, td {
   height: 1rem;
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .all-res-row {
@@ -12,16 +12,17 @@
 }
 
 .name-col {
-  width: 18rem;
+  padding-top: .25rem;
+  width: 22rem;
   padding-left: 4rem;
 }
 
 .iden-col {
-  width: 10rem;
+  width: 15rem;
 }
 
 .ass-col {
-  width: 12rem;
+  width: 20rem;
 }
 
 .detail-link {
@@ -36,16 +37,17 @@
 
 .res-part-table .det-activity {
   width: 15rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: .4rem;
 }
 
 .res-part-table .det-dow {
   width: 10rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .res-part-table .det-date {
+  font-size: 1rem;
   width: 10rem;
 }
 
@@ -61,11 +63,15 @@
 
 .date-span {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .detail-tbl {
   width: 60rem;
+}
+
+.res-details {
+  font-size: 1.5rem;
 }
 
 .new-res-form .new-res-label {
@@ -170,26 +176,5 @@
 
 .res-home {
   margin-left: 3rem;
-}
-
-.text-btn {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  background: none;
-  text-decoration: none;
-  padding: 0rem;
-  padding-left: .25rem;
-  padding-right: .25rem;
-  border-radius: 5px;
-  color: #6F4329;
-  margin-bottom: 1rem;
-  -webkit-box-shadow: 5px 5px 10px #6F4329;
-          box-shadow: 5px 5px 10px #6F4329;
-}
-
-.text-btn:hover {
-  color: #003235;
 }
 /*# sourceMappingURL=Residents.css.map */

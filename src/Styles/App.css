@@ -43,6 +43,7 @@ a:hover, a :focus, a :active {
 
 .my-wrapper {
   width: 99.75vw;
+  height: 85vh;
   position: relative;
   background-image: url(../Components/Images/succulent.jpg);
   background-size: cover;
@@ -57,7 +58,7 @@ a:hover, a :focus, a :active {
 
 .nav-wrapper {
   background-color: #003235;
-  width: 99.70vw;
+  width: 99.50vw;
 }
 
 .page-content {
@@ -104,11 +105,12 @@ a:hover, a :focus, a :active {
 #v-pills-new-act-tab,
 #v-pills-arch-act-tab {
   background-color: #003235;
-  margin-top: .5rem;
-  width: 10rem;
+  margin-top: 1rem;
+  width: 15rem;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.25rem;
   text-align: center;
+  margin-left: 2rem;
 }
 
 #nav-home-tab,
@@ -126,7 +128,7 @@ a:hover, a :focus, a :active {
   border-bottom: none;
   color: #84c6b8;
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -152,7 +154,7 @@ button {
 
 .conts {
   width: 80vw;
-  height: 90vh;
+  height: 80vh;
   border: solid 3px #003235;
   border-top: none;
   background-color: #84c6b8c9;
@@ -161,5 +163,26 @@ button {
   margin-left: 1rem;
   overflow-y: auto;
   padding-top: 1rem;
+}
+
+.text-btn {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  background: none;
+  text-decoration: none;
+  padding: 0rem;
+  padding-left: .25rem;
+  padding-right: .25rem;
+  border-radius: 5px;
+  color: #6F4329;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 5px 5px 10px #003235;
+          box-shadow: 5px 5px 10px #003235;
+}
+
+.text-btn:hover {
+  color: #003235;
 }
 /*# sourceMappingURL=App.css.map */

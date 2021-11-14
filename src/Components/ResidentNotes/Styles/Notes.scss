@@ -46,7 +46,7 @@
 
 //#region
 .edit-field{
-    width: 35rem;
+    width: 55rem;
     background-color:$half-dark-teal;
     border:none;
     border-radius: 5px;
@@ -56,6 +56,13 @@
     background:none;
     margin-left: 2rem;
     margin-top:.5rem;
+}
+
+.note-delete{
+    margin-top:.75rem;
+}
+.save-note{
+    margin-left: 1rem;
 }
 
 //#endregion

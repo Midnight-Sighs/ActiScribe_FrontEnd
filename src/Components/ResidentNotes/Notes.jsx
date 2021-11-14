@@ -27,13 +27,15 @@ const Notes=(props)=> {
                 return(
                     <>
                         <div className="note-content" key={note.id}>
-                            <span>{note.content}</span>
                             <div className = "row">
-                                <div className="col-6">
+                                <div className="col-8">
+                                        <span>{note.content}</span>
+                                </div>
+                                <div className="col-2">
                                     <p className="note-date"> :{note.note_date}</p>
                                 </div>
-                                <div className="col-6">
-                                    {editHS ? <button className="edit-note-btn" onClick={editOnClick}>Close Edit</button>:<button className="edit-note-btn" onClick={editOnClick}>Edit Note</button>}
+                                <div className="col-2">
+                                    {editHS ? <button className="text-btn" onClick={editOnClick}>Close Edit</button>:<button className="text-btn" onClick={editOnClick}>Edit Note</button>}
                                 </div>
                             </div>
                             {editHS ? <EditNote resident={props.resident} getNotesByRes={props.getNotesByRes} onClick={editOnClick}note={note} />: null}

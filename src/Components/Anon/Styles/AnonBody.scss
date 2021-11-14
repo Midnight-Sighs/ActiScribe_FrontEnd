@@ -30,14 +30,14 @@
 
 .welcome-msg{
     font-family: $heading-font;
-    font-size: 4rem;
+    padding-top: 2rem;
+    font-size: 6rem;
     position: absolute;
     right:40%;
 }
 .quote-msg{
-    margin-top: 5rem;
+    margin-top: 8rem;
     font-family: $quote-font;
-    margin-left: 6rem;
     padding: 2rem;
     border-radius: 10px;
     animation: color-change 5s infinite;

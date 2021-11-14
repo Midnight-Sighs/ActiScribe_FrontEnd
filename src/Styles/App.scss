@@ -40,6 +40,7 @@ a{
 }
 .my-wrapper{
     width: 99.75vw;
+    height: 85vh;
     position:relative;
     background-image: url(../Components/Images/succulent.jpg);
     background-size: cover;
@@ -54,7 +55,7 @@ a{
 
 .nav-wrapper{
     background-color: $dark-teal;
-    width:99.70vw;
+    width:99.50vw;
 }
 .page-content{
     position:relative;
@@ -96,11 +97,12 @@ a{
 #v-pills-new-act-tab,
 #v-pills-arch-act-tab{
     background-color: $dark-teal;
-    margin-top: .5rem;
-    width: 10rem;
+    margin-top: 1rem;
+    width: 15rem;
     font-family: $regular-font;
     font-size: 1.25rem;
     text-align:center;
+    margin-left: 2rem;
 }
 
 #nav-home-tab,
@@ -118,7 +120,7 @@ a{
     border-bottom: none;
     color: $light-teal;
     font-family:$regular-font;
-    font-size:1.5rem;
+    font-size:2rem;
     text-align:center;
     & .nav:hover{
         color: $warm-brown;
@@ -136,7 +138,7 @@ button{
 
 .conts{
     width: 80vw;
-    height: 90vh;
+    height: 80vh;
     border: $teal-border;
     border-top:none;
     background-color: $half-light-teal;
@@ -145,4 +147,23 @@ button{
     margin-left:1rem;
     overflow-y:auto;
     padding-top:1rem;
+}
+
+.text-btn{
+    font-family: $regular-font;
+    font-weight: 700;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    background:none;
+    text-decoration:none;
+    padding:0rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    border-radius: 5px;
+    color: $mid-brown;
+    margin-bottom:1rem;
+    box-shadow: 5px 5px 10px $dark-teal;
+    &:hover{
+        color:$dark-teal;
+    }
 }

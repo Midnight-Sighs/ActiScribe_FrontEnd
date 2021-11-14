@@ -49,11 +49,19 @@ const EditNote=(props)=> {
 
     return ( 
         <>
+        <div className="row">
+            <div className="col-9">
             <form onSubmit={onSubmit}>
                 <textarea className="edit-field" maxLength="400" name="noteContent" onChange={e=>setNoteContent(e.currentTarget.value)} value={noteContent} required />
-                <button type="submit" className="edit-note-btn">Save Changes</button>
-            </form>
-                <button type="button" className="edit-note-btn" onClick={deleteClick}>Delete Note</button>
+                <button type="submit" className="text-btn save-note">Save Changes</button>
+            </form>   
+            </div> 
+            <div className="col-2">
+                <br />
+                <p></p>
+                <button type="button" className="text-btn note-delete" onClick={deleteClick}>Delete Note</button>
+            </div>
+        </div>
         </>
      );
 }

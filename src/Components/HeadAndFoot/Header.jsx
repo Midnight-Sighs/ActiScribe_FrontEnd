@@ -48,13 +48,13 @@ const Header=(props)=> {
             {props.loggedIn ? <NavBar /> : null }
                 <Switch>
                     <Route path='/login' >
-                        {props.loggedIn ? <Redirect to="/" component={ResidentHome}/>: <Login loggedIn={props.loggedIn} login={props.login} />}
+                        {props.loggedIn ? null: <Login loggedIn={props.loggedIn} login={props.login} />}
                     </Route>
                     <Route path='/register' >
                         {props.loggedIn ? null: <Register />}
                     </Route>
                     <Route exact path="/">
-                        {props.loggedIn ? null : <AnonMainNav />}
+                        {props.loggedIn ? <Redirect to="/" component={ResidentHome}/> : <AnonMainNav />}
                     </Route>
                 </Switch>
             </Router>

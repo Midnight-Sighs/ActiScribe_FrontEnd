@@ -8,21 +8,22 @@
 .res-table th, td{
     height:1rem;
     font-family:$regular-font;
-    font-size:1.5rem;
+    font-size:1.75rem;
 }
 
 .all-res-row{
     height: 1rem;
 }
 .name-col{
-    width: 18rem;
+    padding-top:.25rem;
+    width: 22rem;
     padding-left: 4rem;
 }
 .iden-col{
-    width: 10rem;
+    width: 15rem;
 }
 .ass-col{
-    width: 12rem;
+    width: 20rem;
 }
 
 .detail-link{
@@ -37,14 +38,15 @@
     font-family:$regular-font;
     & .det-activity{
         width:15rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding:.4rem;
     }
     & .det-dow{
         width: 10rem;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     & .det-date{
+        font-size: 1rem;
         width: 10rem;
     }
 }
@@ -60,7 +62,7 @@
 
 .date-span{
     font-family: $regular-font;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .detail-tbl{
     width: 60rem;
@@ -70,7 +72,7 @@
 
 //#region Resident Detail Page
 .res-details{
-    
+    font-size: 1.5rem;
 }
 .btn-col{
     
@@ -80,7 +82,6 @@
 //#endregion
 
 //#region New Resident
-
 
 .new-res-form{
     
@@ -188,23 +189,4 @@
 }
 .res-home{
     margin-left: 3rem;
-}
-
-.text-btn{
-    font-family: $regular-font;
-    font-weight: 700;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    background:none;
-    text-decoration:none;
-    padding:0rem;
-    padding-left: .25rem;
-    padding-right: .25rem;
-    border-radius: 5px;
-    color: $mid-brown;
-    margin-bottom:1rem;
-    box-shadow: 5px 5px 10px $mid-brown;
-    &:hover{
-        color:$dark-teal;
-    }
 }

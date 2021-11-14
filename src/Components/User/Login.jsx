@@ -12,17 +12,6 @@ class Login extends Component {
          }
     }
 
-    componentDidUpdate=()=>{
-        this.checkTokenStatus()
-    }
-
-    checkTokenStatus=()=>{
-        const jwt = localStorage.getItem('token')
-        if(jwt){
-            <Redirect to="/" />
-        }
-    }
-
     handleChange = (event)=>{
         event.preventDefault()
         this.setState({
@@ -37,7 +26,6 @@ class Login extends Component {
             "password": this.state.password 
         }
         this.props.login(login);
-        this.checkTokenStatus();
     }
 
     render() { 
