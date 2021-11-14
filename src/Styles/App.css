@@ -46,7 +46,7 @@ a:hover, a :focus, a :active {
   width: 99.75vw;
   height: 85vh;
   position: relative;
-  background-image: url(../Components/Images/succulent.jpg);
+  background-image: url(../Components/Images/succulentCenter.jpg);
   background-size: cover;
 }
 

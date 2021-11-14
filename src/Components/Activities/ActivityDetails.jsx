@@ -49,7 +49,7 @@ const ActivityDetail=(props)=>{
     if (Object.keys(props.participation).length>0 || error===false){
     return ( 
             <>
-            <div className="conts activit-details">
+            <div className="conts activity-details">
                 <h1>Activity: {props.activity.name}</h1>
                 <p>{props.activity.description}</p>
                 <table>
@@ -68,7 +68,7 @@ const ActivityDetail=(props)=>{
                 </Modal>
                 <hr />
                     <div className="row">
-                        <div className="col-4">
+                        <div className="col-4 act-part">
                             {props.participation.resident.map((resident, index)=>{
                                 return(<p key={index}>{resident.r_first_name} {resident.r_last_name} </p>
                                     )})}

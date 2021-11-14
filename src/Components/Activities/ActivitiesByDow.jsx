@@ -43,8 +43,8 @@ const ActivitiesByDow=(props)=> {
                     <option value="Occupational">Occupational</option>
                     <option value="Sensory">Sensory</option>
                 </select>
-                <button className="text-btn mx-3" type="submit">Filter</button>
-                <button type="button" className="text-btn" onClick={clearResults}>Clear Results</button>
+                <button className="text-btn filter-btn mx-3" type="submit">Filter</button>
+                <button type="button" className="text-btn filter-btn" onClick={clearResults}>Clear Results</button>
             </div>
             </form>
 

@@ -14,8 +14,12 @@ h3{
     color: $dark-teal;
 }
 .alert-p{
-    text-align:center;
+    text-align:left;
     font-size: 2rem;
+    color: $mid-brown;
+}
+.lacking-dow{
+    margin-top: 2rem;
 }
 
 //#region Activity Details
@@ -24,7 +28,11 @@ h3{
     font-size: 1.5rem;
     width: 15rem;
     color:$dark-teal;
-    
+}
+.activity-details{
+    p{
+        font-size: 1.5rem;
+    }
 }
 
 //#endregion
@@ -40,14 +48,6 @@ h3{
     border-radius: 5px;
     width: 20rem;
 }
-.select-dow{
-    margin-left:2rem;
-    & select{
-        background-color: $half-second-teal;
-        color: $dark-teal;
-        border-radius: 5px;
-    }
-}
 .tab-dow{
     margin-left: 2rem;
 }
@@ -59,6 +59,19 @@ h3{
 //#endregion
 
 //#region Activity Home
+
+.act-alert-home{
+    h1{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.75rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
+
 .cheating{
     z-index: -10;
     width:10px;
@@ -71,27 +84,46 @@ h3{
 .select-act{
     & select{
         background-color: $half-dark-teal;
-        font-size: 1.25rem;
-    }
-    
+        font-size: 1.5rem;
+        padding: .5rem;
+        border-radius: 10px;
+    } 
 }
+
 .filter-date{
     background-color: $half-dark-teal;
     border: none;
     margin-right: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    margin-top: .25rem;
+    padding: .5rem;
 }
 .fil-act-col{
-    padding-left: 1rem;
-    width: 15rem;
+    padding-left: 3rem;
+    width: 20rem;
 }
 .fil-res-col{
-    width: 15rem;
+    width: 20rem;
 }
 .fil-date-col{
     width: 15rem;
 }
 .filter-btn{
     margin-right: .75rem;
+    font-size: 1.5rem;
+}
+.filter-res{
+    margin-top:1rem;
+    margin-left: 4rem;
+}
+.select-dow{
+    margin-left:2rem;
+    & select{
+        font-size:1.5rem;
+        padding: .5rem;
+        background-color: $half-dark-teal;
+        color: $dark-teal;
+        border-radius: 10px;
+    }
 }
 //#endregion
