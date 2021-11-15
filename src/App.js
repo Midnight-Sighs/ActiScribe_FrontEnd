@@ -16,6 +16,7 @@ class App extends Component {
         loggedIn: false,
         localToken: localStorage.token,
         userDetails: [],
+        hasToken: false,
     }
   }
 
@@ -29,12 +30,11 @@ class App extends Component {
       const user = jwtDecode(jwt);
       this.setState({
         user:user,
-        loggedIn: true
       })
       this.getUserDetails();
     }
-    catch{
-      console.log("No token in local storage.  Please log in.")
+    catch(err){
+      console.log(err)
     }
   }
   
@@ -43,10 +43,13 @@ class App extends Component {
       let response = await axios.post('http://127.0.0.1:8000/api/auth/login/', login)
       this.setState({
         token: response.data.token,
-        logInRedirect: true,
       }, ()=>{
       localStorage.setItem('token', response.data.access)
-      this.decodeToken();
+      this.setState({
+        hasToken:true
+      },()=>{
+        this.decodeToken();
+      })
       });
     }
     catch{
@@ -60,21 +63,34 @@ class App extends Component {
       user: [],
       loggedIn: false,
       localToken: '',
+      userDetails: [],
     })
   }
 
   getUserDetails = async()=>{
     const jwt = localStorage.getItem('token')
+    let userId = this.state.user.user_id
     try{
-    let response = await axios.get('http://127.0.0.1:8000/api/auth/user/3/', {headers: {Authorization: 'Bearer '+ jwt}});
+    let response = await axios.get(`http://127.0.0.1:8000/api/auth/user/${userId}/`, {headers: {Authorization: 'Bearer '+ jwt}});
     this.setState({
-      userDetails : response.data
+      userDetails : response.data,
     })
-    if(this.state.loggedIn===true){
+    if(this.state.userDetails){
+      debugger
+      this.setState({
+        loggedIn:true
+      });
       <Redirect to="/" component={ResidentHome} />
     }}
     catch(err){
       console.log(err, "Error getting user details")
+      debugger
+      if(this.state.hasToken === true){
+        for(let i=2; i>0; i--){
+          this.getUserDetails()
+          i--
+        }
+      }
     }
 
   }

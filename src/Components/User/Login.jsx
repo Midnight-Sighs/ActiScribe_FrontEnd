@@ -51,7 +51,7 @@ class Login extends Component {
                                     </tr>
                                     <tr>
                                         <td colspan="2">
-                                            <button className="text-btn login-btn" type="submit">Login</button>
+                                            <button className="text-btn" type="submit">Login</button>
                                         </td>
                                     </tr>
                                 </tbody>

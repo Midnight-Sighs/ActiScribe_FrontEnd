@@ -40,7 +40,7 @@ const Header=(props)=> {
                         {props.loggedIn ? null: <span><Link className = "header-link" to="/login">Login</Link></span>}
                         {props.loggedIn ? null: <span> <Link to ='/register' className = "header-link">Register</Link></span>}
                         {props.loggedIn?<span><button onClick={onClick} className="header-button">Profile</button></span>:null }
-                        {props.loggedIn ? <span><Link to="/" className = "header-link" onClick={props.logout}>Logout</Link></span>: null}
+                        {props.loggedIn ? <span><Link to="/" className = "header-link" onClick={props.logout}>Logout</Link></span>: <Link to="/" className = "header-link" >Home</Link>}
                     </div>
                 </div>        
             </div>
