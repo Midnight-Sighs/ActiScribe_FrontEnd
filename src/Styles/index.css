@@ -12,7 +12,13 @@ html {
   background-color: #003235;
 }
 
-.Toastify__toast-body {
-  color: #46756A;
+#root {
+  --toastify-color-light: rgb(124, 150, 155);
+  --toastify-toast-width: 420px;
+  --toastify-toast-background: rgb(124, 150, 155);
+  --toastify-toast-min-height: 100px;
+  --toastify-toast-max-height: 300px;
+  --toastify-font-family: $regular-font;
+  --toastify-text-color-light: rgb(13, 70, 77);
 }
 /*# sourceMappingURL=index.css.map */

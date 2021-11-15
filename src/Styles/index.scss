@@ -8,6 +8,14 @@ html{
     font-size: 18px;
     background-color: $dark-teal;
 }
-.Toastify__toast-body {
-    color: $second-teal;
+
+
+#root{
+    --toastify-color-light: rgb(124, 150, 155);
+    --toastify-toast-width: 420px;
+    --toastify-toast-background: rgb(124, 150, 155);
+    --toastify-toast-min-height: 100px;
+    --toastify-toast-max-height: 300px;
+    --toastify-font-family: $regular-font;
+    --toastify-text-color-light: rgb(13, 70, 77); 
 }
