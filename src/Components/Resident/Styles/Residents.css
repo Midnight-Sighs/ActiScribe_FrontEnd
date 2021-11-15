@@ -202,6 +202,10 @@
   color: #84c6b8;
 }
 
+.ass-view {
+  height: 35rem;
+}
+
 .res-perc {
   width: 30rem;
   font-family: "Cormorant Garamond", serif;

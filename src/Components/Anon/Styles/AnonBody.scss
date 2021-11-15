@@ -40,7 +40,7 @@
     font-family: $quote-font;
     padding: 2rem;
     border-radius: 10px;
-    animation: color-change 5s infinite;
+    animation: color-change 8s infinite;
     font-size: 3rem;
     text-align:center;
 }
@@ -75,7 +75,7 @@
 
 .quote-block {
     & p{
-    animation: color-change-two 5s infinite;
+    animation: color-change-two 8s infinite;
     font-size: 3rem;
     font-weight: 500;
     font-family: $quote-font;

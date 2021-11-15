@@ -30,6 +30,7 @@ class App extends Component {
       const user = jwtDecode(jwt);
       this.setState({
         user:user,
+        loggedIn:true
       })
       this.getUserDetails();
     }
@@ -76,7 +77,6 @@ class App extends Component {
       userDetails : response.data,
     })
     if(this.state.userDetails){
-      debugger
       this.setState({
         loggedIn:true
       });
@@ -84,7 +84,6 @@ class App extends Component {
     }}
     catch(err){
       console.log(err, "Error getting user details")
-      debugger
       if(this.state.hasToken === true){
         for(let i=2; i>0; i--){
           this.getUserDetails()

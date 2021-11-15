@@ -64,7 +64,7 @@ const ActivityDetail=(props)=>{
                 </table>
                 <button className="text-btn filter-btn" onClick={editOnClick}>Edit Activity</button>
                 <Modal onClick={editOnClick} hideShow={editHS}> 
-                    <EditActivity onClick={editOnClick} getArchivedActivities={props.getArchivedActivities} activity={props.activity} getAllActivities={props.getAllActivities} notifyA={notifyA} notifyB={notifyB} notifyC={notifyC} notifyD={notifyD} notifyE={notifyE} notifyF={notifyF}/>
+                    <EditActivity onClick={editOnClick} setActiveActivity={props.setActiveActivity} getArchivedActivities={props.getArchivedActivities} activity={props.activity} getAllActivities={props.getAllActivities} notifyA={notifyA} notifyB={notifyB} notifyC={notifyC} notifyD={notifyD} notifyE={notifyE} notifyF={notifyF}/>
                 </Modal>
                 <hr />
                     <div className="row">

@@ -89,7 +89,6 @@ class EditActivity extends Component {
             "dow_two": this.state.dow_two,
             "dow_three": this.state.dow_three,
         }
-
         this.editActivity(editActivity, this.props.activity.id)
     }
 

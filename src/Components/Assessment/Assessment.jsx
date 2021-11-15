@@ -102,17 +102,18 @@ class Assessment extends Component {
         }
         else{
             try{
+                debugger
                 let response = await axios.put(`http://127.0.0.1:8000/api/actiscribe/residents/${residentId}/assessment/`, newAssessment, {headers: {Authorization: 'Bearer '+ jwt}});
                 this.setState({
                     activeAssessment: response.data
                 })
-                this.props.onClick()
-                this.props.notifyQ()
+                this.props.toggleHS()
+                // this.props.notifyQ()
                 }
                 catch(err){
                     console.log(err, "Problem submitting assessment")
-                    this.props.onClick()
-                    this.props.notifyR()
+                    this.props.toggleHS()
+                    // this.props.notifyR()
                 }
         }
     }
@@ -125,6 +126,7 @@ class Assessment extends Component {
     }
 
     onSubmit=(event)=>{
+        debugger
         let residentId= this.state.residentId
         let newAssessment={
             "nickname": this.state.nickname,
@@ -272,11 +274,11 @@ class Assessment extends Component {
                             </tr>
                         </tbody>
                     </table>
+                <button className="edit-note-btn" type="submit">Save Assessment</button>
                 </form>
                 </div>
             </div>
             <div className="edit-ass-btn">
-                <button className="edit-note-btn" type="submit">Save Assessment</button>
             </div>
             </>
          );

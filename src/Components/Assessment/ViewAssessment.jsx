@@ -48,7 +48,7 @@ const ViewAssessment=(props)=> {
             <>
             <div className="add-ass">
                 <p>Currently no assessment for this resident</p>
-                <button className="edit-note-btn" onClick={newAssessmentClick}>Add Assessment</button>
+                {newAssessmentHS ? null: <button className="edit-note-btn" onClick={newAssessmentClick}>Add Assessment</button>}
                 {newAssessmentHS ? <Assessment {...props} toggleHS={newAssessmentClick} residentId={residentId}/> : null}
             </div>
             </>
@@ -174,7 +174,7 @@ const ViewAssessment=(props)=> {
             </div>
             </>
             :
-            <Assessment resident={residentId}toggleHS={editOnClick} assessment={assessment}/>}
+            <Assessment resident={residentId} toggleHS={editOnClick} assessment={assessment}/>}
         </>
      );
 }

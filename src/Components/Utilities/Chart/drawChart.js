@@ -38,8 +38,8 @@ const drawChart = (element, data)=>{
         .append("text")
         .attr("text-anchor", "middle")
         .text((d)=>`${d.data.name}`)
-        .style("fill", "#84c6b8")
-        .style("font-size", "1rem")
+        .style("fill", "#FFFFFF")
+        .style("font-size", "2rem")
         .attr("transform", (d)=>{
             const[x,y] = arcGenerator.centroid(d);
             return `translate(${x}, ${y})`;

@@ -69,41 +69,62 @@ function ActivitiesForChart(props) {
         let sum = (x+y+z+a+b+c+d+e+f+g)
         let percentX=calculatePercentage(x, sum)
         setPercentSoc(percentX)
+        let one=nameActivities(percentX, "Social")
         let percentY=calculatePercentage(y, sum)
         setPercentPhy(percentY)
+        let two=nameActivities(percentY, "Physical")
         let percentZ=calculatePercentage(z, sum)
         setPercentEmo(percentZ)
+        let three=nameActivities(percentZ, "Emotional")
         let percentA=calculatePercentage(a, sum)
         setPercentSpi(percentA)
+        let four=nameActivities(percentA, "Spiritual")
         let percentB=calculatePercentage(b, sum)
         setPercentEnv(percentB)
+        let five=nameActivities(percentB, "Environmental")
         let percentC=calculatePercentage(c, sum)
         setPercentFin(percentC)
+        let six=nameActivities(percentC, "Financial")
         let percentD=calculatePercentage(d, sum)
         setPercentInt(percentD)
+        let seven=nameActivities(percentD, "Intellectual")
         let percentE=calculatePercentage(e, sum)
         setPercentCre(percentE)
+        let eight=nameActivities(percentE, "Creative")
         let percentF=calculatePercentage(f, sum)
         setPercentOcc(percentF)
+        let nine=nameActivities(percentF, "Occupational")
         let percentG=calculatePercentage(g, sum)
         setPercentSen(percentG)
+        let ten=nameActivities(percentG, "Sensory")
         setPartNumbers([
-            {name: "Social" ,value: x},
-            {name: "Physical" ,value: y},
-            {name: "Emotional" ,value: z},
-            {name: "Spiritual" ,value: a},
-            {name: "Environmental" ,value:b},
-            {name: "Financial" ,value: c},
-            {name: "Intellectual" ,value: d},
-            {name: "Creative" ,value: e},
-            {name: "Occupational" ,value: f},
-            {name: "Sensory" ,value: g},
+            {name: one ,value: x},
+            {name: two ,value: y},
+            {name: three ,value: z},
+            {name:  four ,value: a},
+            {name: five ,value:b},
+            {name: six ,value: c},
+            {name: seven ,value: d},
+            {name: eight,value: e},
+            {name: nine ,value: f},
+            {name: ten ,value: g},
         ])
         if(x ===.1 && y===.1 &&z===.1&&a===.1&&b===.1&&c===.1&&d===.1&&e===.1&&f===.1&&g===.1){
             setPartLoaded(false)
         }
         if(sum >0){
             setPartLoaded(true)
+        }
+    }
+
+    const nameActivities=(variable, dow)=>{
+        if(variable<10){
+            let num = ""
+            return num
+        }
+        else{
+            let num = dow
+            return num
         }
     }
 

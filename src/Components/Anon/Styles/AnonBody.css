@@ -47,8 +47,8 @@
   font-family: "Tangerine", cursive;
   padding: 2rem;
   border-radius: 10px;
-  -webkit-animation: color-change 5s infinite;
-          animation: color-change 5s infinite;
+  -webkit-animation: color-change 8s infinite;
+          animation: color-change 8s infinite;
   font-size: 3rem;
   text-align: center;
 }
@@ -120,8 +120,8 @@
 }
 
 .quote-block p {
-  -webkit-animation: color-change-two 5s infinite;
-          animation: color-change-two 5s infinite;
+  -webkit-animation: color-change-two 8s infinite;
+          animation: color-change-two 8s infinite;
   font-size: 3rem;
   font-weight: 500;
   font-family: "Tangerine", cursive;
