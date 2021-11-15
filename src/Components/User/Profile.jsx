@@ -96,7 +96,7 @@ class Profile extends Component {
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><button className="text-btn" type="submit">Save Changes</button></td>
+                                <td><button className="text-btn edit-note-btn" type="submit">Save Changes</button></td>
                             </tr>
                         </tbody>
                     </table>

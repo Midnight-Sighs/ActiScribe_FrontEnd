@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=EB+Garamond:ital@1&display=swap");
 .log-reg-form-label {
+  margin-left: 2rem;
   color: #6F4329;
   padding-right: 2rem;
 }
@@ -12,13 +13,19 @@
   border-radius: 10px;
   padding: .25rem;
   margin: .25rem;
-  width: 20rem;
+  margin-left: 2rem;
+  width: 30rem;
   color: #84c6b8;
 }
 
 .log-reg-form-input:focus {
   background-color: #2e1e15;
   border: 5px solid #b47f60;
+}
+
+.login-btn {
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .log-reg-error {
@@ -31,8 +38,9 @@
   margin-top: .5rem;
 }
 
-.log-reg-cont {
-  margin-left: 1.5rem;
+.log-cont {
+  height: 40rem;
+  margin-left: 2rem;
   margin-top: 4rem;
   padding: 5rem;
   background-color: #84c6b8c9;
@@ -40,7 +48,15 @@
 
 .log-img img {
   margin-left: 4rem;
-  width: 20rem;
+  width: 40rem;
+}
+
+.reg-cont {
+  height: 60rem;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  padding: 5rem;
+  background-color: #84c6b8c9;
 }
 
 .reg-img {
@@ -67,17 +83,19 @@
 
 .pro-edit-label {
   font-family: "EB Garamond", serif;
-  color: #003235;
-  margin-left: 2rem;
+  color: #84c6b8;
+  margin-left: 5rem;
+  margin-top: 2rem;
 }
 
 .pro-edit-field {
+  width: 25rem;
   color: #2e1e15;
   background-color: #46756ada;
   border: none;
   border-radius: 5px;
-  margin-top: .25rem;
+  margin-top: 2rem;
   margin-bottom: .5rem;
-  margin-left: .5rem;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=LogReg.css.map */

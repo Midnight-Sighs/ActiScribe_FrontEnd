@@ -90,7 +90,7 @@ class Register extends Component {
         return ( 
             <>
             {this.state.redirect ? <Redirect to='/login' /> : null}
-                <div className="log-reg-cont">
+                <div className="reg-cont">
                     <div className="row">
                         <div className="col-6 reg-img">
 

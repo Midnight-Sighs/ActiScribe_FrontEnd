@@ -2,6 +2,7 @@
 
 
 .log-reg-form-label{
+    margin-left: 2rem;
     color: $mid-brown;
     padding-right: 2rem;
 }
@@ -10,12 +11,17 @@
     border-radius: 10px;
     padding: .25rem;
     margin: .25rem;
-    width: 20rem;
+    margin-left: 2rem;
+    width: 30rem;
     color: $light-teal;
         &:focus{
             background-color: $dk-warm-brown;
             border: 5px solid $warm-brown;
         }
+}
+.login-btn{
+    margin-left: 2rem;
+    margin-top: 1rem;
 }
 .log-reg-error{
     color: $error-color
@@ -25,17 +31,25 @@
     width: 9rem;
     margin-top: .5rem;
 }
-.log-reg-cont{
-    margin-left: 1.5rem;
+.log-cont{
+    height: 40rem;
+    margin-left: 2rem;
     margin-top: 4rem;
     padding: 5rem;
     background-color: $half-light-teal;
 }
 .log-img img{
     margin-left: 4rem;
-    width:20rem;
+    width:40rem;
 }
 
+.reg-cont{
+    height: 60rem;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    padding: 5rem;
+    background-color: $half-light-teal;
+}
 .reg-img{
     position:relative;
     height:45vw;
@@ -56,16 +70,18 @@
 }
 .pro-edit-label{
     font-family: $heading-font;
-    color: $dark-teal;
-    margin-left: 2rem;
+    color: $light-teal;
+    margin-left: 5rem;
+    margin-top:2rem;
 }
 .pro-edit-field{
+    width: 25rem;
     color:$dk-warm-brown;
     background-color: $half-second-teal;
     border:none;
     border-radius:5px;
-    margin-top:.25rem;
+    margin-top:2rem;
     margin-bottom:.5rem;
-    margin-left: .5rem;
+    margin-left: 1rem;
 
 }

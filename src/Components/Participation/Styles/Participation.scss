@@ -2,10 +2,13 @@
 
 .part-select{
     & select{
+        margin-top: 2rem;
+        margin-left: 2rem;
         background-color: $second-teal;
         color: $dk-warm-brown;
         padding: .25rem;
         margin-right: 1rem;
+        font-size: 1.5rem;
     }
 }
 .part-label{
@@ -13,14 +16,24 @@
     padding-right: .5rem;
     font-family: $heading-font;
     color: $dark-teal;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-right: .2rem;
+    margin-top: 2rem;
 }
 .part-date{
     color: $dk-warm-brown;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color: $second-teal;
     margin-right: 1rem;
     border:none;
     border-radius:5px;
     font-family: $regular-font;
+}
+.new-part.conts{
+    margin-left: 20rem;
+}
+.save-part-btn{
+    margin-left: 1rem;
+    font-size: 2rem;
 }

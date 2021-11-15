@@ -109,7 +109,7 @@ const NewParticipation=()=> {
                 </div>
                 <label className="part-label">Activity Date</label>
                 <input className="part-date" name="date" value={activityDate} onChange={handleDateChange} type="date"></input>
-                <button className="text-btn" type="submit">Save Participation</button>
+                <button className="text-btn save-part-btn" type="submit">Save Participation</button>
             </form>
         </div>
         </div>

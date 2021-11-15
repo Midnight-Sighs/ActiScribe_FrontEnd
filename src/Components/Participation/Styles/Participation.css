@@ -3,10 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=EB+Garamond:ital@1&display=swap");
 .part-select select {
+  margin-top: 2rem;
+  margin-left: 2rem;
   background-color: #46756A;
   color: #2e1e15;
   padding: .25rem;
   margin-right: 1rem;
+  font-size: 1.5rem;
 }
 
 .part-label {
@@ -14,16 +17,28 @@
   padding-right: .5rem;
   font-family: "EB Garamond", serif;
   color: #003235;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-right: .2rem;
+  margin-top: 2rem;
 }
 
 .part-date {
   color: #2e1e15;
-  font-size: 1.5rem;
+  font-size: 2rem;
   background-color: #46756A;
   margin-right: 1rem;
   border: none;
   border-radius: 5px;
   font-family: "Cormorant Garamond", serif;
+}
+
+.new-part.conts {
+  margin-left: 20rem;
+}
+
+.save-part-btn {
+  margin-left: 1rem;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=Participation.css.map */

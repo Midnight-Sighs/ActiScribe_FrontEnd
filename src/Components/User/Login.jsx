@@ -32,7 +32,7 @@ class Login extends Component {
         return ( 
             <>
             
-            <div className="log-reg-cont">
+            <div className="log-cont">
                 <div className="row">
                     <div className="col-5 log-img">
                         <img src={InkAndQuill} />
@@ -51,7 +51,7 @@ class Login extends Component {
                                     </tr>
                                     <tr>
                                         <td colspan="2">
-                                            <button type="submit">Login</button>
+                                            <button className="text-btn login-btn" type="submit">Login</button>
                                         </td>
                                     </tr>
                                 </tbody>
