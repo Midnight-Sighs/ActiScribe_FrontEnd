@@ -6,12 +6,15 @@ const Notes=(props)=> {
 
     const[notes, setNotes]=useState(props.notes)
     const[editHS, setEditHS]=useState(false)
+    const[activeNoteId, setActiveNoteId]=useState(null)
 
     useEffect(()=>{
         setNotes(props.notes)
     }, [props])
 
-    const editOnClick=()=>{
+    const editOnClick=(note)=>{
+        debugger
+        setActiveNoteId(note.id)
         setEditHS(!editHS)
     }
 
@@ -35,10 +38,10 @@ const Notes=(props)=> {
                                     <p className="note-date"> :{note.note_date}</p>
                                 </div>
                                 <div className="col-2">
-                                    {editHS ? <button className="text-btn" onClick={editOnClick}>Close Edit</button>:<button className="text-btn" onClick={editOnClick}>Edit Note</button>}
+                                    {editHS ? <button className="text-btn" onClick={editOnClick}>Close Edit</button>:<button className="text-btn" onClick={()=>editOnClick(note)}>Edit Note</button>}
                                 </div>
                             </div>
-                            {editHS ? <EditNote resident={props.resident} getNotesByRes={props.getNotesByRes} onClick={editOnClick}note={note} />: null}
+                            {editHS && (note.id === activeNoteId) ? <EditNote resident={props.resident} getNotesByRes={props.getNotesByRes} onClick={editOnClick}note={note} />: null}
                         </div>
                     </>
                 )})}
