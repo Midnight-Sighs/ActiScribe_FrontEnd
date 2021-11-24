@@ -113,7 +113,7 @@ const ActivityDateFilter=(props)=> {
                     <input className="filter-date" type="date" value={startDate} onChange={s=>setStartDate(s.currentTarget.value)}/>
                     <input className="filter-date" type="date" value={endDate} onChange={e=>setEndDate(e.currentTarget.value)} />
                     <button className="text-btn filter-btn" type="submit">Filter</button>
-                    <button className="text-btn filter-btn" onClick={resetDateFilter}>Reset Search</button>
+                    <button type="reset" className="text-btn filter-btn" onClick={resetDateFilter}>Reset Search</button>
                 </div>
             </div>
         </form>
