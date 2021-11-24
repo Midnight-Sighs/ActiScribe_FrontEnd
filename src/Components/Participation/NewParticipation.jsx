@@ -76,8 +76,10 @@ const NewParticipation=()=> {
 
     const onSubmit=(e)=>{
         e.preventDefault()
+        debugger
+        let activityId = parseInt(selectedActivity)
         let newParticipation={
-            "name":selectedActivity,
+            "id":activityId,
             "date":activityDate
         }
         postParticipation(selectedResident, newParticipation)
@@ -104,7 +106,7 @@ const NewParticipation=()=> {
 
                     <select onChange={handleActChange}>
                         <option defaultValue >Select an Activity</option>
-                        {allActivities.map((activity)=><option value={activity.name}>{activity.name}</option>)}
+                        {allActivities.map((activity)=><option value={activity.id}>{activity.name}</option>)}
                     </select>
                 </div>
                 <label className="part-label">Activity Date</label>
