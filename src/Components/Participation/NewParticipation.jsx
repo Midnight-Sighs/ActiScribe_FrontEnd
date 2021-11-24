@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../Participation/Styles/Participation.css'
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import Ferns from '../Images/Ferns.jpg'
 
 const NewParticipation=()=> {
 
@@ -96,24 +97,34 @@ const NewParticipation=()=> {
         <div className="my-wrapper">
             <ToastContainer enableMultiContainer containerId={'H'} position={toast.POSITION.TOP_RIGHT} />
             <ToastContainer enableMultiContainer containerId={'I'} position={toast.POSITION.TOP_RIGHT} />    
-        <div className="new-part conts">
-            <form onSubmit={onSubmit}>
-                <div className="part-select">
-                    <select onChange={handleResChange}>
-                        <option defaultValue >Select a Resident</option>
-                        {allResidents.map((resident)=><option value={resident.id}>{resident.r_first_name} {resident.r_last_name}</option>)}
-                    </select>
-
-                    <select onChange={handleActChange}>
-                        <option defaultValue >Select an Activity</option>
-                        {allActivities.map((activity)=><option value={activity.id}>{activity.name}</option>)}
-                    </select>
+            <div className="new-part conts">
+                <div className="new-part-form row">
+                    <div className="col-6">
+                        <form onSubmit={onSubmit}>
+                            <div className="part-select">
+                                <select onChange={handleResChange}>
+                                    <option defaultValue >Select a Resident</option>
+                                    {allResidents.map((resident)=><option value={resident.id}>{resident.r_first_name} {resident.r_last_name}</option>)}
+                                </select>
+                                <br />
+                                <select onChange={handleActChange}>
+                                    <option defaultValue >Select an Activity</option>
+                                    {allActivities.map((activity)=><option value={activity.id}>{activity.name}</option>)}
+                                </select>
+                            </div>
+                            <label className="part-label">Activity Date</label>
+                            <br />
+                            <input className="part-date" name="date" value={activityDate} onChange={handleDateChange} type="date"></input>
+                            <br />
+                            <br />
+                            <button className="text-btn save-part-btn" type="submit">Save Participation</button>
+                        </form>
+                    </div>
+                    <div className=" col-6 new-part-img">
+                        <img src={Ferns} />
+                    </div>
                 </div>
-                <label className="part-label">Activity Date</label>
-                <input className="part-date" name="date" value={activityDate} onChange={handleDateChange} type="date"></input>
-                <button className="text-btn save-part-btn" type="submit">Save Participation</button>
-            </form>
-        </div>
+            </div>
         </div>
         </>
      );

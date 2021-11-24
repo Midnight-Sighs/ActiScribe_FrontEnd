@@ -9,6 +9,7 @@
         padding: .25rem;
         margin-right: 1rem;
         font-size: 1.5rem;
+        border-radius: 5px;
     }
 }
 .part-label{
@@ -17,7 +18,7 @@
     font-family: $heading-font;
     color: $dark-teal;
     font-size: 2rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
     margin-right: .2rem;
     margin-top: 2rem;
 }
@@ -25,7 +26,7 @@
     color: $dk-warm-brown;
     font-size: 2rem;
     background-color: $second-teal;
-    margin-right: 1rem;
+    margin-left: 2rem;
     border:none;
     border-radius:5px;
     font-family: $regular-font;
@@ -34,6 +35,15 @@
     margin-left: 20rem;
 }
 .save-part-btn{
-    margin-left: 1rem;
+    margin-left: 2rem;
     font-size: 2rem;
+}
+.new-part-form{
+    margin-top: 3rem;
+    margin-left: 10rem;
+}
+.new-part-img img{
+    width: 25rem;
+    opacity: 90%;
+    box-shadow: 10px 10px 15px $dark-teal;
 }
