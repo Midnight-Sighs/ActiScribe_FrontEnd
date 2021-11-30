@@ -18,7 +18,7 @@ const AllResidents=(props)=>{
             {props.residents.map((resident)=>{
             return(
                 <>
-                    <tr className="all-res-row" key={resident.id}>
+                    <tr key={resident.id} className="all-res-row">
                         <td className="name-col">{resident.r_first_name} {resident.r_last_name}</td>
                         <td className='iden-col'>{resident.r_other_identifier}</td>
                         <td className='ass-col'>{resident.last_assessment}</td>

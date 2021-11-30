@@ -44,7 +44,7 @@ class ResidentHome extends Component {
         })
         }
         catch(err){
-            console.log(err, "Problem getting all residents")
+            console.log(err, "Problem getting all active residents")
         }
     }
 
@@ -57,7 +57,7 @@ class ResidentHome extends Component {
         })
         }
         catch(err){
-            console.log(err, "Problem getting all residents")
+            console.log(err, "Problem getting all archived residents")
         }
     }
 

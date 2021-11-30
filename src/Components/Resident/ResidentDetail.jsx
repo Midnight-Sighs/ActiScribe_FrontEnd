@@ -17,8 +17,8 @@ const ResidentDetail=(props)=> {
     const[notesHS, setNotesHS]=useState(false)
     const[assessmentHS, setAssessmentHS]=useState(false)
 
-    const notifyK = () => toast('Resident Edits Successful', {containerId:'K'});
-    const notifyL = () => toast('Resident Edits Failed', {containerId:'L'});
+    const notifyK = (resName) => toast(`Edits for ${resName} Successful`, {containerId:'K'});
+    const notifyL = (resName) => toast(`Edits for ${resName} Failed`, {containerId:'L'});
     const notifyM = () => toast("Status Change Successful", {containerId:'M'})
     const notifyN = () => toast("Status Change Failed", {containerId:'N'})
     const notifyO = () => toast('New Assessment Saved Successfully', {containerId:'O'});
@@ -74,7 +74,7 @@ const ResidentDetail=(props)=> {
                                 <NewNote onClick={notesOnClick} getNotesByRes={props.getNotesByRes} resident={props.activeResident.id}/>
                             </Modal>
                             <Modal onClick={editOnClick} hideShow={editHS} >
-                                <EditResident onClick={editOnClick} notifyN={notifyN} notifyM={notifyM} notifyL={notifyL} notifyK={notifyK} resident={props.activeResident} getResidents={props.getResidents}/>
+                                <EditResident setResident={props.setResident} onClick={editOnClick} notifyN={notifyN} notifyM={notifyM} notifyL={notifyL} notifyK={notifyK} resident={props.activeResident} getResidents={props.getResidents}/>
                             </Modal>
                             <Modal onClick={assessmentOnClick} hideShow={assessmentHS}>
                                 <ViewAssessment notifyR={notifyR} notifyQ={notifyQ} notifyP={notifyP} notifyO={notifyO} onClick={assessmentOnClick} resident={props.activeResident.id} />

@@ -58,7 +58,7 @@ const ResidentParticipation=(props)=>{
                         {props.participation.activity.map((activity)=>{
                             return(
                             <tbody>
-                                <tr>
+                                <tr key={activity.id}>
                                     <td className="det-activity">{activity.name} </td>
                                     <td className='det-dow'>{activity.dow_one}  </td>
                                     <td className='det-dow'>{activity.dow_two} </td> 

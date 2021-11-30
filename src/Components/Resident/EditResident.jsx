@@ -49,13 +49,14 @@ class EditResident extends Component {
         const jwt = localStorage.getItem('token')
         try{
             await axios.put(`http://127.0.0.1:8000/api/actiscribe/residents/${resident_id}/`, resident, {headers: {Authorization: 'Bearer '+ jwt}});
-            console.log({resident} + " has been edited") 
+            console.log(`${this.state.r_first_name} has been edited`) 
             this.props.getResidents() 
-            this.props.notifyK()
-            this.props.onClick()
+            this.props.setResident(resident)
+            this.props.notifyK(this.state.r_first_name)
+            this.props.onClick(this.state.r_first_name)
         }
         catch(err){
-            console.log(err, "Problem editing resident.")
+            console.log(err, `Problem editing ${this.state.r_first_name}.`)
             this.props.notifyL()
         }
     }
@@ -69,7 +70,7 @@ class EditResident extends Component {
             this.props.notifyM()
         }
         catch(err){
-            console.log(err, "Problem changing residen status")
+            console.log(err, "Problem changing resident status")
             this.props.notifyN()
         }
     }
@@ -97,7 +98,7 @@ class EditResident extends Component {
                             </tr>
                             <tr>
                                 <td><label className="edit-res-label">Last Assessment</label></td>
-                                <td><input className="edit-res-field" name="edit-res-field" onChange={this.handleChange} value={this.state.last_assessment} required /></td>
+                                <td><input type="date" className="edit-res-field" name="last_assessment" onChange={this.handleChange} value={this.state.last_assessment} required /></td>
                             </tr>
                             <tr>
                                 <td colSpan="2">
