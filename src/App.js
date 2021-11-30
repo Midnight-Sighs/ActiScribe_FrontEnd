@@ -70,7 +70,6 @@ class App extends Component {
   }
 
   getUserDetails = async()=>{
-    debugger
     const jwt = localStorage.getItem('token')
     let userId = this.state.user.user_id
     try{

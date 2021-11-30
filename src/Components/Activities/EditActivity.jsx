@@ -10,6 +10,7 @@ class EditActivity extends Component {
             dow_one: "",
             dow_two: "",
             dow_three: "",
+            id: "",
          }
     }
 
@@ -20,17 +21,18 @@ class EditActivity extends Component {
             dow_one: this.props.activity.dow_one,
             dow_two: this.props.activity.dow_two,
             dow_three: this.props.activity.dow_three,
+            id: this.props.activity.id,
         })
     }
 
     archiveOnClick=()=>{
-        let activityId = this.props.activity.id
+        let activityId = this.state.id
         this.archiveActivity(activityId)
     }
 
     deleteOnClick=(e)=>{
         e.preventDefault()
-        let activityId=this.props.activity.id
+        let activityId=this.state.id
         this.deleteActivity(activityId)
     }
 
@@ -72,6 +74,7 @@ class EditActivity extends Component {
         console.log(activity.name + " has been updated.")
         this.props.notifyE()
         this.props.getAllActivities()
+        this.props.setActiveActivity(activity)
         this.props.onClick()
         }
         catch(err){
@@ -88,8 +91,11 @@ class EditActivity extends Component {
             "dow_one": this.state.dow_one,
             "dow_two": this.state.dow_two,
             "dow_three": this.state.dow_three,
+            "id": this.state.id,
+            "is_active": this.props.activity.is_active,
+            "is_archived": this.props.activity.is_archived
         }
-        this.editActivity(editActivity, this.props.activity.id)
+        this.editActivity(editActivity, this.state.id)
     }
 
     handleChange=(event)=>{
