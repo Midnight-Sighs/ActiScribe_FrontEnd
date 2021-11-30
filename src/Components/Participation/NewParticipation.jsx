@@ -104,12 +104,12 @@ const NewParticipation=()=> {
                             <div className="part-select">
                                 <select onChange={handleResChange}>
                                     <option defaultValue >Select a Resident</option>
-                                    {allResidents.map((resident)=><option value={resident.id}>{resident.r_first_name} {resident.r_last_name}</option>)}
+                                    {allResidents.map((resident)=><option key={resident.id} value={resident.id}>{resident.r_first_name} {resident.r_last_name}</option>)}
                                 </select>
                                 <br />
                                 <select onChange={handleActChange}>
                                     <option defaultValue >Select an Activity</option>
-                                    {allActivities.map((activity)=><option value={activity.id}>{activity.name}</option>)}
+                                    {allActivities.map((activity)=><option key={activity.id} value={activity.id}>{activity.name}</option>)}
                                 </select>
                             </div>
                             <label className="part-label">Activity Date</label>

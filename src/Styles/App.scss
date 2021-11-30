@@ -122,8 +122,9 @@ a{
     font-family:$regular-font;
     font-size:2rem;
     text-align:center;
-    & .nav:hover{
+    &:hover{
         color: $warm-brown;
+        border-left: 2px solid $light-teal;
     }
 }
 #nav-tab{

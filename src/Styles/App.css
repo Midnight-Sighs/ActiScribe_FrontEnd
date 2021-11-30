@@ -133,13 +133,14 @@ a:hover, a :focus, a :active {
   text-align: center;
 }
 
-#nav-home-tab .nav:hover,
-#nav-tutorials-tab .nav:hover,
-#nav-features-tab .nav:hover,
-#nav-residents-tab .nav:hover,
-#nav-activities-tab .nav:hover,
-#nav-participation-tab .nav:hover {
+#nav-home-tab:hover,
+#nav-tutorials-tab:hover,
+#nav-features-tab:hover,
+#nav-residents-tab:hover,
+#nav-activities-tab:hover,
+#nav-participation-tab:hover {
   color: #b47f60;
+  border-left: 2px solid #84c6b8;
 }
 
 #nav-tab {

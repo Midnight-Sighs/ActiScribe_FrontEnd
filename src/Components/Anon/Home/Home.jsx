@@ -26,9 +26,12 @@ const Home =(props)=> {
     }
 
     useEffect(()=>{
-        feelGoodQuote()
-        countResidents()
+        feelGoodQuote();
     }, [])
+
+    useEffect(()=>{
+        countResidents();
+    }, [props])
 
 
     return ( 

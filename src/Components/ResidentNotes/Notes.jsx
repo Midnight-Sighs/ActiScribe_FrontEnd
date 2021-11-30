@@ -13,8 +13,8 @@ const Notes=(props)=> {
     }, [props])
 
     const editOnClick=(note)=>{
-        debugger
-        setActiveNoteId(note.id)
+        if(note){
+        setActiveNoteId(note.id)}
         setEditHS(!editHS)
     }
 

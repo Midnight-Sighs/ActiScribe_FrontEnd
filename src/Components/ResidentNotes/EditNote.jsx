@@ -13,6 +13,7 @@ const EditNote=(props)=> {
         await axios.put(`http://127.0.0.1:8000/api/actiscribe/notes/${noteId}/`, note, {headers: {Authorization: 'Bearer '+ jwt}});
         console.log("Note edited successfully")
         props.getNotesByRes(props.resident.id)
+        debugger
         }
         catch(err){
             console.log(err, "Error editing note.")
@@ -49,19 +50,19 @@ const EditNote=(props)=> {
 
     return ( 
         <>
-        <div className="row">
-            <div className="col-9">
-            <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit}>
+            <div className="row">
                 <textarea className="edit-field" maxLength="400" name="noteContent" onChange={e=>setNoteContent(e.currentTarget.value)} value={noteContent} required />
-                <button type="submit" className="text-btn save-note">Save Changes</button>
-            </form>   
-            </div> 
-            <div className="col-2">
-                <br />
-                <p></p>
-                <button type="button" className="text-btn note-delete" onClick={deleteClick}>Delete Note</button>
             </div>
-        </div>
+            <div className="row">
+                <div className="col-2" >  
+                    <button type="submit" className="text-btn save-note">Save Changes</button>
+                </div>
+                <div className="col-2">
+                    <button type="button" className="text-btn note-delete" onClick={deleteClick}>Delete Note</button>
+                </div>
+            </div>
+        </form>   
         </>
      );
 }
