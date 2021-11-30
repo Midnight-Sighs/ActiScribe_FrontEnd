@@ -3,7 +3,7 @@
 .part-select{
     & select{
         margin-top: 2rem;
-        margin-left: 2rem;
+        margin-left: 20rem;
         background-color: $second-teal;
         color: $dk-warm-brown;
         padding: .25rem;
@@ -18,7 +18,7 @@
     font-family: $heading-font;
     color: $dark-teal;
     font-size: 2rem;
-    margin-left: 4rem;
+    margin-left: 24rem;
     margin-right: .2rem;
     margin-top: 2rem;
 }
@@ -26,7 +26,7 @@
     color: $dk-warm-brown;
     font-size: 2rem;
     background-color: $second-teal;
-    margin-left: 2rem;
+    margin-left: 20rem;
     border:none;
     border-radius:5px;
     font-family: $regular-font;
@@ -35,7 +35,7 @@
     margin-left: 20rem;
 }
 .save-part-btn{
-    margin-left: 2rem;
+    margin-left: 20rem;
     font-size: 2rem;
 }
 .new-part-form{
@@ -45,5 +45,6 @@
 .new-part-img img{
     width: 25rem;
     opacity: 90%;
+    margin-top: 2rem;
     box-shadow: 10px 10px 15px $dark-teal;
 }

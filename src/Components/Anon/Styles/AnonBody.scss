@@ -33,16 +33,21 @@
     padding-top: 2rem;
     font-size: 6rem;
     position: absolute;
-    right:40%;
+    left:20%;
 }
 .quote-msg{
-    margin-top: 8rem;
+    margin-top: 13rem;
     font-family: $quote-font;
     padding: 2rem;
     border-radius: 10px;
     animation: color-change 8s infinite;
     font-size: 3rem;
     text-align:center;
+}
+.res-count{
+    position:absolute;
+    left: 21%;
+    top: 21%;
 }
 
 

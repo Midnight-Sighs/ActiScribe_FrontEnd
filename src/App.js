@@ -31,8 +31,9 @@ class App extends Component {
       this.setState({
         user:user,
         loggedIn:true
+      }, ()=>{
+        this.getUserDetails();
       })
-      this.getUserDetails();
     }
     catch(err){
       console.log(err)
@@ -69,6 +70,7 @@ class App extends Component {
   }
 
   getUserDetails = async()=>{
+    debugger
     const jwt = localStorage.getItem('token')
     let userId = this.state.user.user_id
     try{

@@ -6,7 +6,7 @@ import NewParticipation from '../Participation/NewParticipation'
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import './Styles/HeadAndFoot.css'
 
-function NavBar() {
+function NavBar(props) {
     return ( 
         <>
         <Router>
@@ -24,7 +24,7 @@ function NavBar() {
 
             <Switch>
                 <Route exact path="/" exact component={ResidentHome}>
-                    <ResidentHome />
+                    <ResidentHome user = {props.user} />
                 </Route>
                 <Route path="/Activities">
                     <ActivityHome />

@@ -45,7 +45,7 @@ const Header=(props)=> {
                 </div>        
             </div>
 
-            {props.loggedIn ? <NavBar /> : null }
+            {props.loggedIn ? <NavBar user={props.userDetails} /> : null }
                 <Switch>
                     <Route path='/login' >
                         {props.loggedIn ? null: <Login loggedIn={props.loggedIn} login={props.login} />}
