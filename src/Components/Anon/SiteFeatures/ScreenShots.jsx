@@ -35,8 +35,9 @@ const ScreenShots=()=> {
                     <img src={Toasts} />
                     <p>Alerts and New Residents</p>
                 </div>
-                <div className="col-6">
-                    
+                <div className="col-6 call-to-action">
+                    <h1> Are You Ready To Sign Up?</h1>
+                    <h3>Register Above Today!</h3>
                 </div>
             </div>
         </div>
